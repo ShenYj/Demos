@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+Extention.h"
 
 @interface ViewController ()
 
@@ -21,8 +22,14 @@
     imageView.center = self.view.center;
     [self.view addSubview:imageView];
     
-    
+    // 方式一:  直接按照ImageView的尺寸来设置图片
+    // 图片的真实尺寸:  640 × 480 pixels
     imageView.image = [UIImage imageNamed:@"路飞.jpg"];
+    
+    // 方式二:  将图片尺寸处理后,得到与UIImageView一致的尺寸后再来设置
+    UIImage *image = [UIImage imageNamed:@"路飞.jpg"] ;
+    imageView.image = [image js_imageWithSize:CGSizeMake(200, 200)];
+    
 }
 
 - (void)didReceiveMemoryWarning {

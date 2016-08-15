@@ -14,6 +14,7 @@
 		F743A6911D61A729007A3BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F743A6901D61A729007A3BBB /* Assets.xcassets */; };
 		F743A6941D61A729007A3BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F743A6921D61A729007A3BBB /* LaunchScreen.storyboard */; };
 		F743A69C1D61A737007A3BBB /* 路飞.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F743A69B1D61A737007A3BBB /* 路飞.jpg */; };
+		F743A69F1D61AF72007A3BBB /* UIImage+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F743A69E1D61AF72007A3BBB /* UIImage+Extention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		F743A6931D61A729007A3BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F743A6951D61A729007A3BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F743A69B1D61A737007A3BBB /* 路飞.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "路飞.jpg"; sourceTree = "<group>"; };
+		F743A69D1D61AF72007A3BBB /* UIImage+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extention.h"; sourceTree = "<group>"; };
+		F743A69E1D61AF72007A3BBB /* UIImage+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				F743A6881D61A729007A3BBB /* AppDelegate.m */,
 				F743A68A1D61A729007A3BBB /* ViewController.h */,
 				F743A68B1D61A729007A3BBB /* ViewController.m */,
+				F743A69D1D61AF72007A3BBB /* UIImage+Extention.h */,
+				F743A69E1D61AF72007A3BBB /* UIImage+Extention.m */,
 				F743A68D1D61A729007A3BBB /* Main.storyboard */,
 				F743A6901D61A729007A3BBB /* Assets.xcassets */,
 				F743A6921D61A729007A3BBB /* LaunchScreen.storyboard */,
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F743A69F1D61AF72007A3BBB /* UIImage+Extention.m in Sources */,
 				F743A68C1D61A729007A3BBB /* ViewController.m in Sources */,
 				F743A6891D61A729007A3BBB /* AppDelegate.m in Sources */,
 				F743A6861D61A729007A3BBB /* main.m in Sources */,
