@@ -29,8 +29,11 @@
     // 方式二:
     UIImage *originalImage = [UIImage imageNamed:@"路飞.jpg"];
 //    UIImage *resizedImage = [originalImage js_cornerImageWithSize:CGSizeMake(200, 200)];
-    UIImage *resizedImage = [originalImage js_cornerImageWithSize:CGSizeMake(200, 200) fillClolor:[UIColor whiteColor]];
-    imageView.image = resizedImage;
+//    UIImage *resizedImage = [originalImage js_cornerImageWithSize:CGSizeMake(200, 200) fillClolor:[UIColor whiteColor]];
+    [originalImage js_cornerImageWithSize:CGSizeMake(200, 200) fillClolor:[UIColor whiteColor] completion:^(UIImage *img) {
+        
+        imageView.image = img;
+    }];
 }
 
 

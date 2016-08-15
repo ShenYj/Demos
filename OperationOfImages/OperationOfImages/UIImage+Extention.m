@@ -34,37 +34,56 @@
 }
 
 // 生成圆角图片(优化后)
-- (UIImage *)js_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor{
+- (void)js_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor completion:(void(^)(UIImage *img))completion{
     
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        // 获取开始时间
+        CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+        
+        // 开启图形上下文
+        UIGraphicsBeginImageContextWithOptions(size, YES, 0.0);
+        
+        // 设置rect
+        CGRect rect = CGRectMake(0, 0, size.width, size.height);
+        
+        // 设置填充色
+        [fillColor set];
+        UIRectFill(rect);
+        
+        // 计算半径
+        CGFloat cornerRadius = MIN(size.width, size.height) * 0.5;
+        
+        // 设置圆形路径并切割
+        [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius] addClip];
+        
+        // 将原始图片绘制到图形上下文中
+        [self drawInRect:rect];
+        
+        // 从图形上下获取图片
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        // 关闭图形上下文
+        UIGraphicsEndImageContext();
+        
+        // 获取结束时间
+        CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+        
+        //打印时间
+        NSLog(@"%f",end - start);
+        
+        // 返回圆形图片
+        // return image;
+        // 返回主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion) {
+                completion(image);
+            }
+        });
+        
+    });
     
-    
-    // 开启图形上下文
-    UIGraphicsBeginImageContextWithOptions(size, YES, 0.0);
-    
-    // 设置rect
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    
-    // 设置填充色
-    [fillColor set];
-    UIRectFill(rect);
-    
-    // 计算半径
-    CGFloat cornerRadius = MIN(size.width, size.height) * 0.5;
-    
-    // 设置圆形路径并切割
-    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius] addClip];
-    
-    // 将原始图片绘制到图形上下文中
-    [self drawInRect:rect];
-    
-    // 从图形上下获取图片
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // 关闭图形上下文
-    UIGraphicsEndImageContext();
-    
-    // 返回圆形图片
-    return image;
 }
 
 

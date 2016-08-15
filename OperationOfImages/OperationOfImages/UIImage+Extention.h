@@ -22,13 +22,13 @@
 #pragma mark -- 设置圆角图片
 
 /**
- *  根据视图尺寸返回固定Size的圆形Image
+ *  高性能绘制圆角图片
  *
- *  @param size Image的尺寸
- *
- *  @return 圆形Image
+ *  @param size       图片尺寸
+ *  @param fillColor  圆角图片外围填充色
+ *  @param completion 完成回调,返回圆角图片
  */
-- (UIImage *)js_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor;
+- (void)js_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor completion:(void(^)(UIImage *img))completion;
 
 // 生成圆角图片(优化前)
 + (UIImage *)js_imageWithOriginalImage:(UIImage *)originalImage;
