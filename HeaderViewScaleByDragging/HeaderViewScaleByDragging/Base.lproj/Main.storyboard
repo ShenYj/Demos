@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" title="Title" id="nyv-fF-e77">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="L1Q-9E-2kh">
                             <connections>
-                                <action selector="ClickButton:" destination="BYZ-38-t0r" id="pjq-W7-7HV"/>
+                                <action selector="ClickButton:" destination="BYZ-38-t0r" id="8pV-1N-7R1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -33,7 +33,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wBS-vM-kw0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhN-2N-did" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhN-2N-did" customClass="JSNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vPB-wL-XiP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
