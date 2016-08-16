@@ -16,6 +16,7 @@
 		F7211EEA1D62FF1800DC78D3 /* JSHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EE91D62FF1800DC78D3 /* JSHeaderViewController.m */; };
 		F7211EED1D63057000DC78D3 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EEC1D63057000DC78D3 /* JSNavigationController.m */; };
 		F7211EF61D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */; };
+		F7211EF91D6336DC00DC78D3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		F7211EEC1D63057000DC78D3 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
 		F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JSFullScreenPopGesture.h"; sourceTree = "<group>"; };
 		F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JSFullScreenPopGesture.m"; sourceTree = "<group>"; };
+		F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 			children = (
 				F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */,
 				F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */,
+				F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */,
+				F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */,
 				F7211ED41D62DC1D00DC78D3 /* AppDelegate.h */,
 				F7211ED51D62DC1D00DC78D3 /* AppDelegate.m */,
 				F7211ED71D62DC1D00DC78D3 /* ViewController.h */,
@@ -167,6 +172,7 @@
 			files = (
 				F7211EEA1D62FF1800DC78D3 /* JSHeaderViewController.m in Sources */,
 				F7211ED91D62DC1D00DC78D3 /* ViewController.m in Sources */,
+				F7211EF91D6336DC00DC78D3 /* UIImage+Color.m in Sources */,
 				F7211EED1D63057000DC78D3 /* JSNavigationController.m in Sources */,
 				F7211ED61D62DC1D00DC78D3 /* AppDelegate.m in Sources */,
 				F7211ED31D62DC1D00DC78D3 /* main.m in Sources */,

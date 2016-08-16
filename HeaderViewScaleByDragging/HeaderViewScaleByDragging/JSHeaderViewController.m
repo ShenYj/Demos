@@ -7,6 +7,7 @@
 //
 
 #import "JSHeaderViewController.h"
+#import "UIImage+Color.h"
 
 #define kHeaderHeight 200
 
@@ -50,6 +51,22 @@ static NSString *const reuseId = @"Identifier";
     headerView.backgroundColor = [UIColor blueColor];
     
     [self.view addSubview:headerView];
+    
+    // 顶部视图添加UIImageView
+    UIImageView *headerImageView = [[UIImageView alloc] initWithFrame:headerView.bounds];
+    
+    [headerView addSubview:headerImageView];
+    
+    // 设置图像 (使用图片需要考虑性能优化)
+    // headerImageView.image =  [UIImage imageNamed:@"headerView"];
+    UIImage *image = [UIImage imageNamed:@"headerView"];
+    [image js_ImageWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, kHeaderHeight) completion:^(UIImage *img) {
+        
+        headerImageView.image = img;
+    }];
+    
+    
+    
 }
 
 #pragma mark -- 准备TableView
