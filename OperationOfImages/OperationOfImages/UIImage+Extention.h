@@ -30,6 +30,7 @@
  */
 - (void)js_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor completion:(void(^)(UIImage *img))completion;
 
+
 // 生成圆角图片(优化前)
 + (UIImage *)js_imageWithOriginalImage:(UIImage *)originalImage;
 
