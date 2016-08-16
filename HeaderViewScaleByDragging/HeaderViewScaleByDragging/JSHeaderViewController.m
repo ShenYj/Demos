@@ -35,6 +35,13 @@ static NSString *const reuseId = @"Identifier";
     
 }
 
+#pragma mark -- 隐藏导航栏
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    
+//    [self.navigationController setNavigationBarHidden:YES];
+//}
+
 #pragma mark -- 准备顶部视图
 - (void)prepareHeaderView{
     
