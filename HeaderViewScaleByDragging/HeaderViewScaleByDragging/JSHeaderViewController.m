@@ -8,6 +8,7 @@
 
 #import "JSHeaderViewController.h"
 #import "UIImage+Color.h"
+#import "UIView+JSFrame.h"
 
 #define kHeaderHeight 200
 
@@ -17,7 +18,13 @@
 
 static NSString *const reuseId = @"Identifier";
 
-@implementation JSHeaderViewController
+@implementation JSHeaderViewController{
+    
+    // 顶部视图
+    UIView *_headerView;
+    // 顶部视图中的UIImageView
+    UIImageView *_headerImageView;
+}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -46,26 +53,27 @@ static NSString *const reuseId = @"Identifier";
 #pragma mark -- 准备顶部视图
 - (void)prepareHeaderView{
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kHeaderHeight)];
+    _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kHeaderHeight)];
     
-    headerView.backgroundColor = [UIColor blueColor];
+    _headerView.backgroundColor = [UIColor blueColor];
     
-    [self.view addSubview:headerView];
+    [self.view addSubview:_headerView];
     
     // 顶部视图添加UIImageView
-    UIImageView *headerImageView = [[UIImageView alloc] initWithFrame:headerView.bounds];
+    _headerImageView = [[UIImageView alloc] initWithFrame:_headerView.bounds];
     
-    [headerView addSubview:headerImageView];
+    [_headerView addSubview:_headerImageView];
     
     // 设置图像 (使用图片需要考虑性能优化)
     // headerImageView.image =  [UIImage imageNamed:@"headerView"];
     UIImage *image = [UIImage imageNamed:@"headerView"];
     [image js_ImageWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, kHeaderHeight) completion:^(UIImage *img) {
         
-        headerImageView.image = img;
+        _headerImageView.image = img;
     }];
     
-    
+    // 设置等比例拉伸
+    _headerImageView.contentMode = UIViewContentModeScaleAspectFill;
     
 }
 
@@ -108,6 +116,23 @@ static NSString *const reuseId = @"Identifier";
 
 #pragma mark -- UITableViewDelegate
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    CGFloat offSetY = scrollView.contentOffset.y + scrollView.contentInset.top;
+    
+    NSLog(@"%f",offSetY);
+    
+    if (offSetY > 0) {
+        NSLog(@"整体移动");
+        
+    }else {
+        NSLog(@"放大");
+        // 调整HeaderView和HeaderImageView
+        _headerView.y = 0;
+        _headerView.h = kHeaderHeight - offSetY;
+        _headerImageView.h = _headerView.h;
+    }
+}
 
 #pragma mark -- 设置导航栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle{

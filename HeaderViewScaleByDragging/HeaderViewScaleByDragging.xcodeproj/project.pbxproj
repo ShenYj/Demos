@@ -17,6 +17,7 @@
 		F7211EED1D63057000DC78D3 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EEC1D63057000DC78D3 /* JSNavigationController.m */; };
 		F7211EF61D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */; };
 		F7211EF91D6336DC00DC78D3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */; };
+		F75A01201D64138000E11A36 /* UIView+JSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A011F1D64138000E11A36 /* UIView+JSFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JSFullScreenPopGesture.m"; sourceTree = "<group>"; };
 		F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		F75A011E1D64138000E11A36 /* UIView+JSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSFrame.h"; sourceTree = "<group>"; };
+		F75A011F1D64138000E11A36 /* UIView+JSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 			children = (
 				F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */,
 				F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */,
+				F75A011E1D64138000E11A36 /* UIView+JSFrame.h */,
+				F75A011F1D64138000E11A36 /* UIView+JSFrame.m */,
 				F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */,
 				F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */,
 				F7211ED41D62DC1D00DC78D3 /* AppDelegate.h */,
@@ -177,6 +182,7 @@
 				F7211ED61D62DC1D00DC78D3 /* AppDelegate.m in Sources */,
 				F7211ED31D62DC1D00DC78D3 /* main.m in Sources */,
 				F7211EF61D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m in Sources */,
+				F75A01201D64138000E11A36 /* UIView+JSFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +333,7 @@
 				F7211EE71D62DC1D00DC78D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

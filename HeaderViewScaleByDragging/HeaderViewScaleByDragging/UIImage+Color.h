@@ -62,4 +62,6 @@
  *  @param completion 完成回调,返回固定尺寸图片
  */
 - (void)js_ImageWithSize:(CGSize)size completion:(void(^)(UIImage *img))completion;
+
+
 @end
