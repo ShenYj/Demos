@@ -65,7 +65,7 @@ static NSString *const reuseId = @"Identifier";
     [_headerView addSubview:_headerImageView];
     
     // 设置图像 (使用图片需要考虑性能优化)
-    // headerImageView.image =  [UIImage imageNamed:@"headerView"];
+    // _headerImageView.image =  [UIImage imageNamed:@"headerView"];
     UIImage *image = [UIImage imageNamed:@"headerView"];
     [image js_ImageWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, kHeaderHeight) completion:^(UIImage *img) {
         
@@ -124,7 +124,9 @@ static NSString *const reuseId = @"Identifier";
     
     if (offSetY > 0) {
         NSLog(@"整体移动");
-        
+        _headerView.h = kHeaderHeight;
+        _headerImageView.h = _headerView.h;
+        _headerView.y = - offSetY;
     }else {
         NSLog(@"放大");
         // 调整HeaderView和HeaderImageView
