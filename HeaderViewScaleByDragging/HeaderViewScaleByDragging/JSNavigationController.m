@@ -12,8 +12,10 @@
 
 
 #pragma mark -- push隐藏导航栏
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     [super pushViewController:viewController animated:animated];
+    
     self.navigationBarHidden = YES;
     
 }

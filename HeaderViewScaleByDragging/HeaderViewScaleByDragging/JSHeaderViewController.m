@@ -20,23 +20,27 @@
 static NSString *const reuseId = @"Identifier";
 
 @implementation JSHeaderViewController{
+
+    UIView              *_headerView;           // 顶部视图
+    UIImageView         *_headerImageView;      // 顶部视图中的UIImageView
+    UIView              *_lineView;             // 顶部视图中底部的仿导航栏边线
+    UIStatusBarStyle    _statusBarStyle;        // 顶部导航栏
+}
+
+- (instancetype)init{
     
-    // 顶部视图
-    UIView *_headerView;
-    // 顶部视图中的UIImageView
-    UIImageView *_headerImageView;
-    // 顶部视图中底部的仿导航栏边线
-    UIView *_lineView;
+    // 设置导航栏
+    _statusBarStyle = UIStatusBarStyleLightContent;
+    
+    return  [super init];
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+
     
     // 取消添加导航栏后控制器的自动偏移
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    // 设置背景色
-    self.view.backgroundColor = [UIColor whiteColor];
     
     // 准备TableView
     [self prepareTableView];
@@ -44,14 +48,9 @@ static NSString *const reuseId = @"Identifier";
     // 准备顶部视图
     [self prepareHeaderView];
     
+    NSLog(@"%s",__func__);
+    
 }
-
-#pragma mark -- 隐藏导航栏
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    
-//    [self.navigationController setNavigationBarHidden:YES];
-//}
 
 #pragma mark -- 准备顶部视图
 - (void)prepareHeaderView{
@@ -69,7 +68,6 @@ static NSString *const reuseId = @"Identifier";
     _headerView.backgroundColor = [UIColor js_RGBColorWithRed:248 withGreen:248 withBlue:248];
     
     // 设置图像 (使用图片需要考虑性能优化)
-    // _headerImageView.image =  [UIImage imageNamed:@"headerView"];
     UIImage *image = [UIImage imageNamed:@"headerView"];
     [image js_ImageWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, kHeaderHeight) completion:^(UIImage *img) {
         
@@ -135,7 +133,6 @@ static NSString *const reuseId = @"Identifier";
     CGFloat offSetY = scrollView.contentOffset.y + scrollView.contentInset.top;
     
     NSLog(@"%f",offSetY);
-
     
     if (offSetY > 0) {
         
@@ -155,18 +152,23 @@ static NSString *const reuseId = @"Identifier";
         // 随着顶部视图向上滚动,设置透明度
         _headerImageView.alpha = alpha;
         
-        //  _lineView.alpha = 1;
+#pragma mark -- 状态栏处理
+        
+        // 设置状态栏状态
+        _statusBarStyle = (alpha < 0.5) ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+        
+        // 手动更新状态栏状态
+        [self.navigationController setNeedsStatusBarAppearanceUpdate];
         
     }else {
         
         NSLog(@"放大");
         // 调整HeaderView和HeaderImageView
-        _headerView.alpha = 1;
+        _headerImageView.alpha = 1;
         _headerView.y = 0;
         _headerView.h = kHeaderHeight - offSetY;
         _headerImageView.h = _headerView.h;
 
-        // _lineView.alpha = 0.01;
     }
     
     // 设置分割线的Y轴坐标,随着顶部视图的放大而向下偏移
@@ -175,7 +177,8 @@ static NSString *const reuseId = @"Identifier";
 
 #pragma mark -- 设置导航栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    NSLog(@"%s",__func__);
+    return _statusBarStyle;
 }
 
 @end

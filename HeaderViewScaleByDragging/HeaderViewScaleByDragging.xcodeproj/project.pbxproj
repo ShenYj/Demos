@@ -33,17 +33,17 @@
 		F7211EE01D62DC1D00DC78D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7211EE21D62DC1D00DC78D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7211EE81D62FF1800DC78D3 /* JSHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSHeaderViewController.h; sourceTree = "<group>"; };
-		F7211EE91D62FF1800DC78D3 /* JSHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHeaderViewController.m; sourceTree = "<group>"; };
+		F7211EE91D62FF1800DC78D3 /* JSHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHeaderViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		F7211EEB1D63057000DC78D3 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
 		F7211EEC1D63057000DC78D3 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
-		F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JSFullScreenPopGesture.h"; sourceTree = "<group>"; };
-		F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JSFullScreenPopGesture.m"; sourceTree = "<group>"; };
-		F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
-		F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		F75A011E1D64138000E11A36 /* UIView+JSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSFrame.h"; sourceTree = "<group>"; };
-		F75A011F1D64138000E11A36 /* UIView+JSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSFrame.m"; sourceTree = "<group>"; };
-		F75A01211D6425D400E11A36 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
-		F75A01221D6425D400E11A36 /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+JSFullScreenPopGesture.h"; path = "../UINavigationController+JSFullScreenPopGesture.h"; sourceTree = "<group>"; };
+		F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JSFullScreenPopGesture.m"; path = "../UINavigationController+JSFullScreenPopGesture.m"; sourceTree = "<group>"; };
+		F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Color.h"; path = "../UIImage+Color.h"; sourceTree = "<group>"; };
+		F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Color.m"; path = "../UIImage+Color.m"; sourceTree = "<group>"; };
+		F75A011E1D64138000E11A36 /* UIView+JSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JSFrame.h"; path = "../UIView+JSFrame.h"; sourceTree = "<group>"; };
+		F75A011F1D64138000E11A36 /* UIView+JSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JSFrame.m"; path = "../UIView+JSFrame.m"; sourceTree = "<group>"; };
+		F75A01211D6425D400E11A36 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RandomColor.h"; path = "../UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		F75A01221D6425D400E11A36 /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RandomColor.m"; path = "../UIColor+RandomColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +76,7 @@
 		F7211ED01D62DC1D00DC78D3 /* HeaderViewScaleByDragging */ = {
 			isa = PBXGroup;
 			children = (
-				F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */,
-				F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */,
-				F75A011E1D64138000E11A36 /* UIView+JSFrame.h */,
-				F75A011F1D64138000E11A36 /* UIView+JSFrame.m */,
-				F75A01211D6425D400E11A36 /* UIColor+RandomColor.h */,
-				F75A01221D6425D400E11A36 /* UIColor+RandomColor.m */,
-				F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */,
-				F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */,
+				F75A01241D642D1F00E11A36 /* UIKit+Extension */,
 				F7211ED41D62DC1D00DC78D3 /* AppDelegate.h */,
 				F7211ED51D62DC1D00DC78D3 /* AppDelegate.m */,
 				F7211ED71D62DC1D00DC78D3 /* ViewController.h */,
@@ -107,6 +100,21 @@
 				F7211ED21D62DC1D00DC78D3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F75A01241D642D1F00E11A36 /* UIKit+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7211EF41D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.h */,
+				F7211EF51D63341F00DC78D3 /* UINavigationController+JSFullScreenPopGesture.m */,
+				F75A011E1D64138000E11A36 /* UIView+JSFrame.h */,
+				F75A011F1D64138000E11A36 /* UIView+JSFrame.m */,
+				F75A01211D6425D400E11A36 /* UIColor+RandomColor.h */,
+				F75A01221D6425D400E11A36 /* UIColor+RandomColor.m */,
+				F7211EF71D6336DC00DC78D3 /* UIImage+Color.h */,
+				F7211EF81D6336DC00DC78D3 /* UIImage+Color.m */,
+			);
+			path = "UIKit+Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
