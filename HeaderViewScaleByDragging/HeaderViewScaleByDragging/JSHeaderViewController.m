@@ -24,20 +24,18 @@ static NSString *const reuseId = @"Identifier";
     UIView              *_headerView;           // 顶部视图
     UIImageView         *_headerImageView;      // 顶部视图中的UIImageView
     UIView              *_lineView;             // 顶部视图中底部的仿导航栏边线
-    UIStatusBarStyle    _statusBarStyle;        // 顶部导航栏
+    UIStatusBarStyle    _statusBarStyle;        // 顶部状态栏状态
 }
 
 - (instancetype)init{
     
     // 设置导航栏
     _statusBarStyle = UIStatusBarStyleLightContent;
-    
     return  [super init];
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-
     
     // 取消添加导航栏后控制器的自动偏移
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -47,8 +45,6 @@ static NSString *const reuseId = @"Identifier";
     
     // 准备顶部视图
     [self prepareHeaderView];
-    
-    NSLog(@"%s",__func__);
     
 }
 
@@ -132,11 +128,8 @@ static NSString *const reuseId = @"Identifier";
     
     CGFloat offSetY = scrollView.contentOffset.y + scrollView.contentInset.top;
     
-    NSLog(@"%f",offSetY);
-    
     if (offSetY > 0) {
-        
-        NSLog(@"整体移动");
+
         _headerView.h = kHeaderHeight;
         _headerImageView.h = _headerView.h;
         
@@ -161,8 +154,7 @@ static NSString *const reuseId = @"Identifier";
         [self.navigationController setNeedsStatusBarAppearanceUpdate];
         
     }else {
-        
-        NSLog(@"放大");
+
         // 调整HeaderView和HeaderImageView
         _headerImageView.alpha = 1;
         _headerView.y = 0;
@@ -177,7 +169,7 @@ static NSString *const reuseId = @"Identifier";
 
 #pragma mark -- 设置导航栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    NSLog(@"%s",__func__);
+
     return _statusBarStyle;
 }
 
