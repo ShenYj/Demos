@@ -19,13 +19,22 @@
  *
  *  @return RGB颜色
  */
-+ (UIColor *)js_RGBColorWithRed:(CGFloat)red withGreen:(CGFloat)green withBlue:(CGFloat)blue;
++ (instancetype)js_RGBColorWithRed:(CGFloat)red withGreen:(CGFloat)green withBlue:(CGFloat)blue;
 
 /**
  *  生成随机色
  *
  *  @return 返回随机色
  */
-+ (UIColor *)js_randomColor;
++ (instancetype)js_randomColor;
+
+/**
+ *  根据无符号的 32 位整数转换成对应的 RGB 颜色
+ *
+ *  @param hex hex
+ *
+ *  @return UIColor
+ */
++ (instancetype)js_colorWithHex:(u_int32_t)hex;
 
 @end

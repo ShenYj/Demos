@@ -17,7 +17,7 @@
 
 @end
 
-static NSString *const reuseId = @"Identifier";
+static NSString * const reuseId = @"Identifier";
 
 @implementation JSHeaderViewController{
 
