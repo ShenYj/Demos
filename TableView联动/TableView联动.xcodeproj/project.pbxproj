@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBAC32A12A0D013E64FF640A /* libPods-TableView联动.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AD2B869507468F14AEC2AD /* libPods-TableView联动.a */; };
+		F75A013F1D65E9FC00E11A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A013E1D65E9FC00E11A36 /* main.m */; };
+		F75A01421D65E9FC00E11A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01411D65E9FC00E11A36 /* AppDelegate.m */; };
+		F75A01451D65E9FC00E11A36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01441D65E9FC00E11A36 /* ViewController.m */; };
+		F75A01481D65E9FC00E11A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75A01461D65E9FC00E11A36 /* Main.storyboard */; };
+		F75A014A1D65E9FC00E11A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75A01491D65E9FC00E11A36 /* Assets.xcassets */; };
+		F75A014D1D65E9FC00E11A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75A014B1D65E9FC00E11A36 /* LaunchScreen.storyboard */; };
+		F75A01561D65EA2C00E11A36 /* JSMenumTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01551D65EA2C00E11A36 /* JSMenumTableView.m */; };
+		F75A01591D65EA3A00E11A36 /* JSDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01581D65EA3A00E11A36 /* JSDetailTableView.m */; };
+		F75A01691D65EA5400E11A36 /* NSArray+JSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A015C1D65EA5400E11A36 /* NSArray+JSLog.m */; };
+		F75A016A1D65EA5400E11A36 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A015E1D65EA5400E11A36 /* NSString+Emoji.m */; };
+		F75A016B1D65EA5400E11A36 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01601D65EA5400E11A36 /* NSString+Hash.m */; };
+		F75A016C1D65EA5400E11A36 /* NSString+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01621D65EA5400E11A36 /* NSString+JSExtension.m */; };
+		F75A016E1D65EA5400E11A36 /* UIImage+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01661D65EA5400E11A36 /* UIImage+JSExtension.m */; };
+		F75A016F1D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01681D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.m */; };
+		F75A01761D65EC8300E11A36 /* UIColor+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01751D65EC8300E11A36 /* UIColor+JSExtension.m */; };
+		F75A01791D65F62B00E11A36 /* JSSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A01781D65F62B00E11A36 /* JSSectionHeaderView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25AD2B869507468F14AEC2AD /* libPods-TableView联动.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TableView联动.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD66A5207F2D8E8785B8B838 /* Pods-TableView联动.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView联动.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView联动/Pods-TableView联动.debug.xcconfig"; sourceTree = "<group>"; };
+		C3AB3A7CF2458CD9157855F9 /* Pods-TableView联动.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView联动.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView联动/Pods-TableView联动.release.xcconfig"; sourceTree = "<group>"; };
+		F75A013A1D65E9FC00E11A36 /* TableView联动.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView联动.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F75A013E1D65E9FC00E11A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F75A01401D65E9FC00E11A36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F75A01411D65E9FC00E11A36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F75A01431D65E9FC00E11A36 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F75A01441D65E9FC00E11A36 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F75A01471D65E9FC00E11A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F75A01491D65E9FC00E11A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F75A014C1D65E9FC00E11A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F75A014E1D65E9FC00E11A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F75A01541D65EA2C00E11A36 /* JSMenumTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMenumTableView.h; sourceTree = "<group>"; };
+		F75A01551D65EA2C00E11A36 /* JSMenumTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMenumTableView.m; sourceTree = "<group>"; };
+		F75A01571D65EA3A00E11A36 /* JSDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDetailTableView.h; sourceTree = "<group>"; };
+		F75A01581D65EA3A00E11A36 /* JSDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDetailTableView.m; sourceTree = "<group>"; };
+		F75A015B1D65EA5400E11A36 /* NSArray+JSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSLog.h"; sourceTree = "<group>"; };
+		F75A015C1D65EA5400E11A36 /* NSArray+JSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSLog.m"; sourceTree = "<group>"; };
+		F75A015D1D65EA5400E11A36 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		F75A015E1D65EA5400E11A36 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		F75A015F1D65EA5400E11A36 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		F75A01601D65EA5400E11A36 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		F75A01611D65EA5400E11A36 /* NSString+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSExtension.h"; sourceTree = "<group>"; };
+		F75A01621D65EA5400E11A36 /* NSString+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSExtension.m"; sourceTree = "<group>"; };
+		F75A01651D65EA5400E11A36 /* UIImage+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSExtension.h"; sourceTree = "<group>"; };
+		F75A01661D65EA5400E11A36 /* UIImage+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSExtension.m"; sourceTree = "<group>"; };
+		F75A01671D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JSFullScreenPopGesture.h"; sourceTree = "<group>"; };
+		F75A01681D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JSFullScreenPopGesture.m"; sourceTree = "<group>"; };
+		F75A01701D65EAFB00E11A36 /* JSUIkitExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSUIkitExtension.h; sourceTree = "<group>"; };
+		F75A01741D65EC8300E11A36 /* UIColor+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSExtension.h"; sourceTree = "<group>"; };
+		F75A01751D65EC8300E11A36 /* UIColor+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSExtension.m"; sourceTree = "<group>"; };
+		F75A01771D65F62B00E11A36 /* JSSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSectionHeaderView.h; sourceTree = "<group>"; };
+		F75A01781D65F62B00E11A36 /* JSSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSectionHeaderView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F75A01371D65E9FC00E11A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAC32A12A0D013E64FF640A /* libPods-TableView联动.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A075CD5119B740F7A45B794 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD66A5207F2D8E8785B8B838 /* Pods-TableView联动.debug.xcconfig */,
+				C3AB3A7CF2458CD9157855F9 /* Pods-TableView联动.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC36B7F1C070533E484F5B76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25AD2B869507468F14AEC2AD /* libPods-TableView联动.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F75A01311D65E9FC00E11A36 = {
+			isa = PBXGroup;
+			children = (
+				F75A013C1D65E9FC00E11A36 /* TableView联动 */,
+				F75A013B1D65E9FC00E11A36 /* Products */,
+				5A075CD5119B740F7A45B794 /* Pods */,
+				AC36B7F1C070533E484F5B76 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F75A013B1D65E9FC00E11A36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F75A013A1D65E9FC00E11A36 /* TableView联动.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F75A013C1D65E9FC00E11A36 /* TableView联动 */ = {
+			isa = PBXGroup;
+			children = (
+				F75A015A1D65EA5400E11A36 /* UIKit+JSExtension */,
+				F75A01401D65E9FC00E11A36 /* AppDelegate.h */,
+				F75A01411D65E9FC00E11A36 /* AppDelegate.m */,
+				F75A01431D65E9FC00E11A36 /* ViewController.h */,
+				F75A01441D65E9FC00E11A36 /* ViewController.m */,
+				F75A01541D65EA2C00E11A36 /* JSMenumTableView.h */,
+				F75A01551D65EA2C00E11A36 /* JSMenumTableView.m */,
+				F75A01771D65F62B00E11A36 /* JSSectionHeaderView.h */,
+				F75A01781D65F62B00E11A36 /* JSSectionHeaderView.m */,
+				F75A01571D65EA3A00E11A36 /* JSDetailTableView.h */,
+				F75A01581D65EA3A00E11A36 /* JSDetailTableView.m */,
+				F75A01461D65E9FC00E11A36 /* Main.storyboard */,
+				F75A01491D65E9FC00E11A36 /* Assets.xcassets */,
+				F75A014B1D65E9FC00E11A36 /* LaunchScreen.storyboard */,
+				F75A014E1D65E9FC00E11A36 /* Info.plist */,
+				F75A013D1D65E9FC00E11A36 /* Supporting Files */,
+			);
+			path = "TableView联动";
+			sourceTree = "<group>";
+		};
+		F75A013D1D65E9FC00E11A36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F75A013E1D65E9FC00E11A36 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F75A015A1D65EA5400E11A36 /* UIKit+JSExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F75A01701D65EAFB00E11A36 /* JSUIkitExtension.h */,
+				F75A015B1D65EA5400E11A36 /* NSArray+JSLog.h */,
+				F75A015C1D65EA5400E11A36 /* NSArray+JSLog.m */,
+				F75A015D1D65EA5400E11A36 /* NSString+Emoji.h */,
+				F75A015E1D65EA5400E11A36 /* NSString+Emoji.m */,
+				F75A015F1D65EA5400E11A36 /* NSString+Hash.h */,
+				F75A01601D65EA5400E11A36 /* NSString+Hash.m */,
+				F75A01611D65EA5400E11A36 /* NSString+JSExtension.h */,
+				F75A01621D65EA5400E11A36 /* NSString+JSExtension.m */,
+				F75A01741D65EC8300E11A36 /* UIColor+JSExtension.h */,
+				F75A01751D65EC8300E11A36 /* UIColor+JSExtension.m */,
+				F75A01651D65EA5400E11A36 /* UIImage+JSExtension.h */,
+				F75A01661D65EA5400E11A36 /* UIImage+JSExtension.m */,
+				F75A01671D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.h */,
+				F75A01681D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.m */,
+			);
+			path = "UIKit+JSExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F75A01391D65E9FC00E11A36 /* TableView联动 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F75A01511D65E9FC00E11A36 /* Build configuration list for PBXNativeTarget "TableView联动" */;
+			buildPhases = (
+				7247BEB6A339A00488EE8B78 /* [CP] Check Pods Manifest.lock */,
+				F75A01361D65E9FC00E11A36 /* Sources */,
+				F75A01371D65E9FC00E11A36 /* Frameworks */,
+				F75A01381D65E9FC00E11A36 /* Resources */,
+				C24D6A06FEC53227BF9EE0B7 /* [CP] Embed Pods Frameworks */,
+				6FB60D1558113723D3501270 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TableView联动";
+			productName = "TableView联动";
+			productReference = F75A013A1D65E9FC00E11A36 /* TableView联动.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F75A01321D65E9FC00E11A36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "___ShenYJ___";
+				TargetAttributes = {
+					F75A01391D65E9FC00E11A36 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
+				};
+			};
+			buildConfigurationList = F75A01351D65E9FC00E11A36 /* Build configuration list for PBXProject "TableView联动" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F75A01311D65E9FC00E11A36;
+			productRefGroup = F75A013B1D65E9FC00E11A36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F75A01391D65E9FC00E11A36 /* TableView联动 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F75A01381D65E9FC00E11A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F75A014D1D65E9FC00E11A36 /* LaunchScreen.storyboard in Resources */,
+				F75A014A1D65E9FC00E11A36 /* Assets.xcassets in Resources */,
+				F75A01481D65E9FC00E11A36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FB60D1558113723D3501270 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView联动/Pods-TableView联动-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7247BEB6A339A00488EE8B78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C24D6A06FEC53227BF9EE0B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView联动/Pods-TableView联动-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F75A01361D65E9FC00E11A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F75A01691D65EA5400E11A36 /* NSArray+JSLog.m in Sources */,
+				F75A01791D65F62B00E11A36 /* JSSectionHeaderView.m in Sources */,
+				F75A016B1D65EA5400E11A36 /* NSString+Hash.m in Sources */,
+				F75A01451D65E9FC00E11A36 /* ViewController.m in Sources */,
+				F75A016E1D65EA5400E11A36 /* UIImage+JSExtension.m in Sources */,
+				F75A016F1D65EA5400E11A36 /* UINavigationController+JSFullScreenPopGesture.m in Sources */,
+				F75A016A1D65EA5400E11A36 /* NSString+Emoji.m in Sources */,
+				F75A01421D65E9FC00E11A36 /* AppDelegate.m in Sources */,
+				F75A01591D65EA3A00E11A36 /* JSDetailTableView.m in Sources */,
+				F75A013F1D65E9FC00E11A36 /* main.m in Sources */,
+				F75A01561D65EA2C00E11A36 /* JSMenumTableView.m in Sources */,
+				F75A016C1D65EA5400E11A36 /* NSString+JSExtension.m in Sources */,
+				F75A01761D65EC8300E11A36 /* UIColor+JSExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F75A01461D65E9FC00E11A36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F75A01471D65E9FC00E11A36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F75A014B1D65E9FC00E11A36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F75A014C1D65E9FC00E11A36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F75A014F1D65E9FC00E11A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F75A01501D65E9FC00E11A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F75A01521D65E9FC00E11A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD66A5207F2D8E8785B8B838 /* Pods-TableView联动.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TableView联动/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.TableView--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F75A01531D65E9FC00E11A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3AB3A7CF2458CD9157855F9 /* Pods-TableView联动.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TableView联动/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.TableView--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F75A01351D65E9FC00E11A36 /* Build configuration list for PBXProject "TableView联动" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F75A014F1D65E9FC00E11A36 /* Debug */,
+				F75A01501D65E9FC00E11A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F75A01511D65E9FC00E11A36 /* Build configuration list for PBXNativeTarget "TableView联动" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F75A01521D65E9FC00E11A36 /* Debug */,
+				F75A01531D65E9FC00E11A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F75A01321D65E9FC00E11A36 /* Project object */;
+}
