@@ -45,7 +45,17 @@
     }];
     
     // 设置右侧详情视图
+    _detailView = [[JSDetailTableView alloc] initWithStyle:UITableViewStyleGrouped];
     
+    [self addChildViewController:_detailView];
+    [self.view addSubview:_detailView.view];
+    
+    [_detailView.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_menumView.view.mas_right);
+        make.top.right.bottom.mas_equalTo(self.view);
+    }];
+    
+    _detailView.view.backgroundColor = [UIColor js_randomColor];
     
 }
 

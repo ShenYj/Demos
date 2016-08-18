@@ -41,7 +41,7 @@ static NSString * const headerReuseId = @"header";
 - (void)setData:(NSInteger)data{
     _data = data;
     
-    self.textLabel.text = [NSString stringWithFormat:@"%zd",data];
+    self.textLabel.text = [NSString stringWithFormat:@"第%zd组",data];
 }
 
 @end
