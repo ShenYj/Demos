@@ -21,7 +21,6 @@ static NSString * const headerReuseId = @"header";
         headerView = [[JSSectionHeaderView alloc] initWithReuseIdentifier:headerReuseId];
     }
     
-    
     return headerView;
 
 }

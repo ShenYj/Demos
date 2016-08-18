@@ -10,4 +10,6 @@
 
 @interface JSMenumTableView : UITableViewController <UITableViewDataSource,UITabBarDelegate>
 
+@property (nonatomic,copy) void(^ClickMenumCell)(NSIndexPath *indexPath);
+
 @end

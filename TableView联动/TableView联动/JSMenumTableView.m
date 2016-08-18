@@ -45,14 +45,14 @@ static NSString * const reuseID = @"menum";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSNumber numberWithInteger:indexPath.row].stringValue;
+    cell.textLabel.text = [NSString stringWithFormat:@"第%zd组第%@行",indexPath.section,[NSNumber numberWithInteger:indexPath.row].stringValue];
     
     return cell;
 }
@@ -67,4 +67,13 @@ static NSString * const reuseID = @"menum";
     
     return headerView;
 }
+
+// 点击Cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.ClickMenumCell) {
+        self.ClickMenumCell(indexPath);
+    }
+}
+
 @end
