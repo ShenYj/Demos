@@ -10,4 +10,6 @@
 
 @interface JSDetailTableView : UITableViewController
 
+@property (nonatomic,copy) void(^scrollDetailCell)(NSIndexPath *indexPath);
+
 @end

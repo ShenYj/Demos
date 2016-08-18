@@ -71,4 +71,16 @@ static NSString * const reuseID = @"detail";
     return headerView;
 }
 
+// 滚动视图停止时
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    UITableViewCell *firstVisibleCell = self.tableView.visibleCells.firstObject;
+    NSIndexPath *firstCellIndexPath = [self.tableView indexPathForCell:firstVisibleCell];
+    
+    if (self.scrollDetailCell) {
+        self.scrollDetailCell(firstCellIndexPath);
+    }
+}
+
 @end

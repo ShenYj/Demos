@@ -55,7 +55,7 @@
         make.top.right.bottom.mas_equalTo(self.view);
     }];
     
-    // 点击MenumViewCell回调
+    // 点击MenumView回调
     __weak JSDetailTableView *weakDetailView = _detailView;
     [_menumView setClickMenumCell:^(NSIndexPath *indexPath) {
         
@@ -65,6 +65,16 @@
             [strongkDetailView.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.section] animated:YES scrollPosition:UITableViewScrollPositionTop];
         }
         
+    }];
+    
+    // 滚动DetailView回调
+    __weak JSMenumTableView *weakMenumView = _menumView;
+    [_detailView setScrollDetailCell:^(NSIndexPath *indexPath) {
+        
+        if (weakMenumView) {
+            __strong JSMenumTableView *strongMenumView = weakMenumView;
+            [strongMenumView.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
     }];
     
 }
