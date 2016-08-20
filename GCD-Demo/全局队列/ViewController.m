@@ -67,7 +67,6 @@
 - (void)globalQueueSync{
     
     // 1.获取全局队列
-    
     /*
        参数说明:
            参数1: <#long identifier#>     --> 优先级
