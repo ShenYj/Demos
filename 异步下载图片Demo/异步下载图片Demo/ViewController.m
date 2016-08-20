@@ -25,9 +25,17 @@
     [self.view addSubview:self.imageView];
     
     // 下载图片
-    [self downLoadImage];
+//    [self downLoadImage];  主线程
+    [self downLoadImageBySubThread];// 子线程下载设置图片
 }
 
+// 子线程下载
+- (void)downLoadImageBySubThread{
+    
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://m.818today.com/imgsy/image/2016/0215/6359115615139200378199199.jpg"]];
+    UIImage *image = [UIImage imageWithData:data];
+    self.imageView.image = image;
+}
 
 // 主线程下载
 - (void)downLoadImage{
