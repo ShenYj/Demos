@@ -43,6 +43,18 @@
 		F7203BCD1D687EF400ABDD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203BCB1D687EF400ABDD77 /* Main.storyboard */; };
 		F7203BCF1D687EF400ABDD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7203BCE1D687EF400ABDD77 /* Assets.xcassets */; };
 		F7203BD21D687EF400ABDD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203BD01D687EF400ABDD77 /* LaunchScreen.storyboard */; };
+		F7203BDF1D6946F900ABDD77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BDE1D6946F900ABDD77 /* main.m */; };
+		F7203BE21D6946F900ABDD77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BE11D6946F900ABDD77 /* AppDelegate.m */; };
+		F7203BE51D6946F900ABDD77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BE41D6946F900ABDD77 /* ViewController.m */; };
+		F7203BE81D6946F900ABDD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203BE61D6946F900ABDD77 /* Main.storyboard */; };
+		F7203BEA1D6946F900ABDD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7203BE91D6946F900ABDD77 /* Assets.xcassets */; };
+		F7203BED1D6946F900ABDD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203BEB1D6946F900ABDD77 /* LaunchScreen.storyboard */; };
+		F7203BFA1D69485E00ABDD77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BF91D69485E00ABDD77 /* main.m */; };
+		F7203BFD1D69485E00ABDD77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BFC1D69485E00ABDD77 /* AppDelegate.m */; };
+		F7203C001D69485E00ABDD77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7203BFF1D69485E00ABDD77 /* ViewController.m */; };
+		F7203C031D69485E00ABDD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203C011D69485E00ABDD77 /* Main.storyboard */; };
+		F7203C051D69485E00ABDD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7203C041D69485E00ABDD77 /* Assets.xcassets */; };
+		F7203C081D69485E00ABDD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7203C061D69485E00ABDD77 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +118,26 @@
 		F7203BCE1D687EF400ABDD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7203BD11D687EF400ABDD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7203BD31D687EF400ABDD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7203BDB1D6946F900ABDD77 /* 同步任务.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "同步任务.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7203BDE1D6946F900ABDD77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7203BE01D6946F900ABDD77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7203BE11D6946F900ABDD77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7203BE31D6946F900ABDD77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7203BE41D6946F900ABDD77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7203BE71D6946F900ABDD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7203BE91D6946F900ABDD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7203BEC1D6946F900ABDD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7203BEE1D6946F900ABDD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7203BF61D69485E00ABDD77 /* 线程间通讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "线程间通讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7203BF91D69485E00ABDD77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7203BFB1D69485E00ABDD77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7203BFC1D69485E00ABDD77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7203BFE1D69485E00ABDD77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7203BFF1D69485E00ABDD77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7203C021D69485E00ABDD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7203C041D69485E00ABDD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7203C071D69485E00ABDD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7203C091D69485E00ABDD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +183,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7203BD81D6946F900ABDD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7203BF31D69485E00ABDD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,6 +209,8 @@
 				F7203B8B1D68436D00ABDD77 /* 并发队列 */,
 				F7203BA61D684BA700ABDD77 /* 全局队列 */,
 				F7203BC11D687EF400ABDD77 /* 主队列 */,
+				F7203BDC1D6946F900ABDD77 /* 同步任务 */,
+				F7203BF71D69485E00ABDD77 /* 线程间通讯 */,
 				F7203B371D68368800ABDD77 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,6 +224,8 @@
 				F7203B8A1D68436D00ABDD77 /* 并发队列.app */,
 				F7203BA51D684BA700ABDD77 /* 全局队列.app */,
 				F7203BC01D687EF400ABDD77 /* 主队列.app */,
+				F7203BDB1D6946F900ABDD77 /* 同步任务.app */,
+				F7203BF61D69485E00ABDD77 /* 线程间通讯.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,6 +374,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F7203BDC1D6946F900ABDD77 /* 同步任务 */ = {
+			isa = PBXGroup;
+			children = (
+				F7203BE01D6946F900ABDD77 /* AppDelegate.h */,
+				F7203BE11D6946F900ABDD77 /* AppDelegate.m */,
+				F7203BE31D6946F900ABDD77 /* ViewController.h */,
+				F7203BE41D6946F900ABDD77 /* ViewController.m */,
+				F7203BE61D6946F900ABDD77 /* Main.storyboard */,
+				F7203BE91D6946F900ABDD77 /* Assets.xcassets */,
+				F7203BEB1D6946F900ABDD77 /* LaunchScreen.storyboard */,
+				F7203BEE1D6946F900ABDD77 /* Info.plist */,
+				F7203BDD1D6946F900ABDD77 /* Supporting Files */,
+			);
+			path = "同步任务";
+			sourceTree = "<group>";
+		};
+		F7203BDD1D6946F900ABDD77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7203BDE1D6946F900ABDD77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7203BF71D69485E00ABDD77 /* 线程间通讯 */ = {
+			isa = PBXGroup;
+			children = (
+				F7203BFB1D69485E00ABDD77 /* AppDelegate.h */,
+				F7203BFC1D69485E00ABDD77 /* AppDelegate.m */,
+				F7203BFE1D69485E00ABDD77 /* ViewController.h */,
+				F7203BFF1D69485E00ABDD77 /* ViewController.m */,
+				F7203C011D69485E00ABDD77 /* Main.storyboard */,
+				F7203C041D69485E00ABDD77 /* Assets.xcassets */,
+				F7203C061D69485E00ABDD77 /* LaunchScreen.storyboard */,
+				F7203C091D69485E00ABDD77 /* Info.plist */,
+				F7203BF81D69485E00ABDD77 /* Supporting Files */,
+			);
+			path = "线程间通讯";
+			sourceTree = "<group>";
+		};
+		F7203BF81D69485E00ABDD77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7203BF91D69485E00ABDD77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +527,40 @@
 			productReference = F7203BC01D687EF400ABDD77 /* 主队列.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7203BDA1D6946F900ABDD77 /* 同步任务 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7203BEF1D6946F900ABDD77 /* Build configuration list for PBXNativeTarget "同步任务" */;
+			buildPhases = (
+				F7203BD71D6946F900ABDD77 /* Sources */,
+				F7203BD81D6946F900ABDD77 /* Frameworks */,
+				F7203BD91D6946F900ABDD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "同步任务";
+			productName = "同步任务";
+			productReference = F7203BDB1D6946F900ABDD77 /* 同步任务.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7203BF51D69485E00ABDD77 /* 线程间通讯 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7203C0A1D69485E00ABDD77 /* Build configuration list for PBXNativeTarget "线程间通讯" */;
+			buildPhases = (
+				F7203BF21D69485E00ABDD77 /* Sources */,
+				F7203BF31D69485E00ABDD77 /* Frameworks */,
+				F7203BF41D69485E00ABDD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "线程间通讯";
+			productName = "线程间通讯";
+			productReference = F7203BF61D69485E00ABDD77 /* 线程间通讯.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -462,6 +594,14 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KS5QTFAS57;
 					};
+					F7203BDA1D6946F900ABDD77 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
+					F7203BF51D69485E00ABDD77 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
 				};
 			};
 			buildConfigurationList = F7203B311D68368800ABDD77 /* Build configuration list for PBXProject "GCD-Demo" */;
@@ -483,6 +623,8 @@
 				F7203B891D68436D00ABDD77 /* 并发队列 */,
 				F7203BA41D684BA700ABDD77 /* 全局队列 */,
 				F7203BBF1D687EF400ABDD77 /* 主队列 */,
+				F7203BDA1D6946F900ABDD77 /* 同步任务 */,
+				F7203BF51D69485E00ABDD77 /* 线程间通讯 */,
 			);
 		};
 /* End PBXProject section */
@@ -548,6 +690,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7203BD91D6946F900ABDD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7203BED1D6946F900ABDD77 /* LaunchScreen.storyboard in Resources */,
+				F7203BEA1D6946F900ABDD77 /* Assets.xcassets in Resources */,
+				F7203BE81D6946F900ABDD77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7203BF41D69485E00ABDD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7203C081D69485E00ABDD77 /* LaunchScreen.storyboard in Resources */,
+				F7203C051D69485E00ABDD77 /* Assets.xcassets in Resources */,
+				F7203C031D69485E00ABDD77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -608,6 +770,26 @@
 				F7203BCA1D687EF400ABDD77 /* ViewController.m in Sources */,
 				F7203BC71D687EF400ABDD77 /* AppDelegate.m in Sources */,
 				F7203BC41D687EF400ABDD77 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7203BD71D6946F900ABDD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7203BE51D6946F900ABDD77 /* ViewController.m in Sources */,
+				F7203BE21D6946F900ABDD77 /* AppDelegate.m in Sources */,
+				F7203BDF1D6946F900ABDD77 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7203BF21D69485E00ABDD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7203C001D69485E00ABDD77 /* ViewController.m in Sources */,
+				F7203BFD1D69485E00ABDD77 /* AppDelegate.m in Sources */,
+				F7203BFA1D69485E00ABDD77 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +888,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7203BD11D687EF400ABDD77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F7203BE61D6946F900ABDD77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7203BE71D6946F900ABDD77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7203BEB1D6946F900ABDD77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7203BEC1D6946F900ABDD77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F7203C011D69485E00ABDD77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7203C021D69485E00ABDD77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7203C061D69485E00ABDD77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7203C071D69485E00ABDD77 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -929,6 +1143,50 @@
 			};
 			name = Release;
 		};
+		F7203BF01D6946F900ABDD77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "同步任务/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7203BF11D6946F900ABDD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "同步任务/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7203C0B1D69485E00ABDD77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "线程间通讯/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7203C0C1D69485E00ABDD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "线程间通讯/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -986,6 +1244,22 @@
 			buildConfigurations = (
 				F7203BD51D687EF400ABDD77 /* Debug */,
 				F7203BD61D687EF400ABDD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7203BEF1D6946F900ABDD77 /* Build configuration list for PBXNativeTarget "同步任务" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7203BF01D6946F900ABDD77 /* Debug */,
+				F7203BF11D6946F900ABDD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7203C0A1D69485E00ABDD77 /* Build configuration list for PBXNativeTarget "线程间通讯" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7203C0B1D69485E00ABDD77 /* Debug */,
+				F7203C0C1D69485E00ABDD77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
