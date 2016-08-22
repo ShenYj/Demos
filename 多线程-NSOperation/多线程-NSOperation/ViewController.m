@@ -14,16 +14,6 @@
 
 @implementation ViewController
 
-/**
- *  NSOperation: 抽象类
- *  1.不能直接使用
- *  2.约束自行具有共同的属性
- 
- *  子类:
- *  1.NSInvocationOperation
- *  2.NSBlockOperation
- *  3.自定义Operation
- */
 
 
 @end

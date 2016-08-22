@@ -19,6 +19,7 @@
      [self test1];
     // [self test2];
 }
+
 // 开辟新线程
 - (void)test1{
     
