@@ -61,6 +61,13 @@
 		F73CEA061D6AD139004157B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA041D6AD139004157B7 /* Main.storyboard */; };
 		F73CEA081D6AD139004157B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA071D6AD139004157B7 /* Assets.xcassets */; };
 		F73CEA0B1D6AD139004157B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA091D6AD139004157B7 /* LaunchScreen.storyboard */; };
+		F73CEA181D6AE0C3004157B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CEA171D6AE0C3004157B7 /* main.m */; };
+		F73CEA1B1D6AE0C3004157B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CEA1A1D6AE0C3004157B7 /* AppDelegate.m */; };
+		F73CEA1E1D6AE0C3004157B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CEA1D1D6AE0C3004157B7 /* ViewController.m */; };
+		F73CEA211D6AE0C3004157B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA1F1D6AE0C3004157B7 /* Main.storyboard */; };
+		F73CEA231D6AE0C3004157B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA221D6AE0C3004157B7 /* Assets.xcassets */; };
+		F73CEA261D6AE0C3004157B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73CEA241D6AE0C3004157B7 /* LaunchScreen.storyboard */; };
+		F73CEA2D1D6AE235004157B7 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CEA2C1D6AE235004157B7 /* DownloadOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +161,18 @@
 		F73CEA071D6AD139004157B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73CEA0A1D6AD139004157B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F73CEA0C1D6AD139004157B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F73CEA141D6AE0C3004157B7 /* 自定义Operation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义Operation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73CEA171D6AE0C3004157B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F73CEA191D6AE0C3004157B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F73CEA1A1D6AE0C3004157B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F73CEA1C1D6AE0C3004157B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F73CEA1D1D6AE0C3004157B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F73CEA201D6AE0C3004157B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F73CEA221D6AE0C3004157B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F73CEA251D6AE0C3004157B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F73CEA271D6AE0C3004157B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F73CEA2B1D6AE235004157B7 /* DownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadOperation.h; sourceTree = "<group>"; };
+		F73CEA2C1D6AE235004157B7 /* DownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +239,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F73CEA111D6AE0C3004157B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -235,6 +261,7 @@
 				F73CE9C41D6ACAFE004157B7 /* 设置优先级 */,
 				F73CE9DF1D6ACFAD004157B7 /* 监听操作完成 */,
 				F73CE9FA1D6AD139004157B7 /* 设置依赖关系 */,
+				F73CEA151D6AE0C3004157B7 /* 自定义Operation */,
 				F73CE8FC1D6A8757004157B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -251,6 +278,7 @@
 				F73CE9C31D6ACAFE004157B7 /* 设置优先级.app */,
 				F73CE9DE1D6ACFAD004157B7 /* 监听操作完成.app */,
 				F73CE9F91D6AD139004157B7 /* 设置依赖关系.app */,
+				F73CEA141D6AE0C3004157B7 /* 自定义Operation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -471,6 +499,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F73CEA151D6AE0C3004157B7 /* 自定义Operation */ = {
+			isa = PBXGroup;
+			children = (
+				F73CEA191D6AE0C3004157B7 /* AppDelegate.h */,
+				F73CEA1A1D6AE0C3004157B7 /* AppDelegate.m */,
+				F73CEA1C1D6AE0C3004157B7 /* ViewController.h */,
+				F73CEA1D1D6AE0C3004157B7 /* ViewController.m */,
+				F73CEA2B1D6AE235004157B7 /* DownloadOperation.h */,
+				F73CEA2C1D6AE235004157B7 /* DownloadOperation.m */,
+				F73CEA1F1D6AE0C3004157B7 /* Main.storyboard */,
+				F73CEA221D6AE0C3004157B7 /* Assets.xcassets */,
+				F73CEA241D6AE0C3004157B7 /* LaunchScreen.storyboard */,
+				F73CEA271D6AE0C3004157B7 /* Info.plist */,
+				F73CEA161D6AE0C3004157B7 /* Supporting Files */,
+			);
+			path = "自定义Operation";
+			sourceTree = "<group>";
+		};
+		F73CEA161D6AE0C3004157B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F73CEA171D6AE0C3004157B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -627,6 +681,23 @@
 			productReference = F73CE9F91D6AD139004157B7 /* 设置依赖关系.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F73CEA131D6AE0C3004157B7 /* 自定义Operation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F73CEA281D6AE0C3004157B7 /* Build configuration list for PBXNativeTarget "自定义Operation" */;
+			buildPhases = (
+				F73CEA101D6AE0C3004157B7 /* Sources */,
+				F73CEA111D6AE0C3004157B7 /* Frameworks */,
+				F73CEA121D6AE0C3004157B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "自定义Operation";
+			productName = "自定义Operation";
+			productReference = F73CEA141D6AE0C3004157B7 /* 自定义Operation.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -672,6 +743,10 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KS5QTFAS57;
 					};
+					F73CEA131D6AE0C3004157B7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
 				};
 			};
 			buildConfigurationList = F73CE8F61D6A8757004157B7 /* Build configuration list for PBXProject "多线程-NSOperation" */;
@@ -696,6 +771,7 @@
 				F73CE9C21D6ACAFE004157B7 /* 设置优先级 */,
 				F73CE9DD1D6ACFAD004157B7 /* 监听操作完成 */,
 				F73CE9F81D6AD139004157B7 /* 设置依赖关系 */,
+				F73CEA131D6AE0C3004157B7 /* 自定义Operation */,
 			);
 		};
 /* End PBXProject section */
@@ -791,6 +867,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F73CEA121D6AE0C3004157B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73CEA261D6AE0C3004157B7 /* LaunchScreen.storyboard in Resources */,
+				F73CEA231D6AE0C3004157B7 /* Assets.xcassets in Resources */,
+				F73CEA211D6AE0C3004157B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -881,6 +967,17 @@
 				F73CEA031D6AD139004157B7 /* ViewController.m in Sources */,
 				F73CEA001D6AD139004157B7 /* AppDelegate.m in Sources */,
 				F73CE9FD1D6AD139004157B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F73CEA101D6AE0C3004157B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73CEA1E1D6AE0C3004157B7 /* ViewController.m in Sources */,
+				F73CEA1B1D6AE0C3004157B7 /* AppDelegate.m in Sources */,
+				F73CEA181D6AE0C3004157B7 /* main.m in Sources */,
+				F73CEA2D1D6AE235004157B7 /* DownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1124,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F73CEA0A1D6AD139004157B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F73CEA1F1D6AE0C3004157B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F73CEA201D6AE0C3004157B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F73CEA241D6AE0C3004157B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F73CEA251D6AE0C3004157B7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1316,6 +1429,28 @@
 			};
 			name = Release;
 		};
+		F73CEA291D6AE0C3004157B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "自定义Operation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.---Operation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F73CEA2A1D6AE0C3004157B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "自定义Operation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.---Operation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1403,6 +1538,14 @@
 			buildConfigurations = (
 				F73CEA0E1D6AD139004157B7 /* Debug */,
 				F73CEA0F1D6AD139004157B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F73CEA281D6AE0C3004157B7 /* Build configuration list for PBXNativeTarget "自定义Operation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F73CEA291D6AE0C3004157B7 /* Debug */,
+				F73CEA2A1D6AE0C3004157B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
