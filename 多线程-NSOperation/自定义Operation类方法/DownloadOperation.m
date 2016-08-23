@@ -8,13 +8,11 @@
 
 #import "DownloadOperation.h"
 
+
 @implementation DownloadOperation
 
 - (void)main{
     
-    //@autoreleasepool {
-    // 更新后不再需要手动创建,系统内部做过优化
-    //}
     NSAssert(self.completeHandler != nil, @"completeHandler == nil");
     
     // 下载图片
@@ -23,11 +21,20 @@
     
     // 返回主线程刷新UI
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-       
+        
         self.completeHandler(image);
     }];
 }
 
+// 自定义类方法下载图片
 
++ (instancetype)downloadImageUrlString:(NSString *)urlString completeHandler:(void (^)(UIImage *))completeHandler{
+    
+    DownloadOperation *operation = [[DownloadOperation alloc] init];
+    operation.urlString = urlString;
+    operation.completeHandler = completeHandler;
+    return operation;
+    
+}
 
 @end

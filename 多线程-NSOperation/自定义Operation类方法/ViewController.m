@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  自定义Operation
+//  自定义Operation类方法
 //
 //  Created by ShenYj on 16/8/22.
 //  Copyright © 2016年 ___ShenYJ___. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "DownloadOperation.h"
-
 
 @interface ViewController ()
 
@@ -22,19 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     _queue = [[NSOperationQueue alloc] init];
     _imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _imageView.contentMode = UIViewContentModeCenter;
     [self.view addSubview:_imageView];
     
     // 1.创建自定义的Operation对象 (下载图片操作)
-    DownloadOperation *operation = [[DownloadOperation alloc] init];
-    
-    operation.urlString = @"http://t1.mmonly.cc/uploads/tu/201607/tt/1alqhs1gwxo.jpg";
-    [operation setCompleteHandler:^(UIImage *img) {
+    DownloadOperation *operation = [DownloadOperation downloadImageUrlString:@"http://t1.mmonly.cc/uploads/tu/201607/tt/1alqhs1gwxo.jpg" completeHandler:^(UIImage *img) {
         
-        // 更新UI
+        // 刷新UI
         _imageView.image = img;
     }];
     
@@ -42,6 +38,5 @@
     [_queue addOperation:operation];
     
 }
-
 
 @end

@@ -16,4 +16,7 @@
 // 完成回调
 @property (nonatomic,copy) void(^completeHandler)(UIImage *img);
 
+// 下载图片类方法
++(instancetype)downloadImageUrlString:(NSString *)urlString completeHandler:(void(^)(UIImage *img))completeHandler;
+
 @end

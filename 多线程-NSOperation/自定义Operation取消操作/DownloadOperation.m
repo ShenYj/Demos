@@ -8,26 +8,39 @@
 
 #import "DownloadOperation.h"
 
+
 @implementation DownloadOperation
 
 - (void)main{
     
-    //@autoreleasepool {
-    // 更新后不再需要手动创建,系统内部做过优化
-    //}
     NSAssert(self.completeHandler != nil, @"completeHandler == nil");
     
     // 下载图片
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlString]];
     UIImage *image = [UIImage imageWithData:data];
     
+    // 取消操作
+    if (self.isCancelled) {
+        NSLog(@"取消操作");
+        return;
+    }
+    
     // 返回主线程刷新UI
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-       
+        
         self.completeHandler(image);
     }];
 }
 
+// 自定义类方法下载图片
 
++ (instancetype)downloadImageUrlString:(NSString *)urlString completeHandler:(void (^)(UIImage *))completeHandler{
+    
+    DownloadOperation *operation = [[DownloadOperation alloc] init];
+    operation.urlString = urlString;
+    operation.completeHandler = completeHandler;
+    return operation;
+    
+}
 
 @end
