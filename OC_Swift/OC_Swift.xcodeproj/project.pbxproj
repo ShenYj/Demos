@@ -13,6 +13,8 @@
 		F7079FBC1D8ED1430018FDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7079FBB1D8ED1430018FDA4 /* Assets.xcassets */; };
 		F7079FBF1D8ED1430018FDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7079FBD1D8ED1430018FDA4 /* LaunchScreen.storyboard */; };
 		F7079FC91D8ED37D0018FDA4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F7079FC81D8ED37D0018FDA4 /* Person.m */; };
+		F7079FCC1D8EDC790018FDA4 /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7079FCB1D8EDC790018FDA4 /* JSViewController.m */; };
+		F7079FCE1D8EDD990018FDA4 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7079FCD1D8EDD990018FDA4 /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		F7079FC61D8ED37D0018FDA4 /* OC_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OC_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7079FC71D8ED37D0018FDA4 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		F7079FC81D8ED37D0018FDA4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F7079FCA1D8EDC790018FDA4 /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
+		F7079FCB1D8EDC790018FDA4 /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		F7079FCD1D8EDD990018FDA4 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,9 @@
 			children = (
 				F7079FB41D8ED1430018FDA4 /* AppDelegate.swift */,
 				F7079FB61D8ED1430018FDA4 /* ViewController.swift */,
+				F7079FCA1D8EDC790018FDA4 /* JSViewController.h */,
+				F7079FCB1D8EDC790018FDA4 /* JSViewController.m */,
+				F7079FCD1D8EDD990018FDA4 /* Student.swift */,
 				F7079FC71D8ED37D0018FDA4 /* Person.h */,
 				F7079FC81D8ED37D0018FDA4 /* Person.m */,
 				F7079FC61D8ED37D0018FDA4 /* OC_Swift-Bridging-Header.h */,
@@ -146,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7079FC91D8ED37D0018FDA4 /* Person.m in Sources */,
+				F7079FCC1D8EDC790018FDA4 /* JSViewController.m in Sources */,
 				F7079FB71D8ED1430018FDA4 /* ViewController.swift in Sources */,
+				F7079FCE1D8EDD990018FDA4 /* Student.swift in Sources */,
 				F7079FB51D8ED1430018FDA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
