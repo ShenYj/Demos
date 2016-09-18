@@ -62,11 +62,11 @@
 				F7079FB61D8ED1430018FDA4 /* ViewController.swift */,
 				F7079FC71D8ED37D0018FDA4 /* Person.h */,
 				F7079FC81D8ED37D0018FDA4 /* Person.m */,
+				F7079FC61D8ED37D0018FDA4 /* OC_Swift-Bridging-Header.h */,
 				F7079FB81D8ED1430018FDA4 /* Main.storyboard */,
 				F7079FBB1D8ED1430018FDA4 /* Assets.xcassets */,
 				F7079FBD1D8ED1430018FDA4 /* LaunchScreen.storyboard */,
 				F7079FC01D8ED1430018FDA4 /* Info.plist */,
-				F7079FC61D8ED37D0018FDA4 /* OC_Swift-Bridging-Header.h */,
 			);
 			path = OC_Swift;
 			sourceTree = "<group>";

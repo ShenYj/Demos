@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    lazy var person: Person = Person()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +19,6 @@ class ViewController: UIViewController {
         
         
     }
-    
     
 
     override func didReceiveMemoryWarning() {
