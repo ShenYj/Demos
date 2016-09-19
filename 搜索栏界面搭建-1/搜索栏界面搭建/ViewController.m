@@ -28,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+
+    
     _data = @[
               @{@"category":@"Chocolate", @"name":@"Chocolate Bar1"},
               @{@"category":@"Chocolate", @"name":@"Chocolate Chip1"},
@@ -76,25 +79,27 @@
         make.height.mas_equalTo(200);
     }];
     
-    [self addChildViewController:self.searchController];
-    [self.headerView addSubview:self.searchController.searchBar];
-    [self.searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.headerView).mas_offset(5);
-        make.right.mas_equalTo(self.headerView).mas_offset(-60);
-        make.height.mas_equalTo(44);
-        make.bottom.mas_equalTo(self.headerView);
-    }];
+    //[self addChildViewController:self.searchController];
+//    [self.headerView addSubview:self.searchController.searchBar];
+//    [self.searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(self.headerView).mas_offset(5);
+//        make.right.mas_equalTo(self.headerView).mas_offset(-60);
+//        make.height.mas_equalTo(44);
+//        make.bottom.mas_equalTo(self.headerView);
+//    }];
+
+    
     
 }
 
 - (void)prepareView {
-    
+    //mTableView.contentOffset = CGPointMake(0, CGRectGetHeight(resultSearchController.searchBar.frame))
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton:)];
     
     self.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(200, 0, 0, 0);
-    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
 }
 
 #pragma mark - target 
@@ -128,11 +133,15 @@
         // 默认情况下,UISearchController会暗化前一个视图
         _searchController.dimsBackgroundDuringPresentation = NO;
         //保证在UISearchController在激活状态下用户push到下一个view controller之后search bar不会仍留在界面上。
-        _searchController.definesPresentationContext = YES;
+        //_searchController.definesPresentationContext = YES;
         // 是否隐藏导航栏
         _searchController.hidesNavigationBarDuringPresentation = NO;
         // 设置占位文字
         _searchController.searchBar.placeholder = @"Search here...";
+        
+        
+//        _searchController.searchBar.selectedScopeButtonIndex = 1;
+//        _searchController.searchBar.scopeButtonTitles = @[@"1",@"2"];
     }
     return _searchController;
 }
@@ -166,6 +175,7 @@
 #pragma mark - UISearchBarDelegate
 // return NO to not become first responder
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    NSLog(@"%s",__func__);
     return YES;
 }
 // called when text starts editing
@@ -174,7 +184,7 @@
 }
 // return NO to not resign first responder
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
-    
+    NSLog(@"%s",__func__);
     return YES;
 }
 // called when text ends editing
@@ -186,7 +196,8 @@
     NSLog(@"%s",__func__);
 }
 // called before text changes
-- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0){
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    NSLog(@"%s",__func__);
     return YES;
 }
 // called when keyboard search button pressed

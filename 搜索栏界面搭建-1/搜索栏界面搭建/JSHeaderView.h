@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSHeaderView : UIView 
+@interface JSHeaderView : UIView
+
+
 
 @end

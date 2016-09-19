@@ -14,6 +14,7 @@
     UILabel     *_label;
     UILabel     *_detailLabel;
     UIButton    *_button;
+    NSArray     *_data;
 }
 
 - (instancetype)init {
@@ -48,28 +49,30 @@
     _detailLabel.font = [UIFont systemFontOfSize:15];
     _detailLabel.textColor = [UIColor purpleColor];
     _detailLabel.numberOfLines = 0;
-    _detailLabel.text = @"根视图控制器:UITableViewController\n顶部视图:放置了一个UIView作为容器\n内部添加自定义的HeaderView和UISearchcontroller.searchBar\n";
+    _detailLabel.text = @"这是一个TableViewController\n通过设置了TableView向下偏移,在导航栏处插入了此顶部视图\n";
     [self addSubview:_detailLabel];
     [_detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(_label.mas_bottom);
         make.left.right.mas_equalTo(self);
-        make.bottom.mas_equalTo(self).mas_offset(-44);
+//        make.bottom.mas_equalTo(self).mas_offset(-44);
+        make.bottom.mas_equalTo(self).mas_offset(-5);
     }];
     
-    _button = [[UIButton alloc] init];
-    _button.titleLabel.font = [UIFont systemFontOfSize:16];
-    [_button setTitle:@"搜索" forState:UIControlStateNormal];
-    [_button setBackgroundColor:[UIColor blueColor]];
-    [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_button addTarget:self action:@selector(clickSearchButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self addSubview:_button];
-    [_button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self).mas_offset(-8);
-        make.top.mas_equalTo(_detailLabel.mas_bottom).mas_offset(8);
-        make.bottom.mas_equalTo(self).mas_offset(-8);
-        make.width.mas_equalTo(46);
-    }];
+//    _button = [[UIButton alloc] init];
+//    _button.titleLabel.font = [UIFont systemFontOfSize:16];
+//    [_button setTitle:@"搜索" forState:UIControlStateNormal];
+//    [_button setBackgroundColor:[UIColor magentaColor]];
+//    [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [_button addTarget:self action:@selector(clickSearchButton:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self addSubview:_button];
+//    [_button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.mas_equalTo(self).mas_offset(-8);
+//        make.top.mas_equalTo(_detailLabel.mas_bottom).mas_offset(8);
+//        make.bottom.mas_equalTo(self).mas_offset(-8);
+//        make.width.mas_equalTo(46);
+//    }];
+//    
     
 }
 
