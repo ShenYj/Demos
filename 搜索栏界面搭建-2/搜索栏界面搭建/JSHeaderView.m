@@ -8,13 +8,18 @@
 
 #import "JSHeaderView.h"
 #import "JSTableViewController.h"
+#import "JSSearchBar.h"
 #import "Masonry.h"
+
+
+static NSInteger const kMaxNumber = 4;
 
 @implementation JSHeaderView{  
     
     UILabel     *_label;
     UILabel     *_detailLabel;
     UIButton    *_button;
+    UISearchBar *_searchBar;
 }
 
 - (instancetype)init {
@@ -38,7 +43,7 @@
     _label.text = @"搜索视图Demo";
     [self addSubview:_label];
     [_label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self).mas_offset(10);
+        make.top.mas_equalTo(self).mas_offset(20);
         make.left.right.mas_equalTo(self);
         make.height.mas_equalTo(30);
     }];
@@ -72,12 +77,38 @@
         make.width.mas_equalTo(46);
     }];
     
+    _searchBar = [[UISearchBar alloc] init];
+    _searchBar.placeholder = @"请输入手机四位尾号";
+    UIEdgeInsets inset = UIEdgeInsetsMake(50, 0, 0, 0);;
+    _searchBar.delegate = self;
+    [self addSubview:_searchBar];
+    [_searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_detailLabel.mas_bottom).mas_offset(5);
+        make.left.mas_equalTo(self).mas_offset(5);
+        make.right.mas_equalTo(_button.mas_left).mas_offset(-5);
+        make.bottom.mas_equalTo(self).mas_offset(-5);
+    }];
+    
+    
+    
 }
 
 
 - (void)clickSearchButton:(UIButton *)sender {
     
     NSLog(@"%s",__func__);
+}
+
+
+#pragma mark - UISearchBarDelegate
+
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if (range.location >= kMaxNumber) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 

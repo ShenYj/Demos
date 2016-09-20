@@ -31,12 +31,12 @@
 }
 
 - (void)prepareView {
-    
+        
     [self.view addSubview:self.headerView];
     [self addChildViewController:self.tableViewController];
     [self.view addSubview:self.tableViewController.tableView];
-    [self addChildViewController:self.searchController];
-    [self.view addSubview:self.searchController.searchBar];
+//    [self addChildViewController:self.searchController];
+//    [self.view addSubview:self.searchController.searchBar];
     
     
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,11 +49,11 @@
         make.bottom.left.right.mas_equalTo(self.view);
     }];
     
-    [self.searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.mas_equalTo(self.headerView);
-        make.right.mas_equalTo(self.headerView).mas_offset(-60);
-        make.height.mas_equalTo(44);
-    }];
+//    [self.searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.bottom.mas_equalTo(self.headerView);
+//        make.right.mas_equalTo(self.headerView).mas_offset(-60);
+//        make.height.mas_equalTo(44);
+//    }];
     
     
 }
@@ -104,11 +104,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - UISearchBarDelegate
 // return NO to not become first responder
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     
-    [searchBar becomeFirstResponder];
     return YES;
 }
 // called when text starts editing

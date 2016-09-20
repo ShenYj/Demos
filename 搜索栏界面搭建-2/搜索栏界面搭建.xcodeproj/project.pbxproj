@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6333494AF67264CA423E7670 /* libPods-搜索栏界面搭建.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 417216F62510FFEDAA6B0CA9 /* libPods-搜索栏界面搭建.a */; };
+		F71C53151D90CF1F00A711B3 /* JSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F71C53141D90CF1F00A711B3 /* JSSearchBar.m */; };
 		F768EAEB1D8F8D4C004817F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EAEA1D8F8D4C004817F0 /* main.m */; };
 		F768EAEE1D8F8D4C004817F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EAED1D8F8D4C004817F0 /* AppDelegate.m */; };
 		F768EAF11D8F8D4C004817F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EAF01D8F8D4C004817F0 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 		417216F62510FFEDAA6B0CA9 /* libPods-搜索栏界面搭建.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-搜索栏界面搭建.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457195775E6A932F3C4AEC1 /* Pods-搜索栏界面搭建.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-搜索栏界面搭建.debug.xcconfig"; path = "Pods/Target Support Files/Pods-搜索栏界面搭建/Pods-搜索栏界面搭建.debug.xcconfig"; sourceTree = "<group>"; };
 		A5BA838765F363EA40F10F0B /* Pods-搜索栏界面搭建.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-搜索栏界面搭建.release.xcconfig"; path = "Pods/Target Support Files/Pods-搜索栏界面搭建/Pods-搜索栏界面搭建.release.xcconfig"; sourceTree = "<group>"; };
+		F71C53131D90CF1F00A711B3 /* JSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSearchBar.h; sourceTree = "<group>"; };
+		F71C53141D90CF1F00A711B3 /* JSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSearchBar.m; sourceTree = "<group>"; };
 		F768EAE61D8F8D4C004817F0 /* 搜索栏界面搭建.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "搜索栏界面搭建.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F768EAEA1D8F8D4C004817F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F768EAEC1D8F8D4C004817F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				F768EAF01D8F8D4C004817F0 /* ViewController.m */,
 				F768EB031D8F8D6B004817F0 /* JSHeaderView.h */,
 				F768EB041D8F8D6B004817F0 /* JSHeaderView.m */,
+				F71C53131D90CF1F00A711B3 /* JSSearchBar.h */,
+				F71C53141D90CF1F00A711B3 /* JSSearchBar.m */,
 				F768EB001D8F8D5D004817F0 /* JSTableViewController.h */,
 				F768EB011D8F8D5D004817F0 /* JSTableViewController.m */,
 				F768EAF21D8F8D4C004817F0 /* Main.storyboard */,
@@ -237,6 +242,7 @@
 			files = (
 				F768EAF11D8F8D4C004817F0 /* ViewController.m in Sources */,
 				F768EB051D8F8D6B004817F0 /* JSHeaderView.m in Sources */,
+				F71C53151D90CF1F00A711B3 /* JSSearchBar.m in Sources */,
 				F768EAEE1D8F8D4C004817F0 /* AppDelegate.m in Sources */,
 				F768EB021D8F8D5D004817F0 /* JSTableViewController.m in Sources */,
 				F768EAEB1D8F8D4C004817F0 /* main.m in Sources */,

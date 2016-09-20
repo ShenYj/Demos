@@ -1,13 +1,13 @@
 //
-//  JSHeaderView.h
+//  JSSearchBar.h
 //  搜索栏界面搭建
 //
-//  Created by ShenYj on 16/9/19.
+//  Created by ShenYj on 16/9/20.
 //  Copyright © 2016年 ___ShenYJ___. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface JSHeaderView : UIView <UISearchBarDelegate>
+@interface JSSearchBar : UIView
 
 @end
