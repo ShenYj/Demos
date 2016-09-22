@@ -26,7 +26,6 @@
 
 - (void)prepareView {
     
-    
     _button = [[UIButton alloc] init];
     [_button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -51,6 +50,9 @@
     
     sender.selected = !sender.isSelected;
     
+    if (self.handler) {
+        self.handler();
+    }
     
     switch (sender.buttonType) {
         case RightViewButtonTypeUserName:
@@ -64,5 +66,6 @@
     }
     
 }
+
 
 @end

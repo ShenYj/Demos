@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "LeftView.h"
 #import "RightView.h"
-
+#import "UserNameListTableViewController.h"
 
 @interface ViewController ()
 
@@ -20,7 +20,7 @@
 @property (nonatomic) LeftView *leftView_PW;
 @property (nonatomic) RightView *rightView_UN;
 @property (nonatomic) RightView *rightView_PW;
-
+@property (nonatomic,strong) UserNameListTableViewController *nameList;
 
 
 @end
@@ -61,6 +61,13 @@
     [self.view addSubview:self.rightView_PW];
     [self.rightView_PW mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    __weak typeof(self) weakSelf = self;
+    [self.rightView_UN setHandler:^{
+       
+        [weakSelf presentViewController:weakSelf.nameList animated:YES completion:nil];
+        
     }];
     
 }
@@ -108,7 +115,13 @@
     return _rightView_PW;
 }
 
-
+- (UserNameListTableViewController *)nameList {
+    
+    if (_nameList == nil) {
+        _nameList = [[UserNameListTableViewController alloc] init];
+    }
+    return _nameList;
+}
 
 
 - (void)didReceiveMemoryWarning {
