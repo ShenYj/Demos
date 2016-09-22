@@ -17,6 +17,7 @@
 		F726841F1D93BEF5008E9F88 /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = F726841E1D93BEF5008E9F88 /* LeftView.m */; };
 		F72684221D93C0AC008E9F88 /* RightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684211D93C0AC008E9F88 /* RightView.m */; };
 		F72684251D93CAD6008E9F88 /* UserNameListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */; };
+		F72684281D93DB0A008E9F88 /* PopoverBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684271D93DB0A008E9F88 /* PopoverBackGroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		F72684211D93C0AC008E9F88 /* RightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightView.m; sourceTree = "<group>"; };
 		F72684231D93CAD6008E9F88 /* UserNameListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNameListTableViewController.h; sourceTree = "<group>"; };
 		F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameListTableViewController.m; sourceTree = "<group>"; };
+		F72684261D93DB0A008E9F88 /* PopoverBackGroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverBackGroundView.h; sourceTree = "<group>"; };
+		F72684271D93DB0A008E9F88 /* PopoverBackGroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverBackGroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				F72684211D93C0AC008E9F88 /* RightView.m */,
 				F72684231D93CAD6008E9F88 /* UserNameListTableViewController.h */,
 				F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */,
+				F72684261D93DB0A008E9F88 /* PopoverBackGroundView.h */,
+				F72684271D93DB0A008E9F88 /* PopoverBackGroundView.m */,
 				F726840F1D93BC1C008E9F88 /* Main.storyboard */,
 				F72684121D93BC1C008E9F88 /* Assets.xcassets */,
 				F72684141D93BC1C008E9F88 /* LaunchScreen.storyboard */,
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72684281D93DB0A008E9F88 /* PopoverBackGroundView.m in Sources */,
 				F726840E1D93BC1C008E9F88 /* ViewController.m in Sources */,
 				F72684251D93CAD6008E9F88 /* UserNameListTableViewController.m in Sources */,
 				F726840B1D93BC1C008E9F88 /* AppDelegate.m in Sources */,

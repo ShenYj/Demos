@@ -18,6 +18,6 @@ typedef NS_ENUM(NSUInteger, RightViewButtonType) {
 @property (nonatomic,copy) NSString *imageName;
 @property (nonatomic,copy) NSString *imageNameSel;
 @property (nonatomic,assign) RightViewButtonType buttonType;
-@property (nonatomic,copy) void (^handler)();
+@property (nonatomic,copy) void (^handler)(UIButton *button);
 
 @end

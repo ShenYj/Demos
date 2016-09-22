@@ -11,8 +11,9 @@
 #import "LeftView.h"
 #import "RightView.h"
 #import "UserNameListTableViewController.h"
+#import "PopoverBackGroundView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userName_TF;
 @property (weak, nonatomic) IBOutlet UITextField *password_TF;
@@ -64,12 +65,30 @@
     }];
     
     __weak typeof(self) weakSelf = self;
-    [self.rightView_UN setHandler:^{
-       
+    [self.rightView_UN setHandler:^(UIButton *button) {
+        
+        // 设置样式为Popover
+        weakSelf.nameList.modalPresentationStyle = UIModalPresentationPopover;
+        // 设置尺寸
+        weakSelf.nameList.preferredContentSize = CGSizeMake(240, 60);
+        
+        // 获取Popover对象
+        UIPopoverPresentationController *popover = weakSelf.nameList.popoverPresentationController;
+        popover.sourceView = button;
+        popover.sourceRect = button.bounds;
+        
+        // 设置自定义的popoverBackgroundViewClass
+        popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
+        
+        // 设置推荐朝向
+        popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+        
+        // 设置代理,取消自适应
+        popover.delegate = weakSelf;
+        
         [weakSelf presentViewController:weakSelf.nameList animated:YES completion:nil];
         
     }];
-    
 }
 
 
@@ -121,6 +140,12 @@
         _nameList = [[UserNameListTableViewController alloc] init];
     }
     return _nameList;
+}
+
+#pragma mark - UIAdaptivePresentationControllerDelegate
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    
+    return UIModalPresentationNone;
 }
 
 

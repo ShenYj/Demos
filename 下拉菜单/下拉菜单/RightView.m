@@ -51,7 +51,7 @@
     sender.selected = !sender.isSelected;
     
     if (self.handler) {
-        self.handler();
+        self.handler(sender);
     }
     
     switch (sender.buttonType) {

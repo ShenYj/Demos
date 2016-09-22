@@ -19,6 +19,7 @@ static NSString *reuseId = @"reuse";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor whiteColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseId];
 }
 
