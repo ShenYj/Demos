@@ -17,5 +17,10 @@
 //@property (nonatomic, readwrite) UIPopoverArrowDirection arrowDirection;
 //
 //@property(class, nonatomic, readonly) BOOL wantsDefaultContentAppearance;
+@property (nonatomic,strong) UIImageView *arrowImageView;
+
+
+- (UIImage *)drawArrowImage:(CGSize)size;
+
 
 @end

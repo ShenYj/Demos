@@ -99,7 +99,7 @@
     if (_leftView_UN == nil) {
         _leftView_UN = [[LeftView alloc] init];
         _leftView_UN.title = @"账号:";
-        _leftView_UN.imageName = @"icon_magnifying_glass";
+        _leftView_UN.imageName = @"v2_my";
     }
     return _leftView_UN;
 }
@@ -109,7 +109,7 @@
     if (_leftView_PW == nil) {
         _leftView_PW = [[LeftView alloc] init];
         _leftView_PW.title = @"密码:";
-        _leftView_PW.imageName = @"icon_weixin_gray";
+        _leftView_PW.imageName = @"v2_order";
     }
     return _leftView_PW;
 }

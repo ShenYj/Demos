@@ -42,4 +42,36 @@ static CGFloat const kBorderInset = 0.0f;
     return UIEdgeInsetsMake(kBorderInset, kBorderInset, kBorderInset, kBorderInset);
 }
 
+//每次popover的background view的子类的bounds 改变时，这个arrow的frame需要重新计算。我们可以通过覆盖layoutSubviews来达到目的
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    CGSize arrowSize = CGSizeMake([[self class] arrowBase], [[self class] arrowHeight]);
+    self.arrowImageView.image = [self drawArrowImage:arrowSize];
+    self.arrowImageView.frame = CGRectMake(((self.bounds.size.width - arrowSize.width) * kBorderInset), 0.0f, arrowSize.width, arrowSize.height);
+}
+
+
+- (UIImage *)drawArrowImage:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor clearColor] setFill];
+    CGContextFillRect(ctx, CGRectMake(0.0f, 0.0f, size.width, size.height));
+    CGMutablePathRef arrowPath = CGPathCreateMutable();
+    CGPathMoveToPoint(arrowPath, NULL, (size.width/2.0f), 0.0f);
+    CGPathAddLineToPoint(arrowPath, NULL, size.width, size.height);
+    CGPathAddLineToPoint(arrowPath, NULL, 0.0f, size.height);
+    CGPathCloseSubpath(arrowPath);
+    CGContextAddPath(ctx, arrowPath);
+    CGPathRelease(arrowPath);
+    UIColor *fillColor = [UIColor yellowColor];
+    CGContextSetFillColorWithColor(ctx, fillColor.CGColor);
+    CGContextDrawPath(ctx, kCGPathFill);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+
 @end

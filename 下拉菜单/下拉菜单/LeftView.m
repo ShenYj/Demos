@@ -30,15 +30,16 @@
     _label = [[UILabel alloc] init];
     _label.text = self.title;
     _label.font = [UIFont systemFontOfSize:13];
-    _label.backgroundColor = [UIColor greenColor];
+    //_label.backgroundColor = [UIColor greenColor];
     _label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_imageView];
     [self addSubview:_label];
     
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.bottom.mas_equalTo(self);
+        make.left.top.mas_equalTo(self).mas_offset(5);
+        make.bottom.mas_equalTo(self).mas_offset(-5);
         make.right.mas_equalTo(_label.mas_left);
-        make.width.mas_equalTo(30);
+        make.width.mas_equalTo(_imageView.mas_height);
     }];
     
     [_label mas_makeConstraints:^(MASConstraintMaker *make) {
