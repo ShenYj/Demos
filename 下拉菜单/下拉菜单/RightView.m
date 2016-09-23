@@ -31,7 +31,7 @@
     
     [self addSubview:_button];
     [_button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self);
+        make.edges.mas_equalTo(self).mas_offset(UIEdgeInsetsMake(5, 5, 5, 5));
     }];
     
 }

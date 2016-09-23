@@ -21,6 +21,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jM-By-K9z">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XEb-Tv-obe"/>
                                     <constraint firstAttribute="width" constant="240" id="bIF-TU-AXY"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -29,6 +30,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PI1-ZI-TUb">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HTf-cL-IGE"/>
                                     <constraint firstAttribute="width" constant="240" id="bch-xT-lId"/>
                                 </constraints>
                                 <nil key="textColor"/>

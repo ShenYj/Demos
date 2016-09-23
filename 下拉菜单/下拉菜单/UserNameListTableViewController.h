@@ -10,4 +10,6 @@
 
 @interface UserNameListTableViewController : UITableViewController
 
+@property (nonatomic,copy) void (^selectedHandler)(NSString *userName);
+
 @end

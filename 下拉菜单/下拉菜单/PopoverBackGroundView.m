@@ -6,6 +6,7 @@
 //  Copyright © 2016年 ___ShenYJ___. All rights reserved.
 //
 
+// http://www.cocoachina.com/ios/20130513/6185.html
 
 #import "PopoverBackGroundView.h"
 
@@ -52,8 +53,8 @@ static CGFloat const kBorderInset = 0.0f;
 }
 
 
-- (UIImage *)drawArrowImage:(CGSize)size
-{
+- (UIImage *)drawArrowImage:(CGSize)size {
+    
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     [[UIColor clearColor] setFill];
