@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "LeftView.h"
-#import "RightView.h"
 #import "UserNameListTableViewController.h"
 #import "PopoverBackGroundView.h"
 
@@ -18,15 +17,14 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *userName_TF;
 @property (weak, nonatomic) IBOutlet UITextField *password_TF;
-@property (nonatomic) LeftView *leftView_UN;
-@property (nonatomic) LeftView *leftView_PW;
-@property (nonatomic) UIButton *userNameListButton; // 显示账号列号
+@property (nonatomic) LeftView *leftView_UN; // 账号输入框左侧视图
+@property (nonatomic) LeftView *leftView_PW; // 密码输入框左侧视图
+@property (nonatomic) UIView *border_UN;     // 账号输入框外边框
+@property (nonatomic) UIView *border_PW;     // 密码输入框外边框
+@property (nonatomic) UIButton *userNameListButton; // 显示账号列表
 @property (nonatomic) UIButton *showPassWordButton; // 显示密码明文
-@property (nonatomic) UserNameListTableViewController *nameList;
-@property (nonatomic) UILabel *detailLabel;
-@property (nonatomic) UIView *border_UN;
-@property (nonatomic) UIView *border_PW;
-
+@property (nonatomic) UserNameListTableViewController *nameList; // 列表视图控制器
+@property (nonatomic) UILabel *detailLabel;                      // 描述文本框
 
 @end
 
@@ -43,12 +41,11 @@
     self.view.backgroundColor = [UIColor orangeColor];
     self.nameList.tableView.hidden = YES;
     
-    //self.userName_TF.borderStyle = UITextBorderStyleRoundedRect;
     self.userName_TF.borderStyle = UITextBorderStyleNone;
     self.userName_TF.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.userName_TF.secureTextEntry = NO;
     self.password_TF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.password_TF.borderStyle = UITextBorderStyleRoundedRect;
+    self.password_TF.borderStyle = UITextBorderStyleNone;
     self.password_TF.secureTextEntry = YES;
     
     // 设置TextField的左右视图
@@ -60,7 +57,10 @@
     [self.view addSubview:self.leftView_UN];
     [self.view addSubview:self.leftView_PW];
     [self.view addSubview:self.detailLabel];
-    
+    [self.view insertSubview:self.border_UN belowSubview:self.userName_TF];
+    [self.view insertSubview:self.border_PW belowSubview:self.password_TF];
+    [self.border_UN addSubview:self.userNameListButton];
+    [self.border_PW addSubview:self.showPassWordButton];
     
     [self.leftView_UN mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(80, 30));
@@ -73,9 +73,6 @@
         make.height.mas_equalTo(200);
     }];
     
-    [self.view insertSubview:self.border_UN belowSubview:self.userName_TF];
-    [self.view insertSubview:self.border_PW belowSubview:self.password_TF];
-    
     [self.border_UN mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(self.userName_TF).mas_offset(-2);
         make.bottom.mas_equalTo(self.userName_TF).mas_offset(2);
@@ -87,9 +84,6 @@
         make.bottom.mas_equalTo(self.password_TF).mas_offset(2);
         make.right.mas_equalTo(self.password_TF).mas_offset(32);
     }];
-    
-    [self.border_UN addSubview:self.userNameListButton];
-    [self.border_PW addSubview:self.showPassWordButton];
     
     [self.userNameListButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.bottom.mas_equalTo(self.border_UN);
@@ -158,9 +152,9 @@
 //            
 //            NSLog(@"显示或隐藏密码");
 //        }
-//        
-//        
 //    }];
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -299,28 +293,6 @@
     }
     return _showPassWordButton;
 }
-
-//- (RightView *)rightView_UN {
-//    
-//    if (_rightView_UN == nil) {
-//        _rightView_UN = [[RightView alloc] init];
-//        _rightView_UN.imageName = @"cell_arrow_down_accessory";
-//        _rightView_UN.imageNameSel = @"cell_arrow_up_accessory";
-//        _rightView_UN.buttonType = RightViewButtonTypeUserName;
-//    }
-//    return _rightView_UN;
-//}
-//
-//- (RightView *)rightView_PW {
-//    
-//    if (_rightView_PW == nil) {
-//        _rightView_PW = [[RightView alloc] init];
-//        _rightView_PW.imageName = @"icon_black_scancode";
-//        _rightView_PW.imageNameSel = @"scanicon";
-//        _rightView_UN.buttonType = RightViewButtonTypePassWord;
-//    }
-//    return _rightView_PW;
-//}
 
 - (UserNameListTableViewController *)nameList {
     

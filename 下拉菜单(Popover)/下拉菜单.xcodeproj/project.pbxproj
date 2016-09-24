@@ -15,7 +15,6 @@
 		F72684131D93BC1C008E9F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72684121D93BC1C008E9F88 /* Assets.xcassets */; };
 		F72684161D93BC1C008E9F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72684141D93BC1C008E9F88 /* LaunchScreen.storyboard */; };
 		F726841F1D93BEF5008E9F88 /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = F726841E1D93BEF5008E9F88 /* LeftView.m */; };
-		F72684221D93C0AC008E9F88 /* RightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684211D93C0AC008E9F88 /* RightView.m */; };
 		F72684251D93CAD6008E9F88 /* UserNameListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */; };
 		F72684281D93DB0A008E9F88 /* PopoverBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72684271D93DB0A008E9F88 /* PopoverBackGroundView.m */; };
 /* End PBXBuildFile section */
@@ -36,8 +35,6 @@
 		F72684171D93BC1C008E9F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F726841D1D93BEF5008E9F88 /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
 		F726841E1D93BEF5008E9F88 /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftView.m; sourceTree = "<group>"; };
-		F72684201D93C0AC008E9F88 /* RightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightView.h; sourceTree = "<group>"; };
-		F72684211D93C0AC008E9F88 /* RightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightView.m; sourceTree = "<group>"; };
 		F72684231D93CAD6008E9F88 /* UserNameListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNameListTableViewController.h; sourceTree = "<group>"; };
 		F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameListTableViewController.m; sourceTree = "<group>"; };
 		F72684261D93DB0A008E9F88 /* PopoverBackGroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverBackGroundView.h; sourceTree = "<group>"; };
@@ -100,8 +97,6 @@
 				F726840D1D93BC1C008E9F88 /* ViewController.m */,
 				F726841D1D93BEF5008E9F88 /* LeftView.h */,
 				F726841E1D93BEF5008E9F88 /* LeftView.m */,
-				F72684201D93C0AC008E9F88 /* RightView.h */,
-				F72684211D93C0AC008E9F88 /* RightView.m */,
 				F72684231D93CAD6008E9F88 /* UserNameListTableViewController.h */,
 				F72684241D93CAD6008E9F88 /* UserNameListTableViewController.m */,
 				F72684261D93DB0A008E9F88 /* PopoverBackGroundView.h */,
@@ -250,7 +245,6 @@
 				F72684251D93CAD6008E9F88 /* UserNameListTableViewController.m in Sources */,
 				F726840B1D93BC1C008E9F88 /* AppDelegate.m in Sources */,
 				F72684081D93BC1C008E9F88 /* main.m in Sources */,
-				F72684221D93C0AC008E9F88 /* RightView.m in Sources */,
 				F726841F1D93BEF5008E9F88 /* LeftView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
