@@ -116,46 +116,18 @@
         
         CGPoint point = [touch locationInView:self.view];
         
-        
-        if (!CGRectContainsPoint(self.userName_TF.frame, point)) {
+        // 当点击屏幕的点不在账号框内并且账号列表显示状态时, 账号输入框辞去第一响应者,并且收起列表
+        if (!CGRectContainsPoint(self.userName_TF.frame, point) && self.userNameListButton.isSelected) {
             
-            if (self.userNameListButton.isSelected) {
-                
-                //[self clickButton:self.userNameListButton];
-                self.userNameListButton.selected = NO;
-                
-                
-                
-            }
+            [self clickButton:self.userNameListButton];
+            [self.userName_TF resignFirstResponder];
+            
         }
         
-        
-//        // 当点击屏幕的点不在账号框内时
-//        if ( !CGRectContainsPoint(self.userName_TF.frame, point) ) {
-//            
-//            [self.userName_TF resignFirstResponder];
-//            
-//            // 当展开账户列表情况下(列表显示状态),点击屏幕后
-//            if (!self.nameList.tableView.isHidden) {
-//                
-//                [self clickButton:self.userNameListButton];
-//            }
-//            
-//        } else {
-//            
-//            //点击屏幕后,如果点在账号输入框内时
-//            if ( !self.nameList.tableView.isHidden) {
-//                
-//                [self clickButton:self.userNameListButton];
-//            }
-//            
-//        }
-//        
-//        // 当点击屏幕的点不在密码框内时
-//        if (!CGRectContainsPoint(self.password_TF.frame, point)) {
-//            
-//            [self.password_TF resignFirstResponder];
-//        }
+        // 当点击屏幕的点不在密码框内时,密码框辞去第一响应者
+        if (CGRectContainsPoint(self.password_TF.frame, point)) {
+            [self.password_TF resignFirstResponder];
+        }
         
         
     }
@@ -214,20 +186,19 @@
             
             // 以Popover样式进行Modal展示
             [self presentViewController:self.nameList animated:YES completion:nil];
-        }
-        
-        __weak typeof(self) weakSelf = self;
-        [self.nameList setSelectedHandler:^(NSString *userName) {
             
-            weakSelf.userName_TF.text = userName;
-            [weakSelf dismissViewControllerAnimated:NO completion:^{
+        } else {
+            
+            
+            [self dismissViewControllerAnimated:NO completion:^{
                 
-                weakSelf.userNameListButton.selected = NO;
-                
+                self.userNameListButton.selected = NO;
                 
             }];
             
-        }];
+        }
+        
+        
         
     }
     
