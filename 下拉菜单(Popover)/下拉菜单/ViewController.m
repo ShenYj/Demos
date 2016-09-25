@@ -94,17 +94,6 @@
         make.width.mas_equalTo(30);
     }];
     
-    
-//    [self addChildViewController:self.nameList];
-//    [self.view addSubview:self.nameList.tableView];
-//    [self.nameList.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(self.userName_TF.mas_bottom).mas_offset(1);
-//        make.left.mas_equalTo(self.border_UN).mas_offset(1);
-//        make.right.mas_equalTo(self.border_UN).mas_offset(-1);
-//        make.height.mas_offset(60);
-//    }];
-    
-    
     __weak typeof(self) weakSelf = self;
     [self.nameList setSelectedHandler:^(NSString *userName) {
         
@@ -112,47 +101,6 @@
         weakSelf.userNameListButton.selected = NO;
         weakSelf.nameList.tableView.hidden = YES;
     }];
-    
-    
-//    __weak typeof(self) weakSelf = self;
-//    [self.rightView_UN setHandler:^(UIButton *button) {
-//        
-//        if (button.buttonType == RightViewButtonTypeUserName) { // Popover展示账号列表
-//            
-//            // 设置样式为Popover
-//            weakSelf.nameList.modalPresentationStyle = UIModalPresentationPopover;
-//            
-//            // 设置尺寸
-//            weakSelf.nameList.preferredContentSize = CGSizeMake(240, 60);
-//            
-//            // 获取Popover对象
-//            UIPopoverPresentationController *popover = weakSelf.nameList.popoverPresentationController;
-//            popover.sourceView = button;
-//            //popover.sourceRect = button.bounds;
-//            popover.sourceRect = CGRectMake(button.frame.origin.x - weakSelf.userName_TF.bounds.size.width * 0.5, button.bounds.origin.y, 240, 60);
-//            // 设置自定义的popoverBackgroundViewClass
-//            popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
-//            
-//            // 设置推荐朝向
-//            popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
-//            
-//            // 设置代理,取消自适应
-//            popover.delegate = weakSelf;
-//            
-//            [weakSelf presentViewController:weakSelf.nameList animated:YES completion:^{
-//                
-//                
-//            }];
-//            
-//            
-//        } else if (button.buttonType == RightViewButtonTypePassWord ) {
-//            
-//            
-//            weakSelf.password_TF.secureTextEntry = !weakSelf.password_TF.isSecureTextEntry;
-//            
-//            NSLog(@"显示或隐藏密码");
-//        }
-//    }];
     
     
 }
@@ -197,13 +145,20 @@
         self.nameList.modalPresentationStyle = UIModalPresentationPopover;
         
         // 设置尺寸
-        self.nameList.preferredContentSize = CGSizeMake(240, 60);
+        self.nameList.preferredContentSize = CGSizeMake(self.userName_TF.bounds.size.width + 34, 60);
         
         // 获取Popover对象
         UIPopoverPresentationController *popover = self.nameList.popoverPresentationController;
-        popover.sourceView = sender;
-        //popover.sourceRect = button.bounds;
-        popover.sourceRect = CGRectMake(sender.frame.origin.x - self.userName_TF.bounds.size.width * 0.5, sender.bounds.origin.y, 240, 60);
+        
+        // 设置来源视图
+        //popover.sourceView = sender;
+        popover.sourceView = self.border_UN;
+        
+        // 设置锚点
+        //popover.sourceRect = sender.bounds;
+        //popover.sourceRect = CGRectMake(-140 , 0, sender.frame.size.width, sender.frame.size.height);
+        popover.sourceRect = CGRectMake(0, 0, self.border_UN.bounds.size.width, self.border_UN.bounds.size.height);
+        
         // 设置自定义的popoverBackgroundViewClass
         popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
         
@@ -213,6 +168,7 @@
         // 设置代理,取消自适应
         popover.delegate = self;
         
+        // 以Popover样式进行Modal展示
         [self presentViewController:self.nameList animated:YES completion:nil];
         
     }
@@ -236,7 +192,6 @@
             return NO;
         }
     }
-    
     
     return YES;
     
