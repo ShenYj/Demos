@@ -147,7 +147,6 @@
 //            UIPopoverPresentationController *popover = weakSelf.nameList.popoverPresentationController;
 //            popover.sourceView = button;
 //            //popover.sourceRect = button.bounds;
-//            popover.sourceRect = CGRectMake(button.frame.origin.x - weakSelf.userName_TF.bounds.size.width * 0.5, button.bounds.origin.y, 240, 60);
 //            // 设置自定义的popoverBackgroundViewClass
 //            popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
 //            

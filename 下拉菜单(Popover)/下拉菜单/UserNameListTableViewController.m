@@ -20,6 +20,7 @@ static NSString *reuseId = @"reuse";
     [super viewDidLoad];
     
     self.tableView.backgroundColor = [UIColor whiteColor];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseId];
 }
 
@@ -39,7 +40,8 @@ static NSString *reuseId = @"reuse";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"laowang%zd",indexPath.row];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor whiteColor];
+    //cell.selectionStyle  = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -54,6 +56,7 @@ static NSString *reuseId = @"reuse";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
     if (self.selectedHandler) {
         self.selectedHandler(cell.textLabel.text);
     }

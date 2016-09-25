@@ -23,7 +23,7 @@
 @property (nonatomic) UIView *border_PW;     // 密码输入框外边框
 @property (nonatomic) UIButton *userNameListButton; // 显示账号列表
 @property (nonatomic) UIButton *showPassWordButton; // 显示密码明文
-@property (nonatomic) UserNameListTableViewController *nameList; // 列表视图控制器
+@property (nonatomic,strong) UserNameListTableViewController *nameList; // 列表视图控制器
 @property (nonatomic) UILabel *detailLabel;                      // 描述文本框
 
 @end
@@ -39,7 +39,7 @@
 - (void)prepareView {
     
     self.view.backgroundColor = [UIColor orangeColor];
-    self.nameList.tableView.hidden = YES;
+    //self.nameList.tableView.hidden = YES;
     
     self.userName_TF.borderStyle = UITextBorderStyleNone;
     self.userName_TF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -72,7 +72,6 @@
         make.left.bottom.right.mas_equalTo(self.view);
         make.height.mas_equalTo(200);
     }];
-    
     [self.border_UN mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(self.userName_TF).mas_offset(-2);
         make.bottom.mas_equalTo(self.userName_TF).mas_offset(2);
@@ -94,12 +93,18 @@
         make.width.mas_equalTo(30);
     }];
     
+    
     __weak typeof(self) weakSelf = self;
     [self.nameList setSelectedHandler:^(NSString *userName) {
         
         weakSelf.userName_TF.text = userName;
-        weakSelf.userNameListButton.selected = NO;
-        weakSelf.nameList.tableView.hidden = YES;
+        [weakSelf dismissViewControllerAnimated:NO completion:^{
+            
+            weakSelf.userNameListButton.selected = NO;
+            
+            
+        }];
+               
     }];
     
     
@@ -111,17 +116,37 @@
         
         CGPoint point = [touch locationInView:self.view];
         
+        // 当点击屏幕的点不在账号框内时
         if ( !CGRectContainsPoint(self.userName_TF.frame, point) ) {
             
             [self.userName_TF resignFirstResponder];
+            
+            // 当展开账户列表情况下(列表显示状态),点击屏幕后
+            if (!self.nameList.tableView.isHidden) {
+                
+                [self clickButton:self.userNameListButton];
+            }
+            
+        } else {
+            
+            //点击屏幕后,如果点在账号输入框内时
+            if ( !self.nameList.tableView.isHidden) {
+                
+                [self clickButton:self.userNameListButton];
+            }
+            
         }
         
+        // 当点击屏幕的点不在密码框内时
         if (!CGRectContainsPoint(self.password_TF.frame, point)) {
             
             [self.password_TF resignFirstResponder];
         }
         
+        
     }
+    
+    
 }
 
 
@@ -139,24 +164,24 @@
     } else {
         
         // username
-        //self.nameList.tableView.hidden = !sender.isSelected;
+        self.nameList.tableView.hidden = !sender.isSelected;
         
         //设置样式为Popover
         self.nameList.modalPresentationStyle = UIModalPresentationPopover;
         
-        // 设置尺寸
+        // 设置尺寸 (在设置TextField最外层的View时,左右分别设置了2个单位的间距)
         self.nameList.preferredContentSize = CGSizeMake(self.userName_TF.bounds.size.width + 34, 60);
         
         // 获取Popover对象
         UIPopoverPresentationController *popover = self.nameList.popoverPresentationController;
         
-        // 设置来源视图
+        // 设置来源视图 (这里将TextField外层的View作为来源视图)
         //popover.sourceView = sender;
         popover.sourceView = self.border_UN;
         
-        // 设置锚点
+        
+        // 设置锚点 (这里将TextField外层的View作为锚点)
         //popover.sourceRect = sender.bounds;
-        //popover.sourceRect = CGRectMake(-140 , 0, sender.frame.size.width, sender.frame.size.height);
         popover.sourceRect = CGRectMake(0, 0, self.border_UN.bounds.size.width, self.border_UN.bounds.size.height);
         
         // 设置自定义的popoverBackgroundViewClass
@@ -174,6 +199,15 @@
     }
     
 }
+
+
+#pragma mark - UIAdaptivePresentationControllerDelegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    
+    return UIModalPresentationNone;
+}
+
 
 #pragma mark - UITextFieldDelegate
 
@@ -292,18 +326,6 @@
     return _detailLabel;
 }
 
-
-#pragma mark - UIAdaptivePresentationControllerDelegate
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
-    
-    return UIModalPresentationNone;
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

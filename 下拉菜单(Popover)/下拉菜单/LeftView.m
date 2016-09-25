@@ -24,6 +24,7 @@
     return self;
 }
 
+
 - (void)prepareView {
     
     _imageView = [[UIImageView alloc] init];

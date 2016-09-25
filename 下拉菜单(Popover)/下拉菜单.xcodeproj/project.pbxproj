@@ -152,6 +152,7 @@
 				TargetAttributes = {
 					F72684021D93BC1C008E9F88 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KS5QTFAS57;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -366,6 +367,7 @@
 			baseConfigurationReference = A09F969272A905A13C0A966D /* Pods-下拉菜单.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = "下拉菜单/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.----";
@@ -378,6 +380,7 @@
 			baseConfigurationReference = B1A8CE6BAF0B06B2D3F00D9C /* Pods-下拉菜单.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = "下拉菜单/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---ShenYJ---.----";

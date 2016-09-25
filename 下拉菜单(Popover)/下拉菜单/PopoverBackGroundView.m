@@ -74,5 +74,12 @@ static CGFloat const kBorderInset = 0.0f;
     return image;
 }
 
+/**
+ wantsDefaultContentAppearance 方法决定是否在popover中展示默认的内置阴影和圆角，如果返回的是“NO”
+ Popover Background View将不再展示默认的阴影 和圆角，允许执行你自己的。添加如下代码来覆盖之前的方法
+ */
++ (BOOL)wantsDefaultContentAppearance {
+    return NO;
+}
 
 @end
