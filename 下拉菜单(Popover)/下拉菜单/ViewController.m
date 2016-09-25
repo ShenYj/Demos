@@ -13,6 +13,7 @@
 #import "PopoverBackGroundView.h"
 
 
+
 @interface ViewController () <UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userName_TF;
@@ -39,7 +40,6 @@
 - (void)prepareView {
     
     self.view.backgroundColor = [UIColor orangeColor];
-    //self.nameList.tableView.hidden = YES;
     
     self.userName_TF.borderStyle = UITextBorderStyleNone;
     self.userName_TF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -104,7 +104,7 @@
             
             
         }];
-               
+        
     }];
     
     
@@ -116,32 +116,46 @@
         
         CGPoint point = [touch locationInView:self.view];
         
-        // 当点击屏幕的点不在账号框内时
-        if ( !CGRectContainsPoint(self.userName_TF.frame, point) ) {
+        
+        if (!CGRectContainsPoint(self.userName_TF.frame, point)) {
             
-            [self.userName_TF resignFirstResponder];
-            
-            // 当展开账户列表情况下(列表显示状态),点击屏幕后
-            if (!self.nameList.tableView.isHidden) {
+            if (self.userNameListButton.isSelected) {
                 
-                [self clickButton:self.userNameListButton];
-            }
-            
-        } else {
-            
-            //点击屏幕后,如果点在账号输入框内时
-            if ( !self.nameList.tableView.isHidden) {
+                //[self clickButton:self.userNameListButton];
+                self.userNameListButton.selected = NO;
                 
-                [self clickButton:self.userNameListButton];
+                
+                
             }
-            
         }
         
-        // 当点击屏幕的点不在密码框内时
-        if (!CGRectContainsPoint(self.password_TF.frame, point)) {
-            
-            [self.password_TF resignFirstResponder];
-        }
+        
+//        // 当点击屏幕的点不在账号框内时
+//        if ( !CGRectContainsPoint(self.userName_TF.frame, point) ) {
+//            
+//            [self.userName_TF resignFirstResponder];
+//            
+//            // 当展开账户列表情况下(列表显示状态),点击屏幕后
+//            if (!self.nameList.tableView.isHidden) {
+//                
+//                [self clickButton:self.userNameListButton];
+//            }
+//            
+//        } else {
+//            
+//            //点击屏幕后,如果点在账号输入框内时
+//            if ( !self.nameList.tableView.isHidden) {
+//                
+//                [self clickButton:self.userNameListButton];
+//            }
+//            
+//        }
+//        
+//        // 当点击屏幕的点不在密码框内时
+//        if (!CGRectContainsPoint(self.password_TF.frame, point)) {
+//            
+//            [self.password_TF resignFirstResponder];
+//        }
         
         
     }
@@ -163,38 +177,57 @@
         
     } else {
         
-        // username
-        self.nameList.tableView.hidden = !sender.isSelected;
         
-        //设置样式为Popover
-        self.nameList.modalPresentationStyle = UIModalPresentationPopover;
+        if (sender.isSelected) {
+            
+            // username
+            self.nameList.tableView.hidden = !sender.isSelected;
+            
+            //设置样式为Popover
+            self.nameList.modalPresentationStyle = UIModalPresentationPopover;
+            
+            // 设置尺寸 (在设置TextField最外层的View时,左右分别设置了2个单位的间距)
+            self.nameList.preferredContentSize = CGSizeMake(self.userName_TF.bounds.size.width + 34, 60);
+            
+            // 获取Popover对象
+            UIPopoverPresentationController *popover = self.nameList.popoverPresentationController;
+            
+            // 设置来源视图 (这里将TextField外层的View作为来源视图)
+            //popover.sourceView = sender;
+            popover.sourceView = self.border_UN;
+            
+            // 设置锚点 (这里将TextField外层的View作为锚点)
+            //popover.sourceRect = sender.bounds;
+            popover.sourceRect = CGRectMake(0, 0, self.border_UN.bounds.size.width, self.border_UN.bounds.size.height);
+            
+            // 哪些控件可以继续跟用户进行正常交互
+            popover.passthroughViews = @[self.userName_TF,self.password_TF,self.view,self.userNameListButton];
+            
+            // 设置自定义的popoverBackgroundViewClass
+            popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
+            
+            // 设置推荐朝向
+            popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+            
+            // 设置代理,取消自适应
+            popover.delegate = self;
+            
+            // 以Popover样式进行Modal展示
+            [self presentViewController:self.nameList animated:YES completion:nil];
+        }
         
-        // 设置尺寸 (在设置TextField最外层的View时,左右分别设置了2个单位的间距)
-        self.nameList.preferredContentSize = CGSizeMake(self.userName_TF.bounds.size.width + 34, 60);
-        
-        // 获取Popover对象
-        UIPopoverPresentationController *popover = self.nameList.popoverPresentationController;
-        
-        // 设置来源视图 (这里将TextField外层的View作为来源视图)
-        //popover.sourceView = sender;
-        popover.sourceView = self.border_UN;
-        
-        
-        // 设置锚点 (这里将TextField外层的View作为锚点)
-        //popover.sourceRect = sender.bounds;
-        popover.sourceRect = CGRectMake(0, 0, self.border_UN.bounds.size.width, self.border_UN.bounds.size.height);
-        
-        // 设置自定义的popoverBackgroundViewClass
-        popover.popoverBackgroundViewClass = [PopoverBackGroundView class];
-        
-        // 设置推荐朝向
-        popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
-        
-        // 设置代理,取消自适应
-        popover.delegate = self;
-        
-        // 以Popover样式进行Modal展示
-        [self presentViewController:self.nameList animated:YES completion:nil];
+        __weak typeof(self) weakSelf = self;
+        [self.nameList setSelectedHandler:^(NSString *userName) {
+            
+            weakSelf.userName_TF.text = userName;
+            [weakSelf dismissViewControllerAnimated:NO completion:^{
+                
+                weakSelf.userNameListButton.selected = NO;
+                
+                
+            }];
+            
+        }];
         
     }
     
