@@ -24,6 +24,8 @@
         
         self.backgroundColor = [UIColor greenColor];
         
+        [self prepareView];
+        
     }
     return self;
 }

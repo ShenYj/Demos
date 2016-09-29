@@ -22,7 +22,9 @@
     self = [super init];
     if (self) {
         
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor whiteColor];
+        
+        [self prepareView];
         
     }
     return self;
@@ -33,8 +35,8 @@
     _view1 = [[UIView alloc] init];
     _view2 = [[UIView alloc] init];
     
-    _view1.backgroundColor = [UIColor js_randomColor];
-    _view2.backgroundColor = [UIColor js_randomColor];
+    _view1.backgroundColor = [UIColor redColor];
+    _view2.backgroundColor = [UIColor purpleColor];
     
     [self addSubview:_view1];
     [self addSubview:_view2];
@@ -45,7 +47,8 @@
     }];
     
     [_view2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.mas_equalTo(_view1.mas_bottom).mas_offset(10);
+        make.top.mas_equalTo(_view1.mas_bottom).mas_offset(10);
+        make.left.mas_equalTo(_view1);
         make.size.mas_equalTo(CGSizeMake(80, 20));
     }];
     

@@ -39,7 +39,7 @@
     
     [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(self.contentView);
-        //make.height.mas_equalTo(80);
+        make.height.mas_equalTo(80);
     }];
     
     [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {

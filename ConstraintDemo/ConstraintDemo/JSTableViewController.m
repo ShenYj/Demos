@@ -45,6 +45,8 @@ static NSString * const reuseID = @"reuseIdentifier";
     JSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID forIndexPath:indexPath];
     
     //cell.textLabel.text = @(indexPath.row).description;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     
     return cell;
 }

@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C00152E8E6A30C343D0A9D9 /* libPods-ConstraintDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F652915150ED621DB88D3F7 /* libPods-ConstraintDemo.a */; };
+		F7338BFC1D9D15F700170F3F /* Bottom.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338BF31D9D15F700170F3F /* Bottom.m */; };
+		F7338BFD1D9D15F700170F3F /* JSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338BF51D9D15F700170F3F /* JSTableViewCell.m */; };
+		F7338BFE1D9D15F700170F3F /* JSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338BF71D9D15F700170F3F /* JSTableViewController.m */; };
+		F7338BFF1D9D15F700170F3F /* Top.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338BF91D9D15F700170F3F /* Top.m */; };
+		F7338C001D9D15F700170F3F /* UIColor+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338BFB1D9D15F700170F3F /* UIColor+JSExtension.m */; };
+		F7338C031D9D160500170F3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7338C021D9D160500170F3F /* ViewController.m */; };
 		F74DD1061D9D14D5005C0F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DD1051D9D14D5005C0F8B /* main.m */; };
 		F74DD1091D9D14D5005C0F8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DD1081D9D14D5005C0F8B /* AppDelegate.m */; };
-		F74DD10C1D9D14D5005C0F8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DD10B1D9D14D5005C0F8B /* ViewController.m */; };
 		F74DD10F1D9D14D5005C0F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74DD10D1D9D14D5005C0F8B /* Main.storyboard */; };
 		F74DD1111D9D14D5005C0F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74DD1101D9D14D5005C0F8B /* Assets.xcassets */; };
 		F74DD1141D9D14D5005C0F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74DD1121D9D14D5005C0F8B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47DD96D0ACAF5D466E0748D6 /* Pods-ConstraintDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConstraintDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConstraintDemo/Pods-ConstraintDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		57679C36F886DAA48BF83B91 /* Pods-ConstraintDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConstraintDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConstraintDemo/Pods-ConstraintDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6F652915150ED621DB88D3F7 /* libPods-ConstraintDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConstraintDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7338BF21D9D15F700170F3F /* Bottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bottom.h; sourceTree = "<group>"; };
+		F7338BF31D9D15F700170F3F /* Bottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bottom.m; sourceTree = "<group>"; };
+		F7338BF41D9D15F700170F3F /* JSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableViewCell.h; sourceTree = "<group>"; };
+		F7338BF51D9D15F700170F3F /* JSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableViewCell.m; sourceTree = "<group>"; };
+		F7338BF61D9D15F700170F3F /* JSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableViewController.h; sourceTree = "<group>"; };
+		F7338BF71D9D15F700170F3F /* JSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableViewController.m; sourceTree = "<group>"; };
+		F7338BF81D9D15F700170F3F /* Top.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Top.h; sourceTree = "<group>"; };
+		F7338BF91D9D15F700170F3F /* Top.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Top.m; sourceTree = "<group>"; };
+		F7338BFA1D9D15F700170F3F /* UIColor+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSExtension.h"; sourceTree = "<group>"; };
+		F7338BFB1D9D15F700170F3F /* UIColor+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSExtension.m"; sourceTree = "<group>"; };
+		F7338C011D9D160500170F3F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7338C021D9D160500170F3F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F74DD1011D9D14D5005C0F8B /* ConstraintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConstraintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74DD1051D9D14D5005C0F8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F74DD1071D9D14D5005C0F8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F74DD1081D9D14D5005C0F8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F74DD10A1D9D14D5005C0F8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F74DD10B1D9D14D5005C0F8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F74DD10E1D9D14D5005C0F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F74DD1101D9D14D5005C0F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F74DD1131D9D14D5005C0F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C00152E8E6A30C343D0A9D9 /* libPods-ConstraintDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E93E841CE226AD3B1C526BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F652915150ED621DB88D3F7 /* libPods-ConstraintDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70479892F9953C6A5CEB088 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47DD96D0ACAF5D466E0748D6 /* Pods-ConstraintDemo.debug.xcconfig */,
+				57679C36F886DAA48BF83B91 /* Pods-ConstraintDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F74DD0F81D9D14D5005C0F8B = {
 			isa = PBXGroup;
 			children = (
 				F74DD1031D9D14D5005C0F8B /* ConstraintDemo */,
 				F74DD1021D9D14D5005C0F8B /* Products */,
+				C70479892F9953C6A5CEB088 /* Pods */,
+				4E93E841CE226AD3B1C526BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +97,20 @@
 		F74DD1031D9D14D5005C0F8B /* ConstraintDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7338C011D9D160500170F3F /* ViewController.h */,
+				F7338C021D9D160500170F3F /* ViewController.m */,
+				F7338BF61D9D15F700170F3F /* JSTableViewController.h */,
+				F7338BF71D9D15F700170F3F /* JSTableViewController.m */,
+				F7338BF41D9D15F700170F3F /* JSTableViewCell.h */,
+				F7338BF51D9D15F700170F3F /* JSTableViewCell.m */,
+				F7338BF81D9D15F700170F3F /* Top.h */,
+				F7338BF91D9D15F700170F3F /* Top.m */,
+				F7338BF21D9D15F700170F3F /* Bottom.h */,
+				F7338BF31D9D15F700170F3F /* Bottom.m */,
+				F7338BFA1D9D15F700170F3F /* UIColor+JSExtension.h */,
+				F7338BFB1D9D15F700170F3F /* UIColor+JSExtension.m */,
 				F74DD1071D9D14D5005C0F8B /* AppDelegate.h */,
 				F74DD1081D9D14D5005C0F8B /* AppDelegate.m */,
-				F74DD10A1D9D14D5005C0F8B /* ViewController.h */,
-				F74DD10B1D9D14D5005C0F8B /* ViewController.m */,
 				F74DD10D1D9D14D5005C0F8B /* Main.storyboard */,
 				F74DD1101D9D14D5005C0F8B /* Assets.xcassets */,
 				F74DD1121D9D14D5005C0F8B /* LaunchScreen.storyboard */,
@@ -86,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74DD1181D9D14D5005C0F8B /* Build configuration list for PBXNativeTarget "ConstraintDemo" */;
 			buildPhases = (
+				B64761F725CFB29B90A365C2 /* [CP] Check Pods Manifest.lock */,
 				F74DD0FD1D9D14D5005C0F8B /* Sources */,
 				F74DD0FE1D9D14D5005C0F8B /* Frameworks */,
 				F74DD0FF1D9D14D5005C0F8B /* Resources */,
+				E409115696C8F52863FC7878 /* [CP] Embed Pods Frameworks */,
+				50C14E7841C4C45A4DB1AF56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,12 +197,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50C14E7841C4C45A4DB1AF56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConstraintDemo/Pods-ConstraintDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B64761F725CFB29B90A365C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E409115696C8F52863FC7878 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConstraintDemo/Pods-ConstraintDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F74DD0FD1D9D14D5005C0F8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F74DD10C1D9D14D5005C0F8B /* ViewController.m in Sources */,
+				F7338BFD1D9D15F700170F3F /* JSTableViewCell.m in Sources */,
+				F7338BFF1D9D15F700170F3F /* Top.m in Sources */,
+				F7338C031D9D160500170F3F /* ViewController.m in Sources */,
+				F7338C001D9D15F700170F3F /* UIColor+JSExtension.m in Sources */,
+				F7338BFC1D9D15F700170F3F /* Bottom.m in Sources */,
+				F7338BFE1D9D15F700170F3F /* JSTableViewController.m in Sources */,
 				F74DD1091D9D14D5005C0F8B /* AppDelegate.m in Sources */,
 				F74DD1061D9D14D5005C0F8B /* main.m in Sources */,
 			);
@@ -264,6 +369,7 @@
 		};
 		F74DD1191D9D14D5005C0F8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DD96D0ACAF5D466E0748D6 /* Pods-ConstraintDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConstraintDemo/Info.plist;
@@ -275,6 +381,7 @@
 		};
 		F74DD11A1D9D14D5005C0F8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57679C36F886DAA48BF83B91 /* Pods-ConstraintDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConstraintDemo/Info.plist;
@@ -303,6 +410,7 @@
 				F74DD11A1D9D14D5005C0F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
