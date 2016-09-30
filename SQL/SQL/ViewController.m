@@ -118,7 +118,23 @@ static CGFloat const kHeight = 44;
 #pragma mark - 删除表
 - (void)dropTable {
     
+    NSString *dropSQL = @"DROP TABLE T_Student";
     
+    char *error;
+    
+    sqlite3_exec(_db, dropSQL.UTF8String, NULL, NULL, &error);
+    
+    if (error == NULL) {
+        
+        NSLog(@"删除表成功");
+        self.result_Label.text = @"删除表成功";
+        
+    } else {
+        
+        NSLog(@"删除表失败:%s",error);
+        self.result_Label.text = [NSString stringWithFormat:@"删除表失败:%@",[NSString stringWithUTF8String:error]];
+        
+    }
     
     
 }
