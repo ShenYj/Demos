@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		312C2900C727671C87F2EE4E /* libPods-SQLUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4560710AD71567F47E64C99B /* libPods-SQLUITests.a */; };
+		42AFA0A7505DA8849A9FFE43 /* libPods-SQLTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ABBDC7A5FE525EC9EE4A8 /* libPods-SQLTests.a */; };
+		DF7FB8F17AF4605FFF7D0B78 /* libPods-SQL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09BD0A89CEB778DBE92F56 /* libPods-SQL.a */; };
+		F70EFA391D9E06A700560A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA381D9E06A700560A06 /* main.m */; };
+		F70EFA3C1D9E06A700560A06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA3B1D9E06A700560A06 /* AppDelegate.m */; };
+		F70EFA3F1D9E06A700560A06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA3E1D9E06A700560A06 /* ViewController.m */; };
+		F70EFA421D9E06A700560A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70EFA401D9E06A700560A06 /* Main.storyboard */; };
+		F70EFA441D9E06A700560A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70EFA431D9E06A700560A06 /* Assets.xcassets */; };
+		F70EFA471D9E06A700560A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70EFA451D9E06A700560A06 /* LaunchScreen.storyboard */; };
+		F70EFA521D9E06A700560A06 /* SQLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA511D9E06A700560A06 /* SQLTests.m */; };
+		F70EFA5D1D9E06A700560A06 /* SQLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA5C1D9E06A700560A06 /* SQLUITests.m */; };
+		F70EFA6B1D9E06FE00560A06 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F70EFA6A1D9E06FE00560A06 /* libsqlite3.0.tbd */; };
+		F70EFA6E1D9E0B1200560A06 /* JSSQLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA6D1D9E0B1200560A06 /* JSSQLButton.m */; };
+		F70EFA711D9E460600560A06 /* JSSQLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA701D9E460600560A06 /* JSSQLTableViewController.m */; };
+		F70EFA741D9E46E700560A06 /* JSStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = F70EFA731D9E46E700560A06 /* JSStudent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F70EFA4E1D9E06A700560A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70EFA2C1D9E06A700560A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70EFA331D9E06A700560A06;
+			remoteInfo = SQL;
+		};
+		F70EFA591D9E06A700560A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70EFA2C1D9E06A700560A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70EFA331D9E06A700560A06;
+			remoteInfo = SQL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0524BDA5F20E664AEED29F05 /* Pods-SQLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLTests/Pods-SQLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		05C8F08F0E0C4003680AF492 /* Pods-SQLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLUITests/Pods-SQLUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		243EE06C6E6AA6C81A32908E /* Pods-SQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQL/Pods-SQL.release.xcconfig"; sourceTree = "<group>"; };
+		4560710AD71567F47E64C99B /* libPods-SQLUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQLUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A259405AB1BB81FC99EC679 /* Pods-SQLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQLTests/Pods-SQLTests.release.xcconfig"; sourceTree = "<group>"; };
+		658ABBDC7A5FE525EC9EE4A8 /* libPods-SQLTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQLTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1D305A2E1AD0D1378DD440 /* Pods-SQLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQLUITests/Pods-SQLUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B9B210CD6D7F0FC17297CA61 /* Pods-SQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQL/Pods-SQL.debug.xcconfig"; sourceTree = "<group>"; };
+		DE09BD0A89CEB778DBE92F56 /* libPods-SQL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70EFA341D9E06A700560A06 /* SQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70EFA381D9E06A700560A06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F70EFA3A1D9E06A700560A06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F70EFA3B1D9E06A700560A06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F70EFA3D1D9E06A700560A06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F70EFA3E1D9E06A700560A06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F70EFA411D9E06A700560A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F70EFA431D9E06A700560A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F70EFA461D9E06A700560A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F70EFA481D9E06A700560A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70EFA4D1D9E06A700560A06 /* SQLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70EFA511D9E06A700560A06 /* SQLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLTests.m; sourceTree = "<group>"; };
+		F70EFA531D9E06A700560A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70EFA581D9E06A700560A06 /* SQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70EFA5C1D9E06A700560A06 /* SQLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLUITests.m; sourceTree = "<group>"; };
+		F70EFA5E1D9E06A700560A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70EFA6A1D9E06FE00560A06 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F70EFA6C1D9E0B1200560A06 /* JSSQLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSQLButton.h; sourceTree = "<group>"; };
+		F70EFA6D1D9E0B1200560A06 /* JSSQLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSQLButton.m; sourceTree = "<group>"; };
+		F70EFA6F1D9E460600560A06 /* JSSQLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSQLTableViewController.h; sourceTree = "<group>"; };
+		F70EFA701D9E460600560A06 /* JSSQLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSQLTableViewController.m; sourceTree = "<group>"; };
+		F70EFA721D9E46E700560A06 /* JSStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSStudent.h; sourceTree = "<group>"; };
+		F70EFA731D9E46E700560A06 /* JSStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSStudent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F70EFA311D9E06A700560A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70EFA6B1D9E06FE00560A06 /* libsqlite3.0.tbd in Frameworks */,
+				DF7FB8F17AF4605FFF7D0B78 /* libPods-SQL.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA4A1D9E06A700560A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42AFA0A7505DA8849A9FFE43 /* libPods-SQLTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA551D9E06A700560A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				312C2900C727671C87F2EE4E /* libPods-SQLUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05E906D53B2972709E4A1A27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9B210CD6D7F0FC17297CA61 /* Pods-SQL.debug.xcconfig */,
+				243EE06C6E6AA6C81A32908E /* Pods-SQL.release.xcconfig */,
+				0524BDA5F20E664AEED29F05 /* Pods-SQLTests.debug.xcconfig */,
+				4A259405AB1BB81FC99EC679 /* Pods-SQLTests.release.xcconfig */,
+				05C8F08F0E0C4003680AF492 /* Pods-SQLUITests.debug.xcconfig */,
+				AC1D305A2E1AD0D1378DD440 /* Pods-SQLUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47275673F3619D4BEC5287EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE09BD0A89CEB778DBE92F56 /* libPods-SQL.a */,
+				658ABBDC7A5FE525EC9EE4A8 /* libPods-SQLTests.a */,
+				4560710AD71567F47E64C99B /* libPods-SQLUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F70EFA2B1D9E06A700560A06 = {
+			isa = PBXGroup;
+			children = (
+				F70EFA6A1D9E06FE00560A06 /* libsqlite3.0.tbd */,
+				F70EFA361D9E06A700560A06 /* SQL */,
+				F70EFA501D9E06A700560A06 /* SQLTests */,
+				F70EFA5B1D9E06A700560A06 /* SQLUITests */,
+				F70EFA351D9E06A700560A06 /* Products */,
+				05E906D53B2972709E4A1A27 /* Pods */,
+				47275673F3619D4BEC5287EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F70EFA351D9E06A700560A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F70EFA341D9E06A700560A06 /* SQL.app */,
+				F70EFA4D1D9E06A700560A06 /* SQLTests.xctest */,
+				F70EFA581D9E06A700560A06 /* SQLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F70EFA361D9E06A700560A06 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				F70EFA3A1D9E06A700560A06 /* AppDelegate.h */,
+				F70EFA3B1D9E06A700560A06 /* AppDelegate.m */,
+				F70EFA3D1D9E06A700560A06 /* ViewController.h */,
+				F70EFA3E1D9E06A700560A06 /* ViewController.m */,
+				F70EFA721D9E46E700560A06 /* JSStudent.h */,
+				F70EFA731D9E46E700560A06 /* JSStudent.m */,
+				F70EFA6F1D9E460600560A06 /* JSSQLTableViewController.h */,
+				F70EFA701D9E460600560A06 /* JSSQLTableViewController.m */,
+				F70EFA6C1D9E0B1200560A06 /* JSSQLButton.h */,
+				F70EFA6D1D9E0B1200560A06 /* JSSQLButton.m */,
+				F70EFA401D9E06A700560A06 /* Main.storyboard */,
+				F70EFA431D9E06A700560A06 /* Assets.xcassets */,
+				F70EFA451D9E06A700560A06 /* LaunchScreen.storyboard */,
+				F70EFA481D9E06A700560A06 /* Info.plist */,
+				F70EFA371D9E06A700560A06 /* Supporting Files */,
+			);
+			path = SQL;
+			sourceTree = "<group>";
+		};
+		F70EFA371D9E06A700560A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70EFA381D9E06A700560A06 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F70EFA501D9E06A700560A06 /* SQLTests */ = {
+			isa = PBXGroup;
+			children = (
+				F70EFA511D9E06A700560A06 /* SQLTests.m */,
+				F70EFA531D9E06A700560A06 /* Info.plist */,
+			);
+			path = SQLTests;
+			sourceTree = "<group>";
+		};
+		F70EFA5B1D9E06A700560A06 /* SQLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F70EFA5C1D9E06A700560A06 /* SQLUITests.m */,
+				F70EFA5E1D9E06A700560A06 /* Info.plist */,
+			);
+			path = SQLUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F70EFA331D9E06A700560A06 /* SQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70EFA611D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQL" */;
+			buildPhases = (
+				8F87D2DD21C317FFC50C59E2 /* [CP] Check Pods Manifest.lock */,
+				F70EFA301D9E06A700560A06 /* Sources */,
+				F70EFA311D9E06A700560A06 /* Frameworks */,
+				F70EFA321D9E06A700560A06 /* Resources */,
+				30CA5AC915335B1F295DBC56 /* [CP] Embed Pods Frameworks */,
+				4F9E7E4341E5AF51BDFE08AF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQL;
+			productName = SQL;
+			productReference = F70EFA341D9E06A700560A06 /* SQL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F70EFA4C1D9E06A700560A06 /* SQLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70EFA641D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQLTests" */;
+			buildPhases = (
+				0A594AF81AFAE5BCED21BDF2 /* [CP] Check Pods Manifest.lock */,
+				F70EFA491D9E06A700560A06 /* Sources */,
+				F70EFA4A1D9E06A700560A06 /* Frameworks */,
+				F70EFA4B1D9E06A700560A06 /* Resources */,
+				A5F94C5566C41BB8F0DCA78F /* [CP] Embed Pods Frameworks */,
+				956005E82AC188125A3C913B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70EFA4F1D9E06A700560A06 /* PBXTargetDependency */,
+			);
+			name = SQLTests;
+			productName = SQLTests;
+			productReference = F70EFA4D1D9E06A700560A06 /* SQLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F70EFA571D9E06A700560A06 /* SQLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70EFA671D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQLUITests" */;
+			buildPhases = (
+				FBB5A36DBA2CDC6025CE737C /* [CP] Check Pods Manifest.lock */,
+				F70EFA541D9E06A700560A06 /* Sources */,
+				F70EFA551D9E06A700560A06 /* Frameworks */,
+				F70EFA561D9E06A700560A06 /* Resources */,
+				1123E69736C83E3BD254E940 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70EFA5A1D9E06A700560A06 /* PBXTargetDependency */,
+			);
+			name = SQLUITests;
+			productName = SQLUITests;
+			productReference = F70EFA581D9E06A700560A06 /* SQLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F70EFA2C1D9E06A700560A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ShenYj;
+				TargetAttributes = {
+					F70EFA331D9E06A700560A06 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
+					F70EFA4C1D9E06A700560A06 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+						TestTargetID = F70EFA331D9E06A700560A06;
+					};
+					F70EFA571D9E06A700560A06 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+						TestTargetID = F70EFA331D9E06A700560A06;
+					};
+				};
+			};
+			buildConfigurationList = F70EFA2F1D9E06A700560A06 /* Build configuration list for PBXProject "SQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F70EFA2B1D9E06A700560A06;
+			productRefGroup = F70EFA351D9E06A700560A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F70EFA331D9E06A700560A06 /* SQL */,
+				F70EFA4C1D9E06A700560A06 /* SQLTests */,
+				F70EFA571D9E06A700560A06 /* SQLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F70EFA321D9E06A700560A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70EFA471D9E06A700560A06 /* LaunchScreen.storyboard in Resources */,
+				F70EFA441D9E06A700560A06 /* Assets.xcassets in Resources */,
+				F70EFA421D9E06A700560A06 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA4B1D9E06A700560A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA561D9E06A700560A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A594AF81AFAE5BCED21BDF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1123E69736C83E3BD254E940 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQLUITests/Pods-SQLUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30CA5AC915335B1F295DBC56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQL/Pods-SQL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F9E7E4341E5AF51BDFE08AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQL/Pods-SQL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F87D2DD21C317FFC50C59E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		956005E82AC188125A3C913B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQLTests/Pods-SQLTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F94C5566C41BB8F0DCA78F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQLTests/Pods-SQLTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB5A36DBA2CDC6025CE737C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F70EFA301D9E06A700560A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70EFA3F1D9E06A700560A06 /* ViewController.m in Sources */,
+				F70EFA6E1D9E0B1200560A06 /* JSSQLButton.m in Sources */,
+				F70EFA3C1D9E06A700560A06 /* AppDelegate.m in Sources */,
+				F70EFA391D9E06A700560A06 /* main.m in Sources */,
+				F70EFA741D9E46E700560A06 /* JSStudent.m in Sources */,
+				F70EFA711D9E460600560A06 /* JSSQLTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA491D9E06A700560A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70EFA521D9E06A700560A06 /* SQLTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70EFA541D9E06A700560A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70EFA5D1D9E06A700560A06 /* SQLUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F70EFA4F1D9E06A700560A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70EFA331D9E06A700560A06 /* SQL */;
+			targetProxy = F70EFA4E1D9E06A700560A06 /* PBXContainerItemProxy */;
+		};
+		F70EFA5A1D9E06A700560A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70EFA331D9E06A700560A06 /* SQL */;
+			targetProxy = F70EFA591D9E06A700560A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F70EFA401D9E06A700560A06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70EFA411D9E06A700560A06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F70EFA451D9E06A700560A06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70EFA461D9E06A700560A06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F70EFA5F1D9E06A700560A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F70EFA601D9E06A700560A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F70EFA621D9E06A700560A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B210CD6D7F0FC17297CA61 /* Pods-SQL.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F70EFA631D9E06A700560A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 243EE06C6E6AA6C81A32908E /* Pods-SQL.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F70EFA651D9E06A700560A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0524BDA5F20E664AEED29F05 /* Pods-SQLTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQL.app/SQL";
+			};
+			name = Debug;
+		};
+		F70EFA661D9E06A700560A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A259405AB1BB81FC99EC679 /* Pods-SQLTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQL.app/SQL";
+			};
+			name = Release;
+		};
+		F70EFA681D9E06A700560A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05C8F08F0E0C4003680AF492 /* Pods-SQLUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SQL;
+			};
+			name = Debug;
+		};
+		F70EFA691D9E06A700560A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC1D305A2E1AD0D1378DD440 /* Pods-SQLUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.SQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SQL;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F70EFA2F1D9E06A700560A06 /* Build configuration list for PBXProject "SQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70EFA5F1D9E06A700560A06 /* Debug */,
+				F70EFA601D9E06A700560A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70EFA611D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70EFA621D9E06A700560A06 /* Debug */,
+				F70EFA631D9E06A700560A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70EFA641D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70EFA651D9E06A700560A06 /* Debug */,
+				F70EFA661D9E06A700560A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70EFA671D9E06A700560A06 /* Build configuration list for PBXNativeTarget "SQLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70EFA681D9E06A700560A06 /* Debug */,
+				F70EFA691D9E06A700560A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F70EFA2C1D9E06A700560A06 /* Project object */;
+}
