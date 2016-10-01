@@ -107,27 +107,6 @@ static CGFloat const kHeight = 44;
     
 }
 
-#pragma mark - public method
-- (void)excuteSQL:(SQLMethod)SQL withOperation:(NSString *)OperationDescription withSQLOrder:(NSString *)sqlString {
-    
-    switch (SQL) {
-        case SQLMethodDDL:
-        case SQLMethodDML:
-            
-            [self.dataBase executeUpdate:sqlString];
-            
-            break;
-        case SQLMethodDQL:
-            
-            [self.dataBase executeQuery:sqlString];
-            
-            break;
-            
-        default:
-            break;
-    }
-    
-}
 
 #pragma mark - 创建表
 - (void)creatTable {
