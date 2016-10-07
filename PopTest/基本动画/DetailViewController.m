@@ -50,6 +50,32 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+    
+    [self scale];
+    
+}
+
+#pragma mark - 旋转
+
+#pragma mark - 缩放
+- (void)scale {
+    
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    
+    basicAnimation.duration = 2;
+    basicAnimation.removedOnCompletion = NO;
+    basicAnimation.fillMode = kCAFillModeForwards;
+    
+    basicAnimation.toValue = @(0.5);
+    
+    [self.redLayer addAnimation:basicAnimation forKey:@"transformScale"];
+    
+}
+
+
+#pragma mark - 平移
+- (void)move {
+
     CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     
     basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 200)];
@@ -58,7 +84,6 @@
     basicAnimation.fillMode = kCAFillModeForwards;
     
     [self.redLayer addAnimation:basicAnimation forKey:nil];
-    
     
 }
 
