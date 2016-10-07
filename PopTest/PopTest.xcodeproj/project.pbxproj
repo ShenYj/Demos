@@ -19,6 +19,16 @@
 		F7037FF41DA4DF4700920135 /* PopTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7037FF31DA4DF4700920135 /* PopTestTests.m */; };
 		F7037FFF1DA4DF4700920135 /* PopTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7037FFE1DA4DF4700920135 /* PopTestUITests.m */; };
 		F703800E1DA4E92D00920135 /* JSPopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F703800D1DA4E92D00920135 /* JSPopButton.m */; };
+		F70380111DA6A28800920135 /* JSCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F70380101DA6A28800920135 /* JSCircleView.m */; };
+		F703801A1DA770A600920135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F70380191DA770A600920135 /* main.m */; };
+		F703801D1DA770A600920135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F703801C1DA770A600920135 /* AppDelegate.m */; };
+		F70380201DA770A600920135 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F703801F1DA770A600920135 /* MasterViewController.m */; };
+		F70380231DA770A600920135 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70380221DA770A600920135 /* DetailViewController.m */; };
+		F70380261DA770A600920135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70380241DA770A600920135 /* Main.storyboard */; };
+		F70380281DA770A600920135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70380271DA770A600920135 /* Assets.xcassets */; };
+		F703802B1DA770A600920135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70380291DA770A600920135 /* LaunchScreen.storyboard */; };
+		F70380361DA770A600920135 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70380351DA770A600920135 /* ____Tests.m */; };
+		F70380411DA770A600920135 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70380401DA770A600920135 /* ____UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = F7037FD51DA4DF4700920135;
 			remoteInfo = PopTest;
+		};
+		F70380321DA770A600920135 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7037FCE1DA4DF4700920135 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70380151DA770A600920135;
+			remoteInfo = "基本动画";
+		};
+		F703803D1DA770A600920135 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7037FCE1DA4DF4700920135 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70380151DA770A600920135;
+			remoteInfo = "基本动画";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -66,6 +90,26 @@
 		F70380001DA4DF4700920135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F703800C1DA4E92D00920135 /* JSPopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPopButton.h; sourceTree = "<group>"; };
 		F703800D1DA4E92D00920135 /* JSPopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPopButton.m; sourceTree = "<group>"; };
+		F703800F1DA6A28800920135 /* JSCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCircleView.h; sourceTree = "<group>"; };
+		F70380101DA6A28800920135 /* JSCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCircleView.m; sourceTree = "<group>"; };
+		F70380161DA770A600920135 /* 基本动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "基本动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70380191DA770A600920135 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F703801B1DA770A600920135 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F703801C1DA770A600920135 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F703801E1DA770A600920135 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		F703801F1DA770A600920135 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		F70380211DA770A600920135 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F70380221DA770A600920135 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F70380251DA770A600920135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F70380271DA770A600920135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F703802A1DA770A600920135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F703802C1DA770A600920135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70380311DA770A600920135 /* 基本动画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "基本动画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70380351DA770A600920135 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		F70380371DA770A600920135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F703803C1DA770A600920135 /* 基本动画UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "基本动画UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70380401DA770A600920135 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		F70380421DA770A600920135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +134,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F203FF63D52686E8341389 /* libPods-PopTestUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70380131DA770A600920135 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F703802E1DA770A600920135 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70380391DA770A600920135 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +190,9 @@
 				F7037FD81DA4DF4700920135 /* PopTest */,
 				F7037FF21DA4DF4700920135 /* PopTestTests */,
 				F7037FFD1DA4DF4700920135 /* PopTestUITests */,
+				F70380171DA770A600920135 /* 基本动画 */,
+				F70380341DA770A600920135 /* 基本动画Tests */,
+				F703803F1DA770A600920135 /* 基本动画UITests */,
 				F7037FD71DA4DF4700920135 /* Products */,
 				95C7C1B27019F89C815E6B53 /* Pods */,
 				0655EEEF3EB0A78F9BB1484F /* Frameworks */,
@@ -137,6 +205,9 @@
 				F7037FD61DA4DF4700920135 /* PopTest.app */,
 				F7037FEF1DA4DF4700920135 /* PopTestTests.xctest */,
 				F7037FFA1DA4DF4700920135 /* PopTestUITests.xctest */,
+				F70380161DA770A600920135 /* 基本动画.app */,
+				F70380311DA770A600920135 /* 基本动画Tests.xctest */,
+				F703803C1DA770A600920135 /* 基本动画UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +219,8 @@
 				F7037FDD1DA4DF4700920135 /* AppDelegate.m */,
 				F7037FDF1DA4DF4700920135 /* ViewController.h */,
 				F7037FE01DA4DF4700920135 /* ViewController.m */,
+				F703800F1DA6A28800920135 /* JSCircleView.h */,
+				F70380101DA6A28800920135 /* JSCircleView.m */,
 				F703800C1DA4E92D00920135 /* JSPopButton.h */,
 				F703800D1DA4E92D00920135 /* JSPopButton.m */,
 				F7037FE21DA4DF4700920135 /* Main.storyboard */,
@@ -183,6 +256,50 @@
 				F70380001DA4DF4700920135 /* Info.plist */,
 			);
 			path = PopTestUITests;
+			sourceTree = "<group>";
+		};
+		F70380171DA770A600920135 /* 基本动画 */ = {
+			isa = PBXGroup;
+			children = (
+				F703801B1DA770A600920135 /* AppDelegate.h */,
+				F703801C1DA770A600920135 /* AppDelegate.m */,
+				F703801E1DA770A600920135 /* MasterViewController.h */,
+				F703801F1DA770A600920135 /* MasterViewController.m */,
+				F70380211DA770A600920135 /* DetailViewController.h */,
+				F70380221DA770A600920135 /* DetailViewController.m */,
+				F70380241DA770A600920135 /* Main.storyboard */,
+				F70380271DA770A600920135 /* Assets.xcassets */,
+				F70380291DA770A600920135 /* LaunchScreen.storyboard */,
+				F703802C1DA770A600920135 /* Info.plist */,
+				F70380181DA770A600920135 /* Supporting Files */,
+			);
+			path = "基本动画";
+			sourceTree = "<group>";
+		};
+		F70380181DA770A600920135 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70380191DA770A600920135 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F70380341DA770A600920135 /* 基本动画Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F70380351DA770A600920135 /* ____Tests.m */,
+				F70380371DA770A600920135 /* Info.plist */,
+			);
+			path = "基本动画Tests";
+			sourceTree = "<group>";
+		};
+		F703803F1DA770A600920135 /* 基本动画UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F70380401DA770A600920135 /* ____UITests.m */,
+				F70380421DA770A600920135 /* Info.plist */,
+			);
+			path = "基本动画UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +366,59 @@
 			productReference = F7037FFA1DA4DF4700920135 /* PopTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F70380151DA770A600920135 /* 基本动画 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70380431DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画" */;
+			buildPhases = (
+				F70380121DA770A600920135 /* Sources */,
+				F70380131DA770A600920135 /* Frameworks */,
+				F70380141DA770A600920135 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "基本动画";
+			productName = "基本动画";
+			productReference = F70380161DA770A600920135 /* 基本动画.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F70380301DA770A600920135 /* 基本动画Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70380461DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画Tests" */;
+			buildPhases = (
+				F703802D1DA770A600920135 /* Sources */,
+				F703802E1DA770A600920135 /* Frameworks */,
+				F703802F1DA770A600920135 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70380331DA770A600920135 /* PBXTargetDependency */,
+			);
+			name = "基本动画Tests";
+			productName = "基本动画Tests";
+			productReference = F70380311DA770A600920135 /* 基本动画Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F703803B1DA770A600920135 /* 基本动画UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70380491DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画UITests" */;
+			buildPhases = (
+				F70380381DA770A600920135 /* Sources */,
+				F70380391DA770A600920135 /* Frameworks */,
+				F703803A1DA770A600920135 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F703803E1DA770A600920135 /* PBXTargetDependency */,
+			);
+			name = "基本动画UITests";
+			productName = "基本动画UITests";
+			productReference = F703803C1DA770A600920135 /* 基本动画UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,6 +442,20 @@
 						DevelopmentTeam = KS5QTFAS57;
 						TestTargetID = F7037FD51DA4DF4700920135;
 					};
+					F70380151DA770A600920135 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
+					F70380301DA770A600920135 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+						TestTargetID = F70380151DA770A600920135;
+					};
+					F703803B1DA770A600920135 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+						TestTargetID = F70380151DA770A600920135;
+					};
 				};
 			};
 			buildConfigurationList = F7037FD11DA4DF4700920135 /* Build configuration list for PBXProject "PopTest" */;
@@ -290,6 +474,9 @@
 				F7037FD51DA4DF4700920135 /* PopTest */,
 				F7037FEE1DA4DF4700920135 /* PopTestTests */,
 				F7037FF91DA4DF4700920135 /* PopTestUITests */,
+				F70380151DA770A600920135 /* 基本动画 */,
+				F70380301DA770A600920135 /* 基本动画Tests */,
+				F703803B1DA770A600920135 /* 基本动画UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,6 +500,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F7037FF81DA4DF4700920135 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70380141DA770A600920135 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F703802B1DA770A600920135 /* LaunchScreen.storyboard in Resources */,
+				F70380281DA770A600920135 /* Assets.xcassets in Resources */,
+				F70380261DA770A600920135 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F703802F1DA770A600920135 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F703803A1DA770A600920135 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70380111DA6A28800920135 /* JSCircleView.m in Sources */,
 				F703800E1DA4E92D00920135 /* JSPopButton.m in Sources */,
 				F7037FE11DA4DF4700920135 /* ViewController.m in Sources */,
 				F7037FDE1DA4DF4700920135 /* AppDelegate.m in Sources */,
@@ -472,6 +684,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F70380121DA770A600920135 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F703801D1DA770A600920135 /* AppDelegate.m in Sources */,
+				F70380201DA770A600920135 /* MasterViewController.m in Sources */,
+				F703801A1DA770A600920135 /* main.m in Sources */,
+				F70380231DA770A600920135 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F703802D1DA770A600920135 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70380361DA770A600920135 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70380381DA770A600920135 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70380411DA770A600920135 /* ____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -484,6 +723,16 @@
 			isa = PBXTargetDependency;
 			target = F7037FD51DA4DF4700920135 /* PopTest */;
 			targetProxy = F7037FFB1DA4DF4700920135 /* PBXContainerItemProxy */;
+		};
+		F70380331DA770A600920135 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70380151DA770A600920135 /* 基本动画 */;
+			targetProxy = F70380321DA770A600920135 /* PBXContainerItemProxy */;
+		};
+		F703803E1DA770A600920135 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70380151DA770A600920135 /* 基本动画 */;
+			targetProxy = F703803D1DA770A600920135 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -500,6 +749,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7037FE81DA4DF4700920135 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F70380241DA770A600920135 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70380251DA770A600920135 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F70380291DA770A600920135 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F703802A1DA770A600920135 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -665,6 +930,74 @@
 			};
 			name = Release;
 		};
+		F70380441DA770A600920135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "基本动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F70380451DA770A600920135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "基本动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F70380471DA770A600920135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "基本动画Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/基本动画.app/基本动画";
+			};
+			name = Debug;
+		};
+		F70380481DA770A600920135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "基本动画Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/基本动画.app/基本动画";
+			};
+			name = Release;
+		};
+		F703804A1DA770A600920135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "基本动画UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "基本动画";
+			};
+			name = Debug;
+		};
+		F703804B1DA770A600920135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "基本动画UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "基本动画";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -703,6 +1036,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F70380431DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70380441DA770A600920135 /* Debug */,
+				F70380451DA770A600920135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F70380461DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70380471DA770A600920135 /* Debug */,
+				F70380481DA770A600920135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F70380491DA770A600920135 /* Build configuration list for PBXNativeTarget "基本动画UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F703804A1DA770A600920135 /* Debug */,
+				F703804B1DA770A600920135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

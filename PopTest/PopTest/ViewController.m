@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "JSPopButton.h"
 #import <POP.h>
+#import <math.h>
 
 extern CGFloat kButtonSize;
 
@@ -105,9 +106,34 @@ extern CGFloat kButtonSize;
         CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
         rotationAnimation.toValue = @(angel * i);
         
+        CGFloat X;
+        CGFloat Y;
+        
+        
+        if (i * angel > M_PI) {
+            
+            Y = -(sin(i * angel) * 100 + self.circleView.center.y);
+        } else {
+            
+            Y = sin(i * angel) * 100 + self.circleView.center.y;
+        }
+        
+        if (i * angel < M_PI_2 || i * angel >= M_PI_2 * 3 ) {
+            
+            X = cos(i * angel) * 100 + self.circleView.center.x;
+            
+        } else {
+            
+            X = -(cos(i * angel) * 100 + self.circleView.center.x);
+        }
+        
+        NSLog(@"%f,%f",X,Y);
+        
+        CGPoint centerPoint = CGPointMake(X, Y);
+        
         
         CABasicAnimation *transLateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.translation"];
-        transLateAnimation.toValue = @(100);
+        transLateAnimation.toValue =[NSValue valueWithCGPoint:centerPoint];
         
         groupAnimation.animations = @[rotationAnimation,transLateAnimation];
         
