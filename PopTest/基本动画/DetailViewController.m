@@ -50,12 +50,25 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    
-    [self scale];
+    //[self scale];
+    [self rotation];
     
 }
 
 #pragma mark - 旋转
+- (void)rotation {
+    
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    
+    basicAnimation.duration = 2;
+    basicAnimation.removedOnCompletion = NO;
+    basicAnimation.fillMode = kCAFillModeForwards;
+    
+    basicAnimation.byValue = @(M_PI_2 * 0.5);
+    
+    //[self.redLayer addAnimation:basicAnimation forKey:@"transformRotation"];
+    [self.redLayer addAnimation:basicAnimation forKey:nil];
+}
 
 #pragma mark - 缩放
 - (void)scale {
