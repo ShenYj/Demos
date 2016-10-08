@@ -34,7 +34,7 @@
     CATransition *transition = [CATransition animation];
     
     // 2.设置类型
-    transition.type = @"rippleEffect";
+    transition.type = @"cameraIrisHollowOpen";
     
     if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         
