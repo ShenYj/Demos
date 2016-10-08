@@ -30,6 +30,12 @@
 
 - (void)swipeGesture:(UISwipeGestureRecognizer *)gesture {
     
+    // 1.创建转场动画对象
+    CATransition *transition = [CATransition animation];
+    
+    // 2.设置类型
+    transition.type = @"cube";
+    
     if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         
         self.index++;
@@ -38,6 +44,8 @@
         
         self.index--;
     }
+    // 3.添加到Layer上
+    [self.imageView.layer addAnimation:transition forKey:nil];
     
     // 循环图片
     if (self.index > 5) {
