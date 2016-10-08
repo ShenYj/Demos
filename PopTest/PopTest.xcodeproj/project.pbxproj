@@ -45,6 +45,13 @@
 		F7AE68AA1DA7F12800DA5F25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68A81DA7F12800DA5F25 /* Main.storyboard */; };
 		F7AE68AC1DA7F12800DA5F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68AB1DA7F12800DA5F25 /* Assets.xcassets */; };
 		F7AE68AF1DA7F12800DA5F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68AD1DA7F12800DA5F25 /* LaunchScreen.storyboard */; };
+		F7AE68BC1DA8A70200DA5F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE68BB1DA8A70200DA5F25 /* main.m */; };
+		F7AE68BF1DA8A70200DA5F25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE68BE1DA8A70200DA5F25 /* AppDelegate.m */; };
+		F7AE68C21DA8A70200DA5F25 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE68C11DA8A70200DA5F25 /* MasterViewController.m */; };
+		F7AE68C51DA8A70200DA5F25 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE68C41DA8A70200DA5F25 /* DetailViewController.m */; };
+		F7AE68C81DA8A70200DA5F25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68C61DA8A70200DA5F25 /* Main.storyboard */; };
+		F7AE68CA1DA8A70200DA5F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68C91DA8A70200DA5F25 /* Assets.xcassets */; };
+		F7AE68CD1DA8A70200DA5F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE68CB1DA8A70200DA5F25 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +177,18 @@
 		F7AE68AB1DA7F12800DA5F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AE68AE1DA7F12800DA5F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7AE68B01DA7F12800DA5F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7AE68B81DA8A70200DA5F25 /* 转场动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "转场动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7AE68BB1DA8A70200DA5F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7AE68BD1DA8A70200DA5F25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7AE68BE1DA8A70200DA5F25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7AE68C01DA8A70200DA5F25 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		F7AE68C11DA8A70200DA5F25 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		F7AE68C31DA8A70200DA5F25 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F7AE68C41DA8A70200DA5F25 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F7AE68C71DA8A70200DA5F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7AE68C91DA8A70200DA5F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7AE68CC1DA8A70200DA5F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7AE68CE1DA8A70200DA5F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +265,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7AE68B51DA8A70200DA5F25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -285,6 +311,7 @@
 				F7AE687E1DA78D1800DA5F25 /* 关键帧动画Tests */,
 				F7AE68891DA78D1800DA5F25 /* 关键帧动画UITests */,
 				F7AE689B1DA7F12800DA5F25 /* 组动画 */,
+				F7AE68B91DA8A70200DA5F25 /* 转场动画 */,
 				F7037FD71DA4DF4700920135 /* Products */,
 				95C7C1B27019F89C815E6B53 /* Pods */,
 				0655EEEF3EB0A78F9BB1484F /* Frameworks */,
@@ -304,6 +331,7 @@
 				F7AE687B1DA78D1800DA5F25 /* 关键帧动画Tests.xctest */,
 				F7AE68861DA78D1800DA5F25 /* 关键帧动画UITests.xctest */,
 				F7AE689A1DA7F12800DA5F25 /* 组动画.app */,
+				F7AE68B81DA8A70200DA5F25 /* 转场动画.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,6 +492,32 @@
 			isa = PBXGroup;
 			children = (
 				F7AE689D1DA7F12800DA5F25 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7AE68B91DA8A70200DA5F25 /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE68BD1DA8A70200DA5F25 /* AppDelegate.h */,
+				F7AE68BE1DA8A70200DA5F25 /* AppDelegate.m */,
+				F7AE68C01DA8A70200DA5F25 /* MasterViewController.h */,
+				F7AE68C11DA8A70200DA5F25 /* MasterViewController.m */,
+				F7AE68C31DA8A70200DA5F25 /* DetailViewController.h */,
+				F7AE68C41DA8A70200DA5F25 /* DetailViewController.m */,
+				F7AE68C61DA8A70200DA5F25 /* Main.storyboard */,
+				F7AE68C91DA8A70200DA5F25 /* Assets.xcassets */,
+				F7AE68CB1DA8A70200DA5F25 /* LaunchScreen.storyboard */,
+				F7AE68CE1DA8A70200DA5F25 /* Info.plist */,
+				F7AE68BA1DA8A70200DA5F25 /* Supporting Files */,
+			);
+			path = "转场动画";
+			sourceTree = "<group>";
+		};
+		F7AE68BA1DA8A70200DA5F25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE68BB1DA8A70200DA5F25 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -655,6 +709,23 @@
 			productReference = F7AE689A1DA7F12800DA5F25 /* 组动画.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7AE68B71DA8A70200DA5F25 /* 转场动画 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7AE68CF1DA8A70200DA5F25 /* Build configuration list for PBXNativeTarget "转场动画" */;
+			buildPhases = (
+				F7AE68B41DA8A70200DA5F25 /* Sources */,
+				F7AE68B51DA8A70200DA5F25 /* Frameworks */,
+				F7AE68B61DA8A70200DA5F25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "转场动画";
+			productName = "转场动画";
+			productReference = F7AE68B81DA8A70200DA5F25 /* 转场动画.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -710,6 +781,10 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KS5QTFAS57;
 					};
+					F7AE68B71DA8A70200DA5F25 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KS5QTFAS57;
+					};
 				};
 			};
 			buildConfigurationList = F7037FD11DA4DF4700920135 /* Build configuration list for PBXProject "PopTest" */;
@@ -735,6 +810,7 @@
 				F7AE687A1DA78D1800DA5F25 /* 关键帧动画Tests */,
 				F7AE68851DA78D1800DA5F25 /* 关键帧动画UITests */,
 				F7AE68991DA7F12800DA5F25 /* 组动画 */,
+				F7AE68B71DA8A70200DA5F25 /* 转场动画 */,
 			);
 		};
 /* End PBXProject section */
@@ -819,6 +895,16 @@
 				F7AE68AF1DA7F12800DA5F25 /* LaunchScreen.storyboard in Resources */,
 				F7AE68AC1DA7F12800DA5F25 /* Assets.xcassets in Resources */,
 				F7AE68AA1DA7F12800DA5F25 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7AE68B61DA8A70200DA5F25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7AE68CD1DA8A70200DA5F25 /* LaunchScreen.storyboard in Resources */,
+				F7AE68CA1DA8A70200DA5F25 /* Assets.xcassets in Resources */,
+				F7AE68C81DA8A70200DA5F25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1127,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7AE68B41DA8A70200DA5F25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7AE68BF1DA8A70200DA5F25 /* AppDelegate.m in Sources */,
+				F7AE68C21DA8A70200DA5F25 /* MasterViewController.m in Sources */,
+				F7AE68BC1DA8A70200DA5F25 /* main.m in Sources */,
+				F7AE68C51DA8A70200DA5F25 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1137,6 +1234,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7AE68AE1DA7F12800DA5F25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F7AE68C61DA8A70200DA5F25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7AE68C71DA8A70200DA5F25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7AE68CB1DA8A70200DA5F25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7AE68CC1DA8A70200DA5F25 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1460,6 +1573,28 @@
 			};
 			name = Release;
 		};
+		F7AE68D01DA8A70200DA5F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "转场动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7AE68D11DA8A70200DA5F25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "转场动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1555,6 +1690,14 @@
 			buildConfigurations = (
 				F7AE68B21DA7F12800DA5F25 /* Debug */,
 				F7AE68B31DA7F12800DA5F25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7AE68CF1DA8A70200DA5F25 /* Build configuration list for PBXNativeTarget "转场动画" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7AE68D01DA8A70200DA5F25 /* Debug */,
+				F7AE68D11DA8A70200DA5F25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
