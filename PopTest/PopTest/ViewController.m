@@ -109,7 +109,6 @@ extern CGFloat kButtonSize;
         CGFloat X;
         CGFloat Y;
         
-        
         if (i * angel > M_PI) {
             
             Y = -(sin(i * angel) * 100 + self.circleView.center.y);
