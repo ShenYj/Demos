@@ -34,7 +34,7 @@
     CATransition *transition = [CATransition animation];
     
     // 2.设置类型
-    transition.type = @"cameraIrisHollowOpen";
+    transition.type = @"cameraIrisHollowClose";
     
     if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         
