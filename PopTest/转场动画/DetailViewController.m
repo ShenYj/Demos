@@ -38,12 +38,18 @@
     
     if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         
+        // 设置子类型
+        transition.subtype = kCATransitionFromRight;
+        
         self.index++;
         
     } else if (gesture.direction == UISwipeGestureRecognizerDirectionRight) {
         
         self.index--;
+        
+        transition.subtype = kCATransitionFromLeft;
     }
+    
     // 3.添加到Layer上
     [self.imageView.layer addAnimation:transition forKey:nil];
     
