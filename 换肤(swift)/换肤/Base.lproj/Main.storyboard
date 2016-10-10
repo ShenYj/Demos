@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VZb-EL-ogI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rVG-H2-51G">
+            <objects>
+                <tabBarController id="VZb-EL-ogI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cJs-DM-Bc7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EDU-1h-Kye" kind="relationship" relationship="viewControllers" id="As1-7d-Phd"/>
+                        <segue destination="MHD-Qb-dR7" kind="relationship" relationship="viewControllers" id="ENS-Pd-et2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPD-PG-7de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="380"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="DuV-A6-FfO">
+            <objects>
+                <viewController id="EDU-1h-Kye" customClass="FirstViewController" customModule="换肤" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2JZ-xl-jnT"/>
+                        <viewControllerLayoutGuide type="bottom" id="cmp-vw-TeW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wRL-Ho-wsi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-AW-g16">
+                                <rect key="frame" x="211" y="50" width="178" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="7BB-4s-S3j"/>
+                                    <constraint firstAttribute="width" constant="178" id="dYh-Hr-VeC"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t76-F6-und">
+                                <rect key="frame" x="340" y="250" width="51" height="31"/>
+                                <connections>
+                                    <action selector="isNightSwitchClick:" destination="EDU-1h-Kye" eventType="valueChanged" id="Ocx-MI-byM"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夜间模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-QY-apS">
+                                <rect key="frame" x="211" y="255" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Sbh-Oh-fAI"/>
+                                    <constraint firstAttribute="width" constant="68" id="n4q-qR-k2y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eb4-QY-apS" firstAttribute="top" secondItem="Xyg-AW-g16" secondAttribute="bottom" constant="36" id="5ae-ac-Jve"/>
+                            <constraint firstItem="t76-F6-und" firstAttribute="top" secondItem="Xyg-AW-g16" secondAttribute="bottom" constant="31" id="BXE-5v-5gs"/>
+                            <constraint firstItem="Xyg-AW-g16" firstAttribute="centerX" secondItem="wRL-Ho-wsi" secondAttribute="centerX" id="Iar-fY-ljO"/>
+                            <constraint firstItem="Xyg-AW-g16" firstAttribute="top" secondItem="wRL-Ho-wsi" secondAttribute="top" constant="50" id="QUf-jV-YFR"/>
+                            <constraint firstItem="t76-F6-und" firstAttribute="centerX" secondItem="wRL-Ho-wsi" secondAttribute="centerX" constant="64" id="jW3-g4-1Zu"/>
+                            <constraint firstItem="eb4-QY-apS" firstAttribute="centerX" secondItem="wRL-Ho-wsi" secondAttribute="centerX" constant="-55" id="yer-Kp-c82"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="xbP-p0-dr9"/>
+                    <connections>
+                        <outlet property="firstImageView" destination="Xyg-AW-g16" id="Xy4-y9-gxF"/>
+                        <outlet property="isNightLabel" destination="eb4-QY-apS" id="Nm1-FI-Ssl"/>
+                        <outlet property="isNigthSwitch" destination="t76-F6-und" id="858-oT-u9x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="InH-Sy-QoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="22"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="orr-ro-G0N">
+            <objects>
+                <viewController id="MHD-Qb-dR7" customClass="SecondViewController" customModule="换肤" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D4g-CR-fu1"/>
+                        <viewControllerLayoutGuide type="bottom" id="bFg-N7-WP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ah9-zt-kOe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k24-1x-tl5">
+                                <rect key="frame" x="211" y="50" width="178" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="Fui-ZI-ikW"/>
+                                    <constraint firstAttribute="width" constant="178" id="NCi-pc-VXs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k24-1x-tl5" firstAttribute="centerX" secondItem="ah9-zt-kOe" secondAttribute="centerX" id="jz9-Nb-NHA"/>
+                            <constraint firstItem="k24-1x-tl5" firstAttribute="top" secondItem="ah9-zt-kOe" secondAttribute="topMargin" constant="50" id="ygs-UO-IGA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="O91-8G-dwb"/>
+                    <connections>
+                        <outlet property="secondImageView" destination="k24-1x-tl5" id="gQn-hk-4Xt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9u6-8Z-1tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="753"/>
+        </scene>
+    </scenes>
+</document>

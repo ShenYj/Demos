@@ -101,7 +101,7 @@
         NSLog(@"Task2-->%@",[NSThread currentThread]);
     };
     
-    // 3.异步执行任务
+    // 3.同步执行任务
     dispatch_sync(mainQueue, task1Block); // 程序会一致卡在这句代码-->主队列同步执行导致死锁
     dispatch_sync(mainQueue, task2Block);
     
