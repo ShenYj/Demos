@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>vc_label_text</key>
+	<string>255,255,255</string>
+	<key>vc_view_bg</key>
+	<string>111,121,133</string>
+	<key>one_view_bg</key>
+	<string>127,128,128</string>
+	<key>root_tabbar_tint</key>
+	<string>219,60,60</string>
+</dict>
+</plist>
