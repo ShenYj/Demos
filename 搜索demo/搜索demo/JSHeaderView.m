@@ -89,16 +89,19 @@ static NSInteger const kMaxNumber = 4;
         make.right.mas_equalTo(_button.mas_left).mas_offset(-5);
         make.bottom.mas_equalTo(self).mas_offset(-5);
     }];
-    
-    _textField = [[UITextField alloc] init];
-    [self addSubview:_textField];
-    
-    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self);
-        make.width.mas_equalTo(100);
-        make.centerX.mas_equalTo(self);
-    }];
-    
+
+    // UITextField test
+//    _textField = [[UITextField alloc] init];
+//    [self addSubview:_textField];
+//    
+//    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.mas_equalTo(_searchBar.mas_top);
+//        make.width.mas_equalTo(100);
+//        make.height.mas_equalTo(44);
+//        make.centerX.mas_equalTo(self);
+//    }];
+//    _textField.borderStyle = UITextBorderStyleRoundedRect;
+//    
 }
 
 
