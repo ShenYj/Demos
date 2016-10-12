@@ -16,6 +16,8 @@
 		F71DBAB91DAE59D100C75E13 /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71DBAB81DAE59D100C75E13 /* apps.plist */; };
 		F71DBABF1DAE5A4800C75E13 /* JSAppsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBABE1DAE5A4800C75E13 /* JSAppsTableController.m */; };
 		F71DBAC21DAE5A6300C75E13 /* JSApps.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAC11DAE5A6300C75E13 /* JSApps.m */; };
+		F71DBAC41DAE5FF600C75E13 /* user_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */; };
+		F71DBAC71DAE644700C75E13 /* NSString+JSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,9 @@
 		F71DBABE1DAE5A4800C75E13 /* JSAppsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAppsTableController.m; sourceTree = "<group>"; };
 		F71DBAC01DAE5A6300C75E13 /* JSApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSApps.h; sourceTree = "<group>"; };
 		F71DBAC11DAE5A6300C75E13 /* JSApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSApps.m; sourceTree = "<group>"; };
+		F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_default@2x.png"; sourceTree = "<group>"; };
+		F71DBAC51DAE644700C75E13 /* NSString+JSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSCache.h"; sourceTree = "<group>"; };
+		F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSCache.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +97,13 @@
 		F71DBABC1DAE5A3200C75E13 /* DownLoad */ = {
 			isa = PBXGroup;
 			children = (
+				F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */,
 				F71DBABD1DAE5A4800C75E13 /* JSAppsTableController.h */,
 				F71DBABE1DAE5A4800C75E13 /* JSAppsTableController.m */,
 				F71DBAC01DAE5A6300C75E13 /* JSApps.h */,
 				F71DBAC11DAE5A6300C75E13 /* JSApps.m */,
+				F71DBAC51DAE644700C75E13 /* NSString+JSCache.h */,
+				F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */,
 			);
 			path = DownLoad;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 				F71DBAB11DAE59BB00C75E13 /* LaunchScreen.storyboard in Resources */,
 				F71DBAAE1DAE59BB00C75E13 /* Assets.xcassets in Resources */,
 				F71DBAAC1DAE59BB00C75E13 /* Main.storyboard in Resources */,
+				F71DBAC41DAE5FF600C75E13 /* user_default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				F71DBAA31DAE59BB00C75E13 /* main.m in Sources */,
 				F71DBAC21DAE5A6300C75E13 /* JSApps.m in Sources */,
 				F71DBABF1DAE5A4800C75E13 /* JSAppsTableController.m in Sources */,
+				F71DBAC71DAE644700C75E13 /* NSString+JSCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
