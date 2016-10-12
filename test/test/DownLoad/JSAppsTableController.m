@@ -10,6 +10,8 @@
 #import "NSString+JSCache.h"
 #import "JSApps.h"
 
+#import "JSDownLoadImageOperation.h"
+
 static NSString * const reuserId = @"123";
 
 @interface JSAppsTableController ()
@@ -73,13 +75,15 @@ static NSString * const reuserId = @"123";
     }
     
     // 沙盒获取
-    if ([NSData dataWithContentsOfFile:[app.icon cachePath]]) {
+    if ([NSData dataWithContentsOfFile:[app.icon.lastPathComponent cachePath]]) {
         
-        NSData *data = [NSData dataWithContentsOfFile:[app.icon cachePath]];
+        NSData *data = [NSData dataWithContentsOfFile:[app.icon.lastPathComponent cachePath]];
         UIImage *image = [UIImage imageWithData:data];
         
         // 写入内存缓存中
         [self.imageCache setObject:image forKey:app.icon];
+        
+        cell.imageView.image = image;
         
         NSLog(@"从沙盒获取图片...");
         return cell;
@@ -92,6 +96,8 @@ static NSString * const reuserId = @"123";
         return cell;
     }
     
+    __weak typeof(self) weakSelf = self;
+    
     // 子线程下载图片
     NSBlockOperation *downloadDownOperation = [NSBlockOperation blockOperationWithBlock:^{
        
@@ -103,16 +109,16 @@ static NSString * const reuserId = @"123";
         UIImage *image = [UIImage imageWithData:data];
         
         // 存入图片缓存池
-        [self.imageCache setObject:image forKey:app.icon];
+        [weakSelf.imageCache setObject:image forKey:app.icon];
         
-        NSString *path = [app.icon cachePath];
+        NSString *path = [app.icon.lastPathComponent cachePath];
         
         [data writeToFile:path atomically:YES];
         
         // 返回主线程刷新UI
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
-            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
             //cell.imageView.image = image;
             
         }];
@@ -120,9 +126,9 @@ static NSString * const reuserId = @"123";
         
         
     }];
-    
+    // 添加至队列中
     [self.queue addOperation:downloadDownOperation];
-    
+    // 将下载操作存放到操作缓存池中
     [self.operationCace setObject:downloadDownOperation forKey:app.icon];
     
     
@@ -132,6 +138,10 @@ static NSString * const reuserId = @"123";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return 80;
+}
+
+- (void)dealloc {
+    NSLog(@"%s",__func__);
 }
 
 #pragma mark - Delegate
@@ -175,4 +185,6 @@ static NSString * const reuserId = @"123";
     }
     return _imageCache;
 }
+
+
 @end

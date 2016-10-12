@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic) JSAppsTableController *appsTable;
+//@property (nonatomic) JSAppsTableController *appsTable;
 
 @end
 
@@ -27,20 +27,12 @@
 
 - (void)clickRightBarButtonItem:(UIBarButtonItem *)barButtonItem {
     
-    [self.navigationController pushViewController:self.appsTable animated:YES];
+    JSAppsTableController *appsTable = [[JSAppsTableController alloc] init];
+    [self.navigationController pushViewController:appsTable animated:YES];
     
 }
 
-#pragma mark 
-#pragma mark - lazy
 
-- (JSAppsTableController *)appsTable {
-    
-    if (_appsTable == nil) {
-        _appsTable = [[JSAppsTableController alloc] init];
-    }
-    return _appsTable;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
