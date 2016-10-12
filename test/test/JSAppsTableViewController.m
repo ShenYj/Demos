@@ -1,19 +1,20 @@
 //
-//  JSAppsTableController.m
+//  JSAppsTableViewController.m
 //  test
 //
 //  Created by ShenYj on 2016/10/12.
 //  Copyright © 2016年 ShenYj. All rights reserved.
 //
 
-#import "JSAppsTableController.h"
-#import "NSString+JSCache.h"
-#import "JSApps.h"
+#import "JSAppsTableViewController.h"
+#import "JSDownLoadImageOperation.h"
 
 
 static NSString * const reuserId = @"123";
 
-@interface JSAppsTableController ()
+
+@interface JSAppsTableViewController ()
+
 // 数据容器
 @property (nonatomic) NSArray <JSApps *> *appsData;
 // 全局队列
@@ -26,17 +27,16 @@ static NSString * const reuserId = @"123";
 
 @end
 
-@implementation JSAppsTableController
+@implementation JSAppsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self prepareTableView];
-
+    
 }
 
 - (void)prepareTableView {
-    
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuserId];
 }
@@ -65,7 +65,7 @@ static NSString * const reuserId = @"123";
     
     // 设置占位图
     cell.imageView.image = [UIImage imageNamed:@"user_default.png"];
-
+    
     // 从图片缓存池获取图片
     if ([self.imageCache objectForKey:app.icon]) {
         
@@ -86,7 +86,7 @@ static NSString * const reuserId = @"123";
         
         NSLog(@"从沙盒获取图片...");
         return cell;
-                        
+        
     }
     
     // 避免图片下载操作重复执行
@@ -99,7 +99,7 @@ static NSString * const reuserId = @"123";
     
     // 子线程下载图片
     NSBlockOperation *downloadDownOperation = [NSBlockOperation blockOperationWithBlock:^{
-       
+        
         // 模拟延迟
         [NSThread sleepForTimeInterval:3];
         
@@ -130,6 +130,9 @@ static NSString * const reuserId = @"123";
     // 将下载操作存放到操作缓存池中
     [self.operationCace setObject:downloadDownOperation forKey:app.icon];
     
+    JSDownLoadImageOperation *operation = [[JSDownLoadImageOperation alloc] init];
+    
+    [self.queue addOperation:operation];
     
     return cell;
 }
@@ -151,7 +154,7 @@ static NSString * const reuserId = @"123";
 }
 
 
-#pragma mark 
+#pragma mark
 #pragma mark - Lazy
 - (NSArray<JSApps *> *)appsData {
     

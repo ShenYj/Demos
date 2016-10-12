@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "JSAppsTableController.h"
-
+#import "JSAppsTableViewController.h"
 
 @interface ViewController ()
 
@@ -22,7 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"应用程序列表" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBarButtonItem:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"demo2" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftBarButtonItem:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"demo1" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBarButtonItem:)];
 }
 
 - (void)clickRightBarButtonItem:(UIBarButtonItem *)barButtonItem {
@@ -32,7 +34,10 @@
     
 }
 
-
+- (void)clickLeftBarButtonItem:(UIBarButtonItem *)barButtonItem {
+    JSAppsTableViewController *appsTable = [[JSAppsTableViewController alloc] init];
+    [self.navigationController pushViewController:appsTable animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

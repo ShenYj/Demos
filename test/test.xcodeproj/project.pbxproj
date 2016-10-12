@@ -18,7 +18,8 @@
 		F71DBAC21DAE5A6300C75E13 /* JSApps.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAC11DAE5A6300C75E13 /* JSApps.m */; };
 		F71DBAC41DAE5FF600C75E13 /* user_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */; };
 		F71DBAC71DAE644700C75E13 /* NSString+JSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */; };
-		F71DBACB1DAE68CE00C75E13 /* JSDownLoadImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBACA1DAE68CE00C75E13 /* JSDownLoadImageOperation.m */; };
+		F71DBAD31DAE6B4C00C75E13 /* JSDownLoadImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAD21DAE6B4C00C75E13 /* JSDownLoadImageOperation.m */; };
+		F71DBAD61DAE6B7000C75E13 /* JSAppsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71DBAD51DAE6B7000C75E13 /* JSAppsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,10 @@
 		F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_default@2x.png"; sourceTree = "<group>"; };
 		F71DBAC51DAE644700C75E13 /* NSString+JSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSCache.h"; sourceTree = "<group>"; };
 		F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSCache.m"; sourceTree = "<group>"; };
-		F71DBAC91DAE68CE00C75E13 /* JSDownLoadImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDownLoadImageOperation.h; sourceTree = "<group>"; };
-		F71DBACA1DAE68CE00C75E13 /* JSDownLoadImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDownLoadImageOperation.m; sourceTree = "<group>"; };
+		F71DBAD11DAE6B4C00C75E13 /* JSDownLoadImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDownLoadImageOperation.h; sourceTree = "<group>"; };
+		F71DBAD21DAE6B4C00C75E13 /* JSDownLoadImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDownLoadImageOperation.m; sourceTree = "<group>"; };
+		F71DBAD41DAE6B7000C75E13 /* JSAppsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSAppsTableViewController.h; path = ../JSAppsTableViewController.h; sourceTree = "<group>"; };
+		F71DBAD51DAE6B7000C75E13 /* JSAppsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSAppsTableViewController.m; path = ../JSAppsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +77,9 @@
 		F71DBAA01DAE59BB00C75E13 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				F71DBABC1DAE5A3200C75E13 /* DownLoad */,
+				F71DBAD71DAE6C1F00C75E13 /* DownLoad(Demo2) */,
+				F71DBAD01DAE6B4C00C75E13 /* DownLoadLibrary */,
+				F71DBABC1DAE5A3200C75E13 /* DownLoad(demo1) */,
 				F71DBAA41DAE59BB00C75E13 /* AppDelegate.h */,
 				F71DBAA51DAE59BB00C75E13 /* AppDelegate.m */,
 				F71DBAA71DAE59BB00C75E13 /* ViewController.h */,
@@ -97,10 +102,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F71DBABC1DAE5A3200C75E13 /* DownLoad */ = {
+		F71DBABC1DAE5A3200C75E13 /* DownLoad(demo1) */ = {
 			isa = PBXGroup;
 			children = (
-				F71DBAC81DAE68B800C75E13 /* DownLoadLibrary */,
 				F71DBAC31DAE5FF600C75E13 /* user_default@2x.png */,
 				F71DBABD1DAE5A4800C75E13 /* JSAppsTableController.h */,
 				F71DBABE1DAE5A4800C75E13 /* JSAppsTableController.m */,
@@ -109,16 +113,27 @@
 				F71DBAC51DAE644700C75E13 /* NSString+JSCache.h */,
 				F71DBAC61DAE644700C75E13 /* NSString+JSCache.m */,
 			);
+			name = "DownLoad(demo1)";
 			path = DownLoad;
 			sourceTree = "<group>";
 		};
-		F71DBAC81DAE68B800C75E13 /* DownLoadLibrary */ = {
+		F71DBAD01DAE6B4C00C75E13 /* DownLoadLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				F71DBAC91DAE68CE00C75E13 /* JSDownLoadImageOperation.h */,
-				F71DBACA1DAE68CE00C75E13 /* JSDownLoadImageOperation.m */,
+				F71DBAD11DAE6B4C00C75E13 /* JSDownLoadImageOperation.h */,
+				F71DBAD21DAE6B4C00C75E13 /* JSDownLoadImageOperation.m */,
 			);
 			path = DownLoadLibrary;
+			sourceTree = "<group>";
+		};
+		F71DBAD71DAE6C1F00C75E13 /* DownLoad(Demo2) */ = {
+			isa = PBXGroup;
+			children = (
+				F71DBAD41DAE6B7000C75E13 /* JSAppsTableViewController.h */,
+				F71DBAD51DAE6B7000C75E13 /* JSAppsTableViewController.m */,
+			);
+			name = "DownLoad(Demo2)";
+			path = Demo3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +214,8 @@
 				F71DBAA31DAE59BB00C75E13 /* main.m in Sources */,
 				F71DBAC21DAE5A6300C75E13 /* JSApps.m in Sources */,
 				F71DBABF1DAE5A4800C75E13 /* JSAppsTableController.m in Sources */,
-				F71DBACB1DAE68CE00C75E13 /* JSDownLoadImageOperation.m in Sources */,
+				F71DBAD31DAE6B4C00C75E13 /* JSDownLoadImageOperation.m in Sources */,
+				F71DBAD61DAE6B7000C75E13 /* JSAppsTableViewController.m in Sources */,
 				F71DBAC71DAE644700C75E13 /* NSString+JSCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
