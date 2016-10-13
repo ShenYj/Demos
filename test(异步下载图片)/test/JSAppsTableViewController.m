@@ -9,9 +9,7 @@
 #import "JSAppsTableViewController.h"
 #import "UIImageView+JSWebCache.h"
 
-
 static NSString * const reuserId = @"123";
-
 
 @interface JSAppsTableViewController ()
 
@@ -19,6 +17,7 @@ static NSString * const reuserId = @"123";
 @property (nonatomic) NSArray <JSApps *> *appsData;
 
 @property (nonatomic,copy) NSString *currentString;
+
 
 @end
 
