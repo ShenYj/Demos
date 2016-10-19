@@ -89,7 +89,7 @@ static NSString * const reusedId = @"loopView";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.imageUrls.count * 2;
+    return self.imageUrls.count * 100;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
