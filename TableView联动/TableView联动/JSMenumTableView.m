@@ -54,6 +54,9 @@ static NSString * const reuseID = @"menum";
     
     cell.textLabel.text = [NSString stringWithFormat:@"第%zd组第%@行",indexPath.section,[NSNumber numberWithInteger:indexPath.row].stringValue];
     
+    
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
