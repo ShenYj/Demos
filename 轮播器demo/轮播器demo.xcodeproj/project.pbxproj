@@ -15,6 +15,9 @@
 		F76A8C351DB760F8006288D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C2C1DB760F8006288D1 /* LaunchScreen.storyboard */; };
 		F76A8C361DB760F8006288D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C2E1DB760F8006288D1 /* Main.storyboard */; };
 		F76A8C371DB760F8006288D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C301DB760F8006288D1 /* main.m */; };
+		F76A8C3B1DB771C8006288D1 /* JSLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C3A1DB771C8006288D1 /* JSLoopView.m */; };
+		F76A8C3E1DB772A9006288D1 /* JSFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C3D1DB772A9006288D1 /* JSFlowLayout.m */; };
+		F76A8C411DB7778B006288D1 /* JSLoopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C401DB7778B006288D1 /* JSLoopViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,12 @@
 		F76A8C2F1DB760F8006288D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F76A8C301DB760F8006288D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F76A8C381DB7613B006288D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F76A8C391DB771C8006288D1 /* JSLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoopView.h; sourceTree = "<group>"; };
+		F76A8C3A1DB771C8006288D1 /* JSLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoopView.m; sourceTree = "<group>"; };
+		F76A8C3C1DB772A9006288D1 /* JSFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlowLayout.h; sourceTree = "<group>"; };
+		F76A8C3D1DB772A9006288D1 /* JSFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlowLayout.m; sourceTree = "<group>"; };
+		F76A8C3F1DB7778B006288D1 /* JSLoopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoopViewCell.h; sourceTree = "<group>"; };
+		F76A8C401DB7778B006288D1 /* JSLoopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoopViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +131,12 @@
 		F76A8C251DB760F8006288D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F76A8C391DB771C8006288D1 /* JSLoopView.h */,
+				F76A8C3A1DB771C8006288D1 /* JSLoopView.m */,
+				F76A8C3C1DB772A9006288D1 /* JSFlowLayout.h */,
+				F76A8C3D1DB772A9006288D1 /* JSFlowLayout.m */,
+				F76A8C3F1DB7778B006288D1 /* JSLoopViewCell.h */,
+				F76A8C401DB7778B006288D1 /* JSLoopViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F76A8C331DB760F8006288D1 /* AppDelegate.m in Sources */,
+				F76A8C3B1DB771C8006288D1 /* JSLoopView.m in Sources */,
 				F76A8C371DB760F8006288D1 /* main.m in Sources */,
+				F76A8C3E1DB772A9006288D1 /* JSFlowLayout.m in Sources */,
 				F76A8C311DB760F8006288D1 /* ViewController.m in Sources */,
+				F76A8C411DB7778B006288D1 /* JSLoopViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
