@@ -1,0 +1,6 @@
+framework module Pods____demo {
+  umbrella header "Pods-轮播器demo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D78AB18C6EF7EA94A296F8F0 /* Pods____demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C3DE05528F86FE20C0A21B /* Pods____demo.framework */; };
 		F76A8C311DB760F8006288D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C231DB760F8006288D1 /* ViewController.m */; };
 		F76A8C321DB760F8006288D1 /* imgSources.plist in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C271DB760F8006288D1 /* imgSources.plist */; };
 		F76A8C331DB760F8006288D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C2A1DB760F8006288D1 /* AppDelegate.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D9F2F9BD22E8E149A1B2CA /* Pods-轮播器demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-轮播器demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-轮播器demo/Pods-轮播器demo.release.xcconfig"; sourceTree = "<group>"; };
+		85C3DE05528F86FE20C0A21B /* Pods____demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		931E75047B8F6FEFC234827A /* Pods-轮播器demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-轮播器demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-轮播器demo/Pods-轮播器demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F76A8C041DB75D9E006288D1 /* 轮播器demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "轮播器demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A8C181DB75D9E006288D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F76A8C221DB760F8006288D1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78AB18C6EF7EA94A296F8F0 /* Pods____demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CA07C9FBBF57645F1144F31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				931E75047B8F6FEFC234827A /* Pods-轮播器demo.debug.xcconfig */,
+				00D9F2F9BD22E8E149A1B2CA /* Pods-轮播器demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA145905C29C4E808E26F288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85C3DE05528F86FE20C0A21B /* Pods____demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F76A8BFB1DB75D9E006288D1 = {
 			isa = PBXGroup;
 			children = (
 				F76A8C061DB75D9E006288D1 /* 轮播器demo */,
 				F76A8C051DB75D9E006288D1 /* Products */,
+				3CA07C9FBBF57645F1144F31 /* Pods */,
+				DA145905C29C4E808E26F288 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F76A8C1B1DB75D9E006288D1 /* Build configuration list for PBXNativeTarget "轮播器demo" */;
 			buildPhases = (
+				075AD8845D8C3B00A4D0411A /* [CP] Check Pods Manifest.lock */,
 				F76A8C001DB75D9E006288D1 /* Sources */,
 				F76A8C011DB75D9E006288D1 /* Frameworks */,
 				F76A8C021DB75D9E006288D1 /* Resources */,
+				9E3595839FA02C9F98B8DDC7 /* [CP] Embed Pods Frameworks */,
+				168DBA2A46E038605CEC004F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +217,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		075AD8845D8C3B00A4D0411A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		168DBA2A46E038605CEC004F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-轮播器demo/Pods-轮播器demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E3595839FA02C9F98B8DDC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-轮播器demo/Pods-轮播器demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F76A8C001DB75D9E006288D1 /* Sources */ = {
@@ -310,6 +385,7 @@
 		};
 		F76A8C1C1DB75D9E006288D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931E75047B8F6FEFC234827A /* Pods-轮播器demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -323,6 +399,7 @@
 		};
 		F76A8C1D1DB75D9E006288D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D9F2F9BD22E8E149A1B2CA /* Pods-轮播器demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -353,6 +430,7 @@
 				F76A8C1D1DB75D9E006288D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
