@@ -13,6 +13,7 @@
 		F76A8C121DB75D9E006288D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C101DB75D9E006288D1 /* Main.storyboard */; };
 		F76A8C141DB75D9E006288D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C131DB75D9E006288D1 /* Assets.xcassets */; };
 		F76A8C171DB75D9E006288D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C151DB75D9E006288D1 /* LaunchScreen.storyboard */; };
+		F76A8C1F1DB75FB0006288D1 /* imgSources.plist in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C1E1DB75FB0006288D1 /* imgSources.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F76A8C131DB75D9E006288D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F76A8C161DB75D9E006288D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F76A8C181DB75D9E006288D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76A8C1E1DB75FB0006288D1 /* imgSources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imgSources.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F76A8C0B1DB75D9E006288D1 /* AppDelegate.m */,
 				F76A8C0D1DB75D9E006288D1 /* ViewController.h */,
 				F76A8C0E1DB75D9E006288D1 /* ViewController.m */,
+				F76A8C1E1DB75FB0006288D1 /* imgSources.plist */,
 				F76A8C101DB75D9E006288D1 /* Main.storyboard */,
 				F76A8C131DB75D9E006288D1 /* Assets.xcassets */,
 				F76A8C151DB75D9E006288D1 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				F76A8C171DB75D9E006288D1 /* LaunchScreen.storyboard in Resources */,
 				F76A8C141DB75D9E006288D1 /* Assets.xcassets in Resources */,
 				F76A8C121DB75D9E006288D1 /* Main.storyboard in Resources */,
+				F76A8C1F1DB75FB0006288D1 /* imgSources.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
