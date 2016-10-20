@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import "JSHeaderViewController.h"
-
+#import "Masonry.h"
 
 @interface ViewController () 
 
+@property (nonatomic) UILabel *describeLabel;
 
 @end
 
@@ -21,6 +22,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self prepareNavigationBar];
+    
+    [self.view addSubview:self.describeLabel];
+    
+    [self.describeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,7 +52,19 @@
 }
 
 
-
+- (UILabel *)describeLabel {
+    
+    if (_describeLabel == nil) {
+        _describeLabel = [[UILabel alloc ]init];
+        _describeLabel.textAlignment = NSTextAlignmentCenter;
+        _describeLabel.font = [UIFont systemFontOfSize:16];
+        _describeLabel.textColor = [UIColor purpleColor];
+        _describeLabel.numberOfLines = 0;
+        _describeLabel.text = @"点击右上角按钮,进入demo视图";
+        
+    }
+    return _describeLabel;
+}
 
 
 @end
