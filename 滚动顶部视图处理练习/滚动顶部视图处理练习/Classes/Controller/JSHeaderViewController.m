@@ -49,6 +49,26 @@ static NSString * const reusedID = @"abc";
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.tableView.contentOffset = CGPointMake(0, -kHeaderViewHeight);
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    
+    return self.statusBarStyle;
+}
+
+#pragma mark
+#pragma mark - set up UI
+
 - (void)prepareTableView {
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reusedID];
@@ -67,8 +87,8 @@ static NSString * const reusedID = @"abc";
     
     [self.view addSubview:self.headerView];
     [self.headerView addSubview:self.headerImageView];
-    [self.headerView addSubview:self.bottomLine];
     [self.headerView addSubview:self.backButton];
+    [self.headerView addSubview:self.bottomLine];
     
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view);
@@ -94,25 +114,8 @@ static NSString * const reusedID = @"abc";
     
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    self.tableView.contentOffset = CGPointMake(0, -kHeaderViewHeight);
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    
-    return self.statusBarStyle;
-}
-
 #pragma mark 
-#pragma mark = target
+#pragma mark - target
 
 - (void)clickBackButton:(UIButton *)button {
     
@@ -163,6 +166,7 @@ static NSString * const reusedID = @"abc";
             make.top.mas_equalTo(self.view).mas_offset(-minOffsetY);
             make.height.mas_equalTo(kHeaderViewHeight);
         }];
+        
         
         
     } else {
