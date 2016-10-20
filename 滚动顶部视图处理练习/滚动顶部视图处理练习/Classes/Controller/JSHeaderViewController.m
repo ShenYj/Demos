@@ -45,13 +45,15 @@ static NSString * const reusedID = @"abc";
     
     [self prepareTableView];
     
-    [self prepareViewHeaderView];
+    [self prepareHeaderView];
+    
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
     self.tableView.contentOffset = CGPointMake(0, -kHeaderViewHeight);
     
 }
@@ -78,12 +80,10 @@ static NSString * const reusedID = @"abc";
         make.top.left.right.bottom.mas_equalTo(self.view);
     }];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(kHeaderViewHeight, 0, 0, 0);
-    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(kHeaderViewHeight, 0, 0, 0);
     
 }
 
-- (void)prepareViewHeaderView {
+- (void)prepareHeaderView {
     
     [self.view addSubview:self.headerView];
     [self.headerView addSubview:self.headerImageView];
@@ -195,6 +195,8 @@ static NSString * const reusedID = @"abc";
         _tableView = [[JSTableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.contentInset = UIEdgeInsetsMake(kHeaderViewHeight, 0, 0, 0);
+        _tableView.scrollIndicatorInsets = self.tableView.contentInset;
     }
     return _tableView;
 }
