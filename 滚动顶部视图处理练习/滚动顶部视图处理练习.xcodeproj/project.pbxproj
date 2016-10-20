@@ -15,6 +15,7 @@
 		F76A8C781DB86A74006288D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A8C711DB86A74006288D1 /* Main.storyboard */; };
 		F76A8C791DB86A74006288D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C731DB86A74006288D1 /* main.m */; };
 		F76A8C7C1DB872CF006288D1 /* JSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C7B1DB872CF006288D1 /* JSTableView.m */; };
+		F76A8C7F1DB87B4C006288D1 /* JSHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A8C7E1DB87B4C006288D1 /* JSHeaderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		F76A8C731DB86A74006288D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F76A8C7A1DB872CF006288D1 /* JSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableView.h; sourceTree = "<group>"; };
 		F76A8C7B1DB872CF006288D1 /* JSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableView.m; sourceTree = "<group>"; };
+		F76A8C7D1DB87B4C006288D1 /* JSHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSHeaderViewController.h; sourceTree = "<group>"; };
+		F76A8C7E1DB87B4C006288D1 /* JSHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHeaderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 			children = (
 				F76A8C671DB86A74006288D1 /* ViewController.h */,
 				F76A8C681DB86A74006288D1 /* ViewController.m */,
+				F76A8C7D1DB87B4C006288D1 /* JSHeaderViewController.h */,
+				F76A8C7E1DB87B4C006288D1 /* JSHeaderViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				F76A8C7C1DB872CF006288D1 /* JSTableView.m in Sources */,
 				F76A8C751DB86A74006288D1 /* AppDelegate.m in Sources */,
 				F76A8C791DB86A74006288D1 /* main.m in Sources */,
+				F76A8C7F1DB87B4C006288D1 /* JSHeaderViewController.m in Sources */,
 				F76A8C741DB86A74006288D1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
