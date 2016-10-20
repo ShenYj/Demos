@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+ platform :ios, '9.0'
+
+target '滚动顶部视图处理练习' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 滚动顶部视图处理练习
+
+pod 'Masonry'
+pod 'YYWebImage'
+
+end

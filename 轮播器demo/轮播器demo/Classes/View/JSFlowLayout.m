@@ -12,7 +12,7 @@
 
 - (void)prepareLayout {
     [super prepareLayout];
-    self.sectionInset = UIEdgeInsetsZero;
+    //self.sectionInset = UIEdgeInsetsZero;
     self.itemSize = self.collectionView.bounds.size;
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.minimumLineSpacing = 0;
