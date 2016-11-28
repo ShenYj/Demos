@@ -28,11 +28,14 @@
 
 - (void)clickPushViewControllerButton:(UIButton *)sender {
     
-    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-        PushedVC *pushedVC = [[PushedVC alloc] init];
-        UINavigationController *Nav = (UINavigationController *)self.mm_drawerController.centerViewController;
-        [Nav pushViewController:pushedVC animated:YES];
-    }];
+    // 默认是先收起左侧控制器,中央控制器回到屏幕中央的同时再去Push控制器
+    //[self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+    //}];
+    
+    PushedVC *pushedVC = [[PushedVC alloc] init];
+    
+    // 基于原有方法,添加一个控制器参数,获取到中央控制器先进行Push操作,然后再收起左侧控制器
+    [self.mm_drawerController closeDrawerAnimated:YES TempVc:pushedVC completion:nil];
 }
 
 - (UIButton *)button {
