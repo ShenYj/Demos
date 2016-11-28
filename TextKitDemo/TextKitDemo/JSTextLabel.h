@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSTextLabel;
+
+@protocol JSTextLabelDelegate <NSObject>
+@optional
+- (void)textLabel:(JSTextLabel *)textLabel withClickTextStorageString:(NSString *)string;
+@end
+
 @interface JSTextLabel : UILabel
+
+@property (nonatomic,weak) id <JSTextLabelDelegate> delegate;
 
 @end
