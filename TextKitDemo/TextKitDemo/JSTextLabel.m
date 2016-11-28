@@ -11,11 +11,11 @@
 
 @interface JSTextLabel ()
 
-/** 属性文本存储 NSMutableAttributeString的子类 */
+/** 属性文本存储 NSMutableAttributeString的子类(里面存的是要管理的文本) */
 @property (nonatomic,strong) NSTextStorage *textStorage;
-/** 负责文本'字形'布局 */
+/** 负责文本'字形'布局(管理文本布局方式) */
 @property (nonatomic,strong) NSLayoutManager *textLayoutManager;
-/** 负责文本绘制的范围 */
+/** 负责文本绘制的范围(表示文本要填充的区域) */
 @property (nonatomic,strong) NSTextContainer *textLayoutContainer;
 
 @end
@@ -36,17 +36,19 @@
     self.textLayoutContainer.size = self.bounds.size;
 }
 
+/** 重写绘制文本方法 */
 - (void)drawTextInRect:(CGRect)rect {
-    [super drawTextInRect:rect];
+    //[super drawTextInRect:rect];
     NSRange range = NSMakeRange(0, self.textStorage.length);
     // Glyphs字形
-    [self.textLayoutManager setLocation:CGPointZero forStartOfGlyphRange:range];
+    [self.textLayoutManager drawGlyphsForGlyphRange:range atPoint:CGPointZero];
+    
 }
 
 /** 准备文本系统 */
 - (void)prepareTextSystem {
     // 准备文本内容
-    [self prepareTextContent];
+    //[self prepareTextContent];  调用顺序: init --> 设置属性(text/attributeText),所以在调用prepareTextContent时,attributeText和text均为nil
     // 设置对象的关系
     [self.textStorage addLayoutManager:self.textLayoutManager];
     [self.textLayoutManager addTextContainer:self.textLayoutContainer];
