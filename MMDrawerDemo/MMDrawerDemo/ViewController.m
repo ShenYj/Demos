@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor purpleColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左侧按钮" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftBarButtonItem:)];
+}
+
+- (void)clickLeftBarButtonItem:(UIBarButtonItem *)sender {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (NSString *)title {
