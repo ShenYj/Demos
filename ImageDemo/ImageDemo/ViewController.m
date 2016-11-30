@@ -24,9 +24,9 @@
     [self.view addSubview:imageView];
     UIImage *image = [UIImage imageNamed:@"v2_pullRefresh1"];
     CGRect rect = CGRectMake(0, 0, 200, 200);
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 200), NO, 0.0);
-    [[UIColor blueColor] setFill];
-    UIRectFill(rect);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 200), YES, 0.0);
+//    [[UIColor blueColor] setFill];
+//    UIRectFill(rect);
     [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:100] addClip];
     [image drawInRect:rect];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
