@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        
+        //添加到购物车
+        function goCart(){
+            // 自己定义的URL
+            window.location.href = "cart:///buy/iPhone56/10000";
+        }
+        // 窗口提示
+        function alertMessage(){
+            alert("点击了我");
+        }
+        // 求和运算函数
+        function sum(a,b){
+            alert(a+b);
+            return a+b
+        }
+        // 跳转网页
+        function goMyPage(){
+            window.location.href = "http://www.jianshu.com/users/5ec5747435a2/latest_articles";
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>Javascript与OC交互Demo</h1>
+    <br/>
+    <br/>
+    <br/>
+    iPhone 56 <input type="button" value="点击加入购物车" onclick="javascript:goCart()"/>
+
+    <div style="color: red">
+        点击加入购物车,在App中跳转新页面<br/>
+    </div>
+    <hr/>
+
+    <input type="button" value="去我的个人主页" onclick="javascript:goMyPage()"/>
+    <hr/>
+    <input type="button" value="点击弹出提示框" onclick="javascript:alertMessage()"/>
+    <hr/>
+    <input type="button" value="计算:10+21=?" onclick="javascript:sum(10,21);"/>
+    <hr/>
+
+</body>
+</html>

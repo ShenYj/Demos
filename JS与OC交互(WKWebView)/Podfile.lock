@@ -1,0 +1,15 @@
+PODS:
+  - JSExtension (0.0.1)
+  - Masonry (1.0.2)
+
+DEPENDENCIES:
+  - JSExtension
+  - Masonry
+
+SPEC CHECKSUMS:
+  JSExtension: 0a26a1025a24dabfc2145a81875c90f4bafcbf23
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: 5a938cedf30f769c25d53fe209f666fc1de2f053
+
+COCOAPODS: 1.0.1
