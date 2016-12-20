@@ -5,6 +5,9 @@
     <title></title>
 
     <script type="text/javascript">
+        // 适配
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=no">
         
         //添加到购物车
         function goCart(){
@@ -24,6 +27,12 @@
         function goMyPage(){
             window.location.href = "http://www.jianshu.com/users/5ec5747435a2/latest_articles";
         }
+        // 向OC传递信息
+        function postMyMessage()? {?
+            var message = { 'message' : 'Hello, World!', 'numbers' : [ 1, 2, 3 ] };?
+            window.webkit.messageHandlers.myName.postMessage(message);?
+        }
+
     </script>
 
 </head>
@@ -45,6 +54,8 @@
     <input type="button" value="点击弹出提示框" onclick="javascript:alertMessage()"/>
     <hr/>
     <input type="button" value="计算:10+21=?" onclick="javascript:sum(10,21);"/>
+    <hr/>
+    <input type="button" value="向OC传递信息" onclick="javascript:postMyMessage();">
     <hr/>
 
 </body>
