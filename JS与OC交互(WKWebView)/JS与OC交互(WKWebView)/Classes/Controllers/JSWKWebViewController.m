@@ -6,21 +6,22 @@
 //  Copyright © 2016年 ___ShenYJ___. All rights reserved.
 //
 
-#import "JSWebViewController.h"
+#import "JSWKWebViewController.h"
+#import "JSUIkitExtension.h"
 #import "JSCartView.h"
 
-@interface JSWebViewController () <UIWebViewDelegate>
+@interface JSWKWebViewController () <UIWebViewDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;
 
 @end
 
-@implementation JSWebViewController
+@implementation JSWKWebViewController
 
 - (void)loadView{
     
     self.view = [[UIWebView alloc] init];
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor js_randomColor];
     
 }
 
@@ -50,7 +51,7 @@
 - (void)demoMethod{
     
     UIViewController *viewController = [[UIViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor greenColor];
+    viewController.view.backgroundColor = [UIColor js_randomColor];
     [self.navigationController pushViewController:viewController animated:YES];
     
 }

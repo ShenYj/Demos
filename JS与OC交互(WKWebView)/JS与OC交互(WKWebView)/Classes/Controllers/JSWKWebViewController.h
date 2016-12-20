@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSWebViewController : UIViewController
+@interface JSWKWebViewController : UIViewController
 
 @end
