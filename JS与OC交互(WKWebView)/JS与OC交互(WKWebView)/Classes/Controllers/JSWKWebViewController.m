@@ -9,29 +9,28 @@
 #import "JSWKWebViewController.h"
 #import "JSUIkitExtension.h"
 #import "JSCartView.h"
+#import "Masonry.h"
 #import <WebKit/WebKit.h>
 
 
 @interface JSWKWebViewController () <WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 
-@property (nonatomic,weak) WKWebView *webView;
+@property (nonatomic) WKWebView *webView;
 
 @end
 
 @implementation JSWKWebViewController
 
-- (void)loadView{
-    
-    self.view = [[WKWebView alloc] init];
-    self.view.backgroundColor = [UIColor js_randomColor];
-    
-}
-
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.webView = (WKWebView *)self.view;
     
+    [self.view addSubview:self.webView];
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).mas_offset(64);
+    }];
     // 本地Apache服务器
     //    NSString *urlString = @"http://localhost:63342/demo(HTML)/JS与OC交互Demo.html";
     //    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -46,10 +45,17 @@
     
     // 使用WKWebView加载本地HTML文件
     NSURL *localFileUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"JS与OC交互Demo.html" ofType:nil]];
-    [self.webView loadFileURL:localFileUrl allowingReadAccessToURL:localFileUrl];
-    self.webView.navigationDelegate = self;
-    self.webView.UIDelegate = self;
+    //[self.webView loadFileURL:localFileUrl allowingReadAccessToURL:localFileUrl];
     
+    NSURLRequest *request = [NSURLRequest requestWithURL:localFileUrl];
+    [self.webView loadRequest:request];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftBarButtonItem:)];
+}
+
+
+- (void)clickLeftBarButtonItem:(UIBarButtonItem *)sender {
+    [self.webView goBack];
 }
 
 #pragma mark - 拦截URL后执行的OC方法
@@ -97,14 +103,15 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     // 屏幕适配
-    NSString *jScript = @"var meta = document.createElement('meta'); \
-    meta.name = 'viewport'; \
-    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=no'; \
-    var head = document.getElementsByTagName('head')[0];\
-    head.appendChild(meta);";
-    [webView evaluateJavaScript:jScript completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-        
-    }];
+//    NSString *jScript = @"var meta = document.createElement('meta'); \
+//    meta.name = 'viewport'; \
+//    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=no'; \
+//    var head = document.getElementsByTagName('head')[0];\
+//    head.appendChild(meta);";
+//    [webView evaluateJavaScript:jScript completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+//        
+//    }];
+    
 }
 
 #pragma mark
@@ -112,7 +119,7 @@
 
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     
-    NSLog(@"%@",message);
+    NSLog(@"%@--%@",message,frame);
     completionHandler();
 }
 
@@ -121,7 +128,31 @@
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     
+    NSLog(@"%@",userContentController);
     NSLog(@"%@",message);
+}
+
+
+#pragma mark
+#pragma mark - lazy
+
+- (WKWebView *)webView {
+    if (!_webView) {
+        WKUserContentController *userContentController = [[WKUserContentController alloc] init];
+        [userContentController addScriptMessageHandler:self name:@"test"];
+        
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+        configuration.userContentController = userContentController;
+        
+        WKPreferences *preferences = [WKPreferences new];
+        preferences.javaScriptCanOpenWindowsAutomatically = YES;
+        preferences.minimumFontSize = 40.0;
+        configuration.preferences = preferences;
+        _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
+        _webView.navigationDelegate = self;
+        _webView.UIDelegate = self;
+    }
+    return _webView;
 }
 
 @end

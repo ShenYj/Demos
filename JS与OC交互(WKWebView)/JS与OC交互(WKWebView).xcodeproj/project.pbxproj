@@ -13,10 +13,10 @@
 		F71D17351E0903D90099F65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D172E1E0903D90099F65B /* Main.storyboard */; };
 		F71D17361E0903D90099F65B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D17301E0903D90099F65B /* main.m */; };
 		F71D173A1E0904080099F65B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D17391E0904080099F65B /* ViewController.m */; };
-		F71D173F1E09041C0099F65B /* JS与OC交互Demo.html in Resources */ = {isa = PBXBuildFile; fileRef = F71D173E1E09041C0099F65B /* JS与OC交互Demo.html */; };
 		F71D17421E0904240099F65B /* JSCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D17411E0904240099F65B /* JSCartView.m */; };
 		F71D17451E0905980099F65B /* JSWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D17441E0905980099F65B /* JSWKWebViewController.m */; };
 		F71D17471E0906200099F65B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D17461E0906200099F65B /* Launch Screen.storyboard */; };
+		F71D17491E095F2D0099F65B /* JS与OC交互Demo.html in Resources */ = {isa = PBXBuildFile; fileRef = F71D17481E095F2D0099F65B /* JS与OC交互Demo.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +32,12 @@
 		F71D17301E0903D90099F65B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F71D17381E0904080099F65B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F71D17391E0904080099F65B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F71D173E1E09041C0099F65B /* JS与OC交互Demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "JS与OC交互Demo.html"; sourceTree = "<group>"; };
 		F71D17401E0904240099F65B /* JSCartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCartView.h; sourceTree = "<group>"; };
 		F71D17411E0904240099F65B /* JSCartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCartView.m; sourceTree = "<group>"; };
 		F71D17431E0905980099F65B /* JSWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWKWebViewController.h; sourceTree = "<group>"; };
 		F71D17441E0905980099F65B /* JSWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWKWebViewController.m; sourceTree = "<group>"; };
 		F71D17461E0906200099F65B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F71D17481E095F2D0099F65B /* JS与OC交互Demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "JS与OC交互Demo.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 		F71D17281E0903D90099F65B /* SupportingFIles */ = {
 			isa = PBXGroup;
 			children = (
+				F71D17481E095F2D0099F65B /* JS与OC交互Demo.html */,
 				F71D171C1E09037C0099F65B /* Info.plist */,
-				F71D173E1E09041C0099F65B /* JS与OC交互Demo.html */,
 				F71D17291E0903D90099F65B /* AppDelegate.h */,
 				F71D172A1E0903D90099F65B /* AppDelegate.m */,
 				F71D172B1E0903D90099F65B /* Assets.xcassets */,
@@ -212,7 +212,7 @@
 				F71D17351E0903D90099F65B /* Main.storyboard in Resources */,
 				F71D17331E0903D90099F65B /* Assets.xcassets in Resources */,
 				F71D17471E0906200099F65B /* Launch Screen.storyboard in Resources */,
-				F71D173F1E09041C0099F65B /* JS与OC交互Demo.html in Resources */,
+				F71D17491E095F2D0099F65B /* JS与OC交互Demo.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
