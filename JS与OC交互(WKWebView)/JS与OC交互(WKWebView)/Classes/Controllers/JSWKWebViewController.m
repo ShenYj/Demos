@@ -147,6 +147,7 @@
         preferences.javaScriptCanOpenWindowsAutomatically = YES;
         preferences.minimumFontSize = 40.0;
         configuration.preferences = preferences;
+        
         _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
         _webView.navigationDelegate = self;
         _webView.UIDelegate = self;
