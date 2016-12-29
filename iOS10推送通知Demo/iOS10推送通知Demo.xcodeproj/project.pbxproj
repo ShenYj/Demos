@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					F705F8041E10FAA000979D59 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -272,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
 				INFOPLIST_FILE = "iOS10推送通知Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.iOS10----Demo";
@@ -283,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
 				INFOPLIST_FILE = "iOS10推送通知Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.iOS10----Demo";
