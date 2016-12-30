@@ -12,7 +12,35 @@
 		F705F8741E14E5A400979D59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F705F8731E14E5A400979D59 /* ViewController.m */; };
 		F705F8761E14E5A400979D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F705F8751E14E5A400979D59 /* Assets.xcassets */; };
 		F705F8791E14E5A400979D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F705F8771E14E5A400979D59 /* Main.storyboard */; };
+		F705F8871E14E8A200979D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F705F8861E14E8A200979D59 /* Cocoa.framework */; };
+		F705F88D1E14E8A200979D59 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F705F88C1E14E8A200979D59 /* SourceEditorExtension.m */; };
+		F705F8901E14E8A200979D59 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F705F88F1E14E8A200979D59 /* SourceEditorCommand.m */; };
+		F705F8941E14E8A200979D59 /* JSXcodeKit.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F705F8841E14E8A200979D59 /* JSXcodeKit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F705F8921E14E8A200979D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F705F8611E14E5A400979D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F705F8831E14E8A200979D59;
+			remoteInfo = JSXcodeKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F705F8981E14E8A200979D59 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F705F8941E14E8A200979D59 /* JSXcodeKit.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F705F8691E14E5A400979D59 /* JSXcodeHelperKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSXcodeHelperKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +52,14 @@
 		F705F8751E14E5A400979D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F705F8781E14E5A400979D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F705F87A1E14E5A400979D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F705F8841E14E8A200979D59 /* JSXcodeKit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JSXcodeKit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F705F8861E14E8A200979D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F705F88A1E14E8A200979D59 /* JSXcodeKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JSXcodeKit.entitlements; sourceTree = "<group>"; };
+		F705F88B1E14E8A200979D59 /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		F705F88C1E14E8A200979D59 /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		F705F88E1E14E8A200979D59 /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		F705F88F1E14E8A200979D59 /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		F705F8911E14E8A200979D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +70,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F705F8811E14E8A200979D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F705F8871E14E8A200979D59 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				F705F86B1E14E5A400979D59 /* JSXcodeHelperKit */,
+				F705F8881E14E8A200979D59 /* JSXcodeKit */,
+				F705F8851E14E8A200979D59 /* Frameworks */,
 				F705F86A1E14E5A400979D59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F705F8691E14E5A400979D59 /* JSXcodeHelperKit.app */,
+				F705F8841E14E8A200979D59 /* JSXcodeKit.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +123,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F705F8851E14E8A200979D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F705F8861E14E8A200979D59 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F705F8881E14E8A200979D59 /* JSXcodeKit */ = {
+			isa = PBXGroup;
+			children = (
+				F705F88B1E14E8A200979D59 /* SourceEditorExtension.h */,
+				F705F88C1E14E8A200979D59 /* SourceEditorExtension.m */,
+				F705F88E1E14E8A200979D59 /* SourceEditorCommand.h */,
+				F705F88F1E14E8A200979D59 /* SourceEditorCommand.m */,
+				F705F8911E14E8A200979D59 /* Info.plist */,
+				F705F8891E14E8A200979D59 /* Supporting Files */,
+			);
+			path = JSXcodeKit;
+			sourceTree = "<group>";
+		};
+		F705F8891E14E8A200979D59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F705F88A1E14E8A200979D59 /* JSXcodeKit.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,15 +162,34 @@
 				F705F8651E14E5A400979D59 /* Sources */,
 				F705F8661E14E5A400979D59 /* Frameworks */,
 				F705F8671E14E5A400979D59 /* Resources */,
+				F705F8981E14E8A200979D59 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F705F8931E14E8A200979D59 /* PBXTargetDependency */,
 			);
 			name = JSXcodeHelperKit;
 			productName = JSXcodeHelperKit;
 			productReference = F705F8691E14E5A400979D59 /* JSXcodeHelperKit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F705F8831E14E8A200979D59 /* JSXcodeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F705F8971E14E8A200979D59 /* Build configuration list for PBXNativeTarget "JSXcodeKit" */;
+			buildPhases = (
+				F705F8801E14E8A200979D59 /* Sources */,
+				F705F8811E14E8A200979D59 /* Frameworks */,
+				F705F8821E14E8A200979D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSXcodeKit;
+			productName = JSXcodeKit;
+			productReference = F705F8841E14E8A200979D59 /* JSXcodeKit.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +201,10 @@
 				ORGANIZATIONNAME = ShenYj;
 				TargetAttributes = {
 					F705F8681E14E5A400979D59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					F705F8831E14E8A200979D59 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -125,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				F705F8681E14E5A400979D59 /* JSXcodeHelperKit */,
+				F705F8831E14E8A200979D59 /* JSXcodeKit */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +236,13 @@
 			files = (
 				F705F8761E14E5A400979D59 /* Assets.xcassets in Resources */,
 				F705F8791E14E5A400979D59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F705F8821E14E8A200979D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +259,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F705F8801E14E8A200979D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F705F88D1E14E8A200979D59 /* SourceEditorExtension.m in Sources */,
+				F705F8901E14E8A200979D59 /* SourceEditorCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F705F8931E14E8A200979D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F705F8831E14E8A200979D59 /* JSXcodeKit */;
+			targetProxy = F705F8921E14E8A200979D59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F705F8771E14E5A400979D59 /* Main.storyboard */ = {
@@ -277,6 +401,34 @@
 			};
 			name = Release;
 		};
+		F705F8951E14E8A200979D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JSXcodeKit/JSXcodeKit.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JSXcodeKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.JSXcodeHelperKit.JSXcodeKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F705F8961E14E8A200979D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JSXcodeKit/JSXcodeKit.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JSXcodeKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.JSXcodeHelperKit.JSXcodeKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -296,6 +448,16 @@
 				F705F87F1E14E5A400979D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F705F8971E14E8A200979D59 /* Build configuration list for PBXNativeTarget "JSXcodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F705F8951E14E8A200979D59 /* Debug */,
+				F705F8961E14E8A200979D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
