@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JSRefreshControl.h"
+#import "NavigationBar.h"
 
 /** 常量: 顶部视图高度 */
 static CGFloat const kHeaderViewHeight = 400.f;
@@ -23,7 +24,7 @@ static NSString * const reuseId = @"abc";
 /** 顶部视图 */
 @property (nonatomic) UIView *headView;
 /** 自定义导航栏 */
-@property (nonatomic) UIView *navigationBar;
+@property (nonatomic) NavigationBar *navigationBar;
 
 @end
 
@@ -90,7 +91,9 @@ static NSString * const reuseId = @"abc";
         CGFloat currentY = -MIN(maxContentOffsetY, contentOffsetY);
         
         CGFloat alpha = 1 - contentOffsetY / maxContentOffsetY;
-        self.navigationBar.alpha = alpha;
+        //self.navigationBar.alpha = alpha;
+        self.navigationBar.headerView2.alpha = alpha;
+        self.navigationBar.headerView1.alpha = 1 - alpha;
         
         self.headView.frame = CGRectMake(0, currentY , [UIScreen mainScreen].bounds.size.width, kHeaderViewHeight);
         
@@ -125,17 +128,16 @@ static NSString * const reuseId = @"abc";
 
 - (UIView *)headView {
     if (!_headView) {
-        _headView = [[UIView alloc] init];
+        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kHeaderViewHeight)];
         _headView.backgroundColor = [UIColor orangeColor];
-        _headView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kHeaderViewHeight);
     }
     return _headView;
 }
 
-- (UIView *)navigationBar {
+- (NavigationBar *)navigationBar {
     if (!_navigationBar) {
-        _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
-        _navigationBar.backgroundColor = [UIColor yellowColor];
+        _navigationBar = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
+        
     }
     return _navigationBar;
 }

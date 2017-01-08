@@ -16,6 +16,7 @@
 		F737C02D1E20D39700331CA4 /* assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F737C0281E20D39700331CA4 /* assets.bundle */; };
 		F737C02E1E20D39700331CA4 /* JSRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F737C02A1E20D39700331CA4 /* JSRefreshControl.m */; };
 		F737C02F1E20D39700331CA4 /* JSRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = F737C02C1E20D39700331CA4 /* JSRefreshView.m */; };
+		F737C0351E20E6E300331CA4 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F737C0341E20E6E300331CA4 /* NavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		F737C02A1E20D39700331CA4 /* JSRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRefreshControl.m; sourceTree = "<group>"; };
 		F737C02B1E20D39700331CA4 /* JSRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRefreshView.h; sourceTree = "<group>"; };
 		F737C02C1E20D39700331CA4 /* JSRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRefreshView.m; sourceTree = "<group>"; };
+		F737C0331E20E6E300331CA4 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
+		F737C0341E20E6E300331CA4 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				F737C0141E20D38100331CA4 /* AppDelegate.m */,
 				F737C0161E20D38100331CA4 /* ViewController.h */,
 				F737C0171E20D38100331CA4 /* ViewController.m */,
+				F737C0331E20E6E300331CA4 /* NavigationBar.h */,
+				F737C0341E20E6E300331CA4 /* NavigationBar.m */,
 				F737C0191E20D38100331CA4 /* Main.storyboard */,
 				F737C01C1E20D38100331CA4 /* Assets.xcassets */,
 				F737C01E1E20D38100331CA4 /* LaunchScreen.storyboard */,
@@ -173,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F737C02F1E20D39700331CA4 /* JSRefreshView.m in Sources */,
+				F737C0351E20E6E300331CA4 /* NavigationBar.m in Sources */,
 				F737C0181E20D38100331CA4 /* ViewController.m in Sources */,
 				F737C0151E20D38100331CA4 /* AppDelegate.m in Sources */,
 				F737C02E1E20D39700331CA4 /* JSRefreshControl.m in Sources */,
