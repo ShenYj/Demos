@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  轮播器demo
+//
+//  Created by ShenYj on 2016/10/19.
+//  Copyright © 2016年 ShenYj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import "YYWebImage.h"
+
+#endif /* PrefixHeader_pch */
