@@ -83,7 +83,7 @@
 - (void)drawTextInRect:(CGRect)rect {
     //[super drawTextInRect:rect];
     NSRange range = NSMakeRange(0, self.textStorage.length);
-    // 绘制背景 在iOS中绘制工作是类似于油画似的,后悔值的内容,会把之前绘制的内容覆盖,所以需要先绘制背景,再绘制字形
+    // 绘制背景 在iOS中绘制工作是类似于油画似的,后绘制的内容,会把之前绘制的内容覆盖,所以需要先绘制背景,再绘制字形
     // ps: 当然如果想要先绘制字形,再绘制背景,可以通过设置背景色的透明度来实现,但是因为涉及到透明度,图层混合模式计算,效率较低,消耗性能
     [self.textLayoutManager drawBackgroundForGlyphRange:range atPoint:CGPointZero];
     // Glyphs字形
