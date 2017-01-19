@@ -7,11 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "LeftTableViewController.h"
+#import "RightViewController.h"
 
 @interface ViewController ()
 
-@property (nonatomic) UITableViewController *tableViewController;
-@property (nonatomic) UIViewController *viewController;
+@property (nonatomic) LeftTableViewController *tableViewController;
+@property (nonatomic) RightViewController *viewController;
 
 @end
 
@@ -41,18 +43,18 @@
 #pragma mark
 #pragma mark - lazy
 
-- (UITableViewController *)tableViewController {
+- (LeftTableViewController *)tableViewController {
     if (!_tableViewController) {
-        _tableViewController = [[UITableViewController alloc] init];
+        _tableViewController = [[LeftTableViewController alloc] init];
         _tableViewController.view.frame = CGRectMake(0, 0, 100, [UIScreen mainScreen].bounds.size.height);
         _tableViewController.view.backgroundColor = [UIColor redColor];
     }
     return _tableViewController;
 }
 
-- (UIViewController *)viewController {
+- (RightViewController *)viewController {
     if (!_viewController) {
-        _viewController = [[UIViewController alloc] init];
+        _viewController = [[RightViewController alloc] init];
         _viewController.view.backgroundColor = [UIColor blueColor];
         _viewController.view.frame = CGRectMake(100, 0, [UIScreen mainScreen].bounds.size.height - 100, [UIScreen mainScreen].bounds.size.height);
     }

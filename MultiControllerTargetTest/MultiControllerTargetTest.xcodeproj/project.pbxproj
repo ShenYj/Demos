@@ -13,6 +13,8 @@
 		F7D1B2681E30B1E3008F2E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B2601E30B1E3008F2E16 /* LaunchScreen.storyboard */; };
 		F7D1B2691E30B1E3008F2E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B2621E30B1E3008F2E16 /* Main.storyboard */; };
 		F7D1B26A1E30B1E3008F2E16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B2641E30B1E3008F2E16 /* main.m */; };
+		F7D1B26D1E30B203008F2E16 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B26C1E30B203008F2E16 /* RightViewController.m */; };
+		F7D1B2701E30B20A008F2E16 /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B26F1E30B20A008F2E16 /* LeftTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		F7D1B2611E30B1E3008F2E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7D1B2631E30B1E3008F2E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7D1B2641E30B1E3008F2E16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D1B26B1E30B203008F2E16 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		F7D1B26C1E30B203008F2E16 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		F7D1B26E1E30B20A008F2E16 /* LeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewController.h; sourceTree = "<group>"; };
+		F7D1B26F1E30B20A008F2E16 /* LeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,10 @@
 			children = (
 				F7D1B2581E30B1E3008F2E16 /* ViewController.h */,
 				F7D1B2591E30B1E3008F2E16 /* ViewController.m */,
+				F7D1B26B1E30B203008F2E16 /* RightViewController.h */,
+				F7D1B26C1E30B203008F2E16 /* RightViewController.m */,
+				F7D1B26E1E30B20A008F2E16 /* LeftTableViewController.h */,
+				F7D1B26F1E30B20A008F2E16 /* LeftTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D1B2661E30B1E3008F2E16 /* AppDelegate.m in Sources */,
+				F7D1B2701E30B20A008F2E16 /* LeftTableViewController.m in Sources */,
+				F7D1B26D1E30B203008F2E16 /* RightViewController.m in Sources */,
 				F7D1B26A1E30B1E3008F2E16 /* main.m in Sources */,
 				F7D1B2651E30B1E3008F2E16 /* ViewController.m in Sources */,
 			);
