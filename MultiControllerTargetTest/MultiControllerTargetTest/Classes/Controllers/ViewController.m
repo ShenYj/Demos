@@ -22,7 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // 监听设备朝向变化
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChangeNotification:) name:UIDeviceOrientationDidChangeNotification object:nil];
     [self prepareView];
+    
+}
+
+- (void)deviceOrientationDidChangeNotification:(NSNotification *)notification {
+    
+    UIDevice *device = (UIDevice *)notification.object;
+    NSLog(@"%zd",device.orientation);
 }
 
 - (void)prepareView {
@@ -46,9 +55,11 @@
 #pragma mark
 #pragma mark - UITraitEnvironment
 
+
 - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
     NSLog(@"%@",self.traitCollection);
 }
+
 
 #pragma mark
 #pragma mark - lazy
