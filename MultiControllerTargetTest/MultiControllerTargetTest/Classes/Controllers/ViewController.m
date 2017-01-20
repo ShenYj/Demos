@@ -39,6 +39,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+#pragma mark
+#pragma mark - UITraitEnvironment
+
+- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
+    NSLog(@"%@",self.traitCollection);
+}
 
 #pragma mark
 #pragma mark - lazy

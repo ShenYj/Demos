@@ -356,6 +356,7 @@
 				F7D1B2551E30AEE3008F2E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
