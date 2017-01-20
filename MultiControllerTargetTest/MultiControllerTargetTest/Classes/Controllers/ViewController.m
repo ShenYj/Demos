@@ -31,7 +31,13 @@
 - (void)deviceOrientationDidChangeNotification:(NSNotification *)notification {
     
     UIDevice *device = (UIDevice *)notification.object;
-    NSLog(@"%zd",device.orientation);
+    if (UIDeviceOrientationIsPortrait(device.orientation)) {
+        NSLog(@"竖屏");
+    } else {
+        //UIDeviceOrientationIsLandscape(device.orientation);
+        NSLog(@"横屏");
+    }
+    
 }
 
 - (void)prepareView {
