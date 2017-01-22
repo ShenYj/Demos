@@ -42,25 +42,40 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5fq-i0-IKH">
                                         <rect key="frame" x="0.0" y="770" width="984" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Yd-w6l" customClass="ImageButton">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Yd-w6l" customClass="ImageButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="80"/>
                                                 <state key="normal" title="Button" image="skirts_01"/>
+                                                <connections>
+                                                    <action selector="ClickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4FL-D6-sdq"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7f-wl-yCF" customClass="ImageButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7f-wl-yCF" customClass="ImageButton">
                                                 <rect key="frame" x="201" y="0.0" width="180.5" height="80"/>
                                                 <state key="normal" title="Button" image="skirts_02"/>
+                                                <connections>
+                                                    <action selector="ClickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXh-u9-S9l"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-Ll-ZQa" customClass="ImageButton">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-Ll-ZQa" customClass="ImageButton">
                                                 <rect key="frame" x="401.5" y="0.0" width="181" height="80"/>
                                                 <state key="normal" title="Button" image="skirts_03"/>
+                                                <connections>
+                                                    <action selector="ClickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ll3-u5-r10"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tux-NT-Iwr" customClass="ImageButton">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tux-NT-Iwr" customClass="ImageButton">
                                                 <rect key="frame" x="602.5" y="0.0" width="180.5" height="80"/>
                                                 <state key="normal" title="Button" image="skirts_04"/>
+                                                <connections>
+                                                    <action selector="ClickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jq4-hw-hpe"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-5Z-H91" customClass="ImageButton">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-5Z-H91" customClass="ImageButton">
                                                 <rect key="frame" x="803" y="0.0" width="181" height="80"/>
                                                 <state key="normal" title="Button" image="skirts_05"/>
+                                                <connections>
+                                                    <action selector="ClickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epu-DA-mjT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -138,6 +153,9 @@
                             <constraint firstAttribute="trailing" secondItem="M0D-qP-iw5" secondAttribute="trailing" constant="20" id="z0Y-ER-2F2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerImageView" destination="fYM-oh-ZeL" id="P8D-Wm-dl7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

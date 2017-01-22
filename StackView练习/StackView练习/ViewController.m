@@ -7,12 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "ImageButton.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *centerImageView;
 
 @end
 
 @implementation ViewController
+
+
+- (IBAction)ClickImageButton:(ImageButton *)sender {
+    NSInteger tag = sender.tag;
+    NSString *imageName = [NSString stringWithFormat:@"skirts_0%zd",tag];
+    self.centerImageView.image = [UIImage imageNamed:imageName];
+    self.centerImageView.alpha = 0.5;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.centerImageView.alpha = 1.0;
+    }];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
