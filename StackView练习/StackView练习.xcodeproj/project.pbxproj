@@ -13,6 +13,7 @@
 		F7D1B2881E3444DC008F2E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B2861E3444DC008F2E16 /* Main.storyboard */; };
 		F7D1B28A1E3444DC008F2E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B2891E3444DC008F2E16 /* Assets.xcassets */; };
 		F7D1B28D1E3444DC008F2E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B28B1E3444DC008F2E16 /* LaunchScreen.storyboard */; };
+		F7D1B2961E34829D008F2E16 /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B2951E34829D008F2E16 /* ImageButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F7D1B2891E3444DC008F2E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D1B28C1E3444DC008F2E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7D1B28E1E3444DC008F2E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D1B2941E34829D008F2E16 /* ImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageButton.h; sourceTree = "<group>"; };
+		F7D1B2951E34829D008F2E16 /* ImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				F7D1B2811E3444DC008F2E16 /* AppDelegate.m */,
 				F7D1B2831E3444DC008F2E16 /* ViewController.h */,
 				F7D1B2841E3444DC008F2E16 /* ViewController.m */,
+				F7D1B2941E34829D008F2E16 /* ImageButton.h */,
+				F7D1B2951E34829D008F2E16 /* ImageButton.m */,
 				F7D1B2861E3444DC008F2E16 /* Main.storyboard */,
 				F7D1B2891E3444DC008F2E16 /* Assets.xcassets */,
 				F7D1B28B1E3444DC008F2E16 /* LaunchScreen.storyboard */,
@@ -154,6 +159,7 @@
 				F7D1B2851E3444DC008F2E16 /* ViewController.m in Sources */,
 				F7D1B2821E3444DC008F2E16 /* AppDelegate.m in Sources */,
 				F7D1B27F1E3444DC008F2E16 /* main.m in Sources */,
+				F7D1B2961E34829D008F2E16 /* ImageButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
