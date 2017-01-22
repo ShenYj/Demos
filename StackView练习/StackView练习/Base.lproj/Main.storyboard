@@ -154,6 +154,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomStackView" destination="Hz7-jx-MxY" id="7mQ-ag-kL2"/>
                         <outlet property="centerImageView" destination="fYM-oh-ZeL" id="P8D-Wm-dl7"/>
                     </connections>
                 </viewController>

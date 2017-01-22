@@ -12,6 +12,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *centerImageView;
+@property (weak, nonatomic) IBOutlet UIStackView *bottomStackView;
+@property (weak,nonatomic) ImageButton *selectedButton;
 
 @end
 
@@ -19,10 +21,19 @@
 
 
 - (IBAction)ClickImageButton:(ImageButton *)sender {
+    
+    if (sender == self.selectedButton) {
+        return;
+    }
+    sender.selected = YES;
+    self.selectedButton.selected = NO;
+    self.selectedButton = sender;
+    
     NSInteger tag = sender.tag;
     NSString *imageName = [NSString stringWithFormat:@"skirts_0%zd",tag];
     self.centerImageView.image = [UIImage imageNamed:imageName];
     self.centerImageView.alpha = 0.5;
+    
     [UIView animateWithDuration:0.3 animations:^{
         self.centerImageView.alpha = 1.0;
     }];
