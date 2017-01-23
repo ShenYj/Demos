@@ -27,6 +27,9 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.starStackView addArrangedSubview:imageView];
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.starStackView layoutIfNeeded];
+    }];
 }
 
 - (IBAction)clickRemoveButton:(UIButton *)sender {
@@ -34,6 +37,9 @@
         UIImageView *imageView = self.starStackView.subviews.lastObject;
         [self.starStackView removeArrangedSubview:imageView];
         [imageView removeFromSuperview];
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.starStackView layoutIfNeeded];
+        }];
     }
 }
 
