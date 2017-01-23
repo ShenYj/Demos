@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIStackView *starStackView;
+
 @end
 
 @implementation ViewController
@@ -19,6 +21,17 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (IBAction)ClickAddButton:(UIButton *)sender {
+    UIImage *image = [UIImage imageNamed:@"star"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.starStackView addArrangedSubview:imageView];
+}
+
+- (IBAction)clickRemoveButton:(UIButton *)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

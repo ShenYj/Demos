@@ -46,6 +46,9 @@
                                                 <state key="normal" title="点赞">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ClickAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZw-eQ-njJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-en-axn">
                                                 <rect key="frame" x="502" y="0.0" width="482" height="40"/>
@@ -53,13 +56,16 @@
                                                 <state key="normal" title="撤销">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clickRemoveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQa-bF-KFH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="jqS-KG-2K9"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-mE-i6Z">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-mE-i6Z">
                                         <rect key="frame" x="0.0" y="1266" width="984" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="BWO-Ep-Pcj">
@@ -81,6 +87,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7jZ-xt-12B" secondAttribute="bottom" id="rm5-yn-kZ8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="starStackView" destination="TFW-mE-i6Z" id="fUD-zc-QMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
