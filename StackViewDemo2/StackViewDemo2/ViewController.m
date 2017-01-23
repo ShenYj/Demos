@@ -30,7 +30,11 @@
 }
 
 - (IBAction)clickRemoveButton:(UIButton *)sender {
-    
+    if (self.starStackView.subviews.count > 0) {
+        UIImageView *imageView = self.starStackView.subviews.lastObject;
+        [self.starStackView removeArrangedSubview:imageView];
+        [imageView removeFromSuperview];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
