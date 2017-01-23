@@ -30,14 +30,14 @@
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     
-    if ([navigationAction.request.URL.absoluteString hasPrefix:kRedirect_URI]) {
+    if ([navigationAction.request.URL.absoluteString hasPrefix:@"kRedirect_URI"]) {
         
         NSRange range = [navigationAction.request.URL.absoluteString rangeOfString:@"code="];
         
         NSString *code = [navigationAction.request.URL.absoluteString substringFromIndex:range.location + range.length];
         
         // 保存Code信息
-        [JSUserAccountToolModel sharedManager].code = code;
+        //[JSUserAccountToolModel sharedManager].code = code;
         
         NSLog(@"%@",code);
         
