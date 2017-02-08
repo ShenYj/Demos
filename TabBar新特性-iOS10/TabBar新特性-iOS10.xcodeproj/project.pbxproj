@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F74E0A5B1E4B5C7A0054A416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0A5A1E4B5C7A0054A416 /* main.m */; };
+		F74E0A5E1E4B5C7A0054A416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0A5D1E4B5C7A0054A416 /* AppDelegate.m */; };
+		F74E0A611E4B5C7A0054A416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0A601E4B5C7A0054A416 /* ViewController.m */; };
+		F74E0A641E4B5C7A0054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0A621E4B5C7A0054A416 /* Main.storyboard */; };
+		F74E0A661E4B5C7A0054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0A651E4B5C7A0054A416 /* Assets.xcassets */; };
+		F74E0A711E4B5C9E0054A416 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0A701E4B5C9E0054A416 /* Launch Screen.storyboard */; };
+		F74E0A741E4B5CE40054A416 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0A731E4B5CE40054A416 /* TabBarController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F74E0A561E4B5C7A0054A416 /* TabBar新特性-iOS10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBar新特性-iOS10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74E0A5A1E4B5C7A0054A416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F74E0A5C1E4B5C7A0054A416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F74E0A5D1E4B5C7A0054A416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F74E0A5F1E4B5C7A0054A416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F74E0A601E4B5C7A0054A416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F74E0A631E4B5C7A0054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F74E0A651E4B5C7A0054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F74E0A6A1E4B5C7A0054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74E0A701E4B5C9E0054A416 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F74E0A721E4B5CE40054A416 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		F74E0A731E4B5CE40054A416 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F74E0A531E4B5C7A0054A416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F74E0A4D1E4B5C7A0054A416 = {
+			isa = PBXGroup;
+			children = (
+				F74E0A581E4B5C7A0054A416 /* TabBar新特性-iOS10 */,
+				F74E0A571E4B5C7A0054A416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F74E0A571E4B5C7A0054A416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0A561E4B5C7A0054A416 /* TabBar新特性-iOS10.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F74E0A581E4B5C7A0054A416 /* TabBar新特性-iOS10 */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0A5C1E4B5C7A0054A416 /* AppDelegate.h */,
+				F74E0A5D1E4B5C7A0054A416 /* AppDelegate.m */,
+				F74E0A721E4B5CE40054A416 /* TabBarController.h */,
+				F74E0A731E4B5CE40054A416 /* TabBarController.m */,
+				F74E0A5F1E4B5C7A0054A416 /* ViewController.h */,
+				F74E0A601E4B5C7A0054A416 /* ViewController.m */,
+				F74E0A621E4B5C7A0054A416 /* Main.storyboard */,
+				F74E0A651E4B5C7A0054A416 /* Assets.xcassets */,
+				F74E0A701E4B5C9E0054A416 /* Launch Screen.storyboard */,
+				F74E0A6A1E4B5C7A0054A416 /* Info.plist */,
+				F74E0A591E4B5C7A0054A416 /* Supporting Files */,
+			);
+			path = "TabBar新特性-iOS10";
+			sourceTree = "<group>";
+		};
+		F74E0A591E4B5C7A0054A416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0A5A1E4B5C7A0054A416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F74E0A551E4B5C7A0054A416 /* TabBar新特性-iOS10 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74E0A6D1E4B5C7A0054A416 /* Build configuration list for PBXNativeTarget "TabBar新特性-iOS10" */;
+			buildPhases = (
+				F74E0A521E4B5C7A0054A416 /* Sources */,
+				F74E0A531E4B5C7A0054A416 /* Frameworks */,
+				F74E0A541E4B5C7A0054A416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TabBar新特性-iOS10";
+			productName = "TabBar新特性-iOS10";
+			productReference = F74E0A561E4B5C7A0054A416 /* TabBar新特性-iOS10.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F74E0A4E1E4B5C7A0054A416 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ShenYj;
+				TargetAttributes = {
+					F74E0A551E4B5C7A0054A416 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F74E0A511E4B5C7A0054A416 /* Build configuration list for PBXProject "TabBar新特性-iOS10" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F74E0A4D1E4B5C7A0054A416;
+			productRefGroup = F74E0A571E4B5C7A0054A416 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F74E0A551E4B5C7A0054A416 /* TabBar新特性-iOS10 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F74E0A541E4B5C7A0054A416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0A711E4B5C9E0054A416 /* Launch Screen.storyboard in Resources */,
+				F74E0A661E4B5C7A0054A416 /* Assets.xcassets in Resources */,
+				F74E0A641E4B5C7A0054A416 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F74E0A521E4B5C7A0054A416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0A611E4B5C7A0054A416 /* ViewController.m in Sources */,
+				F74E0A741E4B5CE40054A416 /* TabBarController.m in Sources */,
+				F74E0A5E1E4B5C7A0054A416 /* AppDelegate.m in Sources */,
+				F74E0A5B1E4B5C7A0054A416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F74E0A621E4B5C7A0054A416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0A631E4B5C7A0054A416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F74E0A6B1E4B5C7A0054A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F74E0A6C1E4B5C7A0054A416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F74E0A6E1E4B5C7A0054A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "TabBar新特性-iOS10/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.TabBar----iOS10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F74E0A6F1E4B5C7A0054A416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "TabBar新特性-iOS10/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.TabBar----iOS10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F74E0A511E4B5C7A0054A416 /* Build configuration list for PBXProject "TabBar新特性-iOS10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74E0A6B1E4B5C7A0054A416 /* Debug */,
+				F74E0A6C1E4B5C7A0054A416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F74E0A6D1E4B5C7A0054A416 /* Build configuration list for PBXNativeTarget "TabBar新特性-iOS10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74E0A6E1E4B5C7A0054A416 /* Debug */,
+				F74E0A6F1E4B5C7A0054A416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F74E0A4E1E4B5C7A0054A416 /* Project object */;
+}
