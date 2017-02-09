@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目的地:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iG-EV-CxJ">
+                                <rect key="frame" x="24" y="106" width="57" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Xz8-bu-IGm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WV1-Va-WPg">
+                                <rect key="frame" x="103" y="104" width="248" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sDI-9I-66L"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYL-4r-2oU">
+                                <rect key="frame" x="132" y="185" width="111" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Baz-0k-jrw"/>
+                                    <constraint firstAttribute="height" constant="33" id="LSC-XF-L8U"/>
+                                </constraints>
+                                <state key="normal" title="开始导航"/>
+                                <connections>
+                                    <action selector="clickDirectionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JqR-jv-d3c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2iG-EV-CxJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="0KF-GK-wBc"/>
+                            <constraint firstItem="WV1-Va-WPg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="104" id="2Vs-Ex-az1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WV1-Va-WPg" secondAttribute="trailing" constant="8" id="EH1-kw-zG4"/>
+                            <constraint firstItem="WV1-Va-WPg" firstAttribute="leading" secondItem="2iG-EV-CxJ" secondAttribute="trailing" constant="22" id="V8Q-la-Pf7"/>
+                            <constraint firstItem="2iG-EV-CxJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="106" id="WEn-tb-AJc"/>
+                            <constraint firstItem="KYL-4r-2oU" firstAttribute="top" secondItem="WV1-Va-WPg" secondAttribute="bottom" constant="51" id="ae0-xV-H78"/>
+                            <constraint firstItem="KYL-4r-2oU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cpQ-5M-15z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="destination_TF" destination="WV1-Va-WPg" id="3Ek-O4-sDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
