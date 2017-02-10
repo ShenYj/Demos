@@ -16,6 +16,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -45,13 +46,16 @@
 //        self.redView.transform = transform;
         
         //CGAffineTransform transform = CGAffineTransformIdentity; //create a new transform
-        CGAffineTransform transform1 = CGAffineTransformTranslate(self.redView.transform, 200, 0); //translate by 200 points
-        CGAffineTransform transform2 = CGAffineTransformScale(self.redView.transform, 0.5, 0.5); //scale by 50%
-        CGAffineTransform transform3 = CGAffineTransformRotate(self.redView.transform, M_PI_4); //rotate by 45 degrees
-        CGAffineTransform transform = CGAffineTransformConcat(transform1, transform2);
-        transform = CGAffineTransformConcat(transform, transform3);
-        //apply transform to layer
-        self.redView.transform = transform;
+//        CGAffineTransform transform1 = CGAffineTransformTranslate(self.redView.transform, 200, 0); //translate by 200 points
+//        CGAffineTransform transform2 = CGAffineTransformScale(self.redView.transform, 0.5, 0.5); //scale by 50%
+//        CGAffineTransform transform3 = CGAffineTransformRotate(self.redView.transform, M_PI_4); //rotate by 45 degrees
+//        CGAffineTransform transform = CGAffineTransformConcat(transform1, transform2);
+//        transform = CGAffineTransformConcat(transform, transform3);
+//        //apply transform to layer
+//        self.redView.transform = transform;
+        
+        self.redView.transform = CGAffineTransformMakeShear(1, 0);
+        
     }];
 }
 
@@ -61,5 +65,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+// 斜边切换
+CGAffineTransform CGAffineTransformMakeShear(CGFloat x, CGFloat y){
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    transform.c = -x;
+    transform.b = y;
+    return transform;
+}
 
 @end
