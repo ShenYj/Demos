@@ -33,7 +33,7 @@
         MKMapItem *destionMapItem = [[MKMapItem alloc] initWithPlacemark:mkPlaceMark];
         // 通过内置地图进行导航
         [MKMapItem openMapsWithItems:@[currentMapItem,destionMapItem] launchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDefault}];
-        /*
+        /*      系统会自动挑选最优路线
              ' MKLaunchOptionsDirectionsModeDefault 'Will pick the best directions mode, given the user's preferences
          */
     }];
