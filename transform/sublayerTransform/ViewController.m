@@ -28,9 +28,13 @@
     //rotate layerView1 by 45 degrees along the Y axis
     CATransform3D transform1 = CATransform3DMakeRotation(M_PI_4, 0, 1, 0);
     self.leftView.layer.transform = transform1;
+    // 取消背面的绘制
+    //self.leftView.layer.doubleSided = NO;
+    
     //rotate layerView2 by 45 degrees along the Y axis
     CATransform3D transform2 = CATransform3DMakeRotation(-M_PI_4, 0, 1, 0);
     self.rightView.layer.transform = transform2;
+    
 }
 
 
