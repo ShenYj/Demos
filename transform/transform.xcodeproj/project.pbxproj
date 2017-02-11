@@ -19,6 +19,12 @@
 		F74E0ACC1E4D43210054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0ACA1E4D43210054A416 /* Main.storyboard */; };
 		F74E0ACE1E4D43210054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0ACD1E4D43210054A416 /* Assets.xcassets */; };
 		F74E0AD11E4D43210054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0ACF1E4D43210054A416 /* LaunchScreen.storyboard */; };
+		F74E0ADE1E4EA9E30054A416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0ADD1E4EA9E30054A416 /* main.m */; };
+		F74E0AE11E4EA9E30054A416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0AE01E4EA9E30054A416 /* AppDelegate.m */; };
+		F74E0AE41E4EA9E30054A416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0AE31E4EA9E30054A416 /* ViewController.m */; };
+		F74E0AE71E4EA9E30054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AE51E4EA9E30054A416 /* Main.storyboard */; };
+		F74E0AE91E4EA9E30054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AE81E4EA9E30054A416 /* Assets.xcassets */; };
+		F74E0AEC1E4EA9E30054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AEA1E4EA9E30054A416 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,16 @@
 		F74E0ACD1E4D43210054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F74E0AD01E4D43210054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74E0AD21E4D43210054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74E0ADA1E4EA9E30054A416 /* sublayerTransform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sublayerTransform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74E0ADD1E4EA9E30054A416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F74E0ADF1E4EA9E30054A416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F74E0AE01E4EA9E30054A416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F74E0AE21E4EA9E30054A416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F74E0AE31E4EA9E30054A416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F74E0AE61E4EA9E30054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F74E0AE81E4EA9E30054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F74E0AEB1E4EA9E30054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F74E0AED1E4EA9E30054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74E0AD71E4EA9E30054A416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +90,7 @@
 			children = (
 				F74E0AA31E4D37510054A416 /* transform */,
 				F74E0AC01E4D43210054A416 /* 3DTransform */,
+				F74E0ADB1E4EA9E30054A416 /* sublayerTransform */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +100,7 @@
 			children = (
 				F74E0AA11E4D37510054A416 /* transform.app */,
 				F74E0ABF1E4D43210054A416 /* 3DTransform.app */,
+				F74E0ADA1E4EA9E30054A416 /* sublayerTransform.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +153,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F74E0ADB1E4EA9E30054A416 /* sublayerTransform */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0ADF1E4EA9E30054A416 /* AppDelegate.h */,
+				F74E0AE01E4EA9E30054A416 /* AppDelegate.m */,
+				F74E0AE21E4EA9E30054A416 /* ViewController.h */,
+				F74E0AE31E4EA9E30054A416 /* ViewController.m */,
+				F74E0AE51E4EA9E30054A416 /* Main.storyboard */,
+				F74E0AE81E4EA9E30054A416 /* Assets.xcassets */,
+				F74E0AEA1E4EA9E30054A416 /* LaunchScreen.storyboard */,
+				F74E0AED1E4EA9E30054A416 /* Info.plist */,
+				F74E0ADC1E4EA9E30054A416 /* Supporting Files */,
+			);
+			path = sublayerTransform;
+			sourceTree = "<group>";
+		};
+		F74E0ADC1E4EA9E30054A416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0ADD1E4EA9E30054A416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +214,23 @@
 			productReference = F74E0ABF1E4D43210054A416 /* 3DTransform.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F74E0AD91E4EA9E30054A416 /* sublayerTransform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74E0AEE1E4EA9E30054A416 /* Build configuration list for PBXNativeTarget "sublayerTransform" */;
+			buildPhases = (
+				F74E0AD61E4EA9E30054A416 /* Sources */,
+				F74E0AD71E4EA9E30054A416 /* Frameworks */,
+				F74E0AD81E4EA9E30054A416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sublayerTransform;
+			productName = sublayerTransform;
+			productReference = F74E0ADA1E4EA9E30054A416 /* sublayerTransform.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +246,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					F74E0ABE1E4D43210054A416 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
+					F74E0AD91E4EA9E30054A416 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
@@ -201,6 +272,7 @@
 			targets = (
 				F74E0AA01E4D37510054A416 /* transform */,
 				F74E0ABE1E4D43210054A416 /* 3DTransform */,
+				F74E0AD91E4EA9E30054A416 /* sublayerTransform */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +298,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74E0AD81E4EA9E30054A416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0AEC1E4EA9E30054A416 /* LaunchScreen.storyboard in Resources */,
+				F74E0AE91E4EA9E30054A416 /* Assets.xcassets in Resources */,
+				F74E0AE71E4EA9E30054A416 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -246,6 +328,16 @@
 				F74E0AC91E4D43210054A416 /* ViewController.m in Sources */,
 				F74E0AC61E4D43210054A416 /* AppDelegate.m in Sources */,
 				F74E0AC31E4D43210054A416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74E0AD61E4EA9E30054A416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0AE41E4EA9E30054A416 /* ViewController.m in Sources */,
+				F74E0AE11E4EA9E30054A416 /* AppDelegate.m in Sources */,
+				F74E0ADE1E4EA9E30054A416 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +372,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F74E0AD01E4D43210054A416 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0AE51E4EA9E30054A416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0AE61E4EA9E30054A416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0AEA1E4EA9E30054A416 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0AEB1E4EA9E30054A416 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -423,6 +531,30 @@
 			};
 			name = Release;
 		};
+		F74E0AEF1E4EA9E30054A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = sublayerTransform/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.sublayerTransform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F74E0AF01E4EA9E30054A416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = sublayerTransform/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.sublayerTransform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +581,14 @@
 			buildConfigurations = (
 				F74E0AD31E4D43210054A416 /* Debug */,
 				F74E0AD41E4D43210054A416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F74E0AEE1E4EA9E30054A416 /* Build configuration list for PBXNativeTarget "sublayerTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74E0AEF1E4EA9E30054A416 /* Debug */,
+				F74E0AF01E4EA9E30054A416 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
