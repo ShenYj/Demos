@@ -21,6 +21,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self demo2];
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    /*
+     options目前可传入参数Key在UIApplication头文件只有一个:UIApplicationOpenURLOptionUniversalLinksOnly,其对应的Value为布尔值,默认为False.如该Key对应的Value为True,那么打开所传入的Universal Link时,只允许通过这个Link所代表的iOS应用跳转的方式打开这个链接,否则就会返回success为false,也就是说只有安装了Link所对应的App的情况下才能打开这个Universal Link,而不是通过启动Safari方式打开这个Link的代表的网站.
+     */
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https:baidu.com"] options:@{UIApplicationOpenURLOptionUniversalLinksOnly: @NO} completionHandler:^(BOOL success) {
+        
+    }];
+    
 }
 
 - (void)demo2 {
