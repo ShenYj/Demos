@@ -40,6 +40,8 @@
     
     //choose some text
     NSString *text = @"Lorem ipsum dolor sit amet, consectetur adipiscing \ elit. Quisque massa arcu, eleifend vel varius in, facilisis pulvinar \ leo. Nunc quis nunc at mauris pharetra condimentum ut ac neque. Nunc elementum, libero ut porttitor dictum, diam odio congue lacus, vel \ fringilla sapien diam at purus. Etiam suscipit pretium nunc sit amet \ lobortis";
+    // 设置缩放比,解决retina屏幕下像素画问题
+    textLayer.contentsScale = [UIScreen mainScreen].scale;
     
     //set layer text
     textLayer.string = text;
