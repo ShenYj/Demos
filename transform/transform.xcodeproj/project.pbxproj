@@ -25,6 +25,18 @@
 		F74E0AE71E4EA9E30054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AE51E4EA9E30054A416 /* Main.storyboard */; };
 		F74E0AE91E4EA9E30054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AE81E4EA9E30054A416 /* Assets.xcassets */; };
 		F74E0AEC1E4EA9E30054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0AEA1E4EA9E30054A416 /* LaunchScreen.storyboard */; };
+		F74E0AF91E4EAF700054A416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0AF81E4EAF700054A416 /* main.m */; };
+		F74E0AFC1E4EAF700054A416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0AFB1E4EAF700054A416 /* AppDelegate.m */; };
+		F74E0AFF1E4EAF700054A416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0AFE1E4EAF700054A416 /* ViewController.m */; };
+		F74E0B021E4EAF700054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B001E4EAF700054A416 /* Main.storyboard */; };
+		F74E0B041E4EAF700054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B031E4EAF700054A416 /* Assets.xcassets */; };
+		F74E0B071E4EAF700054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B051E4EAF700054A416 /* LaunchScreen.storyboard */; };
+		F74E0B141E4FF62C0054A416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0B131E4FF62C0054A416 /* main.m */; };
+		F74E0B171E4FF62C0054A416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0B161E4FF62C0054A416 /* AppDelegate.m */; };
+		F74E0B1A1E4FF62C0054A416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0B191E4FF62C0054A416 /* ViewController.m */; };
+		F74E0B1D1E4FF62C0054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B1B1E4FF62C0054A416 /* Main.storyboard */; };
+		F74E0B1F1E4FF62C0054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B1E1E4FF62C0054A416 /* Assets.xcassets */; };
+		F74E0B221E4FF62C0054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B201E4FF62C0054A416 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +70,26 @@
 		F74E0AE81E4EA9E30054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F74E0AEB1E4EA9E30054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74E0AED1E4EA9E30054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74E0AF51E4EAF700054A416 /* 扁平化图层.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "扁平化图层.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74E0AF81E4EAF700054A416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F74E0AFA1E4EAF700054A416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F74E0AFB1E4EAF700054A416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F74E0AFD1E4EAF700054A416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F74E0AFE1E4EAF700054A416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F74E0B011E4EAF700054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F74E0B031E4EAF700054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F74E0B061E4EAF700054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F74E0B081E4EAF700054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74E0B101E4FF62B0054A416 /* CATextLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATextLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74E0B131E4FF62C0054A416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F74E0B151E4FF62C0054A416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F74E0B161E4FF62C0054A416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F74E0B181E4FF62C0054A416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F74E0B191E4FF62C0054A416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F74E0B1C1E4FF62C0054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F74E0B1E1E4FF62C0054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F74E0B211E4FF62C0054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F74E0B231E4FF62C0054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +114,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74E0AF21E4EAF700054A416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74E0B0D1E4FF62B0054A416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +137,8 @@
 				F74E0AA31E4D37510054A416 /* transform */,
 				F74E0AC01E4D43210054A416 /* 3DTransform */,
 				F74E0ADB1E4EA9E30054A416 /* sublayerTransform */,
+				F74E0AF61E4EAF700054A416 /* 扁平化图层 */,
+				F74E0B111E4FF62C0054A416 /* CATextLayer */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +149,8 @@
 				F74E0AA11E4D37510054A416 /* transform.app */,
 				F74E0ABF1E4D43210054A416 /* 3DTransform.app */,
 				F74E0ADA1E4EA9E30054A416 /* sublayerTransform.app */,
+				F74E0AF51E4EAF700054A416 /* 扁平化图层.app */,
+				F74E0B101E4FF62B0054A416 /* CATextLayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +227,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F74E0AF61E4EAF700054A416 /* 扁平化图层 */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0AFA1E4EAF700054A416 /* AppDelegate.h */,
+				F74E0AFB1E4EAF700054A416 /* AppDelegate.m */,
+				F74E0AFD1E4EAF700054A416 /* ViewController.h */,
+				F74E0AFE1E4EAF700054A416 /* ViewController.m */,
+				F74E0B001E4EAF700054A416 /* Main.storyboard */,
+				F74E0B031E4EAF700054A416 /* Assets.xcassets */,
+				F74E0B051E4EAF700054A416 /* LaunchScreen.storyboard */,
+				F74E0B081E4EAF700054A416 /* Info.plist */,
+				F74E0AF71E4EAF700054A416 /* Supporting Files */,
+			);
+			path = "扁平化图层";
+			sourceTree = "<group>";
+		};
+		F74E0AF71E4EAF700054A416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0AF81E4EAF700054A416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F74E0B111E4FF62C0054A416 /* CATextLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0B151E4FF62C0054A416 /* AppDelegate.h */,
+				F74E0B161E4FF62C0054A416 /* AppDelegate.m */,
+				F74E0B181E4FF62C0054A416 /* ViewController.h */,
+				F74E0B191E4FF62C0054A416 /* ViewController.m */,
+				F74E0B1B1E4FF62C0054A416 /* Main.storyboard */,
+				F74E0B1E1E4FF62C0054A416 /* Assets.xcassets */,
+				F74E0B201E4FF62C0054A416 /* LaunchScreen.storyboard */,
+				F74E0B231E4FF62C0054A416 /* Info.plist */,
+				F74E0B121E4FF62C0054A416 /* Supporting Files */,
+			);
+			path = CATextLayer;
+			sourceTree = "<group>";
+		};
+		F74E0B121E4FF62C0054A416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F74E0B131E4FF62C0054A416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,6 +329,40 @@
 			productReference = F74E0ADA1E4EA9E30054A416 /* sublayerTransform.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F74E0AF41E4EAF700054A416 /* 扁平化图层 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74E0B091E4EAF700054A416 /* Build configuration list for PBXNativeTarget "扁平化图层" */;
+			buildPhases = (
+				F74E0AF11E4EAF700054A416 /* Sources */,
+				F74E0AF21E4EAF700054A416 /* Frameworks */,
+				F74E0AF31E4EAF700054A416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "扁平化图层";
+			productName = "扁平化图层";
+			productReference = F74E0AF51E4EAF700054A416 /* 扁平化图层.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F74E0B0F1E4FF62B0054A416 /* CATextLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74E0B241E4FF62C0054A416 /* Build configuration list for PBXNativeTarget "CATextLayer" */;
+			buildPhases = (
+				F74E0B0C1E4FF62B0054A416 /* Sources */,
+				F74E0B0D1E4FF62B0054A416 /* Frameworks */,
+				F74E0B0E1E4FF62B0054A416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CATextLayer;
+			productName = CATextLayer;
+			productReference = F74E0B101E4FF62B0054A416 /* CATextLayer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,6 +387,16 @@
 						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
 					};
+					F74E0AF41E4EAF700054A416 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
+					F74E0B0F1E4FF62B0054A416 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = F74E0A9C1E4D37510054A416 /* Build configuration list for PBXProject "transform" */;
@@ -273,6 +415,8 @@
 				F74E0AA01E4D37510054A416 /* transform */,
 				F74E0ABE1E4D43210054A416 /* 3DTransform */,
 				F74E0AD91E4EA9E30054A416 /* sublayerTransform */,
+				F74E0AF41E4EAF700054A416 /* 扁平化图层 */,
+				F74E0B0F1E4FF62B0054A416 /* CATextLayer */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +452,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74E0AF31E4EAF700054A416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0B071E4EAF700054A416 /* LaunchScreen.storyboard in Resources */,
+				F74E0B041E4EAF700054A416 /* Assets.xcassets in Resources */,
+				F74E0B021E4EAF700054A416 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74E0B0E1E4FF62B0054A416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0B221E4FF62C0054A416 /* LaunchScreen.storyboard in Resources */,
+				F74E0B1F1E4FF62C0054A416 /* Assets.xcassets in Resources */,
+				F74E0B1D1E4FF62C0054A416 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,6 +502,26 @@
 				F74E0AE41E4EA9E30054A416 /* ViewController.m in Sources */,
 				F74E0AE11E4EA9E30054A416 /* AppDelegate.m in Sources */,
 				F74E0ADE1E4EA9E30054A416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74E0AF11E4EAF700054A416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0AFF1E4EAF700054A416 /* ViewController.m in Sources */,
+				F74E0AFC1E4EAF700054A416 /* AppDelegate.m in Sources */,
+				F74E0AF91E4EAF700054A416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74E0B0C1E4FF62B0054A416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74E0B1A1E4FF62C0054A416 /* ViewController.m in Sources */,
+				F74E0B171E4FF62C0054A416 /* AppDelegate.m in Sources */,
+				F74E0B141E4FF62C0054A416 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +572,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				F74E0AEB1E4EA9E30054A416 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0B001E4EAF700054A416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0B011E4EAF700054A416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0B051E4EAF700054A416 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0B061E4EAF700054A416 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0B1B1E4FF62C0054A416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0B1C1E4FF62C0054A416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F74E0B201E4FF62C0054A416 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F74E0B211E4FF62C0054A416 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -555,6 +771,54 @@
 			};
 			name = Release;
 		};
+		F74E0B0A1E4EAF700054A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "扁平化图层/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F74E0B0B1E4EAF700054A416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "扁平化图层/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F74E0B251E4FF62C0054A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CATextLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CATextLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F74E0B261E4FF62C0054A416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CATextLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CATextLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +853,22 @@
 			buildConfigurations = (
 				F74E0AEF1E4EA9E30054A416 /* Debug */,
 				F74E0AF01E4EA9E30054A416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F74E0B091E4EAF700054A416 /* Build configuration list for PBXNativeTarget "扁平化图层" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74E0B0A1E4EAF700054A416 /* Debug */,
+				F74E0B0B1E4EAF700054A416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F74E0B241E4FF62C0054A416 /* Build configuration list for PBXNativeTarget "CATextLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74E0B251E4FF62C0054A416 /* Debug */,
+				F74E0B261E4FF62C0054A416 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
