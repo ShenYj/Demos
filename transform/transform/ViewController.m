@@ -16,15 +16,6 @@
 
 @implementation ViewController
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.redView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.redView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.redView];
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [UIView animateWithDuration:3 animations:^{
