@@ -69,6 +69,12 @@
 		F7931FED1E572E2900F05C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7931FEC1E572E2900F05C2E /* Assets.xcassets */; };
 		F7931FF01E572E2900F05C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7931FEE1E572E2900F05C2E /* LaunchScreen.storyboard */; };
 		F7931FF71E572E4100F05C2E /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FF61E572E4100F05C2E /* ScrollView.m */; };
+		F79320001E57476500F05C2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FFF1E57476500F05C2E /* main.m */; };
+		F79320031E57476500F05C2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F79320021E57476500F05C2E /* AppDelegate.m */; };
+		F79320061E57476500F05C2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79320051E57476500F05C2E /* ViewController.m */; };
+		F79320091E57476500F05C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79320071E57476500F05C2E /* Main.storyboard */; };
+		F793200B1E57476500F05C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F793200A1E57476500F05C2E /* Assets.xcassets */; };
+		F793200E1E57476500F05C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F793200C1E57476500F05C2E /* LaunchScreen.storyboard */; };
 		F794C8E91E56CC23006BBC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8E81E56CC23006BBC42 /* main.m */; };
 		F794C8EC1E56CC23006BBC42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EB1E56CC23006BBC42 /* AppDelegate.m */; };
 		F794C8EF1E56CC23006BBC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EE1E56CC23006BBC42 /* ViewController.m */; };
@@ -184,6 +190,16 @@
 		F7931FF11E572E2900F05C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7931FF51E572E4100F05C2E /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
 		F7931FF61E572E4100F05C2E /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
+		F7931FFC1E57476400F05C2E /* CAEmitterLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAEmitterLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7931FFF1E57476500F05C2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F79320011E57476500F05C2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F79320021E57476500F05C2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F79320041E57476500F05C2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F79320051E57476500F05C2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F79320081E57476500F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F793200A1E57476500F05C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F793200D1E57476500F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F793200F1E57476500F05C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F794C8E51E56CC23006BBC42 /* 反射.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "反射.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F794C8E81E56CC23006BBC42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F794C8EA1E56CC23006BBC42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -276,6 +292,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7931FF91E57476400F05C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F794C8E21E56CC23006BBC42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +323,7 @@
 				F74E0B831E5165490054A416 /* CAReplicatorLayer */,
 				F794C8E61E56CC23006BBC42 /* 反射 */,
 				F7931FDF1E572E2900F05C2E /* CAScrollLayer */,
+				F7931FFD1E57476500F05C2E /* CAEmitterLayer */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -319,6 +343,7 @@
 				F74E0B9D1E52B7AB0054A416 /* 属性动画器.app */,
 				F794C8E51E56CC23006BBC42 /* 反射.app */,
 				F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */,
+				F7931FFC1E57476400F05C2E /* CAEmitterLayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -568,6 +593,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F7931FFD1E57476500F05C2E /* CAEmitterLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F79320011E57476500F05C2E /* AppDelegate.h */,
+				F79320021E57476500F05C2E /* AppDelegate.m */,
+				F79320041E57476500F05C2E /* ViewController.h */,
+				F79320051E57476500F05C2E /* ViewController.m */,
+				F79320071E57476500F05C2E /* Main.storyboard */,
+				F793200A1E57476500F05C2E /* Assets.xcassets */,
+				F793200C1E57476500F05C2E /* LaunchScreen.storyboard */,
+				F793200F1E57476500F05C2E /* Info.plist */,
+				F7931FFE1E57476500F05C2E /* Supporting Files */,
+			);
+			path = CAEmitterLayer;
+			sourceTree = "<group>";
+		};
+		F7931FFE1E57476500F05C2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7931FFF1E57476500F05C2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F794C8B81E52BDDA006BBC42 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +840,23 @@
 			productReference = F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7931FFB1E57476400F05C2E /* CAEmitterLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79320101E57476500F05C2E /* Build configuration list for PBXNativeTarget "CAEmitterLayer" */;
+			buildPhases = (
+				F7931FF81E57476400F05C2E /* Sources */,
+				F7931FF91E57476400F05C2E /* Frameworks */,
+				F7931FFA1E57476400F05C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAEmitterLayer;
+			productName = CAEmitterLayer;
+			productReference = F7931FFC1E57476400F05C2E /* CAEmitterLayer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F794C8E41E56CC23006BBC42 /* 反射 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F794C8F91E56CC23006BBC42 /* Build configuration list for PBXNativeTarget "反射" */;
@@ -872,6 +938,11 @@
 						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
 					};
+					F7931FFB1E57476400F05C2E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
 					F794C8E41E56CC23006BBC42 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EC2EUS3UQ9;
@@ -904,6 +975,7 @@
 				F74E0B9C1E52B7AB0054A416 /* 属性动画器 */,
 				F794C8E41E56CC23006BBC42 /* 反射 */,
 				F7931FDD1E572E2800F05C2E /* CAScrollLayer */,
+				F7931FFB1E57476400F05C2E /* CAEmitterLayer */,
 			);
 		};
 /* End PBXProject section */
@@ -1013,6 +1085,16 @@
 				F7931FF01E572E2900F05C2E /* LaunchScreen.storyboard in Resources */,
 				F7931FED1E572E2900F05C2E /* Assets.xcassets in Resources */,
 				F7931FEB1E572E2900F05C2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7931FFA1E57476400F05C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F793200E1E57476500F05C2E /* LaunchScreen.storyboard in Resources */,
+				F793200B1E57476500F05C2E /* Assets.xcassets in Resources */,
+				F79320091E57476500F05C2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,6 +1217,16 @@
 				F7931FF71E572E4100F05C2E /* ScrollView.m in Sources */,
 				F7931FE51E572E2900F05C2E /* AppDelegate.m in Sources */,
 				F7931FE21E572E2900F05C2E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7931FF81E57476400F05C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79320061E57476500F05C2E /* ViewController.m in Sources */,
+				F79320031E57476500F05C2E /* AppDelegate.m in Sources */,
+				F79320001E57476500F05C2E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,6 +1400,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F7931FEF1E572E2900F05C2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F79320071E57476500F05C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79320081E57476500F05C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F793200C1E57476500F05C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F793200D1E57476500F05C2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1683,6 +1791,30 @@
 			};
 			name = Release;
 		};
+		F79320111E57476500F05C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CAEmitterLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CAEmitterLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F79320121E57476500F05C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CAEmitterLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CAEmitterLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F794C8FA1E56CC23006BBC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1814,6 +1946,14 @@
 			buildConfigurations = (
 				F7931FF21E572E2900F05C2E /* Debug */,
 				F7931FF31E572E2900F05C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F79320101E57476500F05C2E /* Build configuration list for PBXNativeTarget "CAEmitterLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79320111E57476500F05C2E /* Debug */,
+				F79320121E57476500F05C2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

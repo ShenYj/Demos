@@ -50,8 +50,6 @@
     
     //reset the pan gesture translation
     [recognizer setTranslation:CGPointZero inView:self];
-    
-    NSLog(@"%s",__func__);
 }
 
 @end
