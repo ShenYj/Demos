@@ -62,12 +62,6 @@
 		F74E0B8F1E5165490054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B8D1E5165490054A416 /* Main.storyboard */; };
 		F74E0B911E5165490054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B901E5165490054A416 /* Assets.xcassets */; };
 		F74E0B941E5165490054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B921E5165490054A416 /* LaunchScreen.storyboard */; };
-		F74E0BA11E52B7AB0054A416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0BA01E52B7AB0054A416 /* main.m */; };
-		F74E0BA41E52B7AB0054A416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0BA31E52B7AB0054A416 /* AppDelegate.m */; };
-		F74E0BAA1E52B7AB0054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0BA81E52B7AB0054A416 /* Main.storyboard */; };
-		F74E0BAC1E52B7AB0054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0BAB1E52B7AB0054A416 /* Assets.xcassets */; };
-		F74E0BAF1E52B7AB0054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0BAD1E52B7AB0054A416 /* LaunchScreen.storyboard */; };
-		F74E0BB41E52BD0B0054A416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E0BA61E52B7AB0054A416 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,15 +158,6 @@
 		F74E0B931E5165490054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74E0B951E5165490054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74E0B9D1E52B7AB0054A416 /* 属性动画器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "属性动画器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F74E0BA01E52B7AB0054A416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F74E0BA21E52B7AB0054A416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F74E0BA31E52B7AB0054A416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F74E0BA51E52B7AB0054A416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F74E0BA61E52B7AB0054A416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F74E0BA91E52B7AB0054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F74E0BAB1E52B7AB0054A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F74E0BAE1E52B7AB0054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F74E0BB01E52B7AB0054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,7 +246,6 @@
 				F74E0B4D1E5147A30054A416 /* CATransformLayer */,
 				F74E0B681E514EDB0054A416 /* CAGradientLayer */,
 				F74E0B831E5165490054A416 /* CAReplicatorLayer */,
-				F74E0B9E1E52B7AB0054A416 /* 属性动画器 */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -498,30 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				F74E0B851E5165490054A416 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F74E0B9E1E52B7AB0054A416 /* 属性动画器 */ = {
-			isa = PBXGroup;
-			children = (
-				F74E0BA21E52B7AB0054A416 /* AppDelegate.h */,
-				F74E0BA31E52B7AB0054A416 /* AppDelegate.m */,
-				F74E0BA51E52B7AB0054A416 /* ViewController.h */,
-				F74E0BA61E52B7AB0054A416 /* ViewController.m */,
-				F74E0BA81E52B7AB0054A416 /* Main.storyboard */,
-				F74E0BAB1E52B7AB0054A416 /* Assets.xcassets */,
-				F74E0BAD1E52B7AB0054A416 /* LaunchScreen.storyboard */,
-				F74E0BB01E52B7AB0054A416 /* Info.plist */,
-				F74E0B9F1E52B7AB0054A416 /* Supporting Files */,
-			);
-			path = "属性动画器";
-			sourceTree = "<group>";
-		};
-		F74E0B9F1E52B7AB0054A416 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F74E0BA01E52B7AB0054A416 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -889,9 +849,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F74E0BAF1E52B7AB0054A416 /* LaunchScreen.storyboard in Resources */,
-				F74E0BAC1E52B7AB0054A416 /* Assets.xcassets in Resources */,
-				F74E0BAA1E52B7AB0054A416 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,9 +950,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F74E0BB41E52BD0B0054A416 /* ViewController.m in Sources */,
-				F74E0BA41E52B7AB0054A416 /* AppDelegate.m in Sources */,
-				F74E0BA11E52B7AB0054A416 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,22 +1096,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				F74E0B931E5165490054A416 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F74E0BA81E52B7AB0054A416 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F74E0BA91E52B7AB0054A416 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F74E0BAD1E52B7AB0054A416 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F74E0BAE1E52B7AB0054A416 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
