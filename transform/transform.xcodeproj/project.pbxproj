@@ -62,6 +62,13 @@
 		F74E0B8F1E5165490054A416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B8D1E5165490054A416 /* Main.storyboard */; };
 		F74E0B911E5165490054A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B901E5165490054A416 /* Assets.xcassets */; };
 		F74E0B941E5165490054A416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74E0B921E5165490054A416 /* LaunchScreen.storyboard */; };
+		F7931FE21E572E2900F05C2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FE11E572E2900F05C2E /* main.m */; };
+		F7931FE51E572E2900F05C2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FE41E572E2900F05C2E /* AppDelegate.m */; };
+		F7931FE81E572E2900F05C2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FE71E572E2900F05C2E /* ViewController.m */; };
+		F7931FEB1E572E2900F05C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7931FE91E572E2900F05C2E /* Main.storyboard */; };
+		F7931FED1E572E2900F05C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7931FEC1E572E2900F05C2E /* Assets.xcassets */; };
+		F7931FF01E572E2900F05C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7931FEE1E572E2900F05C2E /* LaunchScreen.storyboard */; };
+		F7931FF71E572E4100F05C2E /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7931FF61E572E4100F05C2E /* ScrollView.m */; };
 		F794C8E91E56CC23006BBC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8E81E56CC23006BBC42 /* main.m */; };
 		F794C8EC1E56CC23006BBC42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EB1E56CC23006BBC42 /* AppDelegate.m */; };
 		F794C8EF1E56CC23006BBC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EE1E56CC23006BBC42 /* ViewController.m */; };
@@ -165,6 +172,18 @@
 		F74E0B931E5165490054A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74E0B951E5165490054A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74E0B9D1E52B7AB0054A416 /* 属性动画器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "属性动画器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAScrollLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7931FE11E572E2900F05C2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7931FE31E572E2900F05C2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7931FE41E572E2900F05C2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7931FE61E572E2900F05C2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7931FE71E572E2900F05C2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7931FEA1E572E2900F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7931FEC1E572E2900F05C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7931FEF1E572E2900F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7931FF11E572E2900F05C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7931FF51E572E4100F05C2E /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		F7931FF61E572E4100F05C2E /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
 		F794C8E51E56CC23006BBC42 /* 反射.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "反射.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F794C8E81E56CC23006BBC42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F794C8EA1E56CC23006BBC42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +269,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7931FDB1E572E2800F05C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F794C8E21E56CC23006BBC42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +299,7 @@
 				F74E0B681E514EDB0054A416 /* CAGradientLayer */,
 				F74E0B831E5165490054A416 /* CAReplicatorLayer */,
 				F794C8E61E56CC23006BBC42 /* 反射 */,
+				F7931FDF1E572E2900F05C2E /* CAScrollLayer */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -291,6 +318,7 @@
 				F74E0B821E5165490054A416 /* CAReplicatorLayer.app */,
 				F74E0B9D1E52B7AB0054A416 /* 属性动画器.app */,
 				F794C8E51E56CC23006BBC42 /* 反射.app */,
+				F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -514,6 +542,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F7931FDF1E572E2900F05C2E /* CAScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F7931FE31E572E2900F05C2E /* AppDelegate.h */,
+				F7931FE41E572E2900F05C2E /* AppDelegate.m */,
+				F7931FE61E572E2900F05C2E /* ViewController.h */,
+				F7931FE71E572E2900F05C2E /* ViewController.m */,
+				F7931FF51E572E4100F05C2E /* ScrollView.h */,
+				F7931FF61E572E4100F05C2E /* ScrollView.m */,
+				F7931FE91E572E2900F05C2E /* Main.storyboard */,
+				F7931FEC1E572E2900F05C2E /* Assets.xcassets */,
+				F7931FEE1E572E2900F05C2E /* LaunchScreen.storyboard */,
+				F7931FF11E572E2900F05C2E /* Info.plist */,
+				F7931FE01E572E2900F05C2E /* Supporting Files */,
+			);
+			path = CAScrollLayer;
+			sourceTree = "<group>";
+		};
+		F7931FE01E572E2900F05C2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7931FE11E572E2900F05C2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F794C8B81E52BDDA006BBC42 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +774,23 @@
 			productReference = F74E0B9D1E52B7AB0054A416 /* 属性动画器.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7931FDD1E572E2800F05C2E /* CAScrollLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7931FF41E572E2900F05C2E /* Build configuration list for PBXNativeTarget "CAScrollLayer" */;
+			buildPhases = (
+				F7931FDA1E572E2800F05C2E /* Sources */,
+				F7931FDB1E572E2800F05C2E /* Frameworks */,
+				F7931FDC1E572E2800F05C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAScrollLayer;
+			productName = CAScrollLayer;
+			productReference = F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F794C8E41E56CC23006BBC42 /* 反射 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F794C8F91E56CC23006BBC42 /* Build configuration list for PBXNativeTarget "反射" */;
@@ -796,6 +867,11 @@
 						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
 					};
+					F7931FDD1E572E2800F05C2E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
 					F794C8E41E56CC23006BBC42 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EC2EUS3UQ9;
@@ -827,6 +903,7 @@
 				F74E0B811E5165490054A416 /* CAReplicatorLayer */,
 				F74E0B9C1E52B7AB0054A416 /* 属性动画器 */,
 				F794C8E41E56CC23006BBC42 /* 反射 */,
+				F7931FDD1E572E2800F05C2E /* CAScrollLayer */,
 			);
 		};
 /* End PBXProject section */
@@ -926,6 +1003,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7931FDC1E572E2800F05C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7931FF01E572E2900F05C2E /* LaunchScreen.storyboard in Resources */,
+				F7931FED1E572E2900F05C2E /* Assets.xcassets in Resources */,
+				F7931FEB1E572E2900F05C2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,6 +1124,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7931FDA1E572E2800F05C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7931FE81E572E2900F05C2E /* ViewController.m in Sources */,
+				F7931FF71E572E4100F05C2E /* ScrollView.m in Sources */,
+				F7931FE51E572E2900F05C2E /* AppDelegate.m in Sources */,
+				F7931FE21E572E2900F05C2E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,6 +1292,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F74E0B931E5165490054A416 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F7931FE91E572E2900F05C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7931FEA1E572E2900F05C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7931FEE1E572E2900F05C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7931FEF1E572E2900F05C2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1545,6 +1659,30 @@
 			};
 			name = Release;
 		};
+		F7931FF21E572E2900F05C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CAScrollLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CAScrollLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7931FF31E572E2900F05C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = CAScrollLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.CAScrollLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F794C8FA1E56CC23006BBC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1671,6 +1809,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F7931FF41E572E2900F05C2E /* Build configuration list for PBXNativeTarget "CAScrollLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7931FF21E572E2900F05C2E /* Debug */,
+				F7931FF31E572E2900F05C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F794C8F91E56CC23006BBC42 /* Build configuration list for PBXNativeTarget "反射" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1678,6 +1824,7 @@
 				F794C8FB1E56CC23006BBC42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
