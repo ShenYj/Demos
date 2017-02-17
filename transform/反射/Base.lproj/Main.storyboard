@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqE-DC-2TY" customClass="ReflectionView">
+                                <rect key="frame" x="16" y="187" width="343" height="292"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_pullRefresh1" translatesAutoresizingMaskIntoConstraints="NO" id="00e-0k-cYB">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="292"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="00e-0k-cYB" firstAttribute="leading" secondItem="qqE-DC-2TY" secondAttribute="leading" id="7OT-nQ-jkt"/>
+                                    <constraint firstAttribute="bottom" secondItem="00e-0k-cYB" secondAttribute="bottom" id="cJT-aM-I9l"/>
+                                    <constraint firstAttribute="width" constant="343" id="dmn-Jj-6Hk"/>
+                                    <constraint firstItem="00e-0k-cYB" firstAttribute="top" secondItem="qqE-DC-2TY" secondAttribute="top" id="smg-Zh-dKf"/>
+                                    <constraint firstAttribute="height" constant="292" id="ySV-pa-oQK"/>
+                                    <constraint firstAttribute="trailing" secondItem="00e-0k-cYB" secondAttribute="trailing" id="zKp-SN-4sx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qqE-DC-2TY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="67T-XB-Dvp"/>
+                            <constraint firstItem="qqE-DC-2TY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sKN-UG-p0R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="qqE-DC-2TY" id="kZs-0h-Bbf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="v2_pullRefresh1" width="50" height="50"/>
+    </resources>
+</document>
