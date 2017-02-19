@@ -81,6 +81,13 @@
 		F79320261E598AAE00F05C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79320241E598AAE00F05C2E /* Main.storyboard */; };
 		F79320281E598AAE00F05C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79320271E598AAE00F05C2E /* Assets.xcassets */; };
 		F793202B1E598AAE00F05C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79320291E598AAE00F05C2E /* LaunchScreen.storyboard */; };
+		F79320381E598EB200F05C2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F79320371E598EB200F05C2E /* main.m */; };
+		F793203B1E598EB200F05C2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F793203A1E598EB200F05C2E /* AppDelegate.m */; };
+		F793203E1E598EB200F05C2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793203D1E598EB200F05C2E /* ViewController.m */; };
+		F79320411E598EB300F05C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F793203F1E598EB200F05C2E /* Main.storyboard */; };
+		F79320431E598EB300F05C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79320421E598EB300F05C2E /* Assets.xcassets */; };
+		F79320461E598EB300F05C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79320441E598EB300F05C2E /* LaunchScreen.storyboard */; };
+		F793204F1E5994EA00F05C2E /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F793204E1E5994EA00F05C2E /* minion_01.mp4 */; };
 		F794C8E91E56CC23006BBC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8E81E56CC23006BBC42 /* main.m */; };
 		F794C8EC1E56CC23006BBC42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EB1E56CC23006BBC42 /* AppDelegate.m */; };
 		F794C8EF1E56CC23006BBC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F794C8EE1E56CC23006BBC42 /* ViewController.m */; };
@@ -216,6 +223,17 @@
 		F79320271E598AAE00F05C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F793202A1E598AAE00F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F793202C1E598AAE00F05C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79320341E598EB200F05C2E /* AVPlayerLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79320371E598EB200F05C2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F79320391E598EB200F05C2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F793203A1E598EB200F05C2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F793203C1E598EB200F05C2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F793203D1E598EB200F05C2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F79320401E598EB200F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F79320421E598EB300F05C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F79320451E598EB300F05C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F79320471E598EB300F05C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F793204E1E5994EA00F05C2E /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
 		F794C8E51E56CC23006BBC42 /* 反射.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "反射.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F794C8E81E56CC23006BBC42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F794C8EA1E56CC23006BBC42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -322,6 +340,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F79320311E598EB200F05C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F794C8E21E56CC23006BBC42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +373,7 @@
 				F7931FDF1E572E2900F05C2E /* CAScrollLayer */,
 				F7931FFD1E57476500F05C2E /* CAEmitterLayer */,
 				F793201A1E598AAE00F05C2E /* CAEAGLLayer */,
+				F79320351E598EB200F05C2E /* AVPlayerLayer */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -369,6 +395,7 @@
 				F7931FDE1E572E2800F05C2E /* CAScrollLayer.app */,
 				F7931FFC1E57476400F05C2E /* CAEmitterLayer.app */,
 				F79320191E598AAD00F05C2E /* CAEAGLLayer.app */,
+				F79320341E598EB200F05C2E /* AVPlayerLayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -666,6 +693,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F79320351E598EB200F05C2E /* AVPlayerLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F793204E1E5994EA00F05C2E /* minion_01.mp4 */,
+				F79320391E598EB200F05C2E /* AppDelegate.h */,
+				F793203A1E598EB200F05C2E /* AppDelegate.m */,
+				F793203C1E598EB200F05C2E /* ViewController.h */,
+				F793203D1E598EB200F05C2E /* ViewController.m */,
+				F793203F1E598EB200F05C2E /* Main.storyboard */,
+				F79320421E598EB300F05C2E /* Assets.xcassets */,
+				F79320441E598EB300F05C2E /* LaunchScreen.storyboard */,
+				F79320471E598EB300F05C2E /* Info.plist */,
+				F79320361E598EB200F05C2E /* Supporting Files */,
+			);
+			path = AVPlayerLayer;
+			sourceTree = "<group>";
+		};
+		F79320361E598EB200F05C2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79320371E598EB200F05C2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F794C8B81E52BDDA006BBC42 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +975,23 @@
 			productReference = F79320191E598AAD00F05C2E /* CAEAGLLayer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F79320331E598EB200F05C2E /* AVPlayerLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79320481E598EB300F05C2E /* Build configuration list for PBXNativeTarget "AVPlayerLayer" */;
+			buildPhases = (
+				F79320301E598EB200F05C2E /* Sources */,
+				F79320311E598EB200F05C2E /* Frameworks */,
+				F79320321E598EB200F05C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVPlayerLayer;
+			productName = AVPlayerLayer;
+			productReference = F79320341E598EB200F05C2E /* AVPlayerLayer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F794C8E41E56CC23006BBC42 /* 反射 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F794C8F91E56CC23006BBC42 /* Build configuration list for PBXNativeTarget "反射" */;
@@ -1014,6 +1083,11 @@
 						DevelopmentTeam = EC2EUS3UQ9;
 						ProvisioningStyle = Automatic;
 					};
+					F79320331E598EB200F05C2E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
 					F794C8E41E56CC23006BBC42 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EC2EUS3UQ9;
@@ -1048,6 +1122,7 @@
 				F7931FDD1E572E2800F05C2E /* CAScrollLayer */,
 				F7931FFB1E57476400F05C2E /* CAEmitterLayer */,
 				F79320181E598AAD00F05C2E /* CAEAGLLayer */,
+				F79320331E598EB200F05C2E /* AVPlayerLayer */,
 			);
 		};
 /* End PBXProject section */
@@ -1177,6 +1252,17 @@
 				F793202B1E598AAE00F05C2E /* LaunchScreen.storyboard in Resources */,
 				F79320281E598AAE00F05C2E /* Assets.xcassets in Resources */,
 				F79320261E598AAE00F05C2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79320321E598EB200F05C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79320461E598EB300F05C2E /* LaunchScreen.storyboard in Resources */,
+				F79320431E598EB300F05C2E /* Assets.xcassets in Resources */,
+				F793204F1E5994EA00F05C2E /* minion_01.mp4 in Resources */,
+				F79320411E598EB300F05C2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,6 +1405,16 @@
 				F79320231E598AAE00F05C2E /* ViewController.m in Sources */,
 				F79320201E598AAE00F05C2E /* AppDelegate.m in Sources */,
 				F793201D1E598AAE00F05C2E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79320301E598EB200F05C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F793203E1E598EB200F05C2E /* ViewController.m in Sources */,
+				F793203B1E598EB200F05C2E /* AppDelegate.m in Sources */,
+				F79320381E598EB200F05C2E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1524,6 +1620,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F793202A1E598AAE00F05C2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F793203F1E598EB200F05C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79320401E598EB200F05C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F79320441E598EB300F05C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79320451E598EB300F05C2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1947,6 +2059,30 @@
 			};
 			name = Release;
 		};
+		F79320491E598EB300F05C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = AVPlayerLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.AVPlayerLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F793204A1E598EB300F05C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = AVPlayerLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.AVPlayerLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F794C8FA1E56CC23006BBC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2094,6 +2230,14 @@
 			buildConfigurations = (
 				F793202E1E598AAE00F05C2E /* Debug */,
 				F793202F1E598AAE00F05C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F79320481E598EB300F05C2E /* Build configuration list for PBXNativeTarget "AVPlayerLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79320491E598EB300F05C2E /* Debug */,
+				F793204A1E598EB300F05C2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
