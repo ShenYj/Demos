@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
@@ -27,6 +27,7 @@
     
     //configure emitter
     emitter.renderMode = kCAEmitterLayerAdditive;
+    //emitter.renderMode = kCAEmitterLayerUnordered;
     emitter.emitterPosition = CGPointMake(emitter.frame.size.width / 2.0, emitter.frame.size.height / 2.0);
     
     //create a particle template
@@ -43,12 +44,5 @@
     //add particle template to emitter
     emitter.emitterCells = @[cell];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
