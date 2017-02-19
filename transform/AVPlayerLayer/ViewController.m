@@ -23,7 +23,7 @@
     //get video URL
     NSString *path = [[NSBundle mainBundle] pathForResource:@"minion_01.mp4" ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:path];
-    NSLog(@"%@",url);
+    
     //create player and player layer
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
@@ -32,6 +32,18 @@
     //set player layer frame and attach it to our view
     playerLayer.frame = self.containerView.bounds;
     [self.containerView.layer addSublayer:playerLayer];
+    
+    //transform layer
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = -1.0 / 1000.0;
+    transform = CATransform3DRotate(transform, M_PI_4, 1, 1, 0);
+    playerLayer.transform = transform;
+    
+    //add rounded corners and border
+    playerLayer.masksToBounds = YES;
+    playerLayer.cornerRadius = 20.0;
+    playerLayer.borderColor = [UIColor redColor].CGColor;
+    playerLayer.borderWidth = 5.0;
     
     //play the video
     [player play];
