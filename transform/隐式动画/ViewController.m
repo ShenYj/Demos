@@ -28,6 +28,7 @@
     [self.layerView.layer addSublayer:self.colorLayer];
     
 }
+
 - (IBAction)changeColor {
     //begin a new transaction
     [CATransaction begin];

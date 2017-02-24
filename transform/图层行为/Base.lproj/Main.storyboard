@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-dK-s96">
+                                <rect key="frame" x="68" y="215" width="240" height="237"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ne-Dt-DVe">
+                                        <rect key="frame" x="72" y="199" width="96" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="afb-RY-mUe"/>
+                                            <constraint firstAttribute="height" constant="30" id="urF-uV-Hse"/>
+                                        </constraints>
+                                        <state key="normal" title="图层行为"/>
+                                        <connections>
+                                            <action selector="changeColor" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5T-2F-rzC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="9KR-Tp-lAQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="WPw-KL-FDZ"/>
+                                    <constraint firstItem="3ne-Dt-DVe" firstAttribute="centerX" secondItem="CAu-dK-s96" secondAttribute="centerX" id="kWs-uI-Arq"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ne-Dt-DVe" secondAttribute="bottom" constant="8" id="qm3-PQ-cWz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CAu-dK-s96" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iVq-cC-Ylh"/>
+                            <constraint firstItem="CAu-dK-s96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xDg-uz-pbX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="layerView" destination="CAu-dK-s96" id="NEi-LI-4qu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
