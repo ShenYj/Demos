@@ -10,8 +10,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-NSString *const kPGKVOClassPrefix = @"PGKVOClassPrefix_";
-NSString *const kPGKVOAssociatedObservers = @"PGKVOAssociatedObservers";
+NSString *const kJSKVOClassPrefix = @"JSKVOClassPrefix_";
+NSString *const kJSKVOAssociatedObservers = @"JSKVOAssociatedObservers";
 
 
 #pragma mark - PGObservationInfo
@@ -128,7 +128,7 @@ static void kvo_setter(id self, SEL _cmd, id newValue) {
     objc_msgSendSuperCasted(&superclazz, _cmd, newValue);
     
     // look up observers and call the blocks
-    NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kPGKVOAssociatedObservers));
+    NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kJSKVOAssociatedObservers));
     for (PGObservationInfo *each in observers) {
         if ([each.key isEqualToString:getterName]) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -165,7 +165,7 @@ static Class kvo_class(id self, SEL _cmd) {
     NSString *clazzName = NSStringFromClass(clazz);
     
     // if not an KVO class yet
-    if (![clazzName hasPrefix:kPGKVOClassPrefix]) {
+    if (![clazzName hasPrefix:kJSKVOClassPrefix]) {
         clazz = [self makeKvoClassWithOriginalClassName:clazzName];
         object_setClass(self, clazz);
     }
@@ -177,10 +177,10 @@ static Class kvo_class(id self, SEL _cmd) {
     }
     
     PGObservationInfo *info = [[PGObservationInfo alloc] initWithObserver:observer Key:key block:block];
-    NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kPGKVOAssociatedObservers));
+    NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kJSKVOAssociatedObservers));
     if (!observers) {
         observers = [NSMutableArray array];
-        objc_setAssociatedObject(self, (__bridge const void *)(kPGKVOAssociatedObservers), observers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, (__bridge const void *)(kJSKVOAssociatedObservers), observers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     [observers addObject:info];
 }
@@ -188,7 +188,7 @@ static Class kvo_class(id self, SEL _cmd) {
 
 - (void)JS_removeObserver:(NSObject *)observer forKey:(NSString *)key
 {
-    NSMutableArray* observers = objc_getAssociatedObject(self, (__bridge const void *)(kPGKVOAssociatedObservers));
+    NSMutableArray* observers = objc_getAssociatedObject(self, (__bridge const void *)(kJSKVOAssociatedObservers));
     
     PGObservationInfo *infoToRemove;
     for (PGObservationInfo* info in observers) {
@@ -204,7 +204,7 @@ static Class kvo_class(id self, SEL _cmd) {
 
 - (Class)makeKvoClassWithOriginalClassName:(NSString *)originalClazzName
 {
-    NSString *kvoClazzName = [kPGKVOClassPrefix stringByAppendingString:originalClazzName];
+    NSString *kvoClazzName = [kJSKVOClassPrefix stringByAppendingString:originalClazzName];
     Class clazz = NSClassFromString(kvoClazzName);
     
     if (clazz) {
