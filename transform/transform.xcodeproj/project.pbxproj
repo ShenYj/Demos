@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70456AD1E66FB2D00CCF791 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F70456AC1E66FB2D00CCF791 /* main.m */; };
+		F70456B01E66FB2D00CCF791 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F70456AF1E66FB2D00CCF791 /* AppDelegate.m */; };
+		F70456B31E66FB2D00CCF791 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70456B21E66FB2D00CCF791 /* ViewController.m */; };
+		F70456B61E66FB2D00CCF791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70456B41E66FB2D00CCF791 /* Main.storyboard */; };
+		F70456B81E66FB2D00CCF791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70456B71E66FB2D00CCF791 /* Assets.xcassets */; };
+		F70456BB1E66FB2D00CCF791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70456B91E66FB2D00CCF791 /* LaunchScreen.storyboard */; };
 		F71A53AE1E5ED5210093B400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71A53AD1E5ED5210093B400 /* main.m */; };
 		F71A53B11E5ED5210093B400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F71A53B01E5ED5210093B400 /* AppDelegate.m */; };
 		F71A53B41E5ED5210093B400 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71A53B31E5ED5210093B400 /* ViewController.m */; };
@@ -110,6 +116,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F70456A91E66FB2D00CCF791 /* 自定义行为.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义行为.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70456AC1E66FB2D00CCF791 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F70456AE1E66FB2D00CCF791 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F70456AF1E66FB2D00CCF791 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F70456B11E66FB2D00CCF791 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F70456B21E66FB2D00CCF791 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F70456B51E66FB2D00CCF791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F70456B71E66FB2D00CCF791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F70456BA1E66FB2D00CCF791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F70456BC1E66FB2D00CCF791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71A53AA1E5ED5210093B400 /* 图层行为.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图层行为.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71A53AD1E5ED5210093B400 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F71A53AF1E5ED5210093B400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -281,6 +297,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F70456A61E66FB2D00CCF791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F71A53A71E5ED5210093B400 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +426,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F70456AA1E66FB2D00CCF791 /* 自定义行为 */ = {
+			isa = PBXGroup;
+			children = (
+				F70456AE1E66FB2D00CCF791 /* AppDelegate.h */,
+				F70456AF1E66FB2D00CCF791 /* AppDelegate.m */,
+				F70456B11E66FB2D00CCF791 /* ViewController.h */,
+				F70456B21E66FB2D00CCF791 /* ViewController.m */,
+				F70456B41E66FB2D00CCF791 /* Main.storyboard */,
+				F70456B71E66FB2D00CCF791 /* Assets.xcassets */,
+				F70456B91E66FB2D00CCF791 /* LaunchScreen.storyboard */,
+				F70456BC1E66FB2D00CCF791 /* Info.plist */,
+				F70456AB1E66FB2D00CCF791 /* Supporting Files */,
+			);
+			path = "自定义行为";
+			sourceTree = "<group>";
+		};
+		F70456AB1E66FB2D00CCF791 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70456AC1E66FB2D00CCF791 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F71A53AB1E5ED5210093B400 /* 图层行为 */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +493,7 @@
 				F79320351E598EB200F05C2E /* AVPlayerLayer */,
 				F79320551E59D77700F05C2E /* 隐式动画 */,
 				F71A53AB1E5ED5210093B400 /* 图层行为 */,
+				F70456AA1E66FB2D00CCF791 /* 自定义行为 */,
 				F74E0AA21E4D37510054A416 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -470,6 +518,7 @@
 				F79320341E598EB200F05C2E /* AVPlayerLayer.app */,
 				F79320541E59D77700F05C2E /* 隐式动画.app */,
 				F71A53AA1E5ED5210093B400 /* 图层行为.app */,
+				F70456A91E66FB2D00CCF791 /* 自定义行为.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -844,6 +893,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F70456A81E66FB2D00CCF791 /* 自定义行为 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70456BF1E66FB2D00CCF791 /* Build configuration list for PBXNativeTarget "自定义行为" */;
+			buildPhases = (
+				F70456A51E66FB2D00CCF791 /* Sources */,
+				F70456A61E66FB2D00CCF791 /* Frameworks */,
+				F70456A71E66FB2D00CCF791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "自定义行为";
+			productName = "自定义行为";
+			productReference = F70456A91E66FB2D00CCF791 /* 自定义行为.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F71A53A91E5ED5210093B400 /* 图层行为 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F71A53C01E5ED5210093B400 /* Build configuration list for PBXNativeTarget "图层行为" */;
@@ -1142,6 +1208,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ShenYj;
 				TargetAttributes = {
+					F70456A81E66FB2D00CCF791 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EC2EUS3UQ9;
+						ProvisioningStyle = Automatic;
+					};
 					F71A53A91E5ED5210093B400 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EC2EUS3UQ9;
@@ -1259,11 +1330,22 @@
 				F79320331E598EB200F05C2E /* AVPlayerLayer */,
 				F79320531E59D77700F05C2E /* 隐式动画 */,
 				F71A53A91E5ED5210093B400 /* 图层行为 */,
+				F70456A81E66FB2D00CCF791 /* 自定义行为 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F70456A71E66FB2D00CCF791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70456BB1E66FB2D00CCF791 /* LaunchScreen.storyboard in Resources */,
+				F70456B81E66FB2D00CCF791 /* Assets.xcassets in Resources */,
+				F70456B61E66FB2D00CCF791 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F71A53A81E5ED5210093B400 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1435,6 +1517,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F70456A51E66FB2D00CCF791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70456B31E66FB2D00CCF791 /* ViewController.m in Sources */,
+				F70456B01E66FB2D00CCF791 /* AppDelegate.m in Sources */,
+				F70456AD1E66FB2D00CCF791 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F71A53A61E5ED5210093B400 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1608,6 +1700,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F70456B41E66FB2D00CCF791 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70456B51E66FB2D00CCF791 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F70456B91E66FB2D00CCF791 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70456BA1E66FB2D00CCF791 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		F71A53B51E5ED5210093B400 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1867,6 +1975,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F70456BD1E66FB2D00CCF791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "自定义行为/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F70456BE1E66FB2D00CCF791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EC2EUS3UQ9;
+				INFOPLIST_FILE = "自定义行为/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShenYj.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F71A53BE1E5ED5210093B400 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2366,6 +2498,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F70456BF1E66FB2D00CCF791 /* Build configuration list for PBXNativeTarget "自定义行为" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70456BD1E66FB2D00CCF791 /* Debug */,
+				F70456BE1E66FB2D00CCF791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F71A53C01E5ED5210093B400 /* Build configuration list for PBXNativeTarget "图层行为" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2373,6 +2513,7 @@
 				F71A53BF1E5ED5210093B400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F74E0A9C1E4D37510054A416 /* Build configuration list for PBXProject "transform" */ = {
 			isa = XCConfigurationList;
