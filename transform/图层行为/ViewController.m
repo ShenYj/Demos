@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     //set the color of our layerView backing layer directly
     self.layerView.layer.backgroundColor = [UIColor blueColor].CGColor;
+    dispatch_queue_create()
 }
 
 - (IBAction)changeColor {
