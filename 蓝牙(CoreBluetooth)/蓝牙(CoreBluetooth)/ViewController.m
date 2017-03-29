@@ -8,11 +8,30 @@
 
 #import "ViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
+/*
+ 
+ {
+ kCBAdvDataIsConnectable = 1;
+ kCBAdvDataLocalName = "FMC BTLE";
+ kCBAdvDataServiceUUIDs =     (
+ "A830005F-88C0-4369-844A-F7E521041300"
+ );
+ 
+ {
+ kCBAdvDataIsConnectable = 1;
+ kCBAdvDataLocalName = BR508767;
+ kCBAdvDataServiceData =     {
+ 5242 = <3d6400cd ff0e4242>;
+ };
+ */
 
-@interface ViewController () <CBCentralManagerDelegate>
+
+@interface ViewController () <CBCentralManagerDelegate,CBPeripheralDelegate>
 
 /** 中央管理者,我们iPhone设备自身 */
 @property (nonatomic,strong) CBCentralManager *centralManager;
+/** 外设(记录连接的外设) */
+@property (nonatomic,strong) CBPeripheral *peripheral;
 
 /** 开始扫描外设按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *startToScan;
@@ -42,9 +61,6 @@
      CBCentralManagerScanOptionSolicitedServiceUUIDsKey
      */
     [self.centralManager scanForPeripheralsWithServices:serviceUUIDs options:nil];
-    // 3. 连接外设
-    
-    // 4. 查找服务
     
     // 5. 查找特征
     
@@ -84,14 +100,56 @@
  * @param advertisementData 广播数据
  * @param RSSI 信号强度 分贝
  */
-
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *, id> *)advertisementData RSSI:(NSNumber *)RSSI {
     // 获取外设名称
     NSString *peripheralName = advertisementData[CBAdvertisementDataLocalNameKey];
-    NSLog(@"%@",peripheralName);
-    
+    /* 搜索到外设的其他参数
+     NSString *txPowerLevel = advertisementData[CBAdvertisementDataTxPowerLevelKey];
+     NSDictionary *dataSeviceUUIDs = advertisementData[CBAdvertisementDataServiceUUIDsKey];
+     NSArray *dataSeviceData = advertisementData[CBAdvertisementDataServiceDataKey];
+     NSArray *dataManuFactureData = advertisementData[CBAdvertisementDataManufacturerDataKey];
+     NSNumber *dataOverflowServiceUUIDs = advertisementData[CBAdvertisementDataOverflowServiceUUIDsKey];
+     BOOL dataIsConnectable = advertisementData[CBAdvertisementDataIsConnectable];
+     NSArray *dataSolicitedServiceUUIDs = advertisementData[CBAdvertisementDataSolicitedServiceUUIDsKey];
+    */
+
+    //NSLog(@"发现外设: -> %@",advertisementData);
+    //NSLog(@"发现设备:%@ - %@",peripheralName,peripheral.name);
+    // 3. 连接外设
+    if ([peripheralName isEqualToString:@"ShenYj的MacBook Pro"] || [peripheral.name isEqualToString:@"ShenYj的MacBook Pro"]) {
+        
+        [self.centralManager connectPeripheral:peripheral options:nil];
+        // 记录外设 (强引用,防止销毁)
+        self.peripheral = peripheral;
+    }
 }
 
+/**
+ * 已经连接到外设后调用
+ *
+ * @param central 中央管理者
+ * @param peripheral 外设
+ */
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    NSLog(@"连接外设成功");
+    // 4. 查找服务 (参数为nil代表查找所有服务)
+    [peripheral discoverServices:nil];
+    // 获取数据,设置外设的代理
+    peripheral.delegate = self;
+}
+/**
+ * 连接外设失败后调用
+ *
+ * @param central 中央管理者
+ * @param peripheral 外设
+ @ param error 错误信息
+ */
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
+    NSLog(@"连接外设失败: %@",error);
+}
+
+#pragma mark
+#pragma mark - CBPeripheralDelegate
 
 
 - (void)didReceiveMemoryWarning {
