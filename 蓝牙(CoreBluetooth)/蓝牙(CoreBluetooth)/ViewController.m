@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  蓝牙(CoreBluetooth)
+//  蓝牙(CoreBluetooth) 手机作为中央端设备
 //
 //  Created by ShenYj on 2017/3/29.
 //  Copyright © 2017年 ShenYj. All rights reserved.
@@ -8,22 +8,6 @@
 
 #import "ViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
-/*
- 
- {
- kCBAdvDataIsConnectable = 1;
- kCBAdvDataLocalName = "FMC BTLE";
- kCBAdvDataServiceUUIDs =     (
- "A830005F-88C0-4369-844A-F7E521041300"
- );
- 
- {
- kCBAdvDataIsConnectable = 1;
- kCBAdvDataLocalName = BR508767;
- kCBAdvDataServiceData =     {
- 5242 = <3d6400cd ff0e4242>;
- };
- */
 
 
 @interface ViewController () <CBCentralManagerDelegate,CBPeripheralDelegate>
@@ -35,6 +19,7 @@
 
 /** 开始扫描外设按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *startToScan;
+
 
 @end
 
@@ -61,10 +46,6 @@
      CBCentralManagerScanOptionSolicitedServiceUUIDsKey
      */
     [self.centralManager scanForPeripheralsWithServices:serviceUUIDs options:nil];
-    
-    // 5. 查找特征
-    
-    // 6. 读写数据
 }
 
 #pragma mark 
@@ -72,7 +53,7 @@
 /**
  * 中央管理者已经更新状态后调用
  *
- * @param central 中央管理者
+ * @param central   中央管理者
  */
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     // 判断状态
@@ -95,10 +76,10 @@
 /** 
  * 发现某个外设后调用
  *
- * @param central 中央管理者
- * @param peripheral 外设
+ * @param central           中央管理者
+ * @param peripheral        外设
  * @param advertisementData 广播数据
- * @param RSSI 信号强度 分贝
+ * @param RSSI              信号强度 分贝
  */
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *, id> *)advertisementData RSSI:(NSNumber *)RSSI {
     // 获取外设名称
@@ -111,13 +92,12 @@
      NSNumber *dataOverflowServiceUUIDs = advertisementData[CBAdvertisementDataOverflowServiceUUIDsKey];
      BOOL dataIsConnectable = advertisementData[CBAdvertisementDataIsConnectable];
      NSArray *dataSolicitedServiceUUIDs = advertisementData[CBAdvertisementDataSolicitedServiceUUIDsKey];
+     NSLog(@"发现设备:%@ - %@",peripheralName,peripheral.name);
     */
-
-    //NSLog(@"发现外设: -> %@",advertisementData);
-    //NSLog(@"发现设备:%@ - %@",peripheralName,peripheral.name);
+    NSLog(@"发现外设: -> %@ - %@",advertisementData,peripheral.name);
+    
     // 3. 连接外设
     if ([peripheralName isEqualToString:@"ShenYj的MacBook Pro"] || [peripheral.name isEqualToString:@"ShenYj的MacBook Pro"]) {
-        
         [self.centralManager connectPeripheral:peripheral options:nil];
         // 记录外设 (强引用,防止销毁)
         self.peripheral = peripheral;
@@ -127,11 +107,12 @@
 /**
  * 已经连接到外设后调用
  *
- * @param central 中央管理者
- * @param peripheral 外设
+ * @param central       中央管理者
+ * @param peripheral    外设
  */
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"连接外设成功");
+    
     // 4. 查找服务 (参数为nil代表查找所有服务)
     [peripheral discoverServices:nil];
     // 获取数据,设置外设的代理
@@ -140,9 +121,9 @@
 /**
  * 连接外设失败后调用
  *
- * @param central 中央管理者
- * @param peripheral 外设
- @ param error 错误信息
+ * @param central       中央管理者
+ * @param peripheral    外设
+ @ param error          错误信息
  */
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
     NSLog(@"连接外设失败: %@",error);
@@ -150,7 +131,67 @@
 
 #pragma mark
 #pragma mark - CBPeripheralDelegate
-
+/** 
+ * 查找到服务后调用
+ *
+ * @param peripheral 外设
+ * @param error      错误信息
+ **/
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(nullable NSError *)error {
+    NSLog(@"%@",peripheral.services);
+    // 遍历外设中的服务
+    for (CBService *service in peripheral.services) {
+        if ( [service.UUID.UUIDString isEqualToString:@""] ) {
+            // 5. 查找特征 (可通过查找到的特征UUID匹配是否是我们需要查找的特征)
+            [peripheral discoverCharacteristics:nil forService:service];
+        }
+    }
+}
+/**
+ * 查找到特征后调用
+ *
+ * @param peripheral 外设
+ * @param service    服务
+ * @param error      错误信息
+ **/
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error {
+    // 6. 读通过特征读写数据
+    NSLog(@"%@",service.characteristics);
+    for (CBCharacteristic *characteristic in service.characteristics) {
+        if ([characteristic.UUID.UUIDString isEqualToString:@""]) {
+            // 6.1 读取数据
+            [peripheral readValueForCharacteristic:characteristic];
+            
+        }
+    }
+}
+/** 
+ * 读取特征中的数据后调用
+ *
+ * @param peripheral        外设
+ * @param characteristic    特征
+ * @param error             错误信息
+ */
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error {
+    // 6.1 读取到的数据
+    NSData *dataR = characteristic.value;
+    NSLog(@"%@",[[NSString alloc] initWithData:dataR encoding:NSUTF8StringEncoding]);
+    
+    // 6.2 写数据
+    NSData *dataW = [@"demo" dataUsingEncoding:NSUTF8StringEncoding];
+    // CBCharacteristicWriteWithResponse 发送后会有结果响应
+    [peripheral writeValue:dataW forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+}
+/**
+ * 写入数据后调用
+ *
+ * @param peripheral        外设
+ * @param characteristic    特征
+ * @param error             错误信息
+ */
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error {
+    NSLog(@"已经发送");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
