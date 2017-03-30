@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
+// 和做蓝牙设备的同事约定好UUID
+#define TRANSFER_SERVICE_UUID           @"0000fff0-0000-1000-8000-00805f9b34fb"
+#define TRANSFER_CHARACTERISTIC_UUID    @"0000fff7-0000-1000-8000-00805f9b34fb"
+
 
 @interface ViewController () <CBCentralManagerDelegate,CBPeripheralDelegate>
 
@@ -96,12 +100,31 @@
     */
     NSLog(@"发现外设: -> %@ - %@",advertisementData,peripheral.name);
     
+    
+    /*
+     发现外设: -> {
+     kCBAdvDataIsConnectable = 1;
+     kCBAdvDataLocalName = BR508767;
+     kCBAdvDataServiceData =     {
+     5242 = <3d6400cd ff0e4242>;
+     };
+     } - BR508767
+     */
     // 3. 连接外设
+    if ([peripheralName isEqualToString:@"BR508767"]) {
+        [self.centralManager stopScan];
+        [self.centralManager connectPeripheral:peripheral options:0];
+        self.peripheral = peripheral;
+    }
+    /*
     if ([peripheralName isEqualToString:@"ShenYj的MacBook Pro"] || [peripheral.name isEqualToString:@"ShenYj的MacBook Pro"]) {
+        // 在查找到需要的设备后停止扫描外设
+        [self.centralManager stopScan];
         [self.centralManager connectPeripheral:peripheral options:nil];
         // 记录外设 (强引用,防止销毁)
         self.peripheral = peripheral;
     }
+    */
 }
 
 /**
@@ -118,13 +141,11 @@
     // 获取数据,设置外设的代理
     peripheral.delegate = self;
 }
-/**
- * 连接外设失败后调用
- *
- * @param central       中央管理者
- * @param peripheral    外设
- @ param error          错误信息
- */
+/** 断开连接 */
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
+    NSLog(@"断开连接:%s-%@",__func__,error);
+}
+/** 连接外设失败后调用 */
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
     NSLog(@"连接外设失败: %@",error);
 }
@@ -138,11 +159,12 @@
  * @param error      错误信息
  **/
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(nullable NSError *)error {
-    NSLog(@"%@",peripheral.services);
+    NSLog(@"查找到服务: %@",peripheral.services);
     // 遍历外设中的服务
     for (CBService *service in peripheral.services) {
-        if ( [service.UUID.UUIDString isEqualToString:@""] ) {
+        if ( [service.UUID.UUIDString isEqualToString:@"FFA0"] ) {
             // 5. 查找特征 (可通过查找到的特征UUID匹配是否是我们需要查找的特征)
+            NSLog(@"%@",service);
             [peripheral discoverCharacteristics:nil forService:service];
         }
     }
@@ -156,7 +178,7 @@
  **/
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error {
     // 6. 读通过特征读写数据
-    NSLog(@"%@",service.characteristics);
+    NSLog(@"查找到特征:%@",service.characteristics);
     for (CBCharacteristic *characteristic in service.characteristics) {
         if ([characteristic.UUID.UUIDString isEqualToString:@""]) {
             // 6.1 读取数据
