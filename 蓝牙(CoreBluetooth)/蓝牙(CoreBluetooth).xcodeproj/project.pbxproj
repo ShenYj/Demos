@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71AC2601E8D027C004C0391 /* JSPeripheralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AC25F1E8D027C004C0391 /* JSPeripheralInfo.m */; };
+		F71AC2631E8D19D5004C0391 /* UIView+JS_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AC2621E8D19D5004C0391 /* UIView+JS_Frame.m */; };
 		F77574A01E8BDF7A003A637E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F775749F1E8BDF7A003A637E /* main.m */; };
 		F77574A31E8BDF7A003A637E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77574A21E8BDF7A003A637E /* AppDelegate.m */; };
 		F77574A61E8BDF7A003A637E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77574A51E8BDF7A003A637E /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F71AC25E1E8D027C004C0391 /* JSPeripheralInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPeripheralInfo.h; sourceTree = "<group>"; };
+		F71AC25F1E8D027C004C0391 /* JSPeripheralInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPeripheralInfo.m; sourceTree = "<group>"; };
+		F71AC2611E8D19D5004C0391 /* UIView+JS_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JS_Frame.h"; sourceTree = "<group>"; };
+		F71AC2621E8D19D5004C0391 /* UIView+JS_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JS_Frame.m"; sourceTree = "<group>"; };
 		F775749B1E8BDF7A003A637E /* 蓝牙(CoreBluetooth).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "蓝牙(CoreBluetooth).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F775749F1E8BDF7A003A637E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F77574A11E8BDF7A003A637E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 				F77574A21E8BDF7A003A637E /* AppDelegate.m */,
 				F77574A41E8BDF7A003A637E /* ViewController.h */,
 				F77574A51E8BDF7A003A637E /* ViewController.m */,
+				F71AC25E1E8D027C004C0391 /* JSPeripheralInfo.h */,
+				F71AC25F1E8D027C004C0391 /* JSPeripheralInfo.m */,
+				F71AC2611E8D19D5004C0391 /* UIView+JS_Frame.h */,
+				F71AC2621E8D19D5004C0391 /* UIView+JS_Frame.m */,
 				F77574A71E8BDF7A003A637E /* Main.storyboard */,
 				F77574AA1E8BDF7A003A637E /* Assets.xcassets */,
 				F77574AC1E8BDF7A003A637E /* LaunchScreen.storyboard */,
@@ -112,6 +122,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KS5QTFAS57;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71AC2631E8D19D5004C0391 /* UIView+JS_Frame.m in Sources */,
 				F77574A61E8BDF7A003A637E /* ViewController.m in Sources */,
 				F77574A31E8BDF7A003A637E /* AppDelegate.m in Sources */,
+				F71AC2601E8D027C004C0391 /* JSPeripheralInfo.m in Sources */,
 				F77574A01E8BDF7A003A637E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

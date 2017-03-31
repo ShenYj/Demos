@@ -22,23 +22,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6k-eC-pSc">
-                                <rect key="frame" x="135.5" y="74" width="105" height="30"/>
+                                <rect key="frame" x="55" y="80" width="105" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JY8-TA-yHz"/>
-                                    <constraint firstAttribute="width" constant="105" id="wjj-OC-QoR"/>
+                                    <constraint firstAttribute="width" constant="105" id="Opb-AC-Lg1"/>
                                 </constraints>
                                 <state key="normal" title="开始扫描设备"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-HY-Pgn">
+                                <rect key="frame" x="215" y="80" width="105" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="停止扫描设备"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="n6k-eC-pSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IDK-ke-3hu"/>
-                            <constraint firstItem="n6k-eC-pSc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="YT2-wf-SvF"/>
+                            <constraint firstItem="xZj-HY-Pgn" firstAttribute="height" secondItem="n6k-eC-pSc" secondAttribute="height" id="0s6-P2-pmm"/>
+                            <constraint firstItem="xZj-HY-Pgn" firstAttribute="width" secondItem="n6k-eC-pSc" secondAttribute="width" id="4k9-J9-9Y4"/>
+                            <constraint firstItem="xZj-HY-Pgn" firstAttribute="leading" secondItem="n6k-eC-pSc" secondAttribute="trailing" constant="55" id="BBq-B8-yph"/>
+                            <constraint firstItem="xZj-HY-Pgn" firstAttribute="top" secondItem="n6k-eC-pSc" secondAttribute="top" id="EiW-rG-sfQ"/>
+                            <constraint firstItem="n6k-eC-pSc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="K77-YP-RAk"/>
+                            <constraint firstItem="xZj-HY-Pgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="O0t-71-aeK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="startToScan" destination="n6k-eC-pSc" id="1mm-ie-ybq"/>
+                        <outlet property="stopToScan" destination="xZj-HY-Pgn" id="WsR-hO-fVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
