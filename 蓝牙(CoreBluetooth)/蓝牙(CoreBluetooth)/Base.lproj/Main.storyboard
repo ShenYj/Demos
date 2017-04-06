@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Demo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="demoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -28,11 +28,17 @@
                                     <constraint firstAttribute="width" constant="105" id="Opb-AC-Lg1"/>
                                 </constraints>
                                 <state key="normal" title="开始扫描设备"/>
+                                <connections>
+                                    <action selector="startToScanBluetoothPeripheral:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBW-Gp-2wI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-HY-Pgn">
                                 <rect key="frame" x="215" y="80" width="105" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="停止扫描设备"/>
+                                <connections>
+                                    <action selector="stopToScanBluetoothPeripheral:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgI-kS-HW3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,10 +51,6 @@
                             <constraint firstItem="xZj-HY-Pgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="O0t-71-aeK"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="startToScan" destination="n6k-eC-pSc" id="1mm-ie-ybq"/>
-                        <outlet property="stopToScan" destination="xZj-HY-Pgn" id="WsR-hO-fVh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
