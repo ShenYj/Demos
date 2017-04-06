@@ -20,8 +20,11 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 
 
 @interface demoViewController () <UITableViewDataSource,UITableViewDelegate,UIPopoverPresentationControllerDelegate,JSBluetoothToolDelegate>
-
+/*** 表格：展示搜索到的周边的蓝牙设备 ***/
 @property (nonatomic,strong) UITableView *peripheralList;
+/*** 容器：记录搜索到的周边的蓝牙设备 ***/
+@property (nonatomic,strong) NSArray *periphralDevices;
+
 @end
 
 @implementation demoViewController
@@ -40,10 +43,8 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 
 - (IBAction)startToScanBluetoothPeripheral:(UIButton *)sender
 {
-    
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly: @0} completionHandler:nil];
     [[BluetoothManager sharedCentralBluetoothManager] scanBluetoothWith:kTimeOut];
-    
 }
 - (IBAction)stopToScanBluetoothPeripheral:(UIButton *)sender
 {
@@ -57,14 +58,13 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 #pragma mark - table view dataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return self.allowToConnectPeripherals.count;
-    return 0;
+    return self.periphralDevices.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReusedIdentifier forIndexPath:indexPath];
-    //CBPeripheral *peripheral = self.allowToConnectPeripherals[indexPath.row];
-    //cell.textLabel.text = peripheral.name;
+    CBPeripheral *peripheral = self.periphralDevices[indexPath.row];
+    cell.textLabel.text = peripheral.name;
     return cell;
 }
 
@@ -72,8 +72,8 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 #pragma mark - table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     JSPeripheralInfo *peripheralInfoVC = [[JSPeripheralInfo alloc] init];
-    //peripheralInfoVC.peripheral = self.allowToConnectPeripherals[indexPath.row];
-    //    peripheralInfoVC.advertisementData =
+    peripheralInfoVC.peripheral = self.periphralDevices[indexPath.row];
+    //peripheralInfoVC.advertisementData =
     peripheralInfoVC.modalPresentationStyle = UIModalPresentationPopover;
     peripheralInfoVC.preferredContentSize = CGSizeMake(SCREEN_BOUNDS_WIDTH * 0.5, 300);
     UIPopoverPresentationController *popover = peripheralInfoVC.popoverPresentationController;
@@ -97,7 +97,8 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 
 - (void)js_peripheralFounded:(NSArray<CBPeripheral *> *)peripherals
 {
-    NSLog(@"%@",peripherals);
+    self.periphralDevices = peripherals;
+    [self.peripheralList reloadData];
 }
 
 #pragma mark

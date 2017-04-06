@@ -21,10 +21,15 @@ static int const kTimeOut = 60;
 
 
 
-@interface BluetoothManager () 
+@interface BluetoothManager ()
 
+/*** 当前是否正在搜索蓝牙设备 ***/
+@property (nonatomic,assign) BOOL isScanning;
+/*** 中央设备： 手机端 ***/
 @property (nonatomic,strong) CBCentralManager *centralManager;
+/*** 蓝牙设备 ***/
 @property (nonatomic,strong) CBPeripheral *peripheral;
+
 @property (nonatomic,strong) CBCharacteristic *writeCharacter;
 
 @end
@@ -36,6 +41,7 @@ static int const kTimeOut = 60;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instanceType = [[BluetoothManager alloc] init];
+        _instanceType.isScanning = NO;
     });
     return _instanceType;
 }
@@ -46,6 +52,7 @@ static int const kTimeOut = 60;
     if (timeout <= 1) {
         timeout = kTimeOut;
     }
+    //BOOL isScanning = self.centralManager.isScanning;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         switch (self.centralManager.state) {
@@ -63,8 +70,11 @@ static int const kTimeOut = 60;
             case CBCentralManagerStatePoweredOn:       // 开启蓝牙
                 {
                     // 扫描设置
-                    if (!self.centralManager.isScanning)
+                    if (!self.isScanning)
                     {
+                        
+                        self.isScanning = YES;
+                        JSLOG
                         // @[[CBUUID UUIDWithString:@"0xFFF0"],[CBUUID UUIDWithString:@"0xFFE0"],[CBUUID UUIDWithString:@"0x18F0"]]
                         [self.centralManager scanForPeripheralsWithServices:nil options:0];
                         [NSTimer scheduledTimerWithTimeInterval:timeout target:self selector:@selector(stopScanBluetooth:) userInfo:nil repeats:NO];
