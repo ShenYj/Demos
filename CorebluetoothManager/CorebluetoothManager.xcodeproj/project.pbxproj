@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F7D6A7BA1E963E7200AD37AB /* demoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D6A7B91E963E7200AD37AB /* demoViewController.m */; };
+		F7D6A7BD1E96466300AD37AB /* JSPeripheralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D6A7BC1E96466300AD37AB /* JSPeripheralInfo.m */; };
+		F7D6A7C01E96469700AD37AB /* UIView+JS_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D6A7BF1E96469700AD37AB /* UIView+JS_Frame.m */; };
 		F7F236BF1E951C23007E5BE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F236BE1E951C23007E5BE9 /* main.m */; };
 		F7F236C21E951C23007E5BE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F236C11E951C23007E5BE9 /* AppDelegate.m */; };
 		F7F236C81E951C23007E5BE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F236C61E951C23007E5BE9 /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* Begin PBXFileReference section */
 		F7D6A7B81E963E7100AD37AB /* demoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demoViewController.h; sourceTree = "<group>"; };
 		F7D6A7B91E963E7200AD37AB /* demoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoViewController.m; sourceTree = "<group>"; };
+		F7D6A7BB1E96466300AD37AB /* JSPeripheralInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPeripheralInfo.h; sourceTree = "<group>"; };
+		F7D6A7BC1E96466300AD37AB /* JSPeripheralInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPeripheralInfo.m; sourceTree = "<group>"; };
+		F7D6A7BE1E96469700AD37AB /* UIView+JS_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JS_Frame.h"; sourceTree = "<group>"; };
+		F7D6A7BF1E96469700AD37AB /* UIView+JS_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JS_Frame.m"; sourceTree = "<group>"; };
 		F7F236BA1E951C23007E5BE9 /* CorebluetoothManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorebluetoothManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F236BE1E951C23007E5BE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7F236C01E951C23007E5BE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 				F7D6A7B91E963E7200AD37AB /* demoViewController.m */,
 				F7F236DA1E95306F007E5BE9 /* JSBluetoothManager.h */,
 				F7F236DB1E95306F007E5BE9 /* JSBluetoothManager.m */,
+				F7D6A7BB1E96466300AD37AB /* JSPeripheralInfo.h */,
+				F7D6A7BC1E96466300AD37AB /* JSPeripheralInfo.m */,
+				F7D6A7BE1E96469700AD37AB /* UIView+JS_Frame.h */,
+				F7D6A7BF1E96469700AD37AB /* UIView+JS_Frame.m */,
 				F7F236C61E951C23007E5BE9 /* Main.storyboard */,
 				F7F236C91E951C23007E5BE9 /* Assets.xcassets */,
 				F7F236CB1E951C23007E5BE9 /* LaunchScreen.storyboard */,
@@ -159,8 +169,10 @@
 			files = (
 				F7F236C21E951C23007E5BE9 /* AppDelegate.m in Sources */,
 				F7D6A7BA1E963E7200AD37AB /* demoViewController.m in Sources */,
+				F7D6A7BD1E96466300AD37AB /* JSPeripheralInfo.m in Sources */,
 				F7F236DC1E95306F007E5BE9 /* JSBluetoothManager.m in Sources */,
 				F7F236BF1E951C23007E5BE9 /* main.m in Sources */,
+				F7D6A7C01E96469700AD37AB /* UIView+JS_Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

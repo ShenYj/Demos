@@ -7,7 +7,7 @@
 //
 
 #import "demoViewController.h"
-#import "BluetoothManager.h"
+#import "JSBluetoothManager.h"
 #import "JSPeripheralInfo.h"
 
 #define SCREEN_BOUNDS_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -37,19 +37,19 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     [self.view addSubview:self.peripheralList];
     
     // 设置代理
-    [BluetoothManager sharedCentralBluetoothManager].delegate = self;
+    [JSBluetoothManager sharedManager].delegate = self;
 }
 
 
 - (IBAction)startToScanBluetoothPeripheral:(UIButton *)sender
 {
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly: @0} completionHandler:nil];
-    [[BluetoothManager sharedCentralBluetoothManager] scanBluetoothWith:kTimeOut];
+    [[JSBluetoothManager sharedManager] scanBluetoothWith:kTimeOut];
 }
 - (IBAction)stopToScanBluetoothPeripheral:(UIButton *)sender
 {
     // 停止扫描蓝牙设备
-    [[BluetoothManager sharedCentralBluetoothManager] stopToScanBluetoothPeripheral];
+    [[JSBluetoothManager sharedManager] stopToScanBluetoothPeripheral];
     
 }
 
