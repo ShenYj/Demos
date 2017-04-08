@@ -9,10 +9,10 @@
 #import "JSBluetoothManager.h"
 #import <UIKit/UIKit.h>
 
-#define JSLOG NSLog(@"%s",__func__);        // LOG
-#define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0)) // iOS 10
-#define ECG_SERVICE_UUID @"serviceUUID"         //备用
-#define ECG_CHAR_UUID @"characterUUID"          //备用
+#define JSLOG NSLog(@"%s",__func__);                                            // LOG
+#define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0))   // iOS 10
+#define ECG_SERVICE_UUID @"DDAB6486-CBF1-47A5-B939-F3CAA527F834"                //备用
+#define ECG_CHAR_UUID @"2795B687-FF83-46E0-B485-D9174ED37E8A"                   //备用
 
 static JSBluetoothManager *_instanceType = nil;
 static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
@@ -32,10 +32,25 @@ static int const kTimeOut = 60;
 
 @property (nonatomic,strong) CBCharacteristic *writeCharacter;
 
+@property (nonatomic,strong) NSTimer *timer;
 
 @end
 
 @implementation JSBluetoothManager
+
++ (void)load {
+    // 程序一启动就开始获取设备状态 (默认一启动时设备状态为未知,暂时这里手动调用了一下获取设备状态的协议方法)
+    [[JSBluetoothManager sharedManager] centralManagerDidUpdateState:[JSBluetoothManager sharedManager].centralManager];
+    [JSBluetoothManager sharedManager].timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(getCentralDeviceState) userInfo:nil repeats:YES];
+
+}
+
++ (void)getCentralDeviceState
+{
+    BOOL isOn = [JSBluetoothManager sharedManager].centralManager.state == CBCentralManagerStatePoweredOn;
+    [JSBluetoothManager sharedManager].deviceBluetoothOn = isOn;
+    NSLog(@"设备启用状态:%zd,设备连接状态:%zd",[JSBluetoothManager sharedManager].deviceBluetoothIsOn,[JSBluetoothManager sharedManager].deviceIsConnecting);
+}
 
 + (instancetype)sharedManager
 {
@@ -43,6 +58,8 @@ static int const kTimeOut = 60;
     dispatch_once(&onceToken, ^{
         _instanceType = [[JSBluetoothManager alloc] init];
         _instanceType.isScanning = NO;
+        _instanceType.deviceBluetoothOn = NO;
+        _instanceType.deviceConnecting = NO;
     });
     return _instanceType;
 }
@@ -53,30 +70,38 @@ static int const kTimeOut = 60;
 {
     timeout <= 30 ? (self.timeOut = kTimeOut) : (self.timeOut = timeout);
     
-    self.isScanning = self.centralManager.isScanning;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        switch (self.centralManager.state) {
-            case CBCentralManagerStateUnknown:         // 未知
-            case CBCentralManagerStateResetting:       // 正在重启
-            case CBCentralManagerStateUnsupported:     // 不支持
-            case CBCentralManagerStateUnauthorized:    // 未授权
-                break;
-            case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
-            {
-                // 提示用户是否要开启蓝牙
-                [self noticeUserToOpenBluetoothService];
-            }
-                break;
-            case CBCentralManagerStatePoweredOn:       // 开启蓝牙
-            {
-                // 扫描外设
-                [self scanBluetoothDevices];
-            }
-                break;
-            default:
-                break;
-        }
-    });
+    if (self.deviceBluetoothIsOn) {
+        // 蓝牙开启
+        [self scanBluetoothDevices]; // 扫描外设
+    } else {
+        // 其他状态
+        [self noticeUserToOpenBluetoothService];// 提示哟过户是否开启蓝牙
+    }
+    
+//    self.isScanning = self.centralManager.isScanning;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        switch (self.centralManager.state) {
+//            case CBCentralManagerStateUnknown:         // 未知
+//            case CBCentralManagerStateResetting:       // 正在重启
+//            case CBCentralManagerStateUnsupported:     // 不支持
+//            case CBCentralManagerStateUnauthorized:    // 未授权
+//                break;
+//            case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
+//            {
+//                // 提示用户是否要开启蓝牙
+//                [self noticeUserToOpenBluetoothService];
+//            }
+//                break;
+//            case CBCentralManagerStatePoweredOn:       // 开启蓝牙
+//            {
+//                // 扫描外设
+//                [self scanBluetoothDevices];
+//            }
+//                break;
+//            default:
+//                break;
+//        }
+//    });
     
     /*
      if (self.centralManager.state == CBCentralManagerStatePoweredOn)
@@ -86,6 +111,10 @@ static int const kTimeOut = 60;
      [NSTimer scheduledTimerWithTimeInterval:timeout target:self selector:@selector(stopScanfBluetooth:) userInfo:nil repeats:NO];
      */
 }
+
+
+
+
 
 #pragma mark - 蓝牙关闭状态，切换至系统设置-蓝牙开启关闭界面
 - (void)noticeUserToOpenBluetoothService
@@ -165,6 +194,8 @@ static int const kTimeOut = 60;
 {
     if (peripheral.state == CBPeripheralStateDisconnected) {
         [self.centralManager connectPeripheral:peripheral options:nil];
+        NSArray *retrievePeripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[ECG_SERVICE_UUID]];
+        
     }
 }
 
@@ -203,6 +234,9 @@ static int const kTimeOut = 60;
 /*** 中心设备更新状态时调用 ***/
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
+
+    
+    
     // 判断状态
     switch (central.state)
     {
@@ -275,6 +309,21 @@ static int const kTimeOut = 60;
         
         [self.delegate js_peripheralConnected];
     }
+    // 连接成功后停止扫描
+    [self stopToScanBluetoothPeripheral];
+    // 记录连接状态
+    self.deviceConnecting = YES;
+}
+
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error
+{
+    self.deviceConnecting = NO;
+}
+
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error
+{
+    self.deviceConnecting = NO;
 }
 
 //- (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *, id> *)dict {

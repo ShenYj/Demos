@@ -50,6 +50,10 @@
 
 /** 单例: 蓝牙管理者(中央端) */
 + (instancetype)sharedManager;
+/** 设备蓝牙状体启用 */
+@property (nonatomic,assign,getter=deviceBluetoothIsOn) BOOL deviceBluetoothOn;
+/** 连接状态 */
+@property (nonatomic,assign,getter=deviceIsConnecting) BOOL deviceConnecting;
 /*** 代理 ***/
 @property (nonatomic,weak) id <JSBluetoothToolDelegate> delegate;
 /** 代理:监听状态 */

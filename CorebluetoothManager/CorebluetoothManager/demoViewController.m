@@ -25,7 +25,6 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 /*** 容器：记录搜索到的周边的蓝牙设备 ***/
 @property (nonatomic,strong) NSArray *periphralDevices;
 
-@property (nonatomic,strong) NSTimer *timer;
 
 @end
 
@@ -41,18 +40,8 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     // 设置代理
     [JSBluetoothManager sharedManager].delegate = self;
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(getCentralDeviceState) userInfo:nil repeats:YES];
-    // 监听状态
-    
 }
 
-- (void)getCentralDeviceState
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"%zd",[JSBluetoothManager sharedManager].centralManager.state);
-    });
-    
-}
 
 
 - (IBAction)startToScanBluetoothPeripheral:(UIButton *)sender
@@ -86,8 +75,9 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 #pragma mark - table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    [[JSBluetoothManager sharedManager] connect:self.periphralDevices[indexPath.row]];
     
-    
+    /*
     JSPeripheralInfo *peripheralInfoVC = [[JSPeripheralInfo alloc] init];
     peripheralInfoVC.peripheral = self.periphralDevices[indexPath.row];
     //peripheralInfoVC.advertisementData =
@@ -101,6 +91,7 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
     popover.canOverlapSourceViewRect = NO;
     [self presentViewController:peripheralInfoVC animated:YES completion:nil];
+     */
 }
 
 #pragma mark
