@@ -77,21 +77,6 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     
     [[JSBluetoothManager sharedManager] connect:self.periphralDevices[indexPath.row]];
     
-    /*
-    JSPeripheralInfo *peripheralInfoVC = [[JSPeripheralInfo alloc] init];
-    peripheralInfoVC.peripheral = self.periphralDevices[indexPath.row];
-    //peripheralInfoVC.advertisementData =
-    peripheralInfoVC.modalPresentationStyle = UIModalPresentationPopover;
-    peripheralInfoVC.preferredContentSize = CGSizeMake(SCREEN_BOUNDS_WIDTH * 0.5, 300);
-    UIPopoverPresentationController *popover = peripheralInfoVC.popoverPresentationController;
-    popover.delegate = self;
-    UITableViewCell *currentCell = [tableView cellForRowAtIndexPath:indexPath];
-    popover.sourceView = currentCell.contentView;
-    popover.sourceRect = currentCell.contentView.bounds;
-    popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
-    popover.canOverlapSourceViewRect = NO;
-    [self presentViewController:peripheralInfoVC animated:YES completion:nil];
-     */
 }
 
 #pragma mark

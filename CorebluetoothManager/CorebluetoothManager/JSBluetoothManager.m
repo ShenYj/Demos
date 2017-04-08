@@ -32,7 +32,11 @@ static int const kTimeOut = 60;
 
 @property (nonatomic,strong) CBCharacteristic *writeCharacter;
 
+
+#warning 新增
 @property (nonatomic,strong) NSTimer *timer;
+/** 提示框 */
+@property (nonatomic,weak) UIAlertController *alertController;
 
 @end
 
@@ -50,6 +54,36 @@ static int const kTimeOut = 60;
     BOOL isOn = [JSBluetoothManager sharedManager].centralManager.state == CBCentralManagerStatePoweredOn;
     [JSBluetoothManager sharedManager].deviceBluetoothOn = isOn;
     NSLog(@"设备启用状态:%zd,设备连接状态:%zd",[JSBluetoothManager sharedManager].deviceBluetoothIsOn,[JSBluetoothManager sharedManager].deviceIsConnecting);
+    
+    // 蓝牙关闭
+    if (!isOn) {
+        // alert提示框不存在 && 当前应用不再前台 不做任何处理
+        UIApplicationState appState = [UIApplication sharedApplication].applicationState;
+        if ([JSBluetoothManager sharedManager].alertController || appState != UIApplicationStateActive) {
+            return;
+        }
+        // 提示蓝牙关闭
+        [[JSBluetoothManager sharedManager] noticeUserToOpenBluetoothService];
+        return;
+    } else {
+        // 蓝牙开启
+        BOOL isConnected = [JSBluetoothManager sharedManager].deviceIsConnecting;
+        if (isConnected) {
+            // 开启并连接状态
+            NSLog(@"--->当前设备处于连接状态");
+            return;
+        } else {
+            // 开启但断开连接状态
+            // 如果有绑定设备,自动搜索并连接
+            if ([JSBluetoothManager sharedManager].peripheral) {
+                [[JSBluetoothManager sharedManager].centralManager connectPeripheral:[JSBluetoothManager sharedManager].peripheral options:nil];
+                NSLog(@"---->重新连接到设备");
+            }
+        }
+        
+    }
+    
+    
 }
 
 + (instancetype)sharedManager
@@ -126,7 +160,7 @@ static int const kTimeOut = 60;
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:okey];
     [alertController addAction:cancel];
-    
+    self.alertController = alertController;
     // 展示alert提示框
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     
