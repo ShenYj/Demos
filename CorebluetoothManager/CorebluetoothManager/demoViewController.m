@@ -71,6 +71,9 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 #pragma mark
 #pragma mark - table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
     JSPeripheralInfo *peripheralInfoVC = [[JSPeripheralInfo alloc] init];
     peripheralInfoVC.peripheral = self.periphralDevices[indexPath.row];
     //peripheralInfoVC.advertisementData =

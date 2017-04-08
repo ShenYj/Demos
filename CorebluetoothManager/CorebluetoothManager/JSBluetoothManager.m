@@ -15,7 +15,8 @@
 #define ECG_CHAR_UUID @"characterUUID"          //备用
 
 static JSBluetoothManager *_instanceType = nil;
-static NSString * const kMyCentralManagerIdentifier = @"kMyCentralManagerIdentifier";
+static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
+
 /*** 默认超时时间 60s ***/
 static int const kTimeOut = 60;
 
@@ -101,17 +102,23 @@ static int const kTimeOut = 60;
     // 展示alert提示框
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     
-    // 系统默认提醒 ： 设置  &  好
-    //[self openBluetooth];
 }
 /*** 打开蓝牙开关 ***/
 - (void)openBluetooth
 {
-    JSLOG
+#warning 跳转到蓝牙设置界面,指导用户开启蓝牙
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     if (iOS10) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-Prefs:root=Bluetooth"] options:@{UIApplicationOpenURLOptionUniversalLinksOnly: [NSNumber numberWithBool:NO]} completionHandler:nil];
+//        NSURL *url = [NSURL URLWithString:@"App-Prefs:root=Bluetooth"];
+//        if ([[UIApplication sharedApplication] canOpenURL:url] )
+//        {
+//            [[UIApplication sharedApplication] openURL:url];
+//        }
+
     } else {
-        NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Bluetooth"];
+        NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
         if ([[UIApplication sharedApplication] canOpenURL:url] )
         {
             [[UIApplication sharedApplication] openURL:url];
@@ -250,6 +257,10 @@ static int const kTimeOut = 60;
     }
 }
 
+//- (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *, id> *)dict {
+//    
+//}
+
 
 #pragma mark
 #pragma mark - CBPeripheralDelegate
@@ -326,8 +337,22 @@ static int const kTimeOut = 60;
 {
     if (!_centralManager)
     {
-        //  options:@{CBCentralManagerOptionRestoreIdentifierKey : @"kMyCentralManagerIdentifier"}
-        _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        // CBCentralManagerOptionShowPowerAlertKey: [NSNumber numberWithBool:NO] --> 关闭系统默认的蓝牙关闭提示框
+        NSDictionary *option = @{
+                                 CBCentralManagerOptionShowPowerAlertKey: [NSNumber numberWithBool:NO],
+                                 //CBCentralManagerOptionRestoreIdentifierKey: kMyCBCentralManagerOptionRestoreIdentifierKey
+                                 };
+        _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:option];
+        
+#warning 判断是否开启了蓝牙的后台模式
+        NSArray *backgroundModes = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"UIBackgroundModes"];
+        if ([backgroundModes containsObject:@"bluetooth-central"]) {
+            // 后台模式
+            NSLog(@"-----开启了蓝牙后台模式");
+        } else {
+            // 非后台模式
+            NSLog(@"-----未开启蓝牙后台模式,请在info.plist中添加UIBackgroundModes字段,并添加:'App communicates using CoreBluetooth'、'App shares data using CoreBluetooth'");
+        }
     }
     return _centralManager;
 }
