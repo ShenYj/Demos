@@ -27,37 +27,20 @@
 @end
 
 
-/** 检索设备蓝牙状态 */
-@protocol JSCentralDeviceStateDelegate <NSObject>
-@optional
-/** 未知 */
-- (void)js_centralManagerStateUnknown;
-/** 正在重启 */
-- (void)js_centralManagerStateResetting;
-/** 不支持 */
-- (void)js_centralManagerStateUnsupported;
-/** 未授权 */
-- (void)js_centralManagerStateUnauthorized;
-/** 关闭蓝牙 */
-- (void)js_centralManagerStatePoweredOff;
-/** 开启蓝牙 */
-- (void)js_centralManagerStatePoweredOn;
-
-@end
-
 
 @interface JSBluetoothManager : NSObject <CBCentralManagerDelegate,CBPeripheralDelegate>
 
 /** 单例: 蓝牙管理者(中央端) */
 + (instancetype)sharedManager;
-/** 设备蓝牙状体启用 */
+#warning 新增
+/** 设备蓝牙启用 */
 @property (nonatomic,assign,getter=deviceBluetoothIsOn) BOOL deviceBluetoothOn;
 /** 连接状态 */
 @property (nonatomic,assign,getter=deviceIsConnecting) BOOL deviceConnecting;
+
 /*** 代理 ***/
 @property (nonatomic,weak) id <JSBluetoothToolDelegate> delegate;
-/** 代理:监听状态 */
-@property (nonatomic,weak) id <JSCentralDeviceStateDelegate> stateDelegate;
+
 /*** 中央设备： 手机端 ***/
 @property (nonatomic,strong) CBCentralManager *centralManager;
 /*** 存储搜索到的周边外设 ***/

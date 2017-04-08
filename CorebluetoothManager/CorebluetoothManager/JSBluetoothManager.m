@@ -51,23 +51,24 @@ static int const kTimeOut = 60;
 
 + (void)getCentralDeviceState
 {
-    BOOL isOn = [JSBluetoothManager sharedManager].centralManager.state == CBCentralManagerStatePoweredOn;
-    [JSBluetoothManager sharedManager].deviceBluetoothOn = isOn;
-    NSLog(@"设备启用状态:%zd,设备连接状态:%zd",[JSBluetoothManager sharedManager].deviceBluetoothIsOn,[JSBluetoothManager sharedManager].deviceIsConnecting);
+    JSBluetoothManager *manager = [JSBluetoothManager sharedManager];
+    BOOL isOn = manager.centralManager.state == CBCentralManagerStatePoweredOn;
+    manager.deviceBluetoothOn = isOn;
+    NSLog(@"设备启用状态:%zd,设备连接状态:%zd",manager.deviceBluetoothIsOn,manager.deviceIsConnecting);
     
     // 蓝牙关闭
     if (!isOn) {
-        // alert提示框不存在 && 当前应用不再前台 不做任何处理
+        // 自定义alert提示框已在界面中显示 || 当前应用不再前台 不做任何处理
         UIApplicationState appState = [UIApplication sharedApplication].applicationState;
-        if ([JSBluetoothManager sharedManager].alertController || appState != UIApplicationStateActive) {
+        if (manager.alertController || appState != UIApplicationStateActive) {
             return;
         }
         // 提示蓝牙关闭
-        [[JSBluetoothManager sharedManager] noticeUserToOpenBluetoothService];
+        [manager noticeUserToOpenBluetoothService];
         return;
     } else {
         // 蓝牙开启
-        BOOL isConnected = [JSBluetoothManager sharedManager].deviceIsConnecting;
+        BOOL isConnected = manager.deviceIsConnecting;
         if (isConnected) {
             // 开启并连接状态
             NSLog(@"--->当前设备处于连接状态");
@@ -75,14 +76,13 @@ static int const kTimeOut = 60;
         } else {
             // 开启但断开连接状态
             // 如果有绑定设备,自动搜索并连接
-            if ([JSBluetoothManager sharedManager].peripheral) {
-                [[JSBluetoothManager sharedManager].centralManager connectPeripheral:[JSBluetoothManager sharedManager].peripheral options:nil];
+            if (manager.peripheral) {
+                [manager.centralManager connectPeripheral:manager.peripheral options:nil];
                 NSLog(@"---->重新连接到设备");
             }
         }
         
     }
-    
     
 }
 
@@ -109,7 +109,7 @@ static int const kTimeOut = 60;
         [self scanBluetoothDevices]; // 扫描外设
     } else {
         // 其他状态
-        [self noticeUserToOpenBluetoothService];// 提示哟过户是否开启蓝牙
+        [self noticeUserToOpenBluetoothService];// 提示用户是否开启蓝牙
     }
     
 //    self.isScanning = self.centralManager.isScanning;
@@ -228,7 +228,7 @@ static int const kTimeOut = 60;
 {
     if (peripheral.state == CBPeripheralStateDisconnected) {
         [self.centralManager connectPeripheral:peripheral options:nil];
-        NSArray *retrievePeripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[ECG_SERVICE_UUID]];
+//        NSArray *retrievePeripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[ECG_SERVICE_UUID]];
         
     }
 }
@@ -269,40 +269,20 @@ static int const kTimeOut = 60;
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
 
-    
-    
     // 判断状态
     switch (central.state)
     {
         case CBCentralManagerStateUnknown:         // 未知
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnknown)]) {
-                [self.stateDelegate js_centralManagerStateUnknown];
-            }
             break;
         case CBCentralManagerStateResetting:       // 正在重启
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateResetting)]) {
-                [self.stateDelegate js_centralManagerStateResetting];
-            }
             break;
         case CBCentralManagerStateUnsupported:     // 不支持
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnsupported)]) {
-                [self.stateDelegate js_centralManagerStateUnsupported];
-            }
             break;
         case CBCentralManagerStateUnauthorized:    // 未授权
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnauthorized)]) {
-                [self.stateDelegate js_centralManagerStateUnauthorized];
-            }
             break;
         case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStatePoweredOff)]) {
-                [self.stateDelegate js_centralManagerStatePoweredOff];
-            }
             break;
         case CBCentralManagerStatePoweredOn:       // 开启蓝牙
-            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStatePoweredOn)]) {
-                [self.stateDelegate js_centralManagerStatePoweredOn];
-            }
             break;
         default:
             break;

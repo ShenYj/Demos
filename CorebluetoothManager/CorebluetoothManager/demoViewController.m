@@ -19,7 +19,7 @@ static int const kTimeOut = 60;
 static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 
 
-@interface demoViewController () <UITableViewDataSource,UITableViewDelegate,UIPopoverPresentationControllerDelegate,JSBluetoothToolDelegate,JSCentralDeviceStateDelegate>
+@interface demoViewController () <UITableViewDataSource,UITableViewDelegate,UIPopoverPresentationControllerDelegate,JSBluetoothToolDelegate>
 /*** 表格：展示搜索到的周边的蓝牙设备 ***/
 @property (nonatomic,strong) UITableView *peripheralList;
 /*** 容器：记录搜索到的周边的蓝牙设备 ***/
