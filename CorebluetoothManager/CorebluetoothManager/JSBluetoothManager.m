@@ -26,8 +26,7 @@ static int const kTimeOut = 60;
 @property (nonatomic,assign) BOOL isScanning;
 /*** 记录手动设置的超时时长 ***/
 @property (nonatomic,assign) int timeOut;
-/*** 中央设备： 手机端 ***/
-@property (nonatomic,strong) CBCentralManager *centralManager;
+
 /*** 蓝牙设备 ***/
 @property (nonatomic,strong) CBPeripheral *peripheral;
 
@@ -144,24 +143,27 @@ static int const kTimeOut = 60;
 #pragma mark - 停止扫描蓝牙 (定时器方法)
 - (void)stopScanBluetooth:(NSTimer *)timer
 {
-    [self.centralManager stopScan];
-    self.isScanning = NO;
-    [timer invalidate];
-    timer = nil;
+    if (self.isScanning) {
+        [self.centralManager stopScan];
+        self.isScanning = NO;
+        [timer invalidate];
+        timer = nil;
+    }
 }
 /*** 对外接口： 停止扫描蓝牙设备 ***/
 - (void)stopToScanBluetoothPeripheral
 {
-    [self.centralManager stopScan];
-    self.isScanning = NO;
+    if (self.isScanning) {
+        [self.centralManager stopScan];
+        self.isScanning = NO;
+    }
 }
 
 
 #pragma mark - 连接蓝牙
 - (void)connect:(CBPeripheral *)peripheral
 {
-    if (peripheral.state == CBPeripheralStateDisconnected)
-    {
+    if (peripheral.state == CBPeripheralStateDisconnected) {
         [self.centralManager connectPeripheral:peripheral options:nil];
     }
 }
@@ -201,25 +203,43 @@ static int const kTimeOut = 60;
 /*** 中心设备更新状态时调用 ***/
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    
     // 判断状态
-    /*
-     switch (central.state)
-     {
-     case CBCentralManagerStateUnknown:         // 未知
-     case CBCentralManagerStateResetting:       // 正在重启
-     case CBCentralManagerStateUnsupported:     // 不支持
-     case CBCentralManagerStateUnauthorized:    // 未授权
-     case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
-     
-     break;
-     case CBCentralManagerStatePoweredOn:       // 开启蓝牙
-     
-     break;
-     default:
-     break;
-     }
-     */
+    switch (central.state)
+    {
+        case CBCentralManagerStateUnknown:         // 未知
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnknown)]) {
+                [self.stateDelegate js_centralManagerStateUnknown];
+            }
+            break;
+        case CBCentralManagerStateResetting:       // 正在重启
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateResetting)]) {
+                [self.stateDelegate js_centralManagerStateResetting];
+            }
+            break;
+        case CBCentralManagerStateUnsupported:     // 不支持
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnsupported)]) {
+                [self.stateDelegate js_centralManagerStateUnsupported];
+            }
+            break;
+        case CBCentralManagerStateUnauthorized:    // 未授权
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStateUnauthorized)]) {
+                [self.stateDelegate js_centralManagerStateUnauthorized];
+            }
+            break;
+        case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStatePoweredOff)]) {
+                [self.stateDelegate js_centralManagerStatePoweredOff];
+            }
+            break;
+        case CBCentralManagerStatePoweredOn:       // 开启蓝牙
+            if ([self.stateDelegate respondsToSelector:@selector(js_centralManagerStatePoweredOn)]) {
+                [self.stateDelegate js_centralManagerStatePoweredOn];
+            }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 /*** 扫描到蓝牙时调用 ***/
@@ -270,8 +290,7 @@ static int const kTimeOut = 60;
 {
     for (CBService *service in peripheral.services)
     {
-        if ([service.UUID isEqual:[CBUUID UUIDWithString:ECG_SERVICE_UUID]])
-        {
+        if ([service.UUID isEqual:[CBUUID UUIDWithString:ECG_SERVICE_UUID]]) {
             NSLog(@"发现20P的服务: %@", service.UUID);
             [peripheral discoverCharacteristics:nil forService:service];
             
@@ -283,10 +302,8 @@ static int const kTimeOut = 60;
 /*** 发现特征时调用 ***/
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error
 {
-    for (CBCharacteristic *characteristic in service.characteristics)
-    {
-        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:ECG_CHAR_UUID]])
-        {
+    for (CBCharacteristic *characteristic in service.characteristics) {
+        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:ECG_CHAR_UUID]]) {
             NSLog(@"发现20P的特征:%@ for service: %@", characteristic.UUID, service.UUID);
             
             self.writeCharacter = characteristic;//保存读的特征
@@ -302,8 +319,7 @@ static int const kTimeOut = 60;
 #pragma mark - 十六进制转换为NSData数据流
 - (NSData *)convertHexStrToData:(NSString *)str
 {
-    if (!str || [str length] == 0)
-    {
+    if (!str || [str length] == 0) {
         return nil;
     }
     

@@ -38,10 +38,8 @@
 
 - (void)setPeripheral:(CBPeripheral *)peripheral {
     _peripheral = peripheral;
-    NSLog(@"%@",NSStringFromCGRect(self.view.frame));
     self.nameLabel.text = peripheral.name;
     self.services.text = peripheral.identifier.UUIDString;
-    NSLog(@"%zd -- %@",self.view.subviews.count,NSStringFromCGRect(self.nameLabel.frame));
     
     for (CBService *service in peripheral.services) {
         for (CBCharacteristic *characteristic in service.characteristics) {

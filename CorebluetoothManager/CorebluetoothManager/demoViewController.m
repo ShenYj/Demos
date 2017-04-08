@@ -19,11 +19,13 @@ static int const kTimeOut = 60;
 static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 
 
-@interface demoViewController () <UITableViewDataSource,UITableViewDelegate,UIPopoverPresentationControllerDelegate,JSBluetoothToolDelegate>
+@interface demoViewController () <UITableViewDataSource,UITableViewDelegate,UIPopoverPresentationControllerDelegate,JSBluetoothToolDelegate,JSCentralDeviceStateDelegate>
 /*** 表格：展示搜索到的周边的蓝牙设备 ***/
 @property (nonatomic,strong) UITableView *peripheralList;
 /*** 容器：记录搜索到的周边的蓝牙设备 ***/
 @property (nonatomic,strong) NSArray *periphralDevices;
+
+@property (nonatomic,strong) NSTimer *timer;
 
 @end
 
@@ -38,6 +40,18 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     
     // 设置代理
     [JSBluetoothManager sharedManager].delegate = self;
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(getCentralDeviceState) userInfo:nil repeats:YES];
+    // 监听状态
+    
+}
+
+- (void)getCentralDeviceState
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"%zd",[JSBluetoothManager sharedManager].centralManager.state);
+    });
+    
 }
 
 
@@ -64,7 +78,7 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReusedIdentifier forIndexPath:indexPath];
     CBPeripheral *peripheral = self.periphralDevices[indexPath.row];
-    cell.textLabel.text = peripheral.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",peripheral.name,peripheral.identifier.UUIDString];
     return cell;
 }
 
@@ -103,6 +117,7 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     self.periphralDevices = peripherals;
     [self.peripheralList reloadData];
 }
+
 
 #pragma mark
 #pragma mark - lazy
