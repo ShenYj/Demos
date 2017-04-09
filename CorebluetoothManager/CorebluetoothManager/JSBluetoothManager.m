@@ -11,8 +11,14 @@
 
 #define JSLOG NSLog(@"%s",__func__);                                            // LOG
 #define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0))   // iOS 10
-#define ECG_SERVICE_UUID @"DDAB6486-CBF1-47A5-B939-F3CAA527F834"                //备用
-#define ECG_CHAR_UUID @"2795B687-FF83-46E0-B485-D9174ED37E8A"                   //备用
+
+
+/** 需要订阅的设备的 ServiceUUID 和 CharacteristicUUID */
+static NSString * const ServiceUUIDString1 = @"FFF1";
+static NSString * const ServiceUUIDString2 = @"DDAB6486-CBF1-47A5-B939-F3CAA527F834";
+static NSString * const CharacteristicReadUUIDString1 = @"2795B687-FF83-46E0-B485-D9174ED37E8A";
+static NSString * const CharacteristicWriteUUIDString1 = @"588ABC74-BE98-43D4-A207-019EA6A930E0";
+static NSString * const CharacteristicWriteUUIDString2 = @"FC96AE65-D8A0-4D6C-8E7F-F244CF2DC405";
 
 static JSBluetoothManager *_instanceType = nil;
 static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
@@ -37,6 +43,10 @@ static int const kTimeOut = 60;
 @property (nonatomic,strong) NSTimer *timer;
 /** 提示框 */
 @property (nonatomic,weak) UIAlertController *alertController;
+/** 将允许搜索的 service UUID 打包为数组 CBUUID 类型 */
+@property (copy, nonatomic) NSArray *serviceUUIDArray;
+/** 将允许搜索的 characteristic UUID 打包为数组 CBUUID 类型 */
+@property (copy, nonatomic) NSArray *characteristicUUIDArray;
 
 @end
 
@@ -91,13 +101,23 @@ static int const kTimeOut = 60;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instanceType = [[JSBluetoothManager alloc] init];
-        _instanceType.isScanning = NO;
-        _instanceType.deviceBluetoothOn = NO;
-        _instanceType.deviceConnecting = NO;
+//        _instanceType.isScanning = NO;
+//        _instanceType.deviceBluetoothOn = NO;
+//        _instanceType.deviceConnecting = NO;
     });
     return _instanceType;
 }
 
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.isScanning = NO;
+        self.deviceBluetoothOn = NO;
+        self.deviceConnecting = NO;
+    }
+    return self;
+}
 
 #pragma mark - 扫描蓝牙设备
 -(void)scanBluetoothWith:(int)timeout
@@ -197,6 +217,10 @@ static int const kTimeOut = 60;
     {
         JSLOG
         // @[[CBUUID UUIDWithString:@"0xFFF0"],[CBUUID UUIDWithString:@"0xFFE0"],[CBUUID UUIDWithString:@"0x18F0"]]
+        
+#warning 扫描前移除上一次扫描设备结果
+        // 扫描前移除之前搜索到的设备信息
+        [self.allowToConnectPeripherals removeAllObjects];
         [self.centralManager scanForPeripheralsWithServices:nil options:0];
         [NSTimer scheduledTimerWithTimeInterval:self.timeOut target:self selector:@selector(stopScanBluetooth:) userInfo:nil repeats:NO];
         self.isScanning = YES;
@@ -353,7 +377,7 @@ static int const kTimeOut = 60;
 {
     for (CBService *service in peripheral.services)
     {
-        if ([service.UUID isEqual:[CBUUID UUIDWithString:ECG_SERVICE_UUID]]) {
+        if ([service.UUID isEqual:[CBUUID UUIDWithString:ServiceUUIDString1]]) {
             NSLog(@"发现20P的服务: %@", service.UUID);
             [peripheral discoverCharacteristics:nil forService:service];
             
@@ -366,7 +390,7 @@ static int const kTimeOut = 60;
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error
 {
     for (CBCharacteristic *characteristic in service.characteristics) {
-        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:ECG_CHAR_UUID]]) {
+        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:CharacteristicReadUUIDString1]]) {
             NSLog(@"发现20P的特征:%@ for service: %@", characteristic.UUID, service.UUID);
             
             self.writeCharacter = characteristic;//保存读的特征
@@ -444,6 +468,25 @@ static int const kTimeOut = 60;
 }
 
 
+- (NSArray *)serviceUUIDArray {
+    if (!_serviceUUIDArray) {
+        CBUUID *serviceUUID1 = [CBUUID UUIDWithString:ServiceUUIDString1];
+        CBUUID *serviceUUID2 = [CBUUID UUIDWithString:ServiceUUIDString2];
+        _serviceUUIDArray = @[serviceUUID1, serviceUUID2];
+    }
+    return _serviceUUIDArray;
+}
+
+- (NSArray *)characteristicUUIDArray {
+    if (!_characteristicUUIDArray) {
+        CBUUID *characteristicUUID1 = [CBUUID UUIDWithString:CharacteristicReadUUIDString1];
+        CBUUID *characteristicUUID2 = [CBUUID UUIDWithString:CharacteristicWriteUUIDString1];
+        CBUUID *characteristicUUID3 = [CBUUID UUIDWithString:CharacteristicWriteUUIDString2];
+        
+        _characteristicUUIDArray = @[characteristicUUID1, characteristicUUID2, characteristicUUID3];
+    }
+    return _characteristicUUIDArray;
+}
 
 
 @end
