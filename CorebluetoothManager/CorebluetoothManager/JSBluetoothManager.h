@@ -31,11 +31,11 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 - (void)js_centralTool:(JSBluetoothManager *)bluetoothManager connectFailure:(NSError *)error;
 
 /*** 出现低电量时调用 ***/
-- (void)js_lowBattery;
+//- (void)js_lowBattery;
 /*** 读取设备版本号 ***/
-- (void)js_ballVersions:(NSString *)versions;
+//- (void)js_ballVersions:(NSString *)versions;
 /*** 读取设备ID ***/
-- (void)js_ID:(NSString *)str;
+//- (void)js_ID:(NSString *)str;
 @end
 
 
@@ -50,6 +50,9 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 @property (nonatomic,assign,getter=deviceBluetoothIsOn) BOOL deviceBluetoothOn;
 /** 连接状态 */
 @property (nonatomic,assign,getter=deviceIsConnecting) BOOL deviceConnecting;
+/** 需要写入的 chaeacteristic，因为有可能不止一个需要写入，所以在写入数据时，需要外部处理要写入哪一个 */
+@property (strong, nonatomic, readonly) CBCharacteristic *writeCharacteristic;
+
 
 /*** 代理 ***/
 @property (nonatomic,weak) id <JSBluetoothToolDelegate> delegate;

@@ -45,7 +45,7 @@ static int const kTimeOut = 60;
 
 /*** 蓝牙设备 ***/
 @property (nonatomic,strong) CBPeripheral *peripheralConnected;
-
+/*** 记录需要写入的特征 ***/
 @property (nonatomic,strong) CBCharacteristic *writeCharacter;
 
 
@@ -54,9 +54,11 @@ static int const kTimeOut = 60;
 /** 提示框 */
 @property (nonatomic,weak) UIAlertController *alertController;
 /** 将允许搜索的 service UUID 打包为数组 CBUUID 类型 */
-@property (copy, nonatomic) NSArray *serviceUUIDArray;
+@property (copy, nonatomic) NSArray <CBUUID *> *serviceUUIDArray;
 /** 将允许搜索的 characteristic UUID 打包为数组 CBUUID 类型 */
-@property (copy, nonatomic) NSArray *characteristicUUIDArray;
+@property (copy, nonatomic) NSArray <CBUUID *> *characteristicUUIDArray;
+/** 连接的所有 characteristic，主要用于断开连接时，取消 notify 监听 */
+@property (strong, nonatomic) NSMutableArray <CBCharacteristic *> *readCharacteristics;
 
 @end
 
@@ -418,7 +420,6 @@ static int const kTimeOut = 60;
     self.peripheralConnected.delegate = self;
     [self.peripheralConnected discoverServices:nil];
     if ([self.delegate respondsToSelector:@selector(js_peripheralConnected:)]) {
-        
         [self.delegate js_peripheralConnected:peripheral];
     }
     // 连接成功后停止扫描
@@ -464,15 +465,45 @@ static int const kTimeOut = 60;
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error
 {
     for (CBCharacteristic *characteristic in service.characteristics) {
-        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:CharacteristicReadUUIDString1]]) {
-            NSLog(@"发现20P的特征:%@ for service: %@", characteristic.UUID, service.UUID);
-            
-            self.writeCharacter = characteristic;//保存读的特征
-            break;
+        // 对比是否是需要的 characteristic
+        if (![self.characteristicUUIDArray containsObject:characteristic.UUID]) {
+            continue;
+        }
+        // 找到可读的 characteristic，就自动读取数据
+        if (characteristic.properties & CBCharacteristicPropertyNotify) {
+            [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+            [self.readCharacteristics addObject:characteristic];
+        }
+        if (characteristic.properties & CBCharacteristicPropertyWriteWithoutResponse) {
+            if ([characteristic.UUID.UUIDString isEqual:CharacteristicWriteUUIDString1]) {
+                self.writeCharacter = characteristic;
+            }
         }
     }
 }
+/** 读取特征值时调用(包括订阅特征的值发生变化时) */
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error
+{
+    if (error) {
+        NSLog(@"Error for readValue for characteristic: %@",[error localizedDescription]);
+    }
+    
+    
+}
+/** 设置数据订阅成功（或失败) */
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error
+{
+    if (error) {
+        NSLog(@"Error changing notification state: %@",[error localizedDescription]);
+        return;
+    }
+}
 
+/** 写入数据 */
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error
+{
+    
+}
 
 
 
