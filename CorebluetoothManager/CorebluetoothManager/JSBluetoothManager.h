@@ -44,6 +44,7 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 
 /** 单例: 蓝牙管理者(中央端) */
 + (instancetype)sharedManager;
+
 #warning 新增
 /** 设备蓝牙启用 */
 @property (nonatomic,assign,getter=deviceBluetoothIsOn) BOOL deviceBluetoothOn;
@@ -52,7 +53,6 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 
 /*** 代理 ***/
 @property (nonatomic,weak) id <JSBluetoothToolDelegate> delegate;
-
 /*** 中央设备： 手机端 ***/
 @property (nonatomic,strong) CBCentralManager *centralManager;
 /*** 存储搜索到的周边外设 ***/
@@ -62,7 +62,7 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 /**
  *  扫描蓝牙
  *
- *  @param timeout 超时时长, 如果指定时长<=1 ，则默认时长为 60s
+ *  @param timeout 超时时长,如果不指定即传入0,将不做限制,持续扫描设备
  */
 - (void)scanBluetoothWith:(int)timeout;
 /**
@@ -88,15 +88,15 @@ static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
 /**
  *  给设备发送指令
  */
-- (void)write:(CBPeripheral *)peripheral data:(NSString *)data;
+//- (void)write:(CBPeripheral *)peripheral data:(NSString *)data;
 /**
  *  读取蓝牙设备广播信息
  */
-- (void)read:(CBPeripheral *)peripheral;
+//- (void)read:(CBPeripheral *)peripheral;
 /**
  *  设备通知
  */
-- (void)notify:(CBPeripheral *)peripheral on:(BOOL)on;
+//- (void)notify:(CBPeripheral *)peripheral on:(BOOL)on;
 
 
 @end

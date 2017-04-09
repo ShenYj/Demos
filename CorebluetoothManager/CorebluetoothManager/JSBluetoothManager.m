@@ -11,6 +11,9 @@
 
 #define JSLOG NSLog(@"%s",__func__);                                            // LOG
 #define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0))   // iOS 10
+
+
+#warning 新增
 #define JS_ERROR(description) [NSError errorWithDomain:@"com.auko" code:0 userInfo:@{NSLocalizedDescriptionKey:description}]
 
 /** 需要订阅的设备的 ServiceUUID 和 CharacteristicUUID */
@@ -19,20 +22,24 @@ static NSString * const ServiceUUIDString2 = @"DDAB6486-CBF1-47A5-B939-F3CAA527F
 static NSString * const CharacteristicReadUUIDString1 = @"2795B687-FF83-46E0-B485-D9174ED37E8A";
 static NSString * const CharacteristicWriteUUIDString1 = @"588ABC74-BE98-43D4-A207-019EA6A930E0";
 static NSString * const CharacteristicWriteUUIDString2 = @"FC96AE65-D8A0-4D6C-8E7F-F244CF2DC405";
-
-static JSBluetoothManager *_instanceType = nil;
-static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
 /** 自动重连 */
 static const BOOL JSCentralManagerAutoConnect = YES;
 static NSString * const kLastPeriphrealIdentifierConnectedKey = @"LastPeriphrealIdentifierConnectedKey";
 
+
+
+
+static JSBluetoothManager *_instanceType = nil;
+static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
 /*** 默认超时时间 60s ***/
 static int const kTimeOut = 60;
+
+
 
 @interface JSBluetoothManager ()
 
 /*** 当前是否正在搜索蓝牙设备 ***/
-@property (nonatomic,assign) BOOL isScanning;
+@property (nonatomic,assign,getter=isScanning) BOOL scanning;
 /*** 记录手动设置的超时时长 ***/
 @property (nonatomic,assign) int timeOut;
 
@@ -78,14 +85,14 @@ static int const kTimeOut = 60;
         }
         // 提示蓝牙关闭
         [manager noticeUserToOpenBluetoothService];
-        return;
+        
     } else {
         // 蓝牙开启
         BOOL isConnected = manager.deviceIsConnecting;
         if (isConnected) {
             // 开启并连接状态
             NSLog(@"--->当前设备处于连接状态");
-            return;
+            
         } else {
             // 开启但断开连接状态
             // 如果有绑定设备,自动搜索并连接
@@ -97,28 +104,42 @@ static int const kTimeOut = 60;
             
             // 如果应用退出重启后,根据偏好设置缓存取出上次连接成功后的外设进行自动重连
             NSString *lastPeripheralIdentifierConnected = [[NSUserDefaults standardUserDefaults] objectForKey:kLastPeriphrealIdentifierConnectedKey];
-            if ( lastPeripheralIdentifierConnected && lastPeripheralIdentifierConnected.length > 0 ) {
-                
-                NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:lastPeripheralIdentifierConnected];
-                // 返回一个数组,此项目中我们只缓存一个外设
-                NSArray <CBPeripheral *>*peripheralConnecteds = [manager.centralManager retrievePeripheralsWithIdentifiers:@[uuid]];
-                // 如果外设记录为空,错误处理
-                if (peripheralConnecteds.count == 0 || peripheralConnecteds == nil ) {
-                    if (manager.delegate && [manager.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
-                        NSError *error = JS_ERROR(JSCentralErrorConnectAutoConnectFail);
-                        [manager.delegate js_centralTool:manager connectFailure:error];
-                    } else {
-                        
-                        CBPeripheral *peripheralConnected = peripheralConnecteds.firstObject;
-                        [manager.centralManager connectPeripheral:peripheralConnected options:nil];
-                        // 再次记录 并 写入偏好设置进行缓存
-                        manager.peripheralConnected = peripheralConnected;
-                        NSLog(@"---->根据偏好设置缓存identifier重新连接到设备");
-                    }
-                }
-                
-                
+            
+            if (lastPeripheralIdentifierConnected.length <= 0 || lastPeripheralIdentifierConnected == nil) {
+                return;
             }
+            
+            NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:lastPeripheralIdentifierConnected];
+            // 返回一个数组,此项目中我们只缓存一个外设
+            NSArray <CBPeripheral *>*peripheralConnecteds = [manager.centralManager retrievePeripheralsWithIdentifiers:@[uuid]];
+            // 可重连设备的标识符存在,但是获取到的外设记录为空,错误处理
+            if (peripheralConnecteds.count == 0 || peripheralConnecteds == nil ) {
+                
+                if (manager.delegate && [manager.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
+                    NSError *error = JS_ERROR(JSCentralErrorConnectAutoConnectFail);
+                    [manager.delegate js_centralTool:manager connectFailure:error];
+                }
+                return;
+            }
+            
+            CBPeripheral *peripheralConnected = peripheralConnecteds.firstObject;
+            [manager.centralManager connectPeripheral:peripheralConnected options:nil];
+            // 再次记录 并 写入偏好设置进行缓存
+            manager.peripheralConnected = peripheralConnected;
+            NSLog(@"---->根据偏好设置缓存identifier重新连接到设备");
+            
+            // 调试代码
+            UILabel *label = [[UILabel alloc] init];
+            label.text = @"根据偏好设置缓存identifier重新连接到设备";
+            label.textColor = [UIColor redColor];
+            label.backgroundColor = [UIColor blackColor];
+            label.frame = [UIApplication sharedApplication].keyWindow.rootViewController.view.frame;
+            [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:label];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication].keyWindow.rootViewController.view bringSubviewToFront:label];
+                
+            });
+
             
         }
         
@@ -138,7 +159,7 @@ static int const kTimeOut = 60;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.isScanning = NO;
+        self.scanning = NO;
         self.deviceBluetoothOn = NO;
         self.deviceConnecting = NO;
     }
@@ -272,7 +293,7 @@ static int const kTimeOut = 60;
         // 扫描前移除之前搜索到的设备信息
         [self.allowToConnectPeripherals removeAllObjects];
         [self.centralManager scanForPeripheralsWithServices:nil options:nil];
-        self.isScanning = YES;
+        self.scanning = YES;
         // 如果设置了扫描的超时时间,在到达超时上限,会自动停止扫描,走连接失败的协议方法
         if (self.timeOut > 0) {
             [NSTimer scheduledTimerWithTimeInterval:self.timeOut target:self selector:@selector(stopScanBluetooth:) userInfo:nil repeats:NO];
@@ -286,7 +307,7 @@ static int const kTimeOut = 60;
     NSLog(@"%s",__func__);
     if (self.isScanning) {
         [self.centralManager stopScan];
-        self.isScanning = NO;
+        self.scanning = NO;
         [timer invalidate];
         timer = nil;
         if ([self.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
@@ -300,7 +321,7 @@ static int const kTimeOut = 60;
 {
     if (self.isScanning) {
         [self.centralManager stopScan];
-        self.isScanning = NO;
+        self.scanning = NO;
     }
 }
 
@@ -457,34 +478,34 @@ static int const kTimeOut = 60;
 
 
 #pragma mark - 十六进制转换为NSData数据流
-- (NSData *)convertHexStrToData:(NSString *)str
-{
-    if (!str || [str length] == 0) {
-        return nil;
-    }
-    
-    NSMutableData *hexData = [[NSMutableData alloc] initWithCapacity:8];
-    NSRange range;
-    if ([str length] % 2 == 0) {
-        range = NSMakeRange(0, 2);
-    } else {
-        range = NSMakeRange(0, 1);
-    }
-    for (NSInteger i = range.location; i < [str length]; i += 2) {
-        unsigned int anInt;
-        NSString *hexCharStr = [str substringWithRange:range];
-        NSScanner *scanner = [[NSScanner alloc] initWithString:hexCharStr];
-        
-        [scanner scanHexInt:&anInt];
-        NSData *entity = [[NSData alloc] initWithBytes:&anInt length:1];
-        [hexData appendData:entity];
-        
-        range.location += range.length;
-        range.length = 2;
-    }
-    
-    return hexData;
-}
+//- (NSData *)convertHexStrToData:(NSString *)str
+//{
+//    if (!str || [str length] == 0) {
+//        return nil;
+//    }
+//    
+//    NSMutableData *hexData = [[NSMutableData alloc] initWithCapacity:8];
+//    NSRange range;
+//    if ([str length] % 2 == 0) {
+//        range = NSMakeRange(0, 2);
+//    } else {
+//        range = NSMakeRange(0, 1);
+//    }
+//    for (NSInteger i = range.location; i < [str length]; i += 2) {
+//        unsigned int anInt;
+//        NSString *hexCharStr = [str substringWithRange:range];
+//        NSScanner *scanner = [[NSScanner alloc] initWithString:hexCharStr];
+//        
+//        [scanner scanHexInt:&anInt];
+//        NSData *entity = [[NSData alloc] initWithBytes:&anInt length:1];
+//        [hexData appendData:entity];
+//        
+//        range.location += range.length;
+//        range.length = 2;
+//    }
+//    
+//    return hexData;
+//}
 
 #pragma mark
 #pragma mark - 懒加载
