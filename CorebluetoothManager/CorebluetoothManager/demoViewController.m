@@ -94,6 +94,10 @@ static NSString * const kReusedIdentifier = @"kReusedIdentifier";
     [self.peripheralList reloadData];
 }
 
+- (void)js_centralTool:(JSBluetoothManager *)bluetoothManager connectFailure:(NSError *)error {
+    NSLog(@"%@",error);
+}
+
 
 #pragma mark
 #pragma mark - lazy

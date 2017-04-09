@@ -11,7 +11,7 @@
 
 #define JSLOG NSLog(@"%s",__func__);                                            // LOG
 #define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0))   // iOS 10
-
+#define JS_ERROR(description) [NSError errorWithDomain:@"com.auko" code:0 userInfo:@{NSLocalizedDescriptionKey:description}]
 
 /** 需要订阅的设备的 ServiceUUID 和 CharacteristicUUID */
 static NSString * const ServiceUUIDString1 = @"FFF1";
@@ -22,6 +22,9 @@ static NSString * const CharacteristicWriteUUIDString2 = @"FC96AE65-D8A0-4D6C-8E
 
 static JSBluetoothManager *_instanceType = nil;
 static NSString * const kMyCBCentralManagerOptionRestoreIdentifierKey = @"CBCentralManagerOptionRestoreIdentifierKey";
+/** 自动重连 */
+static const BOOL JSCentralManagerAutoConnect = YES;
+static NSString * const kLastPeriphrealIdentifierConnectedKey = @"LastPeriphrealIdentifierConnectedKey";
 
 /*** 默认超时时间 60s ***/
 static int const kTimeOut = 60;
@@ -34,7 +37,7 @@ static int const kTimeOut = 60;
 @property (nonatomic,assign) int timeOut;
 
 /*** 蓝牙设备 ***/
-@property (nonatomic,strong) CBPeripheral *peripheral;
+@property (nonatomic,strong) CBPeripheral *peripheralConnected;
 
 @property (nonatomic,strong) CBCharacteristic *writeCharacter;
 
@@ -86,10 +89,37 @@ static int const kTimeOut = 60;
         } else {
             // 开启但断开连接状态
             // 如果有绑定设备,自动搜索并连接
-            if (manager.peripheral) {
-                [manager.centralManager connectPeripheral:manager.peripheral options:nil];
+            if (manager.peripheralConnected) {
+                [manager.centralManager connectPeripheral:manager.peripheralConnected options:nil];
                 NSLog(@"---->重新连接到设备");
+                return;
             }
+            
+            // 如果应用退出重启后,根据偏好设置缓存取出上次连接成功后的外设进行自动重连
+            NSString *lastPeripheralIdentifierConnected = [[NSUserDefaults standardUserDefaults] objectForKey:kLastPeriphrealIdentifierConnectedKey];
+            if ( lastPeripheralIdentifierConnected && lastPeripheralIdentifierConnected.length > 0 ) {
+                
+                NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:lastPeripheralIdentifierConnected];
+                // 返回一个数组,此项目中我们只缓存一个外设
+                NSArray <CBPeripheral *>*peripheralConnecteds = [manager.centralManager retrievePeripheralsWithIdentifiers:@[uuid]];
+                // 如果外设记录为空,错误处理
+                if (peripheralConnecteds.count == 0 || peripheralConnecteds == nil ) {
+                    if (manager.delegate && [manager.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
+                        NSError *error = JS_ERROR(JSCentralErrorConnectAutoConnectFail);
+                        [manager.delegate js_centralTool:manager connectFailure:error];
+                    } else {
+                        
+                        CBPeripheral *peripheralConnected = peripheralConnecteds.firstObject;
+                        [manager.centralManager connectPeripheral:peripheralConnected options:nil];
+                        // 再次记录 并 写入偏好设置进行缓存
+                        manager.peripheralConnected = peripheralConnected;
+                        NSLog(@"---->根据偏好设置缓存identifier重新连接到设备");
+                    }
+                }
+                
+                
+            }
+            
         }
         
     }
@@ -101,13 +131,9 @@ static int const kTimeOut = 60;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instanceType = [[JSBluetoothManager alloc] init];
-//        _instanceType.isScanning = NO;
-//        _instanceType.deviceBluetoothOn = NO;
-//        _instanceType.deviceConnecting = NO;
     });
     return _instanceType;
 }
-
 
 - (instancetype)init {
     self = [super init];
@@ -119,11 +145,39 @@ static int const kTimeOut = 60;
     return self;
 }
 
+// 自动连接
+//- (void)autoConnect {
+//    // 取出上次连接成功后，存的 peripheral identifier
+//    NSString *lastPeripheralIdentifierConnected = [[NSUserDefaults standardUserDefaults] objectForKey:kLastPeriphrealIdentifierConnectedKey];
+//    // 如果没有，则不做任何操作，说明需要用户点击开始扫描的按钮，进行手动搜索
+//    if (lastPeripheralIdentifierConnected == nil || lastPeripheralIdentifierConnected.length == 0) {
+//        return;
+//    }
+//    // 查看上次存入的 identifier 还能否找到 peripheral
+//    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:lastPeripheralIdentifierConnected];
+//    NSArray *peripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[uuid]];
+//    // 如果不能成功找到或连接，可能是设备未开启等原因，返回连接错误
+//    if (peripherals == nil || [peripherals count] == 0) {
+//        if (self.delegate && [self.delegate respondsToSelector:@selector(centralTool:connectFailure:)]) {
+//            NSError *error = JS_ERROR(JSCentralErrorConnectAutoConnectFail);
+//            [self.delegate js_centralTool:self connectFailure:error];
+//        }
+//        return;
+//    }
+//    // 如果能找到则开始建立连接
+//    CBPeripheral *peripheral = [peripherals firstObject];
+//    [self.centralManager connectPeripheral:peripheral options:nil];
+//    // 注意保留 Peripheral 的引用
+//    self.peripheralConnected = peripheral;
+//    //[self startTimer];
+//}
+
 #pragma mark - 扫描蓝牙设备
 -(void)scanBluetoothWith:(int)timeout
 {
-    timeout <= 30 ? (self.timeOut = kTimeOut) : (self.timeOut = timeout);
-    
+    self.timeOut = timeout;
+    // 取消默认的扫描超时限制,如果用户不指定超时限制,将会一直扫描
+    //timeout <= 30 ? (self.timeOut = kTimeOut) : (self.timeOut = timeout);
     if (self.deviceBluetoothIsOn) {
         // 蓝牙开启
         [self scanBluetoothDevices]; // 扫描外设
@@ -191,7 +245,6 @@ static int const kTimeOut = 60;
 #warning 跳转到蓝牙设置界面,指导用户开启蓝牙
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     if (iOS10) {
-        
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-Prefs:root=Bluetooth"] options:@{UIApplicationOpenURLOptionUniversalLinksOnly: [NSNumber numberWithBool:NO]} completionHandler:nil];
 //        NSURL *url = [NSURL URLWithString:@"App-Prefs:root=Bluetooth"];
 //        if ([[UIApplication sharedApplication] canOpenURL:url] )
@@ -213,28 +266,33 @@ static int const kTimeOut = 60;
 - (void)scanBluetoothDevices
 {
     // 扫描设置
-    if (self.isScanning == NO )
-    {
+    if (self.isScanning == NO ) {
         JSLOG
-        // @[[CBUUID UUIDWithString:@"0xFFF0"],[CBUUID UUIDWithString:@"0xFFE0"],[CBUUID UUIDWithString:@"0x18F0"]]
-        
-#warning 扫描前移除上一次扫描设备结果
+#warning 扫描前移除上一次扫描设备结果 超时处理
         // 扫描前移除之前搜索到的设备信息
         [self.allowToConnectPeripherals removeAllObjects];
-        [self.centralManager scanForPeripheralsWithServices:nil options:0];
-        [NSTimer scheduledTimerWithTimeInterval:self.timeOut target:self selector:@selector(stopScanBluetooth:) userInfo:nil repeats:NO];
+        [self.centralManager scanForPeripheralsWithServices:nil options:nil];
         self.isScanning = YES;
+        // 如果设置了扫描的超时时间,在到达超时上限,会自动停止扫描,走连接失败的协议方法
+        if (self.timeOut > 0) {
+            [NSTimer scheduledTimerWithTimeInterval:self.timeOut target:self selector:@selector(stopScanBluetooth:) userInfo:nil repeats:NO];
+        }
     }
 }
 
 #pragma mark - 停止扫描蓝牙 (定时器方法)
 - (void)stopScanBluetooth:(NSTimer *)timer
 {
+    NSLog(@"%s",__func__);
     if (self.isScanning) {
         [self.centralManager stopScan];
         self.isScanning = NO;
         [timer invalidate];
         timer = nil;
+        if ([self.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
+            NSError *error = JS_ERROR(jsCentralErrorScanTimeOut);
+            [self.delegate js_centralTool:self connectFailure:error];
+        }
     }
 }
 /*** 对外接口： 停止扫描蓝牙设备 ***/
@@ -264,27 +322,24 @@ static int const kTimeOut = 60;
 }
 
 #pragma mark - 发送命令
-- (void)write:(CBPeripheral *)peripheral data:(NSString *)data
-{
-    [peripheral writeValue: [self convertHexStrToData:data]forCharacteristic:self.writeCharacter type:CBCharacteristicWriteWithoutResponse];
-}
+//- (void)write:(CBPeripheral *)peripheral data:(NSString *)data
+//{
+//    [peripheral writeValue: [self convertHexStrToData:data]forCharacteristic:self.writeCharacter type:CBCharacteristicWriteWithoutResponse];
+//}
 
-#pragma mark - 读取外设信息
-- (void)read:(CBPeripheral *)peripheral
-{
-    
-}
+//#pragma mark - 读取外设信息
+//- (void)read:(CBPeripheral *)peripheral
+//{
+//    
+//}
 
 /**
  *  设备通知
  */
-- (void)notify:(CBPeripheral *)peripheral on:(BOOL)on
-{
-    
-}
-
-
-
+//- (void)notify:(CBPeripheral *)peripheral on:(BOOL)on
+//{
+//    
+//}
 
 #pragma mark
 #pragma mark - CBCentralManagerDelegate
@@ -292,24 +347,22 @@ static int const kTimeOut = 60;
 /*** 中心设备更新状态时调用 ***/
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-
-    // 判断状态
-    switch (central.state)
-    {
-        case CBCentralManagerStateUnknown:         // 未知
-            break;
-        case CBCentralManagerStateResetting:       // 正在重启
-            break;
-        case CBCentralManagerStateUnsupported:     // 不支持
-            break;
-        case CBCentralManagerStateUnauthorized:    // 未授权
-            break;
-        case CBCentralManagerStatePoweredOff:      // 关闭蓝牙
-            break;
-        case CBCentralManagerStatePoweredOn:       // 开启蓝牙
-            break;
-        default:
-            break;
+    
+    if (central.state == CBManagerStatePoweredOn) {
+        return;
+    }
+    
+    // 蓝牙状态关闭
+    if ([self.delegate respondsToSelector:@selector(js_centralTool:connectFailure:)]) {
+        if (central.state == CBManagerStatePoweredOff) {
+            NSError *error = JS_ERROR(JSCentralErrorConnectPowerOff);
+            [self.delegate js_centralTool:self connectFailure:error];
+            return;
+        }
+        
+        NSError *error = JS_ERROR(JSCentralErrorConnectOthers);
+        [self.delegate js_centralTool:self connectFailure:error];
+        
     }
     
 }
@@ -340,12 +393,12 @@ static int const kTimeOut = 60;
 /*** 连接上设备时调用 ***/
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
-    self.peripheral = peripheral;
-    self.peripheral.delegate = self;
-    [self.peripheral discoverServices:nil];
-    if ([self.delegate respondsToSelector:@selector(js_peripheralConnected)]) {
+    self.peripheralConnected = peripheral;
+    self.peripheralConnected.delegate = self;
+    [self.peripheralConnected discoverServices:nil];
+    if ([self.delegate respondsToSelector:@selector(js_peripheralConnected:)]) {
         
-        [self.delegate js_peripheralConnected];
+        [self.delegate js_peripheralConnected:peripheral];
     }
     // 连接成功后停止扫描
     [self stopToScanBluetoothPeripheral];
@@ -467,6 +520,15 @@ static int const kTimeOut = 60;
     return _allowToConnectPeripherals;
 }
 
+#warning 缓存连接设备的标识
+- (void)setPeripheralConnected:(CBPeripheral *)peripheralConnected {
+    _peripheralConnected = peripheralConnected;
+    
+    if (peripheralConnected != nil && JSCentralManagerAutoConnect) {
+        // 记录连接设备的标识
+        [[NSUserDefaults standardUserDefaults] setObject:peripheralConnected.identifier.UUIDString forKey:kLastPeriphrealIdentifierConnectedKey];
+    }
+}
 
 - (NSArray *)serviceUUIDArray {
     if (!_serviceUUIDArray) {

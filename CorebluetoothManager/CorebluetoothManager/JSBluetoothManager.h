@@ -8,16 +8,28 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-@class BluetoothManager;
+@class JSBluetoothManager;
+
+
+static NSString * const JSCentralErrorConnectTimeOut = @" connect time out ";
+static NSString * const jsCentralErrorScanTimeOut = @" scan time out ";
+static NSString * const JSCentralErrorConnectOthers = @" other error ";
+static NSString * const JSCentralErrorConnectPowerOff = @" power off ";
+static NSString * const JSCentralErrorConnectAutoConnectFail = @" auto connect fail ";
+static NSString * const JSCentralErrorWriteDataLength = @" data length error ";
+
 
 @protocol JSBluetoothToolDelegate <NSObject>
 @optional
 /*** 扫描到蓝牙设备时调用 ***/
 - (void)js_peripheralFounded:(NSArray <CBPeripheral *>*)peripherals;
 /*** 连接上设备时调用 ***/
-- (void)js_peripheralConnected;
+- (void)js_peripheralConnected:(CBPeripheral *)peripheral;
 /*** 断开连接时调用 ***/
-- (void)js_peripheralDisconnected;
+- (void)js_peripheralDisconnected:(CBPeripheral *)peripheral;
+/** 设备状态变化:  连接失败（包括超时、连接错误等） */
+- (void)js_centralTool:(JSBluetoothManager *)bluetoothManager connectFailure:(NSError *)error;
+
 /*** 出现低电量时调用 ***/
 - (void)js_lowBattery;
 /*** 读取设备版本号 ***/
