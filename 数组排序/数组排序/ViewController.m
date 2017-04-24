@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+//    [self test2];
+    
+    NSString *date1 = @"2019年08月09日";
+    NSString *date2 = @"2019年08月08日";
+    NSComparisonResult result = [date1 compare:date2 options:NSNumericSearch];
+    NSLog(@"%zd",result);
+    
     
 }
 

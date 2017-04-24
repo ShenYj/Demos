@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68556ED21E95D492001F30E7 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68556ED11E95D492001F30E7 /* BluetoothManager.m */; };
 		68556ED71E95F777001F30E7 /* demoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68556ED61E95F777001F30E7 /* demoViewController.m */; };
 		F71AC2601E8D027C004C0391 /* JSPeripheralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AC25F1E8D027C004C0391 /* JSPeripheralInfo.m */; };
 		F71AC2631E8D19D5004C0391 /* UIView+JS_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AC2621E8D19D5004C0391 /* UIView+JS_Frame.m */; };
@@ -20,8 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		68556ED01E95D492001F30E7 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
-		68556ED11E95D492001F30E7 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManager.m; sourceTree = "<group>"; };
 		68556ED51E95F777001F30E7 /* demoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demoViewController.h; sourceTree = "<group>"; };
 		68556ED61E95F777001F30E7 /* demoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoViewController.m; sourceTree = "<group>"; };
 		F71AC25E1E8D027C004C0391 /* JSPeripheralInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPeripheralInfo.h; sourceTree = "<group>"; };
@@ -76,8 +73,6 @@
 				F77574A51E8BDF7A003A637E /* ViewController.m */,
 				68556ED51E95F777001F30E7 /* demoViewController.h */,
 				68556ED61E95F777001F30E7 /* demoViewController.m */,
-				68556ED01E95D492001F30E7 /* BluetoothManager.h */,
-				68556ED11E95D492001F30E7 /* BluetoothManager.m */,
 				F71AC25E1E8D027C004C0391 /* JSPeripheralInfo.h */,
 				F71AC25F1E8D027C004C0391 /* JSPeripheralInfo.m */,
 				F71AC2611E8D19D5004C0391 /* UIView+JS_Frame.h */,
@@ -180,7 +175,6 @@
 				F77574A61E8BDF7A003A637E /* ViewController.m in Sources */,
 				F77574A31E8BDF7A003A637E /* AppDelegate.m in Sources */,
 				F71AC2601E8D027C004C0391 /* JSPeripheralInfo.m in Sources */,
-				68556ED21E95D492001F30E7 /* BluetoothManager.m in Sources */,
 				F77574A01E8BDF7A003A637E /* main.m in Sources */,
 				68556ED71E95F777001F30E7 /* demoViewController.m in Sources */,
 			);
