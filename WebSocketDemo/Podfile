@@ -10,5 +10,7 @@ target 'WebSocketDemo' do
 pod 'SocketRocket'
 pod 'Masonry'
 pod 'YYWebImage'
+pod 'AFNetworking'
+pod 'YYModel'
 
 end

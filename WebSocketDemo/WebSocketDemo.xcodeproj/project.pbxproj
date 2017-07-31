@@ -13,6 +13,9 @@
 		685028271F2EB9A800CC3F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685028261F2EB9A800CC3F2E /* Assets.xcassets */; };
 		6850282A1F2EB9A800CC3F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685028281F2EB9A800CC3F2E /* LaunchScreen.storyboard */; };
 		6850282D1F2EB9A800CC3F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6850282C1F2EB9A800CC3F2E /* main.m */; };
+		68738E0C1F2EC958007CC5A5 /* JSWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68738E0B1F2EC958007CC5A5 /* JSWebSocketManager.m */; };
+		68738E0F1F2ECA6F007CC5A5 /* JSWebSocketTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68738E0E1F2ECA6F007CC5A5 /* JSWebSocketTool.m */; };
+		68738E121F2ED00A007CC5A5 /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68738E111F2ED00A007CC5A5 /* JSViewController.m */; };
 		A1A334C7135CC303CCCB469D /* libPods-WebSocketDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC3DCECE4ADA35BA68CECC2 /* libPods-WebSocketDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,13 @@
 		685028291F2EB9A800CC3F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6850282B1F2EB9A800CC3F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6850282C1F2EB9A800CC3F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68738E0A1F2EC958007CC5A5 /* JSWebSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebSocketManager.h; sourceTree = "<group>"; };
+		68738E0B1F2EC958007CC5A5 /* JSWebSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebSocketManager.m; sourceTree = "<group>"; };
+		68738E0D1F2ECA6F007CC5A5 /* JSWebSocketTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebSocketTool.h; sourceTree = "<group>"; };
+		68738E0E1F2ECA6F007CC5A5 /* JSWebSocketTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebSocketTool.m; sourceTree = "<group>"; };
+		68738E101F2ED00A007CC5A5 /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
+		68738E111F2ED00A007CC5A5 /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		68738E131F2F0B8D007CC5A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8FC3DCECE4ADA35BA68CECC2 /* libPods-WebSocketDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebSocketDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92447471ACCC493D408936E7 /* Pods-WebSocketDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DE1CD6F6D8CCED417FC0E549 /* Pods-WebSocketDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,8 +83,12 @@
 		6850281C1F2EB9A800CC3F2E /* WebSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				68738E091F2EC94B007CC5A5 /* WebSocketTool */,
 				6850281D1F2EB9A800CC3F2E /* AppDelegate.h */,
 				6850281E1F2EB9A800CC3F2E /* AppDelegate.m */,
+				68738E131F2F0B8D007CC5A5 /* PrefixHeader.pch */,
+				68738E101F2ED00A007CC5A5 /* JSViewController.h */,
+				68738E111F2ED00A007CC5A5 /* JSViewController.m */,
 				685028201F2EB9A800CC3F2E /* ViewController.h */,
 				685028211F2EB9A800CC3F2E /* ViewController.m */,
 				685028231F2EB9A800CC3F2E /* Main.storyboard */,
@@ -84,6 +98,17 @@
 				6850282C1F2EB9A800CC3F2E /* main.m */,
 			);
 			path = WebSocketDemo;
+			sourceTree = "<group>";
+		};
+		68738E091F2EC94B007CC5A5 /* WebSocketTool */ = {
+			isa = PBXGroup;
+			children = (
+				68738E0A1F2EC958007CC5A5 /* JSWebSocketManager.h */,
+				68738E0B1F2EC958007CC5A5 /* JSWebSocketManager.m */,
+				68738E0D1F2ECA6F007CC5A5 /* JSWebSocketTool.h */,
+				68738E0E1F2ECA6F007CC5A5 /* JSWebSocketTool.m */,
+			);
+			path = WebSocketTool;
 			sourceTree = "<group>";
 		};
 		F788CCEA5A260D0075E94A93 /* Pods */ = {
@@ -217,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				685028221F2EB9A800CC3F2E /* ViewController.m in Sources */,
+				68738E121F2ED00A007CC5A5 /* JSViewController.m in Sources */,
 				6850282D1F2EB9A800CC3F2E /* main.m in Sources */,
+				68738E0C1F2EC958007CC5A5 /* JSWebSocketManager.m in Sources */,
 				6850281F1F2EB9A800CC3F2E /* AppDelegate.m in Sources */,
+				68738E0F1F2ECA6F007CC5A5 /* JSWebSocketTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +378,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3P982ZUUW8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = WebSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.WebSocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,7 +394,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3P982ZUUW8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = WebSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.WebSocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -391,6 +423,7 @@
 				685028321F2EB9A800CC3F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,10 +9,21 @@
 #import "ViewController.h"
 #import <SocketRocket.h>
 
+
+/******************************************************
+ 
+ @discusstion:   未封装
+ 
+ @author：   ShenYj
+ 
+ @email:    shenyj4@51nb.com
+ 
+ ******************************************************/
+
+
 #define WeakSelf(object) __weak typeof(self) object = self
 
 @interface ViewController () <SRWebSocketDelegate>
-
 
 @property (nonatomic,strong) SRWebSocket *socket;
 @property (nonatomic,assign) dispatch_queue_t socketQueue;
@@ -102,8 +113,6 @@
 {
     NSLog(@" 接收到数据 : %@",message);
 }
-
-
 
 
 @end
