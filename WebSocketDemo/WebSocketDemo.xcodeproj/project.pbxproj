@@ -13,6 +13,7 @@
 		685028271F2EB9A800CC3F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685028261F2EB9A800CC3F2E /* Assets.xcassets */; };
 		6850282A1F2EB9A800CC3F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685028281F2EB9A800CC3F2E /* LaunchScreen.storyboard */; };
 		6850282D1F2EB9A800CC3F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6850282C1F2EB9A800CC3F2E /* main.m */; };
+		A1A334C7135CC303CCCB469D /* libPods-WebSocketDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC3DCECE4ADA35BA68CECC2 /* libPods-WebSocketDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		685028291F2EB9A800CC3F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6850282B1F2EB9A800CC3F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6850282C1F2EB9A800CC3F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FC3DCECE4ADA35BA68CECC2 /* libPods-WebSocketDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebSocketDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92447471ACCC493D408936E7 /* Pods-WebSocketDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DE1CD6F6D8CCED417FC0E549 /* Pods-WebSocketDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A334C7135CC303CCCB469D /* libPods-WebSocketDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07CA93932F280E324332CEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FC3DCECE4ADA35BA68CECC2 /* libPods-WebSocketDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		685028111F2EB9A800CC3F2E = {
 			isa = PBXGroup;
 			children = (
 				6850281C1F2EB9A800CC3F2E /* WebSocketDemo */,
 				6850281B1F2EB9A800CC3F2E /* Products */,
+				F788CCEA5A260D0075E94A93 /* Pods */,
+				07CA93932F280E324332CEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			path = WebSocketDemo;
 			sourceTree = "<group>";
 		};
+		F788CCEA5A260D0075E94A93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE1CD6F6D8CCED417FC0E549 /* Pods-WebSocketDemo.debug.xcconfig */,
+				92447471ACCC493D408936E7 /* Pods-WebSocketDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685028301F2EB9A800CC3F2E /* Build configuration list for PBXNativeTarget "WebSocketDemo" */;
 			buildPhases = (
+				D551CCB0691555F4F1B36EA4 /* [CP] Check Pods Manifest.lock */,
 				685028161F2EB9A800CC3F2E /* Sources */,
 				685028171F2EB9A800CC3F2E /* Frameworks */,
 				685028181F2EB9A800CC3F2E /* Resources */,
+				3A67C7F05B05CAF506658001 /* [CP] Embed Pods Frameworks */,
+				0810CEA54A0F6A744E6D7DA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0810CEA54A0F6A744E6D7DA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A67C7F05B05CAF506658001 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebSocketDemo/Pods-WebSocketDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D551CCB0691555F4F1B36EA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		685028161F2EB9A800CC3F2E /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		685028311F2EB9A800CC3F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1CD6F6D8CCED417FC0E549 /* Pods-WebSocketDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3P982ZUUW8;
@@ -284,6 +360,7 @@
 		};
 		685028321F2EB9A800CC3F2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92447471ACCC493D408936E7 /* Pods-WebSocketDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3P982ZUUW8;
