@@ -133,6 +133,9 @@ static int const kHoursCount = 24;
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.selectedRow = row;
+    if ([self.delegate respondsToSelector:@selector(datePickerView:selectedIndex:)]) {
+        [self.delegate datePickerView:self selectedIndex:row];
+    }
     [pickerView reloadComponent:component];
 }
 

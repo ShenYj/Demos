@@ -36,5 +36,15 @@ typedef NS_ENUM(NSUInteger, JSButtonType) {
  */
 - (void)datePickerView:(JSDatePickerView *)pickVew buttonType:(JSButtonType)type;
 
+/*!
+ *  @metohd datePickerView: selectedIndex:
+ *
+ *  @param pickView      自定义视图
+ *  @param index         选中Row的索引值
+ *
+ *  @discussion          选择某一行后的索引
+ */
+- (void)datePickerView:(JSDatePickerView *)pickView selectedIndex:(NSInteger)index;
+
 
 @end
