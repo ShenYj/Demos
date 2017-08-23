@@ -46,7 +46,8 @@
 }
 
 /** 1.4 注册远程通知获取DeviceToken,将DeviceToken发送给服务器 */
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
     NSLog(@"%@",deviceToken);
 }
 
