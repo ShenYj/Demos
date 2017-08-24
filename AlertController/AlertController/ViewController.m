@@ -39,10 +39,9 @@
 //    UILabel *title = subView5.subviews[0];
 //    UILabel *message = subView5.subviews[1];
 //    message.textAlignment = NSTextAlignmentLeft;
-    alertController.messgeLabel.textAlignment = NSTextAlignmentLeft;
+//    alertController.messgeLabel.textAlignment = NSTextAlignmentLeft;
     
     UIAlertAction *close = [UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleDefault handler:nil];
-    
     [alertController addAction:close];
     [self presentViewController:alertController animated:YES completion:nil];
     

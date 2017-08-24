@@ -32,6 +32,8 @@
     //取title和message：
     self.titleLabel = subView5.subviews[0];
     self.messgeLabel = subView5.subviews[1];
+    
+    self.messgeLabel.textAlignment = NSTextAlignmentLeft;
 }
 
 - (void)didReceiveMemoryWarning
