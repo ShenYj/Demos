@@ -58,7 +58,7 @@
 - (UIProgressView *)progressView {
     if (!_progressView) {
         _progressView = [[UIProgressView alloc] init];
-        _progressView.progressTintColor = [UIColor redColor];
+        _progressView.progressTintColor = [UIColor colorWithRed:94/255.0 green:195/255.0 blue:52/255.0 alpha:1.0];
         _progressView.trackTintColor = [UIColor grayColor];
         _progressView.progressViewStyle = UIProgressViewStyleDefault;
     }
