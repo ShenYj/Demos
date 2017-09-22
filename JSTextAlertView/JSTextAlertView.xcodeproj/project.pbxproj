@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		684AE2081F7361E20053C5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE2071F7361E20053C5AB /* AppDelegate.m */; };
+		684AE20B1F7361E20053C5AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE20A1F7361E20053C5AB /* ViewController.m */; };
+		684AE2101F7361E30053C5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 684AE20F1F7361E30053C5AB /* Assets.xcassets */; };
+		684AE2161F7361E30053C5AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE2151F7361E30053C5AB /* main.m */; };
+		684AE21E1F7362270053C5AB /* JSTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE21D1F7362270053C5AB /* JSTextAlertView.m */; };
+		684AE2211F7365000053C5AB /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE21F1F7365000053C5AB /* UIView+Layout.m */; };
+		684AE2241F73653D0053C5AB /* CALayer+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE2231F73653C0053C5AB /* CALayer+Layout.m */; };
+		684AE2271F7365FC0053C5AB /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE2261F7365FC0053C5AB /* UIColor+Extend.m */; };
+		684AE22A1F7368570053C5AB /* zhPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE2281F7368570053C5AB /* zhPopupController.m */; };
+		684AE2301F736A1E0053C5AB /* UIViewController+JSShowTextAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 684AE22F1F736A1E0053C5AB /* UIViewController+JSShowTextAlert.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		684AE2031F7361E20053C5AB /* JSTextAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTextAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		684AE2061F7361E20053C5AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		684AE2071F7361E20053C5AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		684AE2091F7361E20053C5AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		684AE20A1F7361E20053C5AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		684AE20F1F7361E30053C5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		684AE2141F7361E30053C5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684AE2151F7361E30053C5AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		684AE21C1F7362270053C5AB /* JSTextAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTextAlertView.h; sourceTree = "<group>"; };
+		684AE21D1F7362270053C5AB /* JSTextAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSTextAlertView.m; sourceTree = "<group>"; };
+		684AE21F1F7365000053C5AB /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		684AE2201F7365000053C5AB /* UIView+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		684AE2221F73653C0053C5AB /* CALayer+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Layout.h"; sourceTree = "<group>"; };
+		684AE2231F73653C0053C5AB /* CALayer+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Layout.m"; sourceTree = "<group>"; };
+		684AE2251F7365FC0053C5AB /* UIColor+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		684AE2261F7365FC0053C5AB /* UIColor+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		684AE2281F7368570053C5AB /* zhPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zhPopupController.m; sourceTree = "<group>"; };
+		684AE2291F7368570053C5AB /* zhPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zhPopupController.h; sourceTree = "<group>"; };
+		684AE22E1F736A1E0053C5AB /* UIViewController+JSShowTextAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JSShowTextAlert.h"; sourceTree = "<group>"; };
+		684AE22F1F736A1E0053C5AB /* UIViewController+JSShowTextAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JSShowTextAlert.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		684AE2001F7361E20053C5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		684AE1FA1F7361E20053C5AB = {
+			isa = PBXGroup;
+			children = (
+				684AE2051F7361E20053C5AB /* JSTextAlertView */,
+				684AE2041F7361E20053C5AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		684AE2041F7361E20053C5AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				684AE2031F7361E20053C5AB /* JSTextAlertView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		684AE2051F7361E20053C5AB /* JSTextAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				684AE2061F7361E20053C5AB /* AppDelegate.h */,
+				684AE2071F7361E20053C5AB /* AppDelegate.m */,
+				684AE2091F7361E20053C5AB /* ViewController.h */,
+				684AE20A1F7361E20053C5AB /* ViewController.m */,
+				684AE21C1F7362270053C5AB /* JSTextAlertView.h */,
+				684AE21D1F7362270053C5AB /* JSTextAlertView.m */,
+				684AE2201F7365000053C5AB /* UIView+Layout.h */,
+				684AE21F1F7365000053C5AB /* UIView+Layout.m */,
+				684AE2251F7365FC0053C5AB /* UIColor+Extend.h */,
+				684AE2261F7365FC0053C5AB /* UIColor+Extend.m */,
+				684AE2221F73653C0053C5AB /* CALayer+Layout.h */,
+				684AE2231F73653C0053C5AB /* CALayer+Layout.m */,
+				684AE22E1F736A1E0053C5AB /* UIViewController+JSShowTextAlert.h */,
+				684AE22F1F736A1E0053C5AB /* UIViewController+JSShowTextAlert.m */,
+				684AE2291F7368570053C5AB /* zhPopupController.h */,
+				684AE2281F7368570053C5AB /* zhPopupController.m */,
+				684AE20F1F7361E30053C5AB /* Assets.xcassets */,
+				684AE2141F7361E30053C5AB /* Info.plist */,
+				684AE2151F7361E30053C5AB /* main.m */,
+			);
+			path = JSTextAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		684AE2021F7361E20053C5AB /* JSTextAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684AE2191F7361E30053C5AB /* Build configuration list for PBXNativeTarget "JSTextAlertView" */;
+			buildPhases = (
+				684AE1FF1F7361E20053C5AB /* Sources */,
+				684AE2001F7361E20053C5AB /* Frameworks */,
+				684AE2011F7361E20053C5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSTextAlertView;
+			productName = JSTextAlertView;
+			productReference = 684AE2031F7361E20053C5AB /* JSTextAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		684AE1FB1F7361E20053C5AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Auko;
+				TargetAttributes = {
+					684AE2021F7361E20053C5AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 684AE1FE1F7361E20053C5AB /* Build configuration list for PBXProject "JSTextAlertView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 684AE1FA1F7361E20053C5AB;
+			productRefGroup = 684AE2041F7361E20053C5AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				684AE2021F7361E20053C5AB /* JSTextAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		684AE2011F7361E20053C5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684AE2101F7361E30053C5AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		684AE1FF1F7361E20053C5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684AE22A1F7368570053C5AB /* zhPopupController.m in Sources */,
+				684AE20B1F7361E20053C5AB /* ViewController.m in Sources */,
+				684AE2241F73653D0053C5AB /* CALayer+Layout.m in Sources */,
+				684AE21E1F7362270053C5AB /* JSTextAlertView.m in Sources */,
+				684AE2161F7361E30053C5AB /* main.m in Sources */,
+				684AE2301F736A1E0053C5AB /* UIViewController+JSShowTextAlert.m in Sources */,
+				684AE2271F7365FC0053C5AB /* UIColor+Extend.m in Sources */,
+				684AE2211F7365000053C5AB /* UIView+Layout.m in Sources */,
+				684AE2081F7361E20053C5AB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		684AE2171F7361E30053C5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		684AE2181F7361E30053C5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		684AE21A1F7361E30053C5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AT6MHXZPN;
+				INFOPLIST_FILE = JSTextAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.JSTextAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		684AE21B1F7361E30053C5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AT6MHXZPN;
+				INFOPLIST_FILE = JSTextAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.JSTextAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		684AE1FE1F7361E20053C5AB /* Build configuration list for PBXProject "JSTextAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684AE2171F7361E30053C5AB /* Debug */,
+				684AE2181F7361E30053C5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684AE2191F7361E30053C5AB /* Build configuration list for PBXNativeTarget "JSTextAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684AE21A1F7361E30053C5AB /* Debug */,
+				684AE21B1F7361E30053C5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 684AE1FB1F7361E20053C5AB /* Project object */;
+}
