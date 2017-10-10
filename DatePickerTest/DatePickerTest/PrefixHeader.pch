@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  DatePickerTest
+//
+//  Created by ecg on 2017/10/10.
+//  Copyright © 2017年 Auko. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenBounds [UIScreen mainScreen].bounds
+#define BXColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#import "Masonry.h"
+
+#endif /* PrefixHeader_pch */
