@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1157D093350D00151B49D512 /* libPods-DatePickerTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DF27878891CEB4F81A282F /* libPods-DatePickerTest.a */; };
+		681619331F8DAA8B00AE3F5D /* JSDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 681619321F8DAA8B00AE3F5D /* JSDatePicker.m */; };
 		687955151F8C6CA600A5A686 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 687955141F8C6CA600A5A686 /* AppDelegate.m */; };
 		687955181F8C6CA600A5A686 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687955171F8C6CA600A5A686 /* ViewController.m */; };
 		6879551B1F8C6CA600A5A686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687955191F8C6CA600A5A686 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		10CC7460DB87F42C886ED57E /* Pods-DatePickerTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatePickerTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatePickerTest/Pods-DatePickerTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3BA2E36DAE4582BD987BA89A /* Pods-DatePickerTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatePickerTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatePickerTest/Pods-DatePickerTest.release.xcconfig"; sourceTree = "<group>"; };
+		681619311F8DAA8B00AE3F5D /* JSDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDatePicker.h; sourceTree = "<group>"; };
+		681619321F8DAA8B00AE3F5D /* JSDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDatePicker.m; sourceTree = "<group>"; };
 		687955101F8C6CA600A5A686 /* DatePickerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatePickerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687955131F8C6CA600A5A686 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		687955141F8C6CA600A5A686 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				687955171F8C6CA600A5A686 /* ViewController.m */,
 				687955291F8C767700A5A686 /* JSBirthdayView.h */,
 				6879552A1F8C767700A5A686 /* JSBirthdayView.m */,
+				681619311F8DAA8B00AE3F5D /* JSDatePicker.h */,
+				681619321F8DAA8B00AE3F5D /* JSDatePicker.m */,
 				687955471F8C7ABE00A5A686 /* PrefixHeader.pch */,
 				687955191F8C6CA600A5A686 /* Main.storyboard */,
 				6879551C1F8C6CA600A5A686 /* Assets.xcassets */,
@@ -226,6 +231,7 @@
 			files = (
 				687955181F8C6CA600A5A686 /* ViewController.m in Sources */,
 				687955231F8C6CA600A5A686 /* main.m in Sources */,
+				681619331F8DAA8B00AE3F5D /* JSDatePicker.m in Sources */,
 				6879552B1F8C767700A5A686 /* JSBirthdayView.m in Sources */,
 				687955151F8C6CA600A5A686 /* AppDelegate.m in Sources */,
 			);
@@ -364,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AT6MHXZPN;
-				GCC_PREFIX_HEADER = "$SRCROOT/$PRODUCT_NAME/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = DatePickerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.DatePickerTest;
@@ -380,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AT6MHXZPN;
-				GCC_PREFIX_HEADER = "$SRCROOT/$PRODUCT_NAME/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = DatePickerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanhu.Ecg.DatePickerTest;

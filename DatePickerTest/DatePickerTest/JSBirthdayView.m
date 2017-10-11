@@ -7,37 +7,14 @@
 //
 
 #import "JSBirthdayView.h"
+#import "JSDatePicker.h"
 
-@interface JSDatePicker : UIDatePicker
-@end
-@implementation JSDatePicker
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self clearSeparatorWithView:self];
-}
-- (void)clearSeparatorWithView:(UIView * )view
-{
-    if(view.subviews != 0){
-        if(view.bounds.size.height < 5){
-            view.backgroundColor = [UIColor clearColor];
-        }
-        [view.subviews enumerateObjectsUsingBlock:^( UIView *  obj, NSUInteger idx, BOOL *  stop) {
-            [self clearSeparatorWithView:obj];
-        }];
-    }
-}
-
-
+/******************************************************
+ 
+ @discusstion:   自定义按钮
+ 
+ ******************************************************/
+@implementation BirthdayBtn
 @end
 
 
@@ -46,16 +23,17 @@ static CGFloat const kVerticalMargin = 20.0f;
 static CGFloat const kButtonHeight = 44.0f;
 static CGFloat const kBirthdayHeight = 260.0f;
 
-@interface JSBirthdayView ()
+@interface JSBirthdayView () <JSDatePickerDelegate>
 
-@property (nonatomic,strong) JSDatePicker    *datePicker;
+@property (nonatomic,strong) UIDatePicker    *datePicker;       // 年月日
+//@property (nonatomic,strong) JSDatePicker    *datePickerView; // 日时分
 @property (nonatomic,strong) NSDateFormatter *dateFormatter;
 @property (nonatomic,  copy) NSString        *dateString;
 
 @property (nonatomic,strong) UILabel         *horizontalSeperator;
 @property (nonatomic,strong) UILabel         *verticalSeperator;
-@property (nonatomic,strong) UIButton        *confirmBtn;
-@property (nonatomic,strong) UIButton        *cancelBtn;
+@property (nonatomic,strong) BirthdayBtn     *confirmBtn;
+@property (nonatomic,strong) BirthdayBtn     *cancelBtn;
 
 @property (nonatomic,strong) UIView          *seperatorContainerView;
 @property (nonatomic,strong) NSMutableArray  *seperators_top;
@@ -83,6 +61,7 @@ static CGFloat const kBirthdayHeight = 260.0f;
     self.layer.borderWidth = 1;
     
     [self addSubview: self.datePicker];
+//    [self addSubview: self.datePickerView];
     [self addSubview: self.horizontalSeperator];
     [self addSubview: self.verticalSeperator];
     [self addSubview: self.cancelBtn];
@@ -98,6 +77,12 @@ static CGFloat const kBirthdayHeight = 260.0f;
         make.left.mas_equalTo(self).mas_offset(kHorizontalMargin*0.5);
         make.right.mas_equalTo(self).mas_offset(-kHorizontalMargin*0.5);
     }];
+//    [self.datePickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self).mas_offset(kVerticalMargin);
+//        make.height.mas_equalTo(datePickerHeight);
+//        make.left.mas_equalTo(self).mas_offset(kHorizontalMargin*0.5);
+//        make.right.mas_equalTo(self).mas_offset(-kHorizontalMargin*0.5);
+//    }];
     CGFloat onePexel = 1 / [UIScreen mainScreen].scale;
     [self.horizontalSeperator mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.datePicker.mas_bottom);
@@ -142,32 +127,56 @@ static CGFloat const kBirthdayHeight = 260.0f;
     self.dateString = [self.dateFormatter stringFromDate:self.datePicker.date];
 }
 
-#pragma mark - target
+- (void)addToView:(UIView *)superView
+{
+    [superView addSubview:self];
+    [self clearSeparatorWithView:self.datePicker];
+}
+- (void)clearSeparatorWithView:(UIView * )view
+{
+    if(view.subviews != 0){
+        if(view.bounds.size.height < 5){
+            view.backgroundColor = [UIColor clearColor];
+        }
+        [view.subviews enumerateObjectsUsingBlock:^( UIView *  obj, NSUInteger idx, BOOL *  stop) {
+            [self clearSeparatorWithView:obj];
+        }];
+    }
+}
 
+#pragma mark - target
 - (void)datePickerValueChanged:(UIDatePicker *)datePicker
 {
     self.dateString = [self.dateFormatter stringFromDate:self.datePicker.date];
 }
 
-- (void)confirmBtnClick:(UIButton *)button
+- (void)confirmBtnClick:(BirthdayBtn *)button
 {
-    if ([self.delegate respondsToSelector:@selector(birthdayView:selectedDateString:)]) {
-        [self.delegate birthdayView:self selectedDateString:self.dateString];
+    if ([self.delegate respondsToSelector:@selector(birthdayView:selectedDateString: buttonType:)]) {
+        [self.delegate birthdayView:self selectedDateString:self.dateString buttonType:button.btnType];
     }
-    NSLog(@"选中日期: %@",self.dateString);
     [self removeFromSuperview];
 }
 
-- (void)cancelBtnClick:(UIButton *)button
+- (void)cancelBtnClick:(BirthdayBtn *)button
 {
+    if ([self.delegate respondsToSelector:@selector(birthdayView:selectedDateString: buttonType:)]) {
+        [self.delegate birthdayView:self selectedDateString:self.dateString buttonType:button.btnType];
+    }
     [self removeFromSuperview];
+}
+
+#pragma mark - JSDatePickerDelegate
+- (void)dateChanged:(JSDatePicker *)sender
+{
+    self.dateString = [self.dateFormatter stringFromDate:sender.date];
 }
 
 #pragma mark - lazy
 
-- (JSDatePicker *)datePicker {
+- (UIDatePicker *)datePicker {
     if (!_datePicker) {
-        _datePicker = [[JSDatePicker alloc] initWithFrame:CGRectZero];
+        _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
         _datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//[NSLocale currentLocale];
         _datePicker.datePickerMode = UIDatePickerModeDate;
         _datePicker.timeZone = [NSTimeZone localTimeZone];
@@ -179,6 +188,17 @@ static CGFloat const kBirthdayHeight = 260.0f;
     }
     return _datePicker;
 }
+
+//- (JSDatePicker *)datePickerView {
+//    if (!_datePickerView) {
+//        _datePickerView = [[JSDatePicker alloc] initWithFrame: CGRectZero//CGRectMake(0, 0, 260, 200)
+//                                                      maxDate: [NSDate dateWithTimeIntervalSinceNow:365*24*60*60]
+//                                                      minDate: [self.dateFormatter dateFromString: @"1900-01-01"]
+//                                           showValidDatesOnly: NO];
+//        _datePickerView.delegate = self;
+//    }
+//    return _datePickerView;
+//}
 - (NSDateFormatter *)dateFormatter {
     if (!_dateFormatter) {
         _dateFormatter = [[NSDateFormatter alloc] init];
@@ -186,9 +206,10 @@ static CGFloat const kBirthdayHeight = 260.0f;
     }
     return _dateFormatter;
 }
-- (UIButton *)confirmBtn {
+- (BirthdayBtn *)confirmBtn {
     if (!_confirmBtn) {
-        _confirmBtn = [[UIButton alloc] init];
+        _confirmBtn = [[BirthdayBtn alloc] init];
+        _confirmBtn.btnType = BirthdayBtnTypeConfirm;
         _confirmBtn.backgroundColor = [UIColor whiteColor];
         [_confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
         [_confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -198,9 +219,10 @@ static CGFloat const kBirthdayHeight = 260.0f;
     }
     return _confirmBtn;
 }
-- (UIButton *)cancelBtn {
+- (BirthdayBtn *)cancelBtn {
     if (!_cancelBtn) {
-        _cancelBtn = [[UIButton alloc] init];
+        _cancelBtn = [[BirthdayBtn alloc] init];
+        _cancelBtn.btnType = BirthdayBtnTypeCancel;
         _cancelBtn.backgroundColor = [UIColor whiteColor];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
