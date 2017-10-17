@@ -8,7 +8,7 @@
 
 #import "JSWebSocketManager.h"
 
-#define WebSocketRequestUrlStringDeveloper @"ws://221.216.94.95:8081/runtime.server/rt.ws" //测试
+
 
 static id _instanceType = nil;
 

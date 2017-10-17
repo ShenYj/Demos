@@ -56,7 +56,7 @@ static JSWebSocketTool *_instanceType = nil;
 /*** 初始化WebSocket ***/
 - (instancetype)js_WebSocket_initialWebSocketService
 {
-    self.webSocket = [JSWebSocketManager sharedWebSocketManager];
+    self.webSocket = [[JSWebSocketManager alloc] init];
     self.webSocket.delegate = self;
     NSLog(@" 初始化完成");
     NSDictionary *userInfo = @{@"msg": @" 初始化完成"};
@@ -66,12 +66,21 @@ static JSWebSocketTool *_instanceType = nil;
 /*** 连接 ***/
 - (void)js_WebSocket_open
 {
+    if (self.webSocket) {
+        return;
+    }
+    [self js_WebSocket_initialWebSocketService];
+    
     [self.webSocket open];
+    NSLog(@"   当前状态: %zd",[JSWebSocketTool sharedWebSocketToolManager].webSocket.readyState);
 }
 /*** 断开 ***/
 - (void)js_WebSocket_close
 {
-    [self.webSocket close];
+    if (self.webSocket) {
+        [self.webSocket close];
+        self.webSocket = nil;
+    }
 }
 
 /*** 发送数据 ***/
@@ -159,6 +168,9 @@ static JSWebSocketTool *_instanceType = nil;
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean
 {
     NSLog(@" 连接断开，清空socket对象，清空该清空的东西，还有关闭心跳！(%@)",[NSThread currentThread]);
+    
+    self.webSocket.delegate = nil;
+    self.webSocket = nil;
     
     NSDictionary *userInfo = @{@"msg": @" 连接断开，清空socket对象，清空该清空的东西，还有关闭心跳！"};
     [[NSNotificationCenter defaultCenter] postNotificationName:kJSWebSocketToolManagerStatus object:nil userInfo:userInfo];
