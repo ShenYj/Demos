@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>         // TCP
+#import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>      // UDP
 
 @interface OCSocketManager : NSObject <GCDAsyncUdpSocketDelegate>
 

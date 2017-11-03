@@ -8,5 +8,6 @@ target 'SocketDemo' do
   # Pods for SocketDemo
 
 pod 'CocoaAsyncSocket'
+pod 'SocketRocket'
 
 end

@@ -15,6 +15,7 @@
 		686164DC1F99DDE50072AEC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 686164DB1F99DDE50072AEC6 /* main.m */; };
 		686164E51F99DF130072AEC6 /* CSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 686164E41F99DF130072AEC6 /* CSocketManager.m */; };
 		686164E91F99DF3F0072AEC6 /* OCSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 686164E81F99DF3F0072AEC6 /* OCSocketManager.m */; };
+		68867EC11FAC0FC0009F110C /* JSWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68867EC01FAC0FC0009F110C /* JSWebSocketManager.m */; };
 		7082E3F23C323AE2669E21E3 /* libPods-SocketDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F144EB3966D3DEFDB5BCB86 /* libPods-SocketDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		686164E41F99DF130072AEC6 /* CSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSocketManager.m; sourceTree = "<group>"; };
 		686164E71F99DF3F0072AEC6 /* OCSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSocketManager.h; sourceTree = "<group>"; };
 		686164E81F99DF3F0072AEC6 /* OCSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSocketManager.m; sourceTree = "<group>"; };
+		68867EBF1FAC0FC0009F110C /* JSWebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWebSocketManager.h; sourceTree = "<group>"; };
+		68867EC01FAC0FC0009F110C /* JSWebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWebSocketManager.m; sourceTree = "<group>"; };
 		C6A74C8601F71E0AF826FBEA /* Pods-SocketDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocketDemo/Pods-SocketDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D8EBDFF4F65B52CC95394AB5 /* Pods-SocketDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocketDemo/Pods-SocketDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +78,7 @@
 				686164CD1F99DDE40072AEC6 /* AppDelegate.m */,
 				686164CF1F99DDE40072AEC6 /* ViewController.h */,
 				686164D01F99DDE40072AEC6 /* ViewController.m */,
+				68867EBB1FAC0F1F009F110C /* WebSocket */,
 				686164E61F99DF2E0072AEC6 /* CocoaAsyncSocketManager */,
 				686164E21F99DEE90072AEC6 /* cSocket */,
 				686164D21F99DDE50072AEC6 /* Main.storyboard */,
@@ -102,6 +106,15 @@
 				686164E81F99DF3F0072AEC6 /* OCSocketManager.m */,
 			);
 			path = CocoaAsyncSocketManager;
+			sourceTree = "<group>";
+		};
+		68867EBB1FAC0F1F009F110C /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				68867EBF1FAC0FC0009F110C /* JSWebSocketManager.h */,
+				68867EC01FAC0FC0009F110C /* JSWebSocketManager.m */,
+			);
+			path = WebSocket;
 			sourceTree = "<group>";
 		};
 		CF06BDBE3576A01C356B51B6 /* Frameworks */ = {
@@ -245,6 +258,7 @@
 			files = (
 				686164D11F99DDE50072AEC6 /* ViewController.m in Sources */,
 				686164DC1F99DDE50072AEC6 /* main.m in Sources */,
+				68867EC11FAC0FC0009F110C /* JSWebSocketManager.m in Sources */,
 				686164E91F99DF3F0072AEC6 /* OCSocketManager.m in Sources */,
 				686164E51F99DF130072AEC6 /* CSocketManager.m in Sources */,
 				686164CE1F99DDE40072AEC6 /* AppDelegate.m in Sources */,

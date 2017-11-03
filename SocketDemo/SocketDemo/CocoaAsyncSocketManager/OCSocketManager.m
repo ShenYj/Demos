@@ -7,8 +7,7 @@
 //
 
 #import "OCSocketManager.h"
-#import <CocoaAsyncSocket/GCDAsyncSocket.h>         // TCP
-#import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>      // UDP
+
 
 static OCSocketManager *_instanceType = nil;
 
