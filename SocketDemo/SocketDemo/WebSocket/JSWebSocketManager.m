@@ -21,6 +21,8 @@ NSString * const kJSWebSocketTransportStatusChangedNotificationKey        = @"kJ
 NSString * const kJSWebSocketToolManagerTransportDataNotificationKey      = @"NSString * const kJSWebSocketToolManagerTransport;";
 NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJSWebSocketToolManagerReceivedServerDataNofificationKey";
 
+//static SRWebSocket *_instanceType = nil;
+
 @interface JSWebSocketManager () <SRWebSocketDelegate>
 {
     dispatch_queue_t _socketQueue;
@@ -32,6 +34,7 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
 @property (nonatomic,strong) NSTimer          *isTransportTimer;  // 用于检查连接状态,如果超过15s没有数据,则代表断开
 @property (nonatomic,assign) NSInteger        index;              // 检查连接状态的统计
 @property (nonatomic,assign) BOOL             haveData;           // 连接状态
+//@property (nonatomic,assign) BOOL             appIsInForceground; // 应用处于前台或回到前台
 
 @end
 
@@ -45,6 +48,16 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     [self stopToCheckDataTransport];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+//+ (__kindof SRWebSocket *)sharedSRWebSocket
+//{
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        _instanceType =  [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WebSocketRequestUrlStringDeveloper]]];
+//    });
+//    return _instanceType;
+//}
+
 /*** 构造函数 ***/
 - (instancetype)init
 {
@@ -72,18 +85,22 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
 - (void)applicationWillEnterForegroundNotification:(NSNotification *)notification
 {
     NSLog(@"------ WebSocket -----> 将要进入前台");
+    // 前台标识
+//    self.appIsInForceground = YES;
     [self js_WebSocket_open];
 }
 /*** 应用进将要失去焦点 ***/
 - (void)applicationWillResignActiveNotification:(NSNotification *)notification
 {
     NSLog(@"------ WebSocket -----> 将要失去焦点");
+//    self.appIsInForceground = NO;
     [self js_WebSocket_close];
 }
 /*** 应用进入后台 ***/
 - (void)applicationEnterBackgroundNotification:(NSNotification *)notification
 {
     NSLog(@"------ WebSocket -----> 已经进入后台");
+//    self.appIsInForceground = NO;
 }
 
 #pragma mark - 检查连接状态 15s内是否有推送数据
@@ -152,26 +169,47 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     if ( self.webSocket.readyState == SR_OPEN) {
         [self js_WebSocket_StopToReConectTimer];
         NSLog(@"WebSocket的连接已经建立, 关闭定时器");
+        
         return;
     }
-    [self js_WebSocket_close];
-    self.webSocket = nil;
+//    [self js_WebSocket_close];
+//    self.webSocket = nil;
     
     [self js_WebSocket_open];
-    NSLog(@"************************** 重连中...%@ **************************",[NSThread currentThread]);
+    NSLog(@"************************** 重连中...%zd **************************",self.webSocket.readyState);
 }
 
 #pragma mark - WebSocket
 
 /*** 初始化WebSocket并建立连接 ***/
-- (__kindof JSWebSocketManager *)js_WebSocket_open
+- (void)js_WebSocket_open
 {
     if (self.webSocket) {
         NSLog(@" webSocket 已存在");
-        [self js_WebSocket_close];
-        return self;
+        if (self.webSocket.readyState == SR_CONNECTING) {
+            NSLog(@"----> SR_CONNECTING");
+            // 重连
+            [self js_WebSocket_reConnect];
+            return ;
+        } else if (self.webSocket.readyState == SR_CLOSING) {
+            NSLog(@"----> SR_CLOSING");
+            // 重连
+            [self js_WebSocket_reConnect];
+            return ;
+        } else if (self.webSocket.readyState == SR_CLOSED) {
+            NSLog(@"----> SR_CLOSED");
+            // 重连
+            [self js_WebSocket_reConnect];
+            return ;
+        } else {
+            // OPEN
+            NSLog(@"----> SR_OPEN");
+            [self js_WebSocket_sendData:self.sendData];
+            return ;
+        }
     }
     self.webSocket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WebSocketRequestUrlStringDeveloper]]];
+//    self.webSocket = [JSWebSocketManager sharedSRWebSocket];
     self.webSocket.delegate = self;
     
     // 开启定时器,进行状态检查
@@ -180,7 +218,6 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     NSLog(@" 初始化完成");
     [self.webSocket open];
     NSLog(@"   WebSocket 当前状态: %zd",self.webSocket.readyState);
-    return self;
 }
 /*** 断开 ***/
 - (void)js_WebSocket_close
@@ -189,7 +226,7 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     if (self.webSocket) {
         //        [self.webSocket close];
         [self.webSocket closeWithCode:SRStatusCodeNormal reason:@"手动关闭"];
-        //        self.webSocket = nil;
+//        self.webSocket = nil;
     }
     // 关闭重连定时器
     if (self.reConectTimer) {
@@ -215,7 +252,6 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
                 [weakSelf.webSocket send:self.sendData];     // 发送数据
             } else if (weakSelf.webSocket.readyState == SR_CONNECTING) {
                 // 正在连接中
-                
             } else if (weakSelf.webSocket.readyState == SR_CLOSING ||
                        weakSelf.webSocket.readyState == SR_CLOSED) {
                 [self js_WebSocket_reConnect];      // 重连
@@ -247,7 +283,6 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     NSLog(@"%@",error);
     NSLog(@"************************** socket 连接失败 **************************");
     // 重连
-    NSLog(@"%@",[NSThread currentThread]);
     [self js_WebSocket_reConnect];
 }
 /*** 连接关闭: 连接关闭不是连接断开，关闭是 [socket close] 客户端主动关闭，断开可能是断网了，被动断开的 ***/
@@ -260,12 +295,19 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     // 停止检查传输数据状态
     [self stopToCheckDataTransport];
     self.webSocket.delegate = nil;
-    self.webSocket = nil;
+//    self.webSocket = nil;
+    
+//    if (self.appIsInForceground) {
+//        // 应用回到前台
+//        [self js_WebSocket_reConnect];
+//    }
 }
 /*** 收到服务器发来的数据 ***/
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message
 {
     NSLog(@"************************** 收到服务器发来的数据 **************************");
+    self.index = 0;
+    self.haveData = YES;
     [[NSNotificationCenter defaultCenter] postNotificationName: kJSWebSocketToolManagerReceivedServerDataNofificationKey
                                                         object: nil
                                                       userInfo: nil];

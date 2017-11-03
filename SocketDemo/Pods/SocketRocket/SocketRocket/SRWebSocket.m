@@ -1297,16 +1297,16 @@ static const char CRLFCRLFBytes[] = {'\r', '\n', '\r', '\n'};
     
     BOOL didWork = NO;
 #pragma mark - ShenYj  --->
-    //    if (self.readyState >= SR_CLOSED) {
-    //        return didWork;
-    //    }
-    if (self.readyState >= SR_CLOSING) {
-        dispatch_async(_workQueue, ^{
-            _closeCode = SRStatusCodeNormal;
-            [self closeConnection];
-        });
-        return didWork;
-    }
+        if (self.readyState >= SR_CLOSED) {
+            return didWork;
+        }
+//    if (self.readyState >= SR_CLOSING) {
+//        dispatch_async(_workQueue, ^{
+//            _closeCode = SRStatusCodeNormal;
+//            [self closeConnection];
+//        });
+//        return didWork;
+//    }
 #pragma mark - ShenYj  <---
     
     if (!_consumers.count) {

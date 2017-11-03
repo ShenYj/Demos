@@ -13,7 +13,7 @@ UIKIT_EXTERN NSString * const kJSWebSocketToolManagerReceivedServerDataNofificat
 
 @interface JSWebSocketManager : NSObject
 
-- (__kindof JSWebSocketManager *)js_WebSocket_open;
+- (void)js_WebSocket_open;
 - (void)js_WebSocket_sendData:(id)data;
 - (void)js_WebSocket_close;
 
