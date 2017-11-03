@@ -13,7 +13,7 @@
 
 #define WebSocketRequestUrlStringDeveloper @"ws://221.216.94.95:8081/runtime.server/rt.ws" //测试
 
-NSInteger const kJSWebSocketReConnectOffset                               = 60;           // 重连定时器间隔
+NSInteger const kJSWebSocketReConnectOffset                               = 20;           // 重连定时器间隔
 NSString * const kJSWebSocketToolManagerStatus                            = @"kJSWebSocketToolManagerStatus";
 NSString * const kJSWebSocketTransportStatusChangedKey                    = @"kJSWebSocketTransportStatusChangedKey";
 NSString * const kJSWebSocketToolManagerTransportDataKey                  = @"kJSWebSocketToolManagerTransportDataKey";
@@ -34,7 +34,6 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
 @property (nonatomic,strong) NSTimer          *isTransportTimer;  // 用于检查连接状态,如果超过15s没有数据,则代表断开
 @property (nonatomic,assign) NSInteger        index;              // 检查连接状态的统计
 @property (nonatomic,assign) BOOL             haveData;           // 连接状态
-//@property (nonatomic,assign) BOOL             appIsInForceground; // 应用处于前台或回到前台
 
 @end
 
@@ -48,15 +47,6 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     [self stopToCheckDataTransport];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-//+ (__kindof SRWebSocket *)sharedSRWebSocket
-//{
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        _instanceType =  [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WebSocketRequestUrlStringDeveloper]]];
-//    });
-//    return _instanceType;
-//}
 
 /*** 构造函数 ***/
 - (instancetype)init
@@ -86,21 +76,18 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
 {
     NSLog(@"------ WebSocket -----> 将要进入前台");
     // 前台标识
-//    self.appIsInForceground = YES;
     [self js_WebSocket_open];
 }
 /*** 应用进将要失去焦点 ***/
 - (void)applicationWillResignActiveNotification:(NSNotification *)notification
 {
     NSLog(@"------ WebSocket -----> 将要失去焦点");
-//    self.appIsInForceground = NO;
     [self js_WebSocket_close];
 }
 /*** 应用进入后台 ***/
 - (void)applicationEnterBackgroundNotification:(NSNotification *)notification
 {
     NSLog(@"------ WebSocket -----> 已经进入后台");
-//    self.appIsInForceground = NO;
 }
 
 #pragma mark - 检查连接状态 15s内是否有推送数据
@@ -282,6 +269,10 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
 {
     NSLog(@"%@",error);
     NSLog(@"************************** socket 连接失败 **************************");
+    // 停止检查传输数据状态
+    [self stopToCheckDataTransport];
+    self.webSocket.delegate = nil;
+    self.webSocket = nil;
     // 重连
     [self js_WebSocket_reConnect];
 }
@@ -295,12 +286,7 @@ NSString * const kJSWebSocketToolManagerReceivedServerDataNofificationKey = @"kJ
     // 停止检查传输数据状态
     [self stopToCheckDataTransport];
     self.webSocket.delegate = nil;
-//    self.webSocket = nil;
-    
-//    if (self.appIsInForceground) {
-//        // 应用回到前台
-//        [self js_WebSocket_reConnect];
-//    }
+    self.webSocket = nil;
 }
 /*** 收到服务器发来的数据 ***/
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message
