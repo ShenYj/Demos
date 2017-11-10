@@ -23,6 +23,7 @@
     [self.thread start];
     
 }
+
 // threadBegin123 都可以让线程不死
 - (void)threadBegin1 {
     @autoreleasepool{ //必须的,下面两个方法也应该加上,处理一些autorelease对象
