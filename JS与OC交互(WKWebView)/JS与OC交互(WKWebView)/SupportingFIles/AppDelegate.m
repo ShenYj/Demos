@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "JSWKWebViewController.h"
+#import "ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -19,8 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    JSWKWebViewController *webViewController = [[JSWKWebViewController alloc] init];
-    UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:webViewController];
+    ViewController * viewController = [[ViewController alloc] init];
+    UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     return YES;

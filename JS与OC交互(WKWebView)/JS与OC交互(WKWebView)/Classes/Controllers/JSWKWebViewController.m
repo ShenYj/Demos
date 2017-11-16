@@ -16,12 +16,18 @@
 @interface JSWKWebViewController () <WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 
 @property (nonatomic) WKWebView *webView;
+@property (nonatomic) UIButton  *backButton;
 
 @end
 
 @implementation JSWKWebViewController
 
-- (void)viewDidLoad{
+- (void)dealloc
+{
+    [self.webView.configuration.userContentController removeAllUserScripts];
+}
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -50,38 +56,44 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:localFileUrl];
     [self.webView loadRequest:request];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftBarButtonItem:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回界面" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftBarButtonItem:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickRighttBarButtonItem:)];
 }
 
+- (void)clickLeftBarButtonItem:(UIBarButtonItem *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
-- (void)clickLeftBarButtonItem:(UIBarButtonItem *)sender {
+- (void)clickRighttBarButtonItem:(UIBarButtonItem *)sender
+{
     [self.webView goBack];
 }
 
 #pragma mark - 拦截URL后执行的OC方法
 // 不带参数
-- (void)demoMethod{
+- (void)demoMethod
+{
     UIViewController *viewController = [[UIViewController alloc] init];
     viewController.view.backgroundColor = [UIColor js_randomColor];
     [self.navigationController pushViewController:viewController animated:YES];
-    
 }
 // 带参数
-- (void)demoMethodWithParameters:(NSArray *)parameters{
-    
+- (void)demoMethodWithParameters:(NSArray *)parameters
+{
     UIViewController *viewController = [[UIViewController alloc] init];
     JSCartView *view = [[JSCartView alloc] init];
     view.data = parameters;
     viewController.view = view;
     [self.navigationController pushViewController:viewController animated:YES];
-    
 }
 
 #pragma mark
 #pragma mark - WKNavigationDelegate
 
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
     if ([navigationAction.request.URL.scheme isEqualToString:@"cart"]) {
         
         NSMutableArray *tempArr = [NSMutableArray array];
@@ -101,7 +113,8 @@
 
 }
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
     // 屏幕适配
 //    NSString *jScript = @"var meta = document.createElement('meta'); \
 //    meta.name = 'viewport'; \
@@ -117,8 +130,8 @@
 #pragma mark
 #pragma mark - WKUIDelegate
 
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
-    
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
+{
     NSLog(@"%@--%@",message,frame);
     completionHandler();
 }
@@ -126,8 +139,8 @@
 #pragma mark
 #pragma mark - WKScriptMessageHandler
 
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
+{
     NSLog(@"%@",message.body);
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JSWKWebViewController.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,16 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    JSWKWebViewController *webViewController = [[JSWKWebViewController alloc] init];
+    [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 @end
