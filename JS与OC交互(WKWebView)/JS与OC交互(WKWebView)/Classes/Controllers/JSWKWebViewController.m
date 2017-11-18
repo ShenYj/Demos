@@ -46,13 +46,13 @@
     //    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     //    [self.webView loadHTMLString:htmlString baseURL:[[NSBundle mainBundle] bundleURL]];
     // 项目内资源
-    //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"JS与OC交互Demo.html" withExtension:nil];
-    //    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"JS与OC交互Demo.html" withExtension:nil];
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     
     // 使用WKWebView加载本地HTML文件
     NSURL *localFileUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"JS与OC交互Demo.html" ofType:nil]];
     //[self.webView loadFileURL:localFileUrl allowingReadAccessToURL:localFileUrl];
-    
+
     NSURLRequest *request = [NSURLRequest requestWithURL:localFileUrl];
     [self.webView loadRequest:request];
     
